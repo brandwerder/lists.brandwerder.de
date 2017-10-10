@@ -1,7 +1,9 @@
-from zope.interface import implementer
-from mailman.interfaces.styles import IStyle
 from zope.component import getUtility
-from mailman.interfaces.styles import IStyleManager
+from zope.interface import implementer
+from mailman.core.i18n import _
+from mailman.interfaces.archiver import ArchivePolicy
+from mailman.interfaces.styles import IStyle, IStyleManager
+from mailman.interfaces.mailinglist import SubscriptionPolicy
 import re
 
 @implementer(IStyle)
@@ -25,12 +27,26 @@ class BrandwerderStyle:
         manager = getUtility(IStyleManager)
         manager.get('legacy-default').apply(mlist)
 
-        # overide some options
+        ## List Identity
+
         mlist.display_name = re.sub(r'klasse-(.*)', BrandwerderStyle.klassenlist_name, mlist.list_name)
         mlist.preferred_language = 'de'
-        mlist.subject_prefix = '[$mlist.display_name] '
+        mlist.subject_prefix = _('[$mlist.display_name] ')
 
-        mlist.description = 'Die Mailingliste der $mlist.display_name'
-        mlist.info = """Die Mailingliste der $mlist.display_name
+        # Description
+        mlist.description = _('Die Mailingliste der $mlist.display_name')
 
-                     Hello World"""
+        # Information
+        mlist.info = _("""
+Die Mailingliste der $mlist.display_name
+
+Hello World""")
+
+        # Show list on index page
+        mlist.advertised = False
+
+        ## Archiving
+        mlist.archive_policy = ArchivePolicy.public
+
+        ## Subscription Policy
+        mlist.subscription_policy = SubscriptionPolicy.confirm_then_moderate
