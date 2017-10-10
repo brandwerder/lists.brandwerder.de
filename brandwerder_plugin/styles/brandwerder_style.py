@@ -16,7 +16,7 @@ class BrandwerderStyle:
         # If klasse = 6a return 6a
         if klasse[0].isalpha():
             klasse = klasse[0].upper() + klasse[1:]
-        return 'Klasse: ' + klasse
+        return 'Klasse ' + klasse
 
     def apply(self, mailing_list):
         mlist = mailing_list
@@ -27,3 +27,10 @@ class BrandwerderStyle:
 
         # overide some options
         mlist.display_name = re.sub(r'klasse-(.*)', BrandwerderStyle.klassenlist_name, mlist.list_name)
+        mlist.preferred_language = 'de'
+        mlist.subject_prefix = '[$mlist.display_name] '
+
+        mlist.description = 'Die Mailingliste der $mlist.display_name'
+        mlist.info = """Die Mailingliste der $mlist.display_name
+
+                     Hello World"""
