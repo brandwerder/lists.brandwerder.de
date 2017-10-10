@@ -46,7 +46,7 @@ Hello World""")
         mlist.advertised = False
 
         ## Archiving
-        mlist.archive_policy = ArchivePolicy.public
+        mlist.archive_policy = ArchivePolicy.never
 
         ## Subscription Policy
         mlist.subscription_policy = SubscriptionPolicy.confirm_then_moderate
