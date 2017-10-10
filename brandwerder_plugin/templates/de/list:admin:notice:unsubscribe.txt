@@ -1,0 +1,2 @@
+$member has been removed from $display_name.
+DEUTSCH

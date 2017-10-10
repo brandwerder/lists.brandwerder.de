@@ -1,0 +1,6 @@
+Your message entitled
+
+    $subject
+
+was successfully received by the $display_name mailing list.
+DEUTSCH
