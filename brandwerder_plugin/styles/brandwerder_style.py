@@ -19,10 +19,11 @@ class BrandwerderStyle:
         return 'Klasse: ' + klasse
 
     def apply(self, mailing_list):
+        mlist = mailing_list
+
         # apply default options
         manager = getUtility(IStyleManager)
         manager.get('legacy-default').apply(mlist)
 
-        mlist = mailing_list
         # overide some options
         mlist.display_name = re.sub(r'klasse-(.*)', BrandwerderStyle.klassenlist_name, mlist.list_name)
