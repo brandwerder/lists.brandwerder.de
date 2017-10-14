@@ -10,7 +10,7 @@ class BrandwerderTemplate:
     def apply():
         current_dir = os.path.dirname(os.path.abspath(__file__)) + '/de/'
         manager = getUtility(ITemplateManager)
-        for k, v in ALL_TEMPLATES:
+        for k, v in ALL_TEMPLATES.items():
             if v is None:
                 continue
             file_uri = pathlib.Path(current_dir + k).resolve().as_uri()
