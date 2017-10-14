@@ -7,6 +7,8 @@ from mailman.interfaces.mailinglist import SubscriptionPolicy
 from public import public
 import re
 
+print(__file__ + " called")
+
 @public
 @implementer(IStyle)
 class BrandwerderStyle:
