@@ -1,4 +1,4 @@
-from ..styles.brandwerder_style import BrandwerderStyle
+from .brandwerder_style import BrandwerderStyle
 from ..templates.brandwerder_template import BrandwerderTemplate
 
 from zope.component import getUtility
@@ -12,4 +12,4 @@ manager = getUtility(IStyleManager)
 # prevent double inclusion
 if manager.get('brandwerder-style') is None:
     manager.register(BrandwerderStyle())
-    BrandwerderTemplate.apply()
+    # BrandwerderTemplate.apply()

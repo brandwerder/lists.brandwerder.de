@@ -4,8 +4,10 @@ from mailman.core.i18n import _
 from mailman.interfaces.archiver import ArchivePolicy
 from mailman.interfaces.styles import IStyle, IStyleManager
 from mailman.interfaces.mailinglist import SubscriptionPolicy
+from public import public
 import re
 
+@public
 @implementer(IStyle)
 class BrandwerderStyle:
     name = 'brandwerder-style'

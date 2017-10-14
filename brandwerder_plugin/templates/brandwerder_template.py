@@ -2,7 +2,9 @@ from mailman.interfaces.template import ITemplateManager, ALL_TEMPLATES
 from zope.component import getUtility
 import pathlib
 import os
+from public import public
 
+@public
 class BrandwerderTemplate:
     name = 'brandwerder-template'
 
