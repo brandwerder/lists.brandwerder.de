@@ -15,9 +15,11 @@ class BrandwerderTemplate:
         for name, uri in ALL_TEMPLATES.items():
             if uri is None:
                 continue
-            file_uri = pathlib.Path(current_dir + uri).resolve().as_uri()
+            file_path = current_dir + uri
+            file_uri = pathlib.Path(file_path).resolve().as_uri()
+            print(name + ": " + file_path)
             print(name + ": " + file_uri)
-            manager.set(name, None, file_uri)
+            # manager.set(name, None, file_uri)
             template = manager.get(name, None)
             print(template)
             print()
