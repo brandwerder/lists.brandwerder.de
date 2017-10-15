@@ -17,7 +17,7 @@ class BrandwerderTemplate:
                 continue
             file_path = current_dir + uri
             file_abs_path = pathlib.Path(file_path).resolve()
-            file_uri = file_abs_path.as_uri()
+            file_uri = 'file://' + str(file_abs_path)
             print(name + ": " + file_path)
             print(name + ": " + str(file_abs_path))
             print(name + ": " + file_uri)
