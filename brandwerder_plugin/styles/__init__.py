@@ -15,3 +15,4 @@ print()
 if manager.get('brandwerder-style') is None:
     # manager.register(BrandwerderStyle())
     # BrandwerderTemplate.apply()
+    pass
