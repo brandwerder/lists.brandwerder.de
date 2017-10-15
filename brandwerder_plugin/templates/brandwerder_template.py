@@ -19,7 +19,7 @@ class BrandwerderTemplate:
             file_abs_path = pathlib.Path(file_path).resolve()
             file_uri = file_abs_path.as_uri()
             print(name + ": " + file_path)
-            print(name + ": " + file_abs_path)
+            print(name + ": " + str(file_abs_path))
             print(name + ": " + file_uri)
             # manager.set(name, None, file_uri)
             template = manager.get(name, None)
