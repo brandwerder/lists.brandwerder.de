@@ -3,19 +3,17 @@ import os
 # from mailman.interfaces.plugin import IPlugin
 from public import public
 from zope.interface import implementer
-# from .styles.brandwerder_style import BrandwerderStyle
-# from .templates.brandwerder_template import BrandwerderTemplate
+from .templates.brandwerder_template import BrandwerderTemplate
 
 @public
 # @implementer(IPlugin)
 class BrandwerderPlugin:
     def pre_hook(self):
         print("pre_hook called")
-        # manager.register(BrandwerderStyle())
 
     def post_hook(self):
         print("post_hook called")
-        # BrandwerderTemplate.apply()
+        BrandwerderTemplate.apply()
 
     @property
     def resource(self):
