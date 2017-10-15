@@ -1,6 +1,3 @@
-# from ..styles.brandwerder_style import BrandwerderStyle
-# from ..templates.brandwerder_template import BrandwerderTemplate
-
 print(__file__ + " called")
 
 from zope.component import getUtility
