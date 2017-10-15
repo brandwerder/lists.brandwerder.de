@@ -17,7 +17,7 @@ class BrandwerderTemplate:
                 continue
             file_uri = pathlib.Path(current_dir + uri).resolve().as_uri()
             print(name + ": " + file_uri)
-            # manager.set(name, None, file_uri)
+            manager.set(name, None, file_uri)
             template = manager.get(name, None)
             print(template)
             print()
