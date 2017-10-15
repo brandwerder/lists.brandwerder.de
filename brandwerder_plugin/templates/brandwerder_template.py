@@ -20,3 +20,4 @@ class BrandwerderTemplate:
             # manager.set(name, None, file_uri)
             template = manager.get(name, None)
             print(template)
+            print()
