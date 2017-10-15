@@ -9,7 +9,7 @@ import re
 
 print(__file__ + " called")
 
-# @public
+@public
 @implementer(IStyle)
 class BrandwerderStyle:
     name = 'brandwerder-style'

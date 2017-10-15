@@ -13,5 +13,5 @@ print()
 
 # prevent double inclusion
 if manager.get('brandwerder-style') is None:
-    manager.register(BrandwerderStyle())
+    # manager.register(BrandwerderStyle())
     # BrandwerderTemplate.apply()
