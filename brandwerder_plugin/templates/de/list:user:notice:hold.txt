@@ -1,13 +1,16 @@
-Your mail to '$listname' with the subject
+Ihre E-Mail an '$listname' mit dem Betreff
 
     $subject
 
-Is being held until the list moderator can review it for approval.
+wurde zurückgehalten bis ein Mailinglistenmoderator diese Nachricht freigegeben
+hat.
 
-The message is being held because:
+Ihre Nachricht wurde zurückgehalten wegen folgendem Grund:
 
 $reasons
 
-Either the message will get posted to the list, or you will receive
-notification of the moderator's decision.
-DEUTSCH
+(In den meisten Fällen senden Sie gerade von einer E-Mail Adresse, die der
+Mailingliste nicht bekannt ist.)
+
+Entweder Ihre Nachricht wird freigegeben oder Sie bekommen eine Benachrichtigung
+über die Entscheidung des Moderators.

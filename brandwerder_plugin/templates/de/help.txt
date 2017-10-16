@@ -18,4 +18,3 @@ The following commands are valid:
 Questions and concerns for the attention of a person should be sent to:
 
     $administrator
-DEUTSCH

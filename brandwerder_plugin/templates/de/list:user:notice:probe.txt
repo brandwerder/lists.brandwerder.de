@@ -12,4 +12,3 @@ If you have any questions or problems, you can contact the mailing list owner
 at
 
     $owner_email
-DEUTSCH

@@ -15,4 +15,3 @@ message.  If you think you are being maliciously unsubscribed from the list,
 or have any other questions, you may contact
 
     $owner_email
-DEUTSCH

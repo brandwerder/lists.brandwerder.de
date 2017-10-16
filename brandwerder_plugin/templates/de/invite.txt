@@ -14,4 +14,3 @@ most mail readers.
 If you want to decline this invitation, please simply disregard this
 message.  If you have any questions, please send them to
 $listowner.
-DEUTSCH

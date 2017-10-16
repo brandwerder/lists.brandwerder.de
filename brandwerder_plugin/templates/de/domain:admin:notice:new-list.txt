@@ -8,4 +8,3 @@ as subject or in the body, to:
     $request_email
 
 Please address all questions to $site_email.
-DEUTSCH

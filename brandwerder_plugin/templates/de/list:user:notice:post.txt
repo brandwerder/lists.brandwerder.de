@@ -1,6 +1,5 @@
-Your message entitled
+Ihre Nachricht mit dem Betreff
 
     $subject
 
-was successfully received by the $display_name mailing list.
-DEUTSCH
+wurde erfolgreich von der Mailingliste $display_name empfangen.

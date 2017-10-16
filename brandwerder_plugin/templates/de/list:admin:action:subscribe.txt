@@ -1,6 +1,11 @@
-Your authorization is required for a mailing list subscription request
-approval:
+Ihre Autorisierung ist erforderlich für eine Anfrage zum Hinzufügen zur
+Mailingliste ($listname)
 
     For:  $member
     List: $listname
-DEUTSCH
+
+
+Besuchen Sie die folgende Seite um diese Anfrage zu bestätigen:
+https://$domain/postorius/lists/$list_id/subscription_requests
+
+(Sie müssen einen Account haben und sich einloggen)

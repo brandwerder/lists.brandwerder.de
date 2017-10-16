@@ -10,4 +10,3 @@ You can reach the person managing the list at
 
 When replying, please edit your Subject line so it is more specific than
 "Re: Contents of $display_name digest..."
-DEUTSCH
