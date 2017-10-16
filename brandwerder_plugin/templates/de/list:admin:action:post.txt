@@ -10,7 +10,7 @@ Die Nachricht wurde zurückgehalten wegen folgendem Grund:
 $reasons
 
 (In den meisten Fällen hat der Sender von einer nicht bekannten E-Mail Adresse
-gesendet.)
+gesendet. Sie können diese E-Mail Adresse hinzufügen, falls Sie senden darf.)
 
 
 Besuchen Sie die folgende Seite um die Nachricht freizugeben oder abzulehnen:
