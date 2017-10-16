@@ -39,6 +39,7 @@ class BrandwerderStyle:
         mlist.subject_prefix = _('[$mlist.display_name] ')
 
         if re.match('klasse', mlist.list_name):
+            print('add template: ' + mlist.list_name)
             BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_name, 'list:user:notice:welcome-klasse.txt')
 
         # Description
