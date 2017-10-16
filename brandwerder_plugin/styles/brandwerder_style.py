@@ -42,10 +42,7 @@ class BrandwerderStyle:
         mlist.description = _('Die Mailingliste der $mlist.display_name')
 
         # Information
-        mlist.info = _("""
-Die Mailingliste der $mlist.display_name
-
-Hello World""")
+        mlist.info = _("""Die Mailingliste der $mlist.display_name""")
 
         # Show list on index page
         mlist.advertised = False
@@ -59,5 +56,5 @@ Hello World""")
         # IMPORTANT: add the template after setting the style, otherwise the
         # changes will not apply?
         if re.match('klasse', mlist.list_name):
-            print('add template: ' + mlist.list_id)
+            # print('add template: ' + mlist.list_id)
             BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_id, 'list:user:notice:welcome-klasse.txt')

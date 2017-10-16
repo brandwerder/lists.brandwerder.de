@@ -19,12 +19,12 @@ class BrandwerderTemplate:
         file_uri = 'file://' + str(file_abs_path)
         # print(name + ": " + file_path)
         # print(name + ": " + str(file_abs_path))
-        print(name + " (" + str(context) + "): " + file_uri)
+        # print(name + " (" + str(context) + "): " + file_uri)
         # print(name + " exists?: " + str(file_abs_path.exists()))
         if file_abs_path.exists():
             manager.set(name, context, file_uri)
-            template = manager.get(name, context)
-            print(template)
+            # template = manager.get(name, context)
+            # print(template)
         # print()
 
     @staticmethod
