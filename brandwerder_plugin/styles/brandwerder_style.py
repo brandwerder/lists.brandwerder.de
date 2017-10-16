@@ -8,7 +8,7 @@ from ..templates.brandwerder_template import BrandwerderTemplate
 from public import public
 import re
 
-print(__file__ + " called")
+# print(__file__ + " called")
 
 @public
 @implementer(IStyle)
