@@ -38,10 +38,6 @@ class BrandwerderStyle:
         mlist.preferred_language = 'de'
         mlist.subject_prefix = _('[$mlist.display_name] ')
 
-        if re.match('klasse', mlist.list_name):
-            print('add template: ' + mlist.list_id)
-            BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_id, 'list:user:notice:welcome-klasse.txt')
-
         # Description
         mlist.description = _('Die Mailingliste der $mlist.display_name')
 
@@ -59,3 +55,9 @@ Hello World""")
 
         ## Subscription Policy
         mlist.subscription_policy = SubscriptionPolicy.confirm_then_moderate
+
+        # IMPORTANT: add the template after setting the style, otherwise the
+        # changes will not apply?
+        if re.match('klasse', mlist.list_name):
+            print('add template: ' + mlist.list_id)
+            BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_id, 'list:user:notice:welcome-klasse.txt')
