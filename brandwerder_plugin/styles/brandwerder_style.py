@@ -39,8 +39,8 @@ class BrandwerderStyle:
         mlist.subject_prefix = _('[$mlist.display_name] ')
 
         if re.match('klasse', mlist.list_name):
-            print('add template: ' + mlist.list_name)
-            BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_name, 'list:user:notice:welcome-klasse.txt')
+            print('add template: ' + mlist.list_id)
+            BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_id, 'list:user:notice:welcome-klasse.txt')
 
         # Description
         mlist.description = _('Die Mailingliste der $mlist.display_name')
