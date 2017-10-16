@@ -9,10 +9,10 @@ from .templates.brandwerder_template import BrandwerderTemplate
 # @implementer(IPlugin)
 class BrandwerderPlugin:
     def pre_hook(self):
-        print("pre_hook called")
+        # print("pre_hook called")
 
     def post_hook(self):
-        print("post_hook called")
+        # print("post_hook called")
         BrandwerderTemplate.apply()
 
     @property
