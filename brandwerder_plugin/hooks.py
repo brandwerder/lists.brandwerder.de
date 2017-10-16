@@ -10,6 +10,7 @@ from .templates.brandwerder_template import BrandwerderTemplate
 class BrandwerderPlugin:
     def pre_hook(self):
         # print("pre_hook called")
+        pass
 
     def post_hook(self):
         # print("post_hook called")
