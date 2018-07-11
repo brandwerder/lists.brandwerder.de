@@ -17,5 +17,5 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
-__version__ = '1.2.0'
+__version__ = '1.2.1'
 default_app_config = 'postorius.apps.PostoriusConfig'

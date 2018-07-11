@@ -18,6 +18,12 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+1.2.1
+=====
+(2018-07-11)
+
+* A Django migration was missing from version 1.2.0.  This is now added.
+
 1.2
 ===
 (2018-07-10)
