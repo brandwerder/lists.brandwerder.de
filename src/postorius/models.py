@@ -231,6 +231,7 @@ class EmailTemplate(models.Model):
         help_text=_('Choose the template you want to customize.'))
     data = models.TextField(
         help_text=_(
+            'Note: Do not add any secret content in templates as they are publicly accesible.'  # noqa: E501
             'You can use these variables in the templates. \n'
             '$hyperkitty_url: Permalink to archived message in Hyperkitty\n'
             '$listname: Name of the Mailing List e.g. ant@example.com \n'
