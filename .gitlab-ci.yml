@@ -11,6 +11,11 @@ py36-django-1.11:
   script:
   - tox -e py36-django111
 
+py37-django-20:
+  stage: test
+  script:
+    - tox -e py37-django20
+
 py36-django-20:
   stage: test
   script:
