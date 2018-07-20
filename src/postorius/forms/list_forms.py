@@ -648,6 +648,7 @@ class ListIdentityForm(ListSettingsForm):
     )
     subject_prefix = forms.CharField(
         label=_('Subject prefix'),
+        strip=False,
         required=False,
     )
 
@@ -655,7 +656,7 @@ class ListIdentityForm(ListSettingsForm):
         """
         Strip the leading whitespaces from the subject_prefix form field.
         """
-        return self.cleaned_data.get('subject_prefix', '').strip()
+        return self.cleaned_data.get('subject_prefix', '').lstrip()
 
 
 class ListMassSubscription(forms.Form):
