@@ -652,8 +652,7 @@ def list_index(request, template='postorius/index.html'):
         return redirect("list_summary", list_id=request.POST["list"])
     # If the user is logged-in, show them only related lists in the index,
     # except role is present in requests.GET.
-    if (request.user.is_authenticated and
-            'all-lists' not in request.GET):
+    if request.user.is_authenticated and 'all-lists' not in request.GET:
         return list_index_authenticated(request)
 
     def _get_list_page(count, page):
