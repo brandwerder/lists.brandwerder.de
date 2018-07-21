@@ -596,7 +596,7 @@ def list_new(request, template='postorius/lists/new.html'):
 
 def _unique_lists(lists):
     """Return unique lists from a list of mailing lists."""
-    return {mlist.list_id:mlist for mlist in lists}.values()
+    return {mlist.list_id: mlist for mlist in lists}.values()
 
 
 @login_required
