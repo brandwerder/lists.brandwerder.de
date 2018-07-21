@@ -604,10 +604,11 @@ def list_index_authenticated(request):
     """Index page for authenticated users.
 
     Index page for authenticated users is slightly different than
-    un-authenticated ones. Authenticated users will see all their memberships in
-    the index page.
+    un-authenticated ones. Authenticated users will see all their memberships
+    in the index page.
 
     This view is not paginated and will show all the lists.
+
     """
     role = request.GET.get('role', None)
     client = get_mailman_client()
@@ -620,17 +621,16 @@ def list_index_authenticated(request):
 
     # Get all the mailing lists for the current user.
     all_lists = []
-    for email in user_emails:
+    for user_email in user_emails:
         try:
-            all_lists.extend(client.find_lists(request.user.email, role=role))
+            all_lists.extend(client.find_lists(user_email, role=role))
         except HTTPError:
             # No lists exist with the given role for the given user.
             pass
     # If the user has no list that they are subscriber/owner/moderator of, we
     # just redirect them to the index page with all lists.
-    if len(all_lists) == 0:
-        redirect(reverse('list_index') + '?all-lists')
-
+    if len(all_lists) == 0 and role is None:
+        return redirect(reverse('list_index') + '?all-lists')
     # Render the list index page.
     context = {
         'lists': _unique_lists(all_lists),
@@ -650,9 +650,10 @@ def list_index(request, template='postorius/index.html'):
     # can't it be just a GET with list parameter.
     if request.method == 'POST':
         return redirect("list_summary", list_id=request.POST["list"])
-
-    # If the user is logged-in, show them only related lists in the index.
-    if request.user.is_authenticated and 'all-lists' not in request.GET:
+    # If the user is logged-in, show them only related lists in the index,
+    # except role is present in requests.GET.
+    if (request.user.is_authenticated and
+            'all-lists' not in request.GET):
         return list_index_authenticated(request)
 
     def _get_list_page(count, page):
