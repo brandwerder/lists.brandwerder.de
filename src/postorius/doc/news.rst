@@ -21,8 +21,9 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.2.2
 =====
 (201X-XX-XX)
-
-
+* Add support for Python 3.7 with Django 2.0+
+* Index page only shows related lists for signed-in users with option to
+  filter based on role.
 
 
 1.2.1
