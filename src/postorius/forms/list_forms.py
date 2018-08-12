@@ -366,7 +366,6 @@ class DMARCMitigationsForm(ListSettingsForm):
             'DMARC policy of reject or quarantine or to all messages if '
             'DMARC Mitigate unconditionally is True.'))
     dmarc_mitigate_unconditionally = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -397,7 +396,6 @@ class AlterMessagesForm(ListSettingsForm):
     Alter messages list settings.
     """
     filter_content = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -405,7 +403,6 @@ class AlterMessagesForm(ListSettingsForm):
         help_text=_('Should Mailman filter the content of list traffic '
                     'according to the settings below?'))
     collapse_alternatives = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -413,7 +410,6 @@ class AlterMessagesForm(ListSettingsForm):
         help_text=_('Should Mailman collapse multipart/alternative to '
                     'its first part content?'))
     convert_html_to_plaintext = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -422,7 +418,6 @@ class AlterMessagesForm(ListSettingsForm):
                     'This conversion happens after MIME attachments '
                     'have been stripped.'))
     anonymous_list = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -431,7 +426,6 @@ class AlterMessagesForm(ListSettingsForm):
                     'replacing it with the list address '
                     '(Removes From, Sender and Reply-To fields)'))
     include_rfc2369_headers = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -450,7 +444,6 @@ class AlterMessagesForm(ListSettingsForm):
             'recommended (and in fact, your ability to disable these headers '
             'may eventually go away).'))
     allow_list_posts = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -467,7 +460,6 @@ class AlterMessagesForm(ListSettingsForm):
             'It is only used if the reply-to is set to use an explicitly set '
             'header'))
     first_strip_reply_to = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -571,7 +563,6 @@ class ListAutomaticResponsesForm(ListSettingsForm):
             '(or negative) for no grace period (i.e. auto-respond to every '
             'message).'))
     send_welcome_message = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -621,7 +612,6 @@ class ListIdentityForm(ListSettingsForm):
     List identity settings.
     """
     advertised = forms.TypedChoiceField(
-        coerce=lambda x: x == 'True',
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         label=_('Show list on index page'),
