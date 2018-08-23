@@ -58,3 +58,4 @@ class BrandwerderStyle:
         if re.match('klasse', mlist.list_name):
             # print('add template: ' + mlist.list_id)
             BrandwerderTemplate.set_template('list:user:notice:welcome', mlist.list_id, 'list:user:notice:welcome-klasse.txt')
+            BrandwerderTemplate.set_template('list:user:notice:goodbye', mlist.list_id, 'list:user:notice:goodbye-klasse.txt')
