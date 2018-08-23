@@ -1,0 +1,40 @@
+
+# Sie wurden von der Mailingliste der $display_name erfolgreich abgemeldet!
+
+### Warum wurde ich ausgetragen? Mein Kind geht noch zur Schule!
+
+Sie werden von Ihren Elternvertretern am Ende bzw. Anfang eines Schuljahres aus
+der Klassen-Mailingliste ausgetragen (falls sich die Bezeichnung der Klasse
+ändert) und in die nächste Klassen-Mailingliste eingetragen.
+
+Zum Beispiel: Wenn Ihr Kind von der Klasse 4a in die Klasse 5a versetzt wird,
+dann werden Sie aus der Liste klasse-4a@lists.brandwerder.de ausgetragen und in
+die Liste klasse-5a@lists.brandwerder.de eingetragen.
+
+### Mein Kind hat die Schule verlassen.
+
+Erst einmal vielen Dank für die schöne Zeit, die Sie mit Ihrem Kind an unserer
+Schule verbracht haben.
+
+Sie sind nun ausgetragen und bekommen keine E-Mails mehr von dieser
+Mailingliste.
+
+### Alle meine Kinder gehen nicht mehr auf die Grundschule am Brandwerder. Ich
+    möchte komplett abgemeldet werden.
+
+Schicken Sie eine E-Mail an die Administratoren ($owner_email) mit den Klassen
+in denen Ihre Kinder gegangen sind. Wir werden Sie dann austragen.
+
+Normalerweise sollten Sie kurz nach den ersten Elternabenden ausgetragen
+werden.
+
+### Ich bekomme immer noch E-Mails!?
+
+Wenn Sie ausgetragen wurden, aber immer noch E-Mails bekommen, dann melden Sie
+sich bitte bei den Administratoren ($owner_email). Es handelt sich um ein
+Fehler.
+
+----------------------
+
+Vielen Dank für die Aufmerksamkeit und besuchen Sie uns auf
+http://www.brandwerder.de.
