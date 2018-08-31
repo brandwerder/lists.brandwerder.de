@@ -26,6 +26,21 @@ py35-django-20:
   script:
     - tox -e py35-django20
 
+py35-django-21:
+  stage: test
+  script:
+    - tox -e py35-django21
+
+py36-django-21:
+  stage: test
+  script:
+    - tox -e py36-django21
+
+py37-django-21:
+  stage: test
+  script:
+    - tox -e py37-django21
+
 coverage:
   stage: test
   script:
