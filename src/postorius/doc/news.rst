@@ -24,6 +24,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support for Python 3.7 with Django 2.0+
 * Index page only shows related lists for signed-in users with option to
   filter based on role.
+* Expose respond_to_post_requests in Postorius. (Closes #223)
 
 
 1.2.1

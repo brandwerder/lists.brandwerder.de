@@ -562,6 +562,15 @@ class ListAutomaticResponsesForm(ListSettingsForm):
             'or -request/-owner address from the same poster. Set to zero '
             '(or negative) for no grace period (i.e. auto-respond to every '
             'message).'))
+    respond_to_post_requests = forms.TypedChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Notify users of held messages'),
+        help_text=_(
+            'Should Mailman notify users about their messages held for '
+            'approval. If you say \'No\', no notifications will be sent '
+            'to users about the pending approval on their messages.'))
     send_welcome_message = forms.TypedChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
