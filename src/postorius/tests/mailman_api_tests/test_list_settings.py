@@ -20,6 +20,7 @@
 from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.utils import six
 
 from postorius.views.list import SETTINGS_FORMS
 from postorius.models import List
@@ -244,3 +245,44 @@ class ListSettingsTest(ViewTestCase):
         # Now, let's remove all the subscribers
         self.client.post(url)
         self.assertEqual(len(self.foo_list.members), 0)
+
+    def test_message_acceptance(self):
+        initial_values = {
+            'acceptable_aliases': [],
+            'require_explicit_destination': True,
+            'administrivia': True,
+            'default_member_action': 'defer',
+            'default_nonmember_action': 'hold',
+            'max_message_size': 40,
+            'max_num_recipients': 10,
+        }
+        self.client.login(username='testsu', password='testpass')
+        url = reverse('list_settings',
+                      args=('foo.example.com', 'message_acceptance'))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        for field, value in six.iteritems(initial_values):
+            self.assertEqual(
+                self.foo_list.settings[field], value,
+                'Field: {}'.format(field))
+            self.assertEqual(
+                response.context["form"].initial[field], value,
+                'Field: {}'.format(field))
+        updated_values = {
+            'acceptable_aliases': ['bar@example.com'],
+            'require_explicit_destination': False,
+            'administrivia': False,
+            'default_member_action': 'accept',
+            'default_nonmember_action': 'accept',
+            'max_message_size': 100,
+            'max_num_recipients': 100,
+        }
+        response = self.client.post(url, updated_values)
+        self.assertRedirects(response, url)
+        self.assertHasSuccessMessage(response)
+        # Get a new list object to avoid caching
+        m_list = List.objects.get(fqdn_listname='foo.example.com')
+        for field, value in six.iteritems(updated_values):
+            self.assertEqual(
+                m_list.settings[field], value,
+                'Field: {}'.format(field))
