@@ -309,6 +309,14 @@ class MessageAcceptanceForm(ListSettingsForm):
             'The maximum allowed message size. '
             'This can be used to prevent emails with large attachments. '
             'A size of 0 disables the check.'))
+    max_num_recipients = forms.IntegerField(
+        min_value=0,
+        label=_('Maximum number of recipients'),
+        required=False,
+        help_text=_(
+            'The maximum number of recipients for a message. '
+            'This can be used to prevent mass mailings from being accepted. '
+            'A value of 0 disables the check.'))
 
     def clean_acceptable_aliases(self):
         # python's urlencode will drop this attribute completely if an empty

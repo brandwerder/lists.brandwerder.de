@@ -18,6 +18,12 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+1.2.3
+=====
+(201X-XX-XX)
+
+* Expose ``max_num_recipients`` in list settings. (Closes #297)
+
 1.2.2
 =====
 (2018-08-30)

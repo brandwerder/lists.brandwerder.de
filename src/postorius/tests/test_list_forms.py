@@ -430,7 +430,8 @@ class TestMessageAcceptanceForm(TestCase):
 
     fields = ('acceptable_aliases', 'require_explicit_destination',
               'administrivia', 'default_member_action',
-              'default_nonmember_action', 'max_message_size')
+              'default_nonmember_action', 'max_message_size',
+              'max_num_recipients')
 
     def prepare_formdata(self, values):
         return dict(((key, val) for key, val in zip(self.fields, values) if val is not None))   # noqa
@@ -440,7 +441,7 @@ class TestMessageAcceptanceForm(TestCase):
         form = MessageAcceptanceForm({}, mlist=None)
         self.assertFalse(form.is_valid())
         # Now lets try with only required fields.
-        values = (None, None, None, 'hold', 'hold', 40)
+        values = (None, None, None, 'hold', 'hold', 40, 100)
         form = MessageAcceptanceForm(self.prepare_formdata(values), mlist=None)
         print(form.errors)
         self.assertTrue(form.is_valid())
