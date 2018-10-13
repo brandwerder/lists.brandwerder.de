@@ -42,11 +42,11 @@ class MailingListView(TemplateView, MailmanClientMixin):
 
     Sets self.mailing_list to list object if list_id is in **kwargs.
     """
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
         # This should be overridden by the subclass.
         return HttpResponse(status=405)
 
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
         # This should be overridden by the subclass.
         return HttpResponse(status=405)
 
