@@ -159,7 +159,7 @@ class TestListNew(TestCase):
                         'description': 'The Most Desirable organization', })
         # Without domain choices, the form is not going to be valid.
         self.assertFalse(form.is_valid())
-        self.assertTrue(form.fields['mail_host'].help_text ==
+        self.assertTrue(form.fields['mail_host'].help_text ==     # noqa: W504
                         'Site admin has not created any domains')
 
     def test_listname_validation(self):
