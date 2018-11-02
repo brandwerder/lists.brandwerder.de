@@ -83,7 +83,7 @@ list_patterns = [
 ]
 
 urlpatterns = [
-    url(r'^$', list_views.list_index),
+    url(r'^$', list_views.list_index),                   # noqa: W605 (bogus)
     url(r'^accounts/subscriptions/$', user_views.user_subscriptions,
         name='ps_user_profile'),
     url(r'^accounts/per-address-preferences/$',

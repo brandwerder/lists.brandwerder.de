@@ -113,7 +113,7 @@ def list_members_view(request, list_id, role=None):
         if mailing_list.member_count == 0:
             context['empty_error'] = _('List has no Subscribers')
         else:
-            context['empty_error'] =\
+            context['empty_error'] = \
                 _('No member was found matching the search')
         context['form'] = form
     else:
@@ -205,13 +205,13 @@ class ListSummaryView(MailingListView):
                 'hyperkitty_enabled': False}
         if self.mailing_list.settings['archive_policy'] == 'public':
             data['public_archive'] = True
-        if getattr(settings, 'TESTING', False) and \
-                'hyperkitty' not in settings.INSTALLED_APPS:
+        if (getattr(settings, 'TESTING', False) and               # noqa: W504
+                'hyperkitty' not in settings.INSTALLED_APPS):
             # avoid systematic test failure when HyperKitty is installed
             # (missing VCR request, see below).
             list(self.mailing_list.archivers)
-        if ('hyperkitty' in settings.INSTALLED_APPS and
-                'hyperkitty' in self.mailing_list.archivers and
+        if ('hyperkitty' in settings.INSTALLED_APPS and           # noqa: W504
+                'hyperkitty' in self.mailing_list.archivers and   # noqa: W504
                 self.mailing_list.archivers['hyperkitty']):
             data['hyperkitty_enabled'] = True
         if request.user.is_authenticated:
@@ -270,7 +270,7 @@ class ChangeSubscriptionView(MailingListView):
                     # confirmation is needed.
                     response = self.mailing_list.subscribe(
                         email, pre_confirmed=True)
-                    if (type(response) == dict and
+                    if (type(response) == dict and                # noqa: W504
                             response.get('token_owner') == 'moderator'):
                         messages.success(
                             request, _('Your request to change the email for'
@@ -308,7 +308,7 @@ class ListSubscribeView(MailingListView):
                 email = request.POST.get('email')
                 response = self.mailing_list.subscribe(
                     email, pre_verified=True, pre_confirmed=True)
-                if (type(response) == dict and
+                if (type(response) == dict and                    # noqa: W504
                         response.get('token_owner') == 'moderator'):
                     messages.success(
                         request, _('Your subscription request has been'
