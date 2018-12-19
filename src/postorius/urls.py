@@ -133,7 +133,7 @@ urlpatterns = [
     url(r'^api/list/(?P<list_id>[^/]+)/held_message/(?P<held_id>\d+)/$',
         rest_views.get_held_message, name='rest_held_message'),
     url(r'^api/list/(?P<list_id>[^/]+)/held_message/(?P<held_id>\d+)/'
-        'attachment/(?P<attachment_id>\d+)/$',
+        r'attachment/(?P<attachment_id>\d+)/$',
         rest_views.get_attachment_for_held_message,
         name='rest_attachment_for_held_message'),
     # URL configuration for templates.
