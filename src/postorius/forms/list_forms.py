@@ -290,7 +290,7 @@ class MessageAcceptanceForm(ListSettingsForm):
             'the message.'))
     default_nonmember_action = forms.ChoiceField(
         widget=forms.RadioSelect(),
-        label=_('Default action to take when a non-member posts to the'
+        label=_('Default action to take when a non-member posts to the '
                 'list'),
         error_messages={
             'required': _("Please choose a default non-member action.")},
