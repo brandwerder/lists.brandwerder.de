@@ -735,7 +735,9 @@ def list_subscription_requests(request, list_id):
     """Shows a list of subscription requests.
     """
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
-    requests = m_list.requests
+    requests = [req
+                for req in m_list.requests
+                if req['token_owner'] == 'moderator']
     paginated_requests = paginate(
         requests,
         request.GET.get('page'),

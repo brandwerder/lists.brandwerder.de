@@ -192,13 +192,22 @@ class ListSettingsTest(ViewTestCase):
             b'There are currently no subscription requests for this list.'
             in response.content)
         self.assertNotContains(response, '<div class="paginator">')
+        # We set subscription policy to 'confirm', which should wait for the
+        # user approval.
+        self.foo_list.settings['subscription_policy'] = 'confirm'
+        self.foo_list.settings.save()
+        self.foo_list.subscribe('someone@example.com', pre_verified=True)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # Check that the request is not shown in pending subscription requests.
+        self.assertTrue('someone@example.com' not in str(response.content))
         # Now we set the subscription policy to moderate so that all
         # subscriptions are held for moderator approval.
         self.foo_list.settings['subscription_policy'] = 'moderate'
         self.foo_list.settings.save()
-        self.foo_list.subscribe('test@example.com')
-        self.foo_list.subscribe('owner@example.com')
-        self.foo_list.subscribe('moderator@example.com')
+        self.foo_list.subscribe('test@example.com', pre_verified=True)
+        self.foo_list.subscribe('owner@example.com', pre_verified=True)
+        self.foo_list.subscribe('moderator@example.com', pre_verified=True)
         # Now there should be three subscription requests pending.
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
