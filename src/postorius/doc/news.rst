@@ -23,6 +23,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 (201X-XX-XX)
 
 * Expose ``max_num_recipients`` in list settings. (Closes #297)
+* Add support for Non-member management in Postorius. (Closes #265)
+* `Members` tab in Mailing List settings page is now called `Users`. (Closes #309)
 
 1.2.2
 =====

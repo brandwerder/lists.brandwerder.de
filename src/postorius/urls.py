@@ -31,7 +31,7 @@ list_patterns = [
     url(r'^csv_view/$', list_views.csv_view, name='csv_view'),
     url(r'^members/options/(?P<email>.+)$', list_views.list_member_options,
         name='list_member_options'),
-    url(r'^members/(?P<role>\w+)/$', list_views.list_members_view,
+    url(r'^members/(?P<role>\w+)/$', list_views.ListMembersViews.as_view(),
         name='list_members'),
     url(r'^$', list_views.ListSummaryView.as_view(),
         name='list_summary'),
