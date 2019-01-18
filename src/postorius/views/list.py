@@ -71,7 +71,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
             if "*" not in query:
                 query = '*{}*'.format(query)
         else:
-            query = None
+            query = ''
 
         return query
 
