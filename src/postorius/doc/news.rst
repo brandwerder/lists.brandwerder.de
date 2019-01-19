@@ -20,7 +20,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 1.2.3
 =====
-(201X-XX-XX)
+(2019-01-19)
 
 * Expose ``max_num_recipients`` in list settings. (Closes #297)
 * Add support for Non-member management in Postorius. (Closes #265)
