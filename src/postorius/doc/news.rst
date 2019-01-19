@@ -22,15 +22,12 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 =====
 (201X-XX-XX)
 
-* Expose ``max_num_recipients`` in list settings.  (Closes #297)
-* Add support for Non-member management in Postorius.  (Closes #265)
+* Expose ``max_num_recipients`` in list settings. (Closes #297)
+* Add support for Non-member management in Postorius. (Closes #265)
 * `Members` tab in Mailing List settings page is now called `Users`.
   (Closes #309)
 * Show pending subscription requests are only pending for Moderator.
   (Closes #314)
-* Add support for ``explicit_header_only`` in list settings.
-  (See !369)
-
 
 1.2.2
 =====

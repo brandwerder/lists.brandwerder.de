@@ -484,8 +484,7 @@ class AlterMessagesForm(ListSettingsForm):
         choices=(
             ('no_munging', _('No Munging')),
             ('point_to_list', _('Reply goes to list')),
-            ('explicit_header', _('Explicit Reply-to header set')),
-            ('explicit_header_only', _('Explicit Reply-to set; no Cc added'))),
+            ('explicit_header', _('Explicit Reply-to header set'))),
         help_text=_(
             'Where are replies to list messages directed? No Munging is '
             'strongly recommended for most mailing lists. \nThis option '
@@ -494,13 +493,10 @@ class AlterMessagesForm(ListSettingsForm):
             'Reply-To: header is '
             'added by Mailman, although if one is present in the original '
             'message, it is not stripped. Setting this value to either Reply '
-            'to List, Explicit Reply, or Reply Only causes Mailman to insert '
-            'a specific Reply-To: header in all messages, overriding the '
-            'header in the original message if necessary '
-            '(Explicit Reply inserts the value of reply_to_address). '
-            'Explicit Reply-to set; no Cc added is useful for'
-            'announce-only lists where you want to avoid someone replying '
-            'to the list address. There are many reasons not to introduce or '
+            'to List or Explicit Reply causes Mailman to insert a specific '
+            'Reply-To: header in all messages, overriding the header in the '
+            'original message if necessary (Explicit Reply inserts the value '
+            'of reply_to_address). There are many reasons not to introduce or '
             'override the Reply-To: header. One is that some posters depend '
             'on their own Reply-To: settings to convey their valid return '
             'address. Another is that modifying Reply-To: makes it much more '
