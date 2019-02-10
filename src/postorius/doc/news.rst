@@ -20,7 +20,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 1.2.4
 =====
-(201X-XX-XX)
+(2019-02-09)
 
 * Add support for ``explicit_header_only`` in list settings.
   (See !369)

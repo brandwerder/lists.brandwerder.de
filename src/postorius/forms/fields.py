@@ -62,7 +62,7 @@ class NullBooleanRadioSelect(forms.RadioSelect):
 class SiteModelChoiceField(forms.ModelChoiceField):
 
     def label_from_instance(self, obj):
-            return "%s (%s)" % (obj.name, obj.domain)
+        return "%s (%s)" % (obj.name, obj.domain)
 
 
 class MultipleChoiceForm(forms.Form):
