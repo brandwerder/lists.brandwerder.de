@@ -18,6 +18,12 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+1.2.5
+=====
+(2019-XX-XX)
+
+
+
 1.2.4
 =====
 (2019-02-09)
