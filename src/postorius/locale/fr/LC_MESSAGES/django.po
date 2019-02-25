@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-15 23:00+0200\n"
-"PO-Revision-Date: 2014-10-29 23:38+0100\n"
-"Last-Translator: Guillaume Libersat <glibersat@sigill.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-02-26 15:18+0000\n"
+"Last-Translator: anarcat <anarcat@debian.org>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/postorius/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: forms.py:32 forms.py:133 forms.py:407
 #: templates/postorius/domain_index.html:14
@@ -214,27 +216,27 @@ msgstr "Réponse automatique au propriétaire de la liste"
 
 #: forms.py:261
 msgid "Autoresponse owner text"
-msgstr ""
+msgstr "Text d'autoréponse au propriétaire"
 
 #: forms.py:268
 msgid "Autorespond postings"
-msgstr ""
+msgstr "Réponses automatiques"
 
 #: forms.py:272
 msgid "Autoresponse postings text"
-msgstr ""
+msgstr "Texte de réponse automatique"
 
 #: forms.py:279
 msgid "Autorespond requests"
-msgstr ""
+msgstr "Réponse automatique aux requêtes"
 
 #: forms.py:286
 msgid "Autoresponse request text"
-msgstr ""
+msgstr "Texte de réponse automatique aux requêtes"
 
 #: forms.py:291
 msgid "Autoresponse grace period"
-msgstr ""
+msgstr "Période de grâce pour réponse automatique"
 
 #: forms.py:305
 msgid "Advertise the existence of this list?"
@@ -280,7 +282,7 @@ msgstr ""
 
 #: forms.py:345
 msgid "Please choose a default member action."
-msgstr "Veuillez choisir une action par défaut pour les membres"
+msgstr "Veuillez choisir une action par défaut pour les membres."
 
 #: forms.py:361
 msgid "Default action to take when a non-member posts to thelist:"
@@ -311,7 +313,7 @@ msgstr "Veuillez spécifier un entier."
 
 #: forms.py:430
 msgid "Pipeline"
-msgstr ""
+msgstr "Pipeline"
 
 #: forms.py:442 forms.py:869
 msgid "Display name"
@@ -327,7 +329,7 @@ msgstr "Répondre à la liste"
 
 #: forms.py:453
 msgid "Please choose a reply-to action."
-msgstr "Veuillez choisir une action de réponse"
+msgstr "Veuillez choisir une action de réponse."
 
 #: forms.py:455
 msgid "No Munging"
@@ -367,7 +369,7 @@ msgstr "Alias autorisés"
 
 #: forms.py:532
 msgid "Admin immed notify"
-msgstr ""
+msgstr "Notification immédiate aux administrateurs-trices"
 
 #: forms.py:544
 msgid "Notify admin of membership changes"
@@ -375,7 +377,7 @@ msgstr "Notifier l'administrateur des changements d'abonnements"
 
 #: forms.py:551
 msgid "Administrivia"
-msgstr ""
+msgstr "Administrivia"
 
 #: forms.py:563
 msgid "Anonymous list"
@@ -507,7 +509,7 @@ msgstr "Quand quelqu'un consulte la liste des membres, votre adresse courriel es
 
 #: forms.py:785
 msgid "Receive list copy"
-msgstr ""
+msgstr "Recevoir une copie de la liste"
 
 #: forms.py:787
 msgid ""
@@ -562,7 +564,7 @@ msgstr "ID"
 
 #: forms.py:863
 msgid "Please provide an integer ID."
-msgstr "Veuillez fournir un ID numérique"
+msgstr "Veuillez fournir un identifiant numérique."
 
 #: forms.py:865
 msgid "Mailing list"
@@ -842,7 +844,7 @@ msgstr "Cacher les courriels aux abonnés de la liste ?"
 
 #: templates/postorius/lists/memberoptions.html:73
 msgid "Avoid duplicate copies of messages? "
-msgstr "Eviter les messages dupliqués ?"
+msgstr "Éviter les messages dupliqués ? "
 
 #: templates/postorius/lists/memberoptions.html:80
 #: templates/postorius/user_address_activation.html:13
@@ -1049,7 +1051,7 @@ msgstr "Répondeur automatique"
 
 #: templates/postorius/menu/maintanance.html:20
 msgid "Postings"
-msgstr ""
+msgstr "Messages"
 
 #: templates/postorius/menu/maintanance.html:25
 #: templates/postorius/menu/maintanance.html:86
@@ -1095,7 +1097,7 @@ msgstr "Abonnements"
 
 #: templates/postorius/menu/subscriptions.html:16
 msgid "Join Address"
-msgstr ""
+msgstr "Adresse pour joindre la liste"
 
 #: templates/postorius/menu/subscriptions.html:22
 msgid "Owner Address"
@@ -1107,7 +1109,7 @@ msgstr "Abonnement en Masse"
 
 #: templates/postorius/menu/subscriptions.html:41
 msgid "Leave Address"
-msgstr ""
+msgstr "Adresse de départ"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Profile"
@@ -1227,14 +1229,16 @@ msgid "Content"
 msgstr "Contenu"
 
 #: templates/postorius/user_settings.html:20
-#, fuzzy
 msgid ""
 "Use this page to manage your account. You'll be able to see a list of your "
 "subscribed lists, modify these membership settings of the list and your "
 "personal preferences in user_settings <a href='https://bugs.launchpad.net/"
 "mailman/+bug/821438' >LP:821438</a> is solved <br>"
 msgstr ""
-"Utilisez cette page pour gérer votre compte. Vous pourrez voir une liste de vos abonnements aux listes, modifier vos paramètres d'abonnement de cette liste et vos préférences personnelles dans user_setting  a href='https://bugs.launchpad.net/\"\n"
+"Utilisez cette page pour gérer votre compte. Vous pourrez voir une liste de "
+"vos abonnements aux listes, modifier vos paramètres d'abonnement de cette "
+"liste et vos préférences personnelles dans \"user_setting\"  <a "
+"href='https://bugs.launchpad.net/\"\n"
 "\"mailman/+bug/821438' >LP:821438</a> est corrigé <br>"
 
 #: templates/postorius/user_settings.html:34
