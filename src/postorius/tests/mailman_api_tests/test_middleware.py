@@ -31,7 +31,7 @@ class TestMiddleware(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
 
-    @mock.patch('httplib2.Http.request')
+    @mock.patch('requests.request')
     @mock.patch('postorius.views.list.list_index')
     def test_middleware_request(self, mock_request, mock_list_index):
         # Mock the view function to raise MailmanApiError and verify
