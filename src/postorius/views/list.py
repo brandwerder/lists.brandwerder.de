@@ -658,9 +658,12 @@ def list_index_authenticated(request):
 
     # Get all the mailing lists for the current user.
     all_lists = []
+    mail_host = request.get_host().split(':')[0] if (
+        getattr(settings, 'FILTER_VHOST', False)) else None
     for user_email in user_emails:
         try:
-            all_lists.extend(client.find_lists(user_email, role=role))
+            all_lists.extend(
+                client.find_lists(user_email, role=role, mail_host=mail_host))
         except HTTPError:
             # No lists exist with the given role for the given user.
             pass
@@ -695,8 +698,10 @@ def list_index(request, template='postorius/index.html'):
     def _get_list_page(count, page):
         client = get_mailman_client()
         advertised = not request.user.is_superuser
+        mail_host = request.get_host().split(":")[0] if (
+            getattr(settings, 'FILTER_VHOST', False)) else None
         return client.get_list_page(
-            advertised=advertised, count=count, page=page)
+            advertised=advertised, mail_host=mail_host, count=count, page=page)
 
     lists = paginate(
         _get_list_page, request.GET.get('page'), request.GET.get('count'),
