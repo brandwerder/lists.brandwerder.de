@@ -143,7 +143,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
             except HTTPError as e:
                 messages.error(request, e.msg.decode())
         else:
-            messages.error(request, member_form.errorsg)
+            messages.error(request, member_form.errors)
         return redirect('list_members', self.mailing_list.list_id, role)
 
     def post(self, request, list_id, role=None):
