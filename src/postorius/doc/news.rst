@@ -25,6 +25,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   be exposed as notification to admin. (Closes #327)
 * Add support for ``FILTER_VHOST`` option to filter MalingLists based on
   ``HOST`` header of incoming request. (Closes #330)
+* List Summary page now renders List info as markdown. (Closes #244)
 
 
 1.2.4

@@ -170,3 +170,26 @@ class ListSummaryPageTest(ViewTestCase):
         response = self.client.get(reverse('list_summary',
                                            args=('foo@example.com',)))
         self.assertContains(response, 'List metrics')
+
+    def test_list_info(self):
+        # Test that list info is rendered as markdown.
+        settings = self.mm_client.get_list('foo@example.com').settings
+        info = 'Welcome To FooList today. This is something very interesting.'
+        settings['info'] = info
+        settings.save()
+        response = self.client.get(reverse('list_summary',
+                                           args=('foo@example.com',)))
+        self.assertContains(response, info)
+        settings['info'] = """\
+Welcome To Foolist
+==================
+
+```
+def function:
+    print('Hello World')
+```
+"""
+        settings.save()
+        response = self.client.get(reverse('list_summary',
+                                           args=('foo@example.com',)))
+        self.assertContains(response, '<pre><code>def function:')
