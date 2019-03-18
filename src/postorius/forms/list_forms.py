@@ -190,8 +190,7 @@ class ListSubscriptionPolicyForm(ListSettingsForm):
                     'Moderate: Moderators will have to authorize '
                     'each subscription manually.\n'
                     'Confirm then Moderate: First subscribers have to confirm,'
-                    ' then a moderator '
-                    'needs to authorize.'))
+                    ' then a moderator needs to authorize.'))
 
 
 class ArchiveSettingsForm(ListSettingsForm):
@@ -290,8 +289,7 @@ class MessageAcceptanceForm(ListSettingsForm):
             'the message.'))
     default_nonmember_action = forms.ChoiceField(
         widget=forms.RadioSelect(),
-        label=_('Default action to take when a non-member posts to the '
-                'list'),
+        label=_('Default action to take when a non-member posts to the list'),
         error_messages={
             'required': _("Please choose a default non-member action.")},
         required=True,
@@ -591,23 +589,10 @@ class ListAutomaticResponsesForm(ListSettingsForm):
         help_text=_(
             'Send welcome message to newly subscribed members? '
             'Turn this off only if you plan on subscribing people manually '
-            'and don\'t want them to know that you did so. This option is '
-            'most useful for transparently migrating lists from some other '
-            'mailing list manager to Mailman.'))
-    welcome_message_uri = forms.CharField(
-        label=_('URI for the welcome message'),
-        required=False,
-        help_text=_(
-            'If a welcome message is to be sent to subscribers, you can '
-            'specify a URI that gives the text of this message.'),
-    )
-    goodbye_message_uri = forms.CharField(
-        label=_('URI for the good bye message'),
-        required=False,
-        help_text=_(
-            'If a good bye message is to be sent to unsubscribers, you can '
-            'specify a URI that gives the text of this message.'),
-    )
+            'and don\'t want them to know that you did so. Setting this to No '
+            'is most useful for transparently migrating lists from some other '
+            'mailing list manager to Mailman.\n'
+            'The text of Welcome message can be set via the Templates tab.'))
     admin_immed_notify = forms.BooleanField(
         widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
         required=False,
@@ -682,8 +667,8 @@ class ListMassSubscription(forms.Form):
             'John Doe &lt;jdoe@example.com&gt;\n'
             '"John Doe" &lt;jdoe@example.com&gt;\n'
             'jdoe@example.com (John Doe)\n'
-            'Use the last three to associate a display name with'
-            ' the address\n'),
+            'Use the last three to associate a display name with the address\n'
+            ),
     )
 
 
