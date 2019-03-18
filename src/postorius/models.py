@@ -251,7 +251,7 @@ class EmailTemplate(models.Model):
         max_length=5, choices=LANGUAGES,
         help_text=_('Language for the template, this should be the list\'s preferred language.'),     # noqa: E501
         blank=True)
-    craeted_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     modified_at = models.DateTimeField(auto_now=True)
     context = models.CharField(max_length=50, choices=TEMPLATE_CONTEXT_CHOICES)
     identifier = models.CharField(blank=True, max_length=100)
