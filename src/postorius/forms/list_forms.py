@@ -371,7 +371,7 @@ class DMARCMitigationsForm(ListSettingsForm):
             'The action to apply to messages From: a domain publishing a '
             'DMARC policy of reject or quarantine or to all messages if '
             'DMARC Mitigate unconditionally is True.'))
-    dmarc_mitigate_unconditionally = forms.TypedChoiceField(
+    dmarc_mitigate_unconditionally = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -401,21 +401,21 @@ class AlterMessagesForm(ListSettingsForm):
     """
     Alter messages list settings.
     """
-    filter_content = forms.TypedChoiceField(
+    filter_content = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
         label=_('Filter content'),
         help_text=_('Should Mailman filter the content of list traffic '
                     'according to the settings below?'))
-    collapse_alternatives = forms.TypedChoiceField(
+    collapse_alternatives = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
         label=_('Collapse alternatives'),
         help_text=_('Should Mailman collapse multipart/alternative to '
                     'its first part content?'))
-    convert_html_to_plaintext = forms.TypedChoiceField(
+    convert_html_to_plaintext = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -423,7 +423,7 @@ class AlterMessagesForm(ListSettingsForm):
         help_text=_('Should Mailman convert text/html parts to plain text? '
                     'This conversion happens after MIME attachments '
                     'have been stripped.'))
-    anonymous_list = forms.TypedChoiceField(
+    anonymous_list = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -431,7 +431,7 @@ class AlterMessagesForm(ListSettingsForm):
         help_text=_('Hide the sender of a message, '
                     'replacing it with the list address '
                     '(Removes From, Sender and Reply-To fields)'))
-    include_rfc2369_headers = forms.TypedChoiceField(
+    include_rfc2369_headers = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -449,7 +449,7 @@ class AlterMessagesForm(ListSettingsForm):
             'As a last resort you can disable these headers, but this is not '
             'recommended (and in fact, your ability to disable these headers '
             'may eventually go away).'))
-    allow_list_posts = forms.TypedChoiceField(
+    allow_list_posts = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -465,7 +465,7 @@ class AlterMessagesForm(ListSettingsForm):
             'This option allows admins to set an explicit Reply-to address. '
             'It is only used if the reply-to is set to use an explicitly set '
             'header'))
-    first_strip_reply_to = forms.TypedChoiceField(
+    first_strip_reply_to = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -572,7 +572,7 @@ class ListAutomaticResponsesForm(ListSettingsForm):
             'or -request/-owner address from the same poster. Set to zero '
             '(or negative) for no grace period (i.e. auto-respond to every '
             'message).'))
-    respond_to_post_requests = forms.TypedChoiceField(
+    respond_to_post_requests = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -581,7 +581,7 @@ class ListAutomaticResponsesForm(ListSettingsForm):
             'Should Mailman notify users about their messages held for '
             'approval. If you say \'No\', no notifications will be sent '
             'to users about the pending approval on their messages.'))
-    send_welcome_message = forms.TypedChoiceField(
+    send_welcome_message = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         required=False,
@@ -617,7 +617,7 @@ class ListIdentityForm(ListSettingsForm):
     """
     List identity settings.
     """
-    advertised = forms.TypedChoiceField(
+    advertised = forms.ChoiceField(
         choices=((True, _('Yes')), (False, _('No'))),
         widget=forms.RadioSelect,
         label=_('Show list on index page'),
