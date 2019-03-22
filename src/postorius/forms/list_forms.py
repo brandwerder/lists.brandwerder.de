@@ -772,7 +772,7 @@ class MemberModeration(forms.Form):
             'Discard -- this simply discards the message, with no notice '
             'sent to the post\'s author. \n'
             'Accept -- accepts any postings without any further checks. \n'
-            'Defer -- default processing, run additional checks and accept '
+            'Default Processing -- run additional checks and accept '
             'the message. \n'))
 
 
