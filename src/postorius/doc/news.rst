@@ -26,6 +26,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support for ``FILTER_VHOST`` option to filter MalingLists based on
   ``HOST`` header of incoming request. (Closes #330)
 * List Summary page now renders List info as markdown. (Closes #244)
+* Moderation action for held message's sender can now be set from held
+  message's view.(Closes #127)
 
 
 1.2.4

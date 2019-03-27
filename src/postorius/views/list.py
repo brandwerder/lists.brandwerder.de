@@ -22,7 +22,7 @@ import email.utils
 import logging
 
 from allauth.account.models import EmailAddress
-from django.http import HttpResponse, HttpResponseNotAllowed, Http404
+from django.http import HttpResponse, Http404
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -33,9 +33,11 @@ from django.core.exceptions import ValidationError
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
+from django.utils.six.moves.urllib.error import HTTPError
+from django.views.decorators.http import require_http_methods
+
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.lib.paginator import paginate, MailmanPaginator
-from django.utils.six.moves.urllib.error import HTTPError
 
 from postorius.forms import (
     ListNew, MemberForm, ListSubscribe, MultipleChoiceForm, UserPreferences,
@@ -44,6 +46,7 @@ from postorius.forms import (
     ListIdentityForm, ListMassSubscription, ListMassRemoval, ListAddBanForm,
     ListHeaderMatchForm, ListHeaderMatchFormset, MemberModeration,
     DMARCMitigationsForm, ListAnonymousSubscribe)
+from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import Domain, List, Mailman404Error, Style
 from postorius.auth.decorators import (
     list_owner_required, list_moderator_required, superuser_required)
@@ -512,26 +515,42 @@ def list_moderation(request, list_id, held_id=-1):
         'list': mailing_list,
         'held_messages': held_messages,
         'form': form,
+        'ACTION_CHOICES': ACTION_CHOICES,
         }
     return render(request, 'postorius/lists/held_messages.html', context)
 
 
+@require_http_methods(['POST'])
 @login_required
 @list_moderator_required
 def moderate_held_message(request, list_id):
-    if request.method != 'POST':
-        return HttpResponseNotAllowed(['POST'])
-    msg_id = request.POST['msgid']
+    """Moderate one held message"""
     mailing_list = List.objects.get_or_404(fqdn_listname=list_id)
+    msg = mailing_list.get_held_message(request.POST['msgid'])
+    moderation_choice = request.POST.get('moderation_choice')
     if 'accept' in request.POST:
-        mailing_list.accept_message(msg_id)
+        mailing_list.accept_message(msg.request_id)
         messages.success(request, _('The message was accepted'))
     elif 'reject' in request.POST:
-        mailing_list.reject_message(msg_id)
+        mailing_list.reject_message(msg.request_id)
         messages.success(request, _('The message was rejected'))
     elif 'discard' in request.POST:
-        mailing_list.discard_message(msg_id)
+        mailing_list.discard_message(msg.request_id)
         messages.success(request, _('The message was discarded'))
+    moderation_choices = dict(ACTION_CHOICES)
+    if moderation_choice in moderation_choices:
+        try:
+            member = mailing_list.get_member(msg.sender)
+            member.moderation_action = moderation_choice
+            member.save()
+            messages.success(
+                request,
+                _('Moderation action for {} set to {}'.format(
+                    member, moderation_choices[moderation_choice])))
+        except ValueError as e:
+            messages.error(
+                request,
+                _('Failed to set moderation action: {}'.format(e)))
     return redirect('list_held_messages', list_id)
 
 
