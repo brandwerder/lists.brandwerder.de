@@ -1,0 +1,931 @@
+interactions:
+- request:
+    body: mail_host=example.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '21'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: POST
+    uri: http://localhost:9001/3.0/domains
+  response:
+    body:
+      string: ''
+    headers:
+      content-length:
+      - '0'
+      content-type:
+      - application/json; charset=UTF-8
+      location:
+      - http://localhost:9001/3.0/domains/example.com
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/domains/example.com
+  response:
+    body:
+      string: '{"alias_domain": null, "description": null, "http_etag": "\"492652d581dc93af101db450d81ae93a074bff49\"",
+        "mail_host": "example.com", "self_link": "http://localhost:9001/3.0/domains/example.com"}'
+    headers:
+      content-length:
+      - '194'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: fqdn_listname=test-2%40example.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '34'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: POST
+    uri: http://localhost:9001/3.0/lists
+  response:
+    body:
+      string: ''
+    headers:
+      content-length:
+      - '0'
+      content-type:
+      - application/json; charset=UTF-8
+      location:
+      - http://localhost:9001/3.0/lists/test-2.example.com
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2.example.com
+  response:
+    body:
+      string: '{"description": "", "display_name": "Test-2", "fqdn_listname": "test-2@example.com",
+        "http_etag": "\"abe5c462f6347ad7285a1a79183292a94a7bc1e9\"", "list_id": "test-2.example.com",
+        "list_name": "test-2", "mail_host": "example.com", "member_count": 0, "self_link":
+        "http://localhost:9001/3.0/lists/test-2.example.com", "volume": 1}'
+    headers:
+      content-length:
+      - '328'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/config
+  response:
+    body:
+      string: '{"acceptable_aliases": [], "admin_immed_notify": true, "admin_notify_mchanges":
+        false, "administrivia": true, "advertised": true, "allow_list_posts": true,
+        "anonymous_list": false, "archive_policy": "public", "autorespond_owner":
+        "none", "autorespond_postings": "none", "autorespond_requests": "none", "autoresponse_grace_period":
+        "90d", "autoresponse_owner_text": "", "autoresponse_postings_text": "", "autoresponse_request_text":
+        "", "bounces_address": "test-2-bounces@example.com", "collapse_alternatives":
+        true, "convert_html_to_plaintext": false, "created_at": "2005-08-01T07:49:23",
+        "default_member_action": "defer", "default_nonmember_action": "hold", "description":
+        "", "digest_footer_uri": "", "digest_header_uri": "", "digest_last_sent_at":
+        null, "digest_send_periodic": true, "digest_size_threshold": 30.0, "digest_volume_frequency":
+        "monthly", "digests_enabled": true, "display_name": "Test-2", "dmarc_mitigate_action":
+        "no_mitigation", "dmarc_mitigate_unconditionally": false, "dmarc_moderation_notice":
+        "", "dmarc_wrapped_message_text": "", "filter_content": false, "first_strip_reply_to":
+        false, "footer_uri": "", "fqdn_listname": "test-2@example.com", "goodbye_message_uri":
+        "", "header_uri": "", "http_etag": "\"5aa68316ec76edd9a2aa2578b942e286fd27e688\"",
+        "include_rfc2369_headers": true, "info": "", "join_address": "test-2-join@example.com",
+        "last_post_at": null, "leave_address": "test-2-leave@example.com", "list_name":
+        "test-2", "mail_host": "example.com", "max_message_size": 40, "max_num_recipients":
+        10, "member_roster_visibility": "moderators", "moderator_password": null,
+        "next_digest_number": 1, "no_reply_address": "noreply@example.com", "owner_address":
+        "test-2-owner@example.com", "post_id": 1, "posting_address": "test-2@example.com",
+        "posting_pipeline": "default-posting-pipeline", "preferred_language": "en",
+        "reply_goes_to_list": "no_munging", "reply_to_address": "", "request_address":
+        "test-2-request@example.com", "require_explicit_destination": true, "respond_to_post_requests":
+        true, "send_welcome_message": true, "subject_prefix": "[Test-2] ", "subscription_policy":
+        "confirm", "volume": 1, "welcome_message_uri": ""}'
+    headers:
+      content-length:
+      - '2159'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: default_member_action=hold
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '26'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: PATCH
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/config
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: display_name=None&list_id=test-2.example.com&pre_confirmed=True&pre_verified=True&subscriber=aperson%40example.com
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '114'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: POST
+    uri: http://localhost:9001/3.0/members
+  response:
+    body:
+      string: ''
+    headers:
+      content-length:
+      - '0'
+      content-type:
+      - application/json; charset=UTF-8
+      location:
+      - http://localhost:9001/3.0/members/12
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues
+  response:
+    body:
+      string: '{"entries": [{"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/archive",
+        "files": [], "http_etag": "\"5491e0d3a5cbea146dea16864b3797691cf45588\"",
+        "name": "archive", "self_link": "http://localhost:9001/3.0/queues/archive"},
+        {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/bad",
+        "files": [], "http_etag": "\"82f098b0a994835a7ce3f693de0e29dc7784fe09\"",
+        "name": "bad", "self_link": "http://localhost:9001/3.0/queues/bad"}, {"count":
+        0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/bounces",
+        "files": [], "http_etag": "\"6de382eae5500d58fc275a0869f76cbbfd9afc78\"",
+        "name": "bounces", "self_link": "http://localhost:9001/3.0/queues/bounces"},
+        {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/command",
+        "files": [], "http_etag": "\"35d99f5b2628a6f6dc9f47fc20a23ee61c086b5d\"",
+        "name": "command", "self_link": "http://localhost:9001/3.0/queues/command"},
+        {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/digest",
+        "files": [], "http_etag": "\"2e3dbb690de7fb40afe1ef8ff7a3d0c4459aed8e\"",
+        "name": "digest", "self_link": "http://localhost:9001/3.0/queues/digest"},
+        {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": [], "http_etag": "\"45a33561fa0974fd78e671e7e7d3fd0b87e0d57a\"",
+        "name": "in", "self_link": "http://localhost:9001/3.0/queues/in"}, {"count":
+        0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/nntp", "files":
+        [], "http_etag": "\"2cc7468e9778cdc59fa80b451b2509582365caaf\"", "name": "nntp",
+        "self_link": "http://localhost:9001/3.0/queues/nntp"}, {"count": 0, "directory":
+        "/home/maxking/Documents/mm3/core/var_test/queue/out", "files": [], "http_etag":
+        "\"029de39114c017935e814e1ac3ab372679fdb130\"", "name": "out", "self_link":
+        "http://localhost:9001/3.0/queues/out"}, {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/pipeline",
+        "files": [], "http_etag": "\"3d4dc726ab1ee649fea4c09570fa024acc8d8a50\"",
+        "name": "pipeline", "self_link": "http://localhost:9001/3.0/queues/pipeline"},
+        {"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/retry",
+        "files": [], "http_etag": "\"fd92d1a28f293ea141578f63f83d2a264bcac96a\"",
+        "name": "retry", "self_link": "http://localhost:9001/3.0/queues/retry"}, {"count":
+        37, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/shunt",
+        "files": ["1553653385.5083861+f2ef2d480abe3b399f092dffcbc1eb9e839989eb", "1553653421.6732728+8360c1ebea60ca3874d491e8359198e6f04060c2",
+        "1553653421.6772797+7b9aad792f5696a06f44ad41df2ec1a9d0a77c0b", "1553653460.7329412+ba125467fceaeacda89e51067b100f11742c6082",
+        "1553653460.7369995+a44ea20cdfae4bf6f5ac69a70b5d4ecb1a86d8ad", "1553653465.756533+fb233331a3d65a9ddabd3aaca5c2207c32b01015",
+        "1553653465.7708564+cd5e1c3358c439b054856f29db2eff50b98715bf", "1553653465.893548+c4ae26db8239e2a347ec8e8a93827edf50460ee3",
+        "1553654214.832579+62f4ee717c2977a96f4f45006df90a8155d5ed56", "1553654214.8477516+a81506ba5e8696a1e80ba76beb9d8f4ae24e2604",
+        "1553654214.9150755+d0953fe475d2b4d8e22a1be338dfc4bc069947fd", "1553654215.8628316+fd420e3b4b0277a99e5bff859f6673195cacf006",
+        "1553654215.8808596+2ddb41a2a799e3fb4fe9ca8b67b11aa8e3e13f72", "1553654215.9315104+71d0e2314945253a2695ffce989bc994a70d68e7",
+        "1553654290.0206745+0a3f45cfa33a3e05bcb9d8000611f10c9cf9e054", "1553654290.0249085+e587f18d73271aca565547a5258830a1ab20849d",
+        "1553654290.0430887+6a71c3aafd37a000d07ba0a637a110b229a53df0", "1553654291.0382297+fa0a5d4e15d2b8ff29905fc03205468f6790f200",
+        "1553654291.0516722+b4706522f4610b72b647cf3a3f31acb46184cea4", "1553654291.0531209+d8797024feb891093318d5f1fb57fc9c03bd328d",
+        "1553654402.2150567+3d74eaf6e9feccf10d600b6240950bff96dc36b9", "1553654402.217807+46c8e5d241c3d29b17f64a6730334bcc0ed2edd1",
+        "1553654402.221709+bbb222adb30f58189221be7082471d28e8af8d85", "1553654403.228669+6aa7ac4ae4974a770ade254a1ef971a82ae3d508",
+        "1553654403.2359717+13d3614c9bb4beacfbb4550174cb219eb91a4d57", "1553654403.249773+b44fa307316ffa10db4ffe104d23ea5f2fb11b14",
+        "1553655038.9377487+adb1d88b37f8847de33f22e251911e48dc64820d", "1553655038.947407+45fd919421739b6a2a0b4acd07ce6fafbad077c9",
+        "1553655038.951303+5f476f71bac1f6d6700615f3ee5eb059204dfa1d", "1553655100.128928+81a985e72900c70d8ed3d64277532b0bdf1558f6",
+        "1553655100.1483734+4e69d3bc03326bdc7ce81962020208481405b96b", "1553655100.1521826+194cd98c93514e52cc89f8ae4d338f90b5bb3389",
+        "1553655100.5634217+f309514c08dd7bd0a89399ea140eb12f12c9816f", "1553655100.9237406+b75c0da81e91bdca1f2540f74a5d93e4eac4cf66",
+        "1553655101.14265+0ff8bf30eb98b0f1b79869c9ec4f51925f25117c", "1553655101.1659577+1f828d655a77163a1387426fb3bff5f5b6ef84e4",
+        "1553655101.1801186+5c21abb17c7be9cd5490c251a36c359374be38cb"], "http_etag":
+        "\"e6bc3130ec3a5d91c56fee6601a8c8157b65f0e2\"", "name": "shunt", "self_link":
+        "http://localhost:9001/3.0/queues/shunt"}, {"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/virgin",
+        "files": ["1553655539.3449664+15c5e3dce0696bd33e3f7faeba51b2d5733ec4f0"],
+        "http_etag": "\"65ed2bd34490f1dcdca762e0691c27ad846e8b3d\"", "name": "virgin",
+        "self_link": "http://localhost:9001/3.0/queues/virgin"}], "http_etag": "\"536744338b2518c8ec49d7a37308585efb35f710\"",
+        "self_link": "http://localhost:9001/3.0/queues", "start": 0, "total_size":
+        12}'
+    headers:
+      content-length:
+      - '5301'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: list_id=test-2.example.com&text=From%3A+aperson%40example.com%0ATo%3A+test-2%40example.com%0ASubject%3A+This+is+a+test+message%0AMessage-ID%3A+%3Ctest-msg%40id%3E%0A%0AThis+is+a+test+message.%0A%0A
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '197'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: POST
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: ''
+    headers:
+      content-length:
+      - '0'
+      content-type:
+      - application/json; charset=UTF-8
+      location:
+      - http://localhost:9001/3.0/queues/in/1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 1, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": ["1553655539.3616087+ec16bdc023a83f899616bd6ff4858b286eccffbb"],
+        "http_etag": "\"ea83c81ac8fd5b9b7346aa9d0113790d0ef323a4\"", "name": "in",
+        "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '280'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/queues/in
+  response:
+    body:
+      string: '{"count": 0, "directory": "/home/maxking/Documents/mm3/core/var_test/queue/in",
+        "files": [], "http_etag": "\"45a33561fa0974fd78e671e7e7d3fd0b87e0d57a\"",
+        "name": "in", "self_link": "http://localhost:9001/3.0/queues/in"}'
+    headers:
+      content-length:
+      - '219'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/held
+  response:
+    body:
+      string: '{"http_etag": "\"32223434a0f3af4cdc4673d1fbc5bac1f6d98fd3\"", "start":
+        0, "total_size": 0}'
+    headers:
+      content-length:
+      - '90'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/held
+  response:
+    body:
+      string: '{"entries": [{"_parsemsg": false, "envsender": "noreply@example.com",
+        "hold_date": "2005-08-01T07:49:23", "http_etag": "\"93a1b34b751e03218ed938592c6a16e04cbed733\"",
+        "lang": "en", "listid": "test-2.example.com", "member_moderation_action":
+        "hold", "message_id": "<test-msg@id>", "moderation_reasons": ["The message
+        comes from a moderated member"], "moderation_sender": "aperson@example.com",
+        "msg": "From: aperson@example.com\nTo: test-1@example.com\nSubject: This is
+        a test message\nMessage-ID: <test-msg@id>\nDate: Tue, 26 Mar 2019 19:23:39
+        -0700\nX-Mailman-Rule-Hits: nonmember-moderation\nX-Mailman-Rule-Misses: dmarc-mitigation;
+        no-senders; approved; emergency; loop; banned-address; member-moderation\nMessage-ID-Hash:
+        KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\nX-Message-ID-Hash: KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\n\nThis
+        is a test message.\n\n", "original_size": 273, "original_subject": "This is
+        a test message", "reason": "The message comes from a moderated member", "request_id":
+        1, "rule_hits": ["member-moderation"], "rule_misses": ["dmarc-mitigation",
+        "no-senders", "approved", "emergency", "loop", "banned-address"], "self_link":
+        "http://localhost:9001/3.0/lists/test-2.example.com/held/1", "sender": "aperson@example.com",
+        "subject": "This is a test message", "version": 3}], "http_etag": "\"d15259666cae2f2bae7dbbcae331d2e110e40205\"",
+        "start": 0, "total_size": 1}'
+    headers:
+      content-length:
+      - '1372'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/held
+  response:
+    body:
+      string: '{"entries": [{"_parsemsg": false, "envsender": "noreply@example.com",
+        "hold_date": "2005-08-01T07:49:23", "http_etag": "\"93a1b34b751e03218ed938592c6a16e04cbed733\"",
+        "lang": "en", "listid": "test-2.example.com", "member_moderation_action":
+        "hold", "message_id": "<test-msg@id>", "moderation_reasons": ["The message
+        comes from a moderated member"], "moderation_sender": "aperson@example.com",
+        "msg": "From: aperson@example.com\nTo: test-1@example.com\nSubject: This is
+        a test message\nMessage-ID: <test-msg@id>\nDate: Tue, 26 Mar 2019 19:23:39
+        -0700\nX-Mailman-Rule-Hits: nonmember-moderation\nX-Mailman-Rule-Misses: dmarc-mitigation;
+        no-senders; approved; emergency; loop; banned-address; member-moderation\nMessage-ID-Hash:
+        KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\nX-Message-ID-Hash: KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\n\nThis
+        is a test message.\n\n", "original_size": 273, "original_subject": "This is
+        a test message", "reason": "The message comes from a moderated member", "request_id":
+        1, "rule_hits": ["member-moderation"], "rule_misses": ["dmarc-mitigation",
+        "no-senders", "approved", "emergency", "loop", "banned-address"], "self_link":
+        "http://localhost:9001/3.0/lists/test-2.example.com/held/1", "sender": "aperson@example.com",
+        "subject": "This is a test message", "version": 3}], "http_etag": "\"d15259666cae2f2bae7dbbcae331d2e110e40205\"",
+        "start": 0, "total_size": 1}'
+    headers:
+      content-length:
+      - '1372'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2@example.com/held
+  response:
+    body:
+      string: '{"entries": [{"_parsemsg": false, "envsender": "noreply@example.com",
+        "hold_date": "2005-08-01T07:49:23", "http_etag": "\"93a1b34b751e03218ed938592c6a16e04cbed733\"",
+        "lang": "en", "listid": "test-2.example.com", "member_moderation_action":
+        "hold", "message_id": "<test-msg@id>", "moderation_reasons": ["The message
+        comes from a moderated member"], "moderation_sender": "aperson@example.com",
+        "msg": "From: aperson@example.com\nTo: test-1@example.com\nSubject: This is
+        a test message\nMessage-ID: <test-msg@id>\nDate: Tue, 26 Mar 2019 19:23:39
+        -0700\nX-Mailman-Rule-Hits: nonmember-moderation\nX-Mailman-Rule-Misses: dmarc-mitigation;
+        no-senders; approved; emergency; loop; banned-address; member-moderation\nMessage-ID-Hash:
+        KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\nX-Message-ID-Hash: KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\n\nThis
+        is a test message.\n\n", "original_size": 273, "original_subject": "This is
+        a test message", "reason": "The message comes from a moderated member", "request_id":
+        1, "rule_hits": ["member-moderation"], "rule_misses": ["dmarc-mitigation",
+        "no-senders", "approved", "emergency", "loop", "banned-address"], "self_link":
+        "http://localhost:9001/3.0/lists/test-2.example.com/held/1", "sender": "aperson@example.com",
+        "subject": "This is a test message", "version": 3}], "http_etag": "\"d15259666cae2f2bae7dbbcae331d2e110e40205\"",
+        "start": 0, "total_size": 1}'
+    headers:
+      content-length:
+      - '1372'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.1/lists/test-2.example.com
+  response:
+    body:
+      string: '{"description": "", "display_name": "Test-2", "fqdn_listname": "test-2@example.com",
+        "http_etag": "\"32ccd4ea3e015cf9613b8268b44a3300fbd3e5ab\"", "list_id": "test-2.example.com",
+        "list_name": "test-2", "mail_host": "example.com", "member_count": 1, "self_link":
+        "http://localhost:9001/3.1/lists/test-2.example.com", "volume": 1}'
+    headers:
+      content-length:
+      - '328'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.1/lists/test-2@example.com/held/1
+  response:
+    body:
+      string: '{"_parsemsg": false, "envsender": "noreply@example.com", "hold_date":
+        "2005-08-01T07:49:23", "http_etag": "\"4c683eb625ea200bdba1d11b485fd36855ebf9ec\"",
+        "lang": "en", "listid": "test-2.example.com", "member_moderation_action":
+        "hold", "message_id": "<test-msg@id>", "moderation_reasons": ["The message
+        comes from a moderated member"], "moderation_sender": "aperson@example.com",
+        "msg": "From: aperson@example.com\nTo: test-1@example.com\nSubject: This is
+        a test message\nMessage-ID: <test-msg@id>\nDate: Tue, 26 Mar 2019 19:23:39
+        -0700\nX-Mailman-Rule-Hits: nonmember-moderation\nX-Mailman-Rule-Misses: dmarc-mitigation;
+        no-senders; approved; emergency; loop; banned-address; member-moderation\nMessage-ID-Hash:
+        KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\nX-Message-ID-Hash: KTEN5N5EZT367FSVW5YVJNYDS5TE4W32\n\nThis
+        is a test message.\n\n", "original_size": 273, "original_subject": "This is
+        a test message", "reason": "The message comes from a moderated member", "request_id":
+        1, "rule_hits": ["member-moderation"], "rule_misses": ["dmarc-mitigation",
+        "no-senders", "approved", "emergency", "loop", "banned-address"], "self_link":
+        "http://localhost:9001/3.1/lists/test-2.example.com/held/1", "sender": "aperson@example.com",
+        "subject": "This is a test message", "version": 3}'
+    headers:
+      content-length:
+      - '1267'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: action=accept
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: POST
+    uri: http://localhost:9001/3.1/lists/test-2@example.com/held/1
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.1/lists/test-2.example.com/member/aperson@example.com
+  response:
+    body:
+      string: '{"address": "http://localhost:9001/3.1/addresses/aperson@example.com",
+        "delivery_mode": "regular", "display_name": "", "email": "aperson@example.com",
+        "http_etag": "\"beb4b430ca10aab673cc5a21976cc1920ec6b06c\"", "list_id": "test-2.example.com",
+        "member_id": "0000000000000000000000000000000c", "role": "member", "self_link":
+        "http://localhost:9001/3.1/members/0000000000000000000000000000000c", "user":
+        "http://localhost:9001/3.1/users/00000000000000000000000000000005"}'
+    headers:
+      content-length:
+      - '470'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: moderation_action=defer
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '23'
+      Content-Type:
+      - application/x-www-form-urlencoded
+    method: PATCH
+    uri: http://localhost:9001/3.1/members/0000000000000000000000000000000c
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.1/members/0000000000000000000000000000000c
+  response:
+    body:
+      string: '{"address": "http://localhost:9001/3.1/addresses/aperson@example.com",
+        "delivery_mode": "regular", "display_name": "", "email": "aperson@example.com",
+        "http_etag": "\"5599cd13b769e741623edc2d3e065b88423a5d91\"", "list_id": "test-2.example.com",
+        "member_id": "0000000000000000000000000000000c", "moderation_action": "defer",
+        "role": "member", "self_link": "http://localhost:9001/3.1/members/0000000000000000000000000000000c",
+        "user": "http://localhost:9001/3.1/users/00000000000000000000000000000005"}'
+    headers:
+      content-length:
+      - '500'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/lists/test-2.example.com/member/aperson@example.com
+  response:
+    body:
+      string: '{"address": "http://localhost:9001/3.0/addresses/aperson@example.com",
+        "delivery_mode": "regular", "display_name": "", "email": "aperson@example.com",
+        "http_etag": "\"87c9e6ea1b15eb08afda99b63d12668198986423\"", "list_id": "test-2.example.com",
+        "member_id": 12, "moderation_action": "defer", "role": "member", "self_link":
+        "http://localhost:9001/3.0/members/12", "user": "http://localhost:9001/3.0/users/5"}'
+    headers:
+      content-length:
+      - '407'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/domains
+  response:
+    body:
+      string: '{"entries": [{"alias_domain": null, "description": null, "http_etag":
+        "\"492652d581dc93af101db450d81ae93a074bff49\"", "mail_host": "example.com",
+        "self_link": "http://localhost:9001/3.0/domains/example.com"}], "http_etag":
+        "\"5868fb6d2442c0d163e0edb2bfd7a92b6c812796\"", "start": 0, "total_size":
+        1}'
+    headers:
+      content-length:
+      - '299'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    method: DELETE
+    uri: http://localhost:9001/3.0/domains/example.com
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+    status:
+      code: 204
+      message: No Content
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+    method: GET
+    uri: http://localhost:9001/3.0/users
+  response:
+    body:
+      string: '{"entries": [{"created_on": "2005-08-01T07:49:23", "http_etag": "\"637c12d15eb0203c9ffac9ea2d5ac8605d18e38d\"",
+        "is_server_owner": false, "self_link": "http://localhost:9001/3.0/users/5",
+        "user_id": 5}], "http_etag": "\"15b44390592f920a5a0ba1e7f7271b66565b807d\"",
+        "start": 0, "total_size": 1}'
+    headers:
+      content-length:
+      - '293'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+    method: DELETE
+    uri: http://localhost:9001/3.0/users/5
+  response:
+    body:
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+    status:
+      code: 204
+      message: No Content
+version: 1
