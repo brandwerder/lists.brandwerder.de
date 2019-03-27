@@ -21,13 +21,15 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.models import Site
 from django.http import Http404
-from django.shortcuts import render, redirect
-from django.utils.translation import gettext as _
-from django_mailman3.models import MailDomain
+from django.shortcuts import redirect, render
 from django.utils.six.moves.urllib.error import HTTPError
+from django.utils.translation import gettext as _
+
+from django_mailman3.models import MailDomain
+
 from postorius.auth.decorators import superuser_required
-from postorius.models import Domain, Mailman404Error
 from postorius.forms import DomainEditForm, DomainForm
+from postorius.models import Domain, Mailman404Error
 
 
 @login_required

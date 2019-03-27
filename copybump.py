@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
+import datetime
 import os
 import re
-import sys
 import stat
-import datetime
+import sys
 
 
 FSF = 'by the Free Software Foundation, Inc.'

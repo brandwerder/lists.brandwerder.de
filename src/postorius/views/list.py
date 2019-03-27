@@ -21,36 +21,36 @@ import csv
 import email.utils
 import logging
 
-from allauth.account.models import EmailAddress
-from django.http import HttpResponse, Http404
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.forms import formset_factory
-from django.shortcuts import render, redirect
-from django.core.exceptions import ValidationError
+from django.http import Http404, HttpResponse
+from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.decorators import method_decorator
-from django.utils.translation import gettext as _
 from django.utils.six.moves.urllib.error import HTTPError
+from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
+from allauth.account.models import EmailAddress
 from django_mailman3.lib.mailman import get_mailman_client
-from django_mailman3.lib.paginator import paginate, MailmanPaginator
+from django_mailman3.lib.paginator import MailmanPaginator, paginate
 
+from postorius.auth.decorators import (
+    list_moderator_required, list_owner_required, superuser_required)
+from postorius.auth.mixins import ListOwnerMixin
 from postorius.forms import (
-    ListNew, MemberForm, ListSubscribe, MultipleChoiceForm, UserPreferences,
-    ListSubscriptionPolicyForm, ArchiveSettingsForm, MessageAcceptanceForm,
-    DigestSettingsForm, AlterMessagesForm, ListAutomaticResponsesForm,
-    ListIdentityForm, ListMassSubscription, ListMassRemoval, ListAddBanForm,
-    ListHeaderMatchForm, ListHeaderMatchFormset, MemberModeration,
-    DMARCMitigationsForm, ListAnonymousSubscribe)
+    AlterMessagesForm, ArchiveSettingsForm, DigestSettingsForm,
+    DMARCMitigationsForm, ListAddBanForm, ListAnonymousSubscribe,
+    ListAutomaticResponsesForm, ListHeaderMatchForm, ListHeaderMatchFormset,
+    ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
+    ListSubscribe, ListSubscriptionPolicyForm, MemberForm, MemberModeration,
+    MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import Domain, List, Mailman404Error, Style
-from postorius.auth.decorators import (
-    list_owner_required, list_moderator_required, superuser_required)
-from postorius.auth.mixins import ListOwnerMixin
 from postorius.views.generic import MailingListView
 
 

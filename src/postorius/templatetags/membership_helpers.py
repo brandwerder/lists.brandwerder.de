@@ -19,10 +19,11 @@
 
 from django import template
 
+from mailmanclient import MailingList
+
 from postorius.auth.utils import user_is_in_list_roster
 from postorius.models import List
 
-from mailmanclient import MailingList
 
 register = template.Library()
 

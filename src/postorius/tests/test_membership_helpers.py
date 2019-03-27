@@ -19,14 +19,15 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
+
+from allauth.account.models import EmailAddress
 from mailmanclient import MailingList
 
 from postorius.models import Mailman404Error
-from postorius.tests.utils import ViewTestCase
 from postorius.templatetags.membership_helpers import (
-    get_list, user_is_list_owner, user_is_list_moderator)
+    get_list, user_is_list_moderator, user_is_list_owner)
+from postorius.tests.utils import ViewTestCase
 
 
 class TestMembershipHelpers(ViewTestCase):

@@ -23,19 +23,21 @@ import logging
 from urllib.parse import urljoin
 
 from django.conf import settings
-from django.core.exceptions import ImproperlyConfigured
 from django.contrib.auth.models import User
+from django.core.exceptions import ImproperlyConfigured
 from django.db import models
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
 from django.http import Http404
 from django.urls import reverse
 from django.utils.six.moves.urllib.error import HTTPError
 from django.utils.translation import ugettext_lazy as _
+
 from mailmanclient import MailmanConnectionError
 
-from postorius.utils import get_mailman_client, LANGUAGES
 from postorius.template_list import TEMPLATES_LIST
+from postorius.utils import LANGUAGES, get_mailman_client
+
 
 logger = logging.getLogger(__name__)
 

@@ -18,10 +18,11 @@
 
 from functools import partial
 
-from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.test import override_settings
 from django.urls import reverse
+
+from allauth.account.models import EmailAddress
 
 from postorius.tests.utils import ViewTestCase
 

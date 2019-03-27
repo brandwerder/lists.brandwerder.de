@@ -17,7 +17,9 @@
 
 import re
 import sys
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
+
 
 # Calculate the version number without importing the postorius package.
 with open('src/postorius/__init__.py') as fp:
@@ -60,5 +62,6 @@ setup(
         "mock",
         "vcrpy",
         "beautifulsoup4",
+        "isort",
     ],
 )

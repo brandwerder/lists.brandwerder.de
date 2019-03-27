@@ -18,12 +18,13 @@
 #
 from __future__ import absolute_import, unicode_literals
 
-import mock
+from django.test import RequestFactory, TestCase
 from django.urls import reverse
-from django.test import TestCase, RequestFactory
+
+import mock
+from mailmanclient import MailmanConnectionError
 
 from postorius.models import MailmanApiError
-from mailmanclient import MailmanConnectionError
 
 
 class TestMiddleware(TestCase):

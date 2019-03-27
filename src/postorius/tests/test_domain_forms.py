@@ -17,8 +17,8 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-from django.test import TestCase
 from django.contrib.sites.models import Site
+from django.test import TestCase
 
 from postorius.forms import DomainEditForm, DomainForm
 
