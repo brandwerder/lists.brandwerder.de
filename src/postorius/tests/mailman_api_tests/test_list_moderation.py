@@ -18,9 +18,10 @@
 
 import time
 
-from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.urls import reverse
+
+from allauth.account.models import EmailAddress
 
 from postorius.tests.utils import ViewTestCase
 

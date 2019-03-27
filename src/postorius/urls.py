@@ -17,14 +17,14 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from django.conf.urls import url, include
+from django.conf.urls import include, url
 
-from postorius.views import user as user_views
 from postorius.views import domain as domain_views
 from postorius.views import list as list_views
 from postorius.views import rest as rest_views
 from postorius.views import system as system_views
 from postorius.views import template as template_views
+from postorius.views import user as user_views
 
 
 list_patterns = [

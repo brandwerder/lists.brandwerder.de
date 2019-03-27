@@ -21,11 +21,11 @@ import unittest
 from django.test import TestCase
 
 from postorius.forms.list_forms import (
-    ListSubscribe, ChangeSubscriptionForm, ListNew, ListIdentityForm,
-    ListMassSubscription, ListMassRemoval, ListAddBanForm, ListHeaderMatchForm,
-    MemberModeration, ListAutomaticResponsesForm, DMARCMitigationsForm,
-    DigestSettingsForm, MessageAcceptanceForm, ArchiveSettingsForm,
-    ListAnonymousSubscribe, ListSubscriptionPolicyForm)
+    ArchiveSettingsForm, ChangeSubscriptionForm, DigestSettingsForm,
+    DMARCMitigationsForm, ListAddBanForm, ListAnonymousSubscribe,
+    ListAutomaticResponsesForm, ListHeaderMatchForm, ListIdentityForm,
+    ListMassRemoval, ListMassSubscription, ListNew, ListSubscribe,
+    ListSubscriptionPolicyForm, MemberModeration, MessageAcceptanceForm)
 from postorius.tests.utils import create_mock_list
 
 

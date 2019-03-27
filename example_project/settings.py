@@ -29,6 +29,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
+# Compatibility with Bootstrap 3
+from django.contrib.messages import constants as messages
+
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -191,8 +195,6 @@ LOGOUT_URL = 'account_logout'
 DEFAULT_FROM_EMAIL = 'postorius@localhost.local'
 # From Address for emails sent to admins
 SERVER_EMAIL = 'root@localhost.local'
-# Compatibility with Bootstrap 3
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }

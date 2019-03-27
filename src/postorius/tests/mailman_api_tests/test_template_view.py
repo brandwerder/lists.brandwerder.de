@@ -19,15 +19,16 @@
 
 import urllib
 
-from allauth.account.models import EmailAddress
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.sites.models import Site
-from django.conf import settings
 from django.urls import reverse
+
+from allauth.account.models import EmailAddress
 from django_mailman3.models import MailDomain
 
+from postorius.models import TEMPLATES_LIST, EmailTemplate
 from postorius.tests.utils import ViewTestCase
-from postorius.models import EmailTemplate, TEMPLATES_LIST
 
 
 class DomainTemplateViewTest(ViewTestCase):

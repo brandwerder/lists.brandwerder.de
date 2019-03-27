@@ -16,9 +16,10 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from django.contrib.messages.storage.base import BaseStorage, Message
 from django.test import TestCase
 from django.test.client import RequestFactory
-from django.contrib.messages.storage.base import BaseStorage, Message
+
 from mailmanclient import MailingList
 
 from postorius.views.list import ListMembersViews

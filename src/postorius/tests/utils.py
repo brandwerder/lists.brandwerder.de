@@ -16,20 +16,21 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import os
-import vcr
 import logging
+import os
 
 from django.conf import settings
 from django.contrib import messages
-from django.urls import reverse
 from django.test import TransactionTestCase
-from mock import MagicMock
-from six import binary_type, text_type, PY3
-from six.moves.urllib_parse import (
-    quote, urlparse, urlunparse, parse_qsl, urlencode)
+from django.urls import reverse
+
+import vcr
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.tests.utils import get_flash_messages
+from mock import MagicMock
+from six import PY3, binary_type, text_type
+from six.moves.urllib_parse import (
+    parse_qsl, quote, urlencode, urlparse, urlunparse)
 
 
 vcr_log = logging.getLogger('vcr')
