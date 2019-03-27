@@ -28,6 +28,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * List Summary page now renders List info as markdown. (Closes #244)
 * Moderation action for held message's sender can now be set from held
   message's view.(Closes #127)
+* Add a 'Ban' button to list of subscription requests to help administrators
+  against spams. (Closes #339)
 
 
 1.2.4

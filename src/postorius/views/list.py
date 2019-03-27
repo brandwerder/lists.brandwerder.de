@@ -989,7 +989,7 @@ def list_bans(request, list_id):
                 messages.error(request, _('Invalid data: %s') % e)
             return redirect('list_bans', list_id)
     else:
-        addban_form = ListAddBanForm()
+        addban_form = ListAddBanForm(initial=request.GET)
     banned_addresses = paginate(
         list(ban_list), request.GET.get('page'), request.GET.get('count'))
     return render(request, 'postorius/lists/bans.html',
