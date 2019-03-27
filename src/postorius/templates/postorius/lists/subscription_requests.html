@@ -28,6 +28,7 @@
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'accept' %}" class="btn btn-xs btn-success">{% trans 'Accept' %}</a>
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'reject' %}" class="btn btn-xs btn-danger">{% trans 'Reject' %}</a>
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'discard' %}" class="btn btn-xs btn-danger">{% trans 'Discard' %}</a>
+                            <a href="{% url 'list_bans' list.list_id %}?email={{ request.email }}" class="btn btn-xs btn-danger">{% trans 'Ban' %}</a>
                         </td>
                     </tr>
                     {% endfor %}
