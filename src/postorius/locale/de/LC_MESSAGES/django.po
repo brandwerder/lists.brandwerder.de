@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-10 21:46+0100\n"
-"PO-Revision-Date: 2017-11-12 15:58+0100\n"
-"Last-Translator: Manfred Dohmen <manfred.dohmen@gmail.com>\n"
-"Language-Team: DE <manfred.dohmen@gmail.com>\n"
+"PO-Revision-Date: 2019-04-16 17:04+0000\n"
+"Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
+"translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Weblate 3.6-dev\n"
 
 #: forms.py:33
 msgid "Hold for moderation"
@@ -319,7 +320,7 @@ msgstr ""
 #: forms.py:393
 #, fuzzy
 msgid "DMARC mitigation action"
-msgstr "DMARC-Hilfmaßnahmen"
+msgstr "DMARC-Hilfsmaßnahmen"
 
 #: forms.py:397
 #, fuzzy
@@ -360,7 +361,7 @@ msgstr ""
 #: forms.py:414
 #, fuzzy
 msgid "DMARC Mitigate unconditionally"
-msgstr "DMARC Mitigate unconditionally"
+msgstr "DMARC Mitigate bedingungslos"
 
 #: forms.py:416
 #, fuzzy
@@ -1986,4 +1987,3 @@ msgstr "Ihre Einstellungen haben sich nicht geändert."
 #: views/user.py:195
 msgid "Subscription does not exist"
 msgstr "Mitgliedschaft existiert nicht"
-
