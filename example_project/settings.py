@@ -95,6 +95,7 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django_mailman3.middleware.TimezoneMiddleware',
     'postorius.middleware.PostoriusMiddleware',
 )
 
@@ -288,6 +289,7 @@ LOGGING = {
 
 
 POSTORIUS_TEMPLATE_BASE_URL = "http://localhost:8000"
+
 
 
 try:
