@@ -57,6 +57,12 @@ from postorius.views.generic import MailingListView
 logger = logging.getLogger(__name__)
 
 
+class TokenOwner:
+    """Who 'owns' the token returned from the registrar?"""
+    subscriber = 'subscriber'
+    moderator = 'moderator'
+
+
 class ListMembersViews(ListOwnerMixin, MailingListView):
 
     # List of allowed roles for the memberships. The string value matches the
@@ -311,7 +317,7 @@ class ChangeSubscriptionView(MailingListView):
                     response = self.mailing_list.subscribe(
                         email, pre_confirmed=True)
                     if (type(response) == dict and                # noqa: W504
-                            response.get('token_owner') == 'moderator'):
+                            response.get('token_owner') == TokenOwner.moderator):  # noqa: E501
                         messages.success(
                             request, _('Your request to change the email for'
                                        ' this subscription was submitted and'
@@ -348,8 +354,8 @@ class ListSubscribeView(MailingListView):
                 email = request.POST.get('email')
                 response = self.mailing_list.subscribe(
                     email, pre_verified=True, pre_confirmed=True)
-                if (type(response) == dict and                    # noqa: W504
-                        response.get('token_owner') == 'moderator'):
+                if (type(response) == dict and                   # noqa: W504
+                        response.get('token_owner') == TokenOwner.moderator):
                     messages.success(
                         request, _('Your subscription request has been'
                                    ' submitted and is waiting for moderator'
@@ -754,21 +760,45 @@ def list_delete(request, list_id):
 
 @login_required
 @list_moderator_required
-def list_subscription_requests(request, list_id):
+def list_pending_confirmations(request, list_id):
     """Shows a list of subscription requests.
     """
+    return _list_subscriptions(
+        request=request,
+        list_id=list_id,
+        token_owner=TokenOwner.subscriber,
+        template='postorius/lists/pending_confirmations.html',
+        page_title=_('Subscriptions pending user confirmation'),
+        )
+
+
+@login_required
+@list_moderator_required
+def list_subscription_requests(request, list_id):
+    """Shows a list of subscription requests."""
+    return _list_subscriptions(
+        request=request,
+        list_id=list_id,
+        token_owner=TokenOwner.moderator,
+        template='postorius/lists/subscription_requests.html',
+        page_title=_('Subscriptions pending approval'),
+        )
+
+
+def _list_subscriptions(request, list_id, token_owner, template, page_title):
     m_list = List.objects.get_or_404(fqdn_listname=list_id)
     requests = [req
                 for req in m_list.requests
-                if req['token_owner'] == 'moderator']
+                if req['token_owner'] == token_owner]
     paginated_requests = paginate(
         requests,
         request.GET.get('page'),
         request.GET.get('count', 25))
     page_subtitle = '(%d)' % len(requests)
-    return render(request, 'postorius/lists/subscription_requests.html',
+    return render(request, template,
                   {'list': m_list,
                    'paginated_requests': paginated_requests,
+                   'page_title': page_title,
                    'page_subtitle': page_subtitle})
 
 
