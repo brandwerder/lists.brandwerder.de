@@ -639,7 +639,7 @@ def list_new(request, template='postorius/lists/new.html'):
                 # Right now, there is no good way to detect that this is a
                 # duplicate mailing list request other than checking the
                 # reason for 400 error.
-                if e.reason == b'Mailing list exists':
+                if e.reason == 'Mailing list exists':
                     form.add_error(
                         'listname', _('Mailing List already exists.'))
                     return render(request, template, {'form': form})

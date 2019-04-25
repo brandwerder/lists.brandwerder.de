@@ -1,5 +1,5 @@
 ===================================
-Postorius - web ui for GNU Mailman
+Postorius - Web UI for GNU Mailman
 ===================================
 .. image:: https://gitlab.com/mailman/postorius/badges/master/build.svg
     :target: https://gitlab.com/mailman/postorius/commits/master
@@ -42,7 +42,7 @@ bindings for GNU Mailman.
 
 The minimum Django version is 1.11.
 
-Postorius needs a running version of GNU Mailman version 3.2
+Postorius needs a running version of GNU Mailman version 3.2.2
 
 
 Installation
