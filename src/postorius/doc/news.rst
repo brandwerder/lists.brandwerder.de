@@ -30,6 +30,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   message's view.(Closes #127)
 * Add a 'Ban' button to list of subscription requests to help administrators
   against spams. (Closes #339)
+* Added support for Django 2.2.
+* ``pytest`` will be used to run tests instead of default Django's test runner.
+* Remove ``vcrpy`` and use fixtures to start and stop Mailman's REST API to
+  test against, without having to record tapes to be replayed.
 
 
 1.2.4
