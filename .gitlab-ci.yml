@@ -98,7 +98,7 @@ pages:
   dependencies:
   - coverage
   script:
-  - mv coverage/ public/
+  - mv example_project/htmlcov/ public/
   artifacts:
     paths:
     - public
