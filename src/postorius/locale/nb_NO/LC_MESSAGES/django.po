@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-05-04 18:48+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/translations/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -32,11 +34,11 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Skriv inn et domenenavn"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Skriv inn et gyldig domenenavn."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -47,7 +49,7 @@ msgstr ""
 #: forms/domain_forms.py:54 forms/list_forms.py:72 forms/list_forms.py:629
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:55
 msgid "Description"
-msgstr ""
+msgstr "Beskrivelse"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
@@ -67,7 +69,7 @@ msgstr ""
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Skriv inn et domenenavn"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
@@ -119,7 +121,7 @@ msgstr ""
 
 #: forms/list_forms.py:65
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Velg en listetype."
 
 #: forms/list_forms.py:68
 msgid "Advertise this list in list index"
@@ -155,41 +157,41 @@ msgstr ""
 
 #: forms/list_forms.py:106
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Skriv inn et gyldig listenavn"
 
 #: forms/list_forms.py:132 forms/list_forms.py:153
 msgid "Your email address"
-msgstr ""
+msgstr "Din e-postadresse"
 
 #: forms/list_forms.py:136 forms/list_forms.py:156 forms/list_forms.py:707
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Skriv inn en e-postadresse."
 
 #: forms/list_forms.py:137 forms/list_forms.py:157 forms/list_forms.py:708
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Skriv inn en gyldig e-postadresse."
 
 #: forms/list_forms.py:140 forms/list_forms.py:160
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Ditt navn (Valgfritt)"
 
 #: forms/list_forms.py:175
 msgid "Open"
-msgstr ""
+msgstr "Åpne"
 
 #: forms/list_forms.py:176
 msgid "Confirm"
-msgstr ""
+msgstr "Bekreft"
 
 #: forms/list_forms.py:177
 msgid "Moderate"
-msgstr ""
+msgstr "Moderer"
 
 #: forms/list_forms.py:178
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Bekreft, med påfølgende moderering"
 
 #: forms/list_forms.py:187 views/list.py:816
 msgid "Subscription Policy"
