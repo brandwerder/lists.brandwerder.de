@@ -92,16 +92,3 @@ upstream-django-mailman3:
   only:
     variables:
       - $DJANGO_MAILMAN3_COMMIT_SHA
-
-pages:
-  stage: deploy
-  dependencies:
-  - coverage
-  script:
-  - mv example_project/htmlcov/ public/
-  artifacts:
-    paths:
-    - public
-    expire_in: 5 days
-  only:
-  - master
