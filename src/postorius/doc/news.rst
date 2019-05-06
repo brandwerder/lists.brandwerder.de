@@ -34,7 +34,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * ``pytest`` will be used to run tests instead of default Django's test runner.
 * Remove ``vcrpy`` and use fixtures to start and stop Mailman's REST API to
   test against, without having to record tapes to be replayed.
-
+* Corrected display message in 'recieve_list_copy' option in global mailman
+  preferences of mailman settings. (Closes #351)
 
 1.2.4
 =====
