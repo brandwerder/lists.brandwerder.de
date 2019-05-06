@@ -147,8 +147,8 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
                     display_name=member_form.cleaned_data['display_name'])
                 messages.success(
                     request,
-                    _('{0}s has been added with the role {1}s'.format(
-                        member_form.cleaned_data['email'], role)))
+                    _('{email} has been added with the role {role}'.format(
+                        email=member_form.cleaned_data['email'], role=role)))
             except HTTPError as e:
                 messages.error(request, e.msg)
         else:
