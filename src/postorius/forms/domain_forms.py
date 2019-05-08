@@ -95,3 +95,11 @@ class DomainEditForm(DomainForm):
     separte from the DomainForm, so that the mail_host can't be changed.
     """
     mail_host = None
+
+
+class DomainOwnerForm(forms.Form):
+    """Form to add a owner for a domain."""
+    email = forms.EmailField(
+        label=_("Owner's Email"),
+        required=True,
+    )

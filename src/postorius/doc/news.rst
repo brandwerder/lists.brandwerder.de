@@ -43,6 +43,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   ``digests_enabled`` settings for MailingLists.
 * Add a badge with count of held messages and pending subscription requests
 	for moderator approval. (Closes #308)
+* Add support to add, view and remove domain owners.
 
 1.2.4
 =====

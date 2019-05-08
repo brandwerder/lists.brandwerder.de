@@ -108,6 +108,11 @@ urlpatterns = [
         name='domain_edit'),
     url(r'^domains/(?P<domain>[^/]+)/delete$', domain_views.domain_delete,
         name='domain_delete'),
+   url(r'^domains/(?P<domain>[^/]+)/owners$', domain_views.domain_owners,
+       name='domain_owners'),
+   url(r'^domains/(?P<domain>[^/]+)/owners/(?P<user_id>.+)/remove$',
+       domain_views.remove_owners,
+       name='remove_domain_owner'),
     # Ideally, these paths should be accessible by domain_owners, however,
     # we don't have good ways to check that, so for now, this views are
     # protected by superuser privileges.
