@@ -247,7 +247,8 @@ class EmailTemplate(models.Model):
             '$owner_email: The email address for -owner address \n'
             '$site_email: The email address to reach the owners of the site \n'
             '$language: The two letter language code for list\'s preferred language e.g. fr, en, de \n'  # noqa: E501
-        )
+        ),
+        blank=True,
     )
     language = models.CharField(
         max_length=5, choices=LANGUAGES,

@@ -37,7 +37,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Corrected display message in 'recieve_list_copy' option in global mailman
   preferences of mailman settings. (Closes #351)
 * Allow setting a MailingList's Preferred Language. (Closes #303)
-
+* Allow a empty templates as a workaround for missing settings to skip
+  email decoration. (Closes #331)
 
 1.2.4
 =====
