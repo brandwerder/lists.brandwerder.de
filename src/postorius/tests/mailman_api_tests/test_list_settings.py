@@ -155,6 +155,8 @@ class ListSettingsTest(ViewTestCase):
             'subject_prefix': '',
             'description': '',
             'advertised': 'True',
+            'preferred_language': 'en',
+            'member_roster_visibility': 'public',
             })
         self.assertRedirects(response, url)
         self.assertHasSuccessMessage(response)

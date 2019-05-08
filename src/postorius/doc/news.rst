@@ -44,6 +44,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add a badge with count of held messages and pending subscription requests
 	for moderator approval. (Closes #308)
 * Add support to add, view and remove domain owners.
+* Allow setting the visibility options for MailingList's member list.
+
 
 1.2.4
 =====

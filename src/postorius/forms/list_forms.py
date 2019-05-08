@@ -46,6 +46,12 @@ DIGEST_FREQUENCY_CHOICES = (
     ("yearly", _("Yearly"))
 )
 
+ROSTER_VISIBILITY_CHOICES = (
+    ("moderators", _("Only mailinglist moderators")),
+    ("members", _("Only mailinglist members")),
+    ("public", _("Anyone")),
+    )
+
 
 EMPTY_STRING = ''
 
@@ -684,6 +690,13 @@ class ListIdentityForm(ListSettingsForm):
         required=False,
         widget=forms.Select(),
         choices=LANGUAGES,
+    )
+    member_roster_visibility = forms.ChoiceField(
+        label=_('Members List Visibility'),
+        required=False,
+        widget=forms.Select(),
+        choices=ROSTER_VISIBILITY_CHOICES,
+        help_text=_('Who is allowed to see members list for this MailingList?')
     )
 
     def clean_subject_prefix(self):
