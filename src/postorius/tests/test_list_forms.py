@@ -235,6 +235,8 @@ class TestListIdentityForm(TestCase):
             'info': 'This is a larger description of this mailing list.',
             'display_name': 'Most Desirable Mailing List',
             'subject_prefix': '  [Most Desirable]               ',
+            'preferred_language': 'en',
+            'member_roster_visibility': 'public',
         }, mlist=None)
         self.assertFalse(form.is_valid())
         self.assertTrue('advertised' in form.errors)
@@ -423,7 +425,14 @@ class TestDigestSettingsForm(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_all_fields(self):
-        pass
+        formdata = dict(
+            digests_enabled='True',
+            digests_send_periodic='True',
+            digests_volume_frequency='daily',
+            digest_size_threshold='10',
+        )
+        form = DigestSettingsForm(formdata, mlist=None)
+        self.assertTrue(form.is_valid())
 
 
 class TestMessageAcceptanceForm(TestCase):

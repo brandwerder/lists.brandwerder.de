@@ -3,6 +3,11 @@ html {
     position: relative;
     min-height: 100%;
 }
+
+@media (min-width:1200px){
+		.container{width:1370px}
+}
+
 body {
     margin-bottom: 90px;
 }

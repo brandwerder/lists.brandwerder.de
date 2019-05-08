@@ -27,6 +27,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_mailman3.lib.mailman import get_mailman_client
 
 from postorius.forms.fields import ListOfStringsField
+from postorius.languages import LANGUAGES
 
 
 ACTION_CHOICES = (
@@ -36,6 +37,20 @@ ACTION_CHOICES = (
     ("accept", _("Accept immediately (bypass other rules)")),
     ("defer", _("Default processing")),
 )
+
+DIGEST_FREQUENCY_CHOICES = (
+    ("daily", _("Daily")),
+    ("weekly", _("Weekly")),
+    ("quarterly", _("Quarterly")),
+    ("monthly", _("Monthly")),
+    ("yearly", _("Yearly"))
+)
+
+ROSTER_VISIBILITY_CHOICES = (
+    ("moderators", _("Only mailinglist moderators")),
+    ("members", _("Only mailinglist members")),
+    ("public", _("Anyone")),
+    )
 
 
 EMPTY_STRING = ''
@@ -346,6 +361,27 @@ class DigestSettingsForm(ListSettingsForm):
     """
     List digest settings.
     """
+    digests_enabled = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Enable Digests'),
+        help_text=_('Should Mailman enable digests for this MailingList?'),
+        )
+    digest_send_periodic = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Send Digest Periodically'),
+        help_text=_('Should Mailman send out digests periodically?'),
+        )
+    digest_volume_frequency = forms.ChoiceField(
+        choices=DIGEST_FREQUENCY_CHOICES,
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Digest Frequency'),
+        help_text=_('At what frequency should Mailman send out digests?'),
+        )
     digest_size_threshold = forms.DecimalField(
         label=_('Digest size threshold'),
         help_text=_('How big in Kb should a digest be before '
@@ -648,6 +684,19 @@ class ListIdentityForm(ListSettingsForm):
         label=_('Subject prefix'),
         strip=False,
         required=False,
+    )
+    preferred_language = forms.ChoiceField(
+        label=_('Preferred Language'),
+        required=False,
+        widget=forms.Select(),
+        choices=LANGUAGES,
+    )
+    member_roster_visibility = forms.ChoiceField(
+        label=_('Members List Visibility'),
+        required=False,
+        widget=forms.Select(),
+        choices=ROSTER_VISIBILITY_CHOICES,
+        help_text=_('Who is allowed to see members list for this MailingList?')
     )
 
     def clean_subject_prefix(self):

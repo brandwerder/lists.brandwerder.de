@@ -36,6 +36,16 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   test against, without having to record tapes to be replayed.
 * Corrected display message in 'recieve_list_copy' option in global mailman
   preferences of mailman settings. (Closes #351)
+* Allow setting a MailingList's Preferred Language. (Closes #303)
+* Allow a empty templates as a workaround for missing settings to skip
+  email decoration. (Closes #331)
+* Expose ``digest_volume_frequency``, ``digest_send_periodict`` and
+  ``digests_enabled`` settings for MailingLists.
+* Add a badge with count of held messages and pending subscription requests
+	for moderator approval. (Closes #308)
+* Add support to add, view and remove domain owners.
+* Allow setting the visibility options for MailingList's member list.
+
 
 1.2.4
 =====
