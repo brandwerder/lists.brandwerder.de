@@ -27,6 +27,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_mailman3.lib.mailman import get_mailman_client
 
 from postorius.forms.fields import ListOfStringsField
+from postorius.languages import LANGUAGES
 
 
 ACTION_CHOICES = (
@@ -648,6 +649,12 @@ class ListIdentityForm(ListSettingsForm):
         label=_('Subject prefix'),
         strip=False,
         required=False,
+    )
+    preferred_language = forms.ChoiceField(
+        label=_('Preferred Language'),
+        required=False,
+        widget=forms.Select(),
+        choices=LANGUAGES,
     )
 
     def clean_subject_prefix(self):

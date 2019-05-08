@@ -36,6 +36,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   test against, without having to record tapes to be replayed.
 * Corrected display message in 'recieve_list_copy' option in global mailman
   preferences of mailman settings. (Closes #351)
+* Allow setting a MailingList's Preferred Language. (Closes #303)
+
 
 1.2.4
 =====
