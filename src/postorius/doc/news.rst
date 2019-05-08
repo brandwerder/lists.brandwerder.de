@@ -39,6 +39,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Allow setting a MailingList's Preferred Language. (Closes #303)
 * Allow a empty templates as a workaround for missing settings to skip
   email decoration. (Closes #331)
+* Expose ``digest_volume_frequency``, ``digest_send_periodict`` and
+  ``digests_enabled`` settings for MailingLists.
 
 1.2.4
 =====

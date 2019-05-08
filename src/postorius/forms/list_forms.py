@@ -38,6 +38,14 @@ ACTION_CHOICES = (
     ("defer", _("Default processing")),
 )
 
+DIGEST_FREQUENCY_CHOICES = (
+    ("daily", _("Daily")),
+    ("weekly", _("Weekly")),
+    ("quarterly", _("Quarterly")),
+    ("monthly", _("Monthly")),
+    ("yearly", _("Yearly"))
+)
+
 
 EMPTY_STRING = ''
 
@@ -347,6 +355,27 @@ class DigestSettingsForm(ListSettingsForm):
     """
     List digest settings.
     """
+    digests_enabled = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Enable Digests'),
+        help_text=_('Should Mailman enable digests for this MailingList?'),
+        )
+    digest_send_periodic = forms.ChoiceField(
+        choices=((True, _('Yes')), (False, _('No'))),
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Send Digest Periodically'),
+        help_text=_('Should Mailman send out digests periodically?'),
+        )
+    digest_volume_frequency = forms.ChoiceField(
+        choices=DIGEST_FREQUENCY_CHOICES,
+        widget=forms.RadioSelect,
+        required=False,
+        label=_('Digest Frequency'),
+        help_text=_('At what frequency should Mailman send out digests?'),
+        )
     digest_size_threshold = forms.DecimalField(
         label=_('Digest size threshold'),
         help_text=_('How big in Kb should a digest be before '
