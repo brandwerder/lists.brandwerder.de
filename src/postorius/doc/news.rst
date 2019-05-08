@@ -41,6 +41,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   email decoration. (Closes #331)
 * Expose ``digest_volume_frequency``, ``digest_send_periodict`` and
   ``digests_enabled`` settings for MailingLists.
+* Add a badge with count of held messages and pending subscription requests
+	for moderator approval. (Closes #308)
 
 1.2.4
 =====

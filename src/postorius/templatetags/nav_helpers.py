@@ -43,3 +43,15 @@ def nav_active_class(context, current, view_name):
     if current == view_name:
         return 'active'
     return ''
+
+
+@register.filter
+def held_count(mlist):
+    return mlist.get_held_page().total_size
+
+
+@register.filter
+def pending_subscriptions(mlist):
+    return len(list(r
+               for r in mlist.requests
+               if r['token_owner'] == 'moderator'))
