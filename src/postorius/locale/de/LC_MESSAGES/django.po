@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-10 21:46+0100\n"
-"PO-Revision-Date: 2019-05-06 14:11+0000\n"
+"PO-Revision-Date: 2019-05-14 07:48+0000\n"
 "Last-Translator: Daniel <daniel-other+weblate@dadosch.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "translations/de/>\n"
@@ -346,16 +346,14 @@ msgid "Discard the message"
 msgstr "Nachricht verwerfen"
 
 #: forms.py:406
-#, fuzzy
 msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
-"Die Aktion, die auf Nachrichten mit [From: eine Domain, die eine DMARC-"
-"Richtlinie zur Ablehnung oder Quarantäne veröffentlicht], beziehungsweise "
-"auf alle Nachrichten anzuwenden ist wenn \"DMARC Unbedingt mildern\" auf \""
-"Ja\" ist."
+"Die Aktion, die auf Nachrichten an eine Domain mit einer Reject-/Quarantine-"
+"DMARC-Richtlinie beziehungsweise auf alle Nachrichten anzuwenden ist, wenn \""
+"DMARC Unbedingt mildern\" auf \"Ja\" ist."
 
 #: forms.py:414
 msgid "DMARC Mitigate unconditionally"
