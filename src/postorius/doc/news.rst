@@ -42,7 +42,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Expose ``digest_volume_frequency``, ``digest_send_periodict`` and
   ``digests_enabled`` settings for MailingLists.
 * Add a badge with count of held messages and pending subscription requests
-	for moderator approval. (Closes #308)
+  for moderator approval. (Closes #308)
 * Add support to add, view and remove domain owners.
 * Allow setting the visibility options for MailingList's member list.
 
@@ -61,7 +61,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 * Expose ``max_num_recipients`` in list settings.  (Closes #297)
 * Add support for Non-member management in Postorius.  (Closes #265)
-* `Members` tab in Mailing List settings page is now called `Users`.
+* ``Members`` tab in Mailing List settings page is now called ``Users``.
   (Closes #309)
 * Show pending subscription requests are only pending for Moderator.
   (Closes #314)
@@ -233,7 +233,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * all code now conform to PEP8
 * themes: removed obsolete MAILMAN_THEME settings from templates, contexts, file structure; contributed by Richard Wackerbarth (LP: 1043258)
 * added access control for list owners and moderators
-* added a mailmanclient shell to use as a `manage.py` command (`python manage.py mmclient`)
+* added a mailmanclient shell to use as a ``manage.py`` command (``python manage.py mmclient``)
 * use "url from future" template tag in all templates. Contributed by Richard Wackerbarth.
 * added "new user" form. Contributed by George Chatzisofroniou.
 * added user subscription page
