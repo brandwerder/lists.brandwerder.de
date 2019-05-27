@@ -321,7 +321,7 @@ class MessageAcceptanceForm(ListSettingsForm):
         label=_('Maximum message size'),
         required=False,
         help_text=_(
-            'The maximum allowed message size. '
+            'The maximum allowed message size in KB. '
             'This can be used to prevent emails with large attachments. '
             'A size of 0 disables the check.'))
     max_num_recipients = forms.IntegerField(
