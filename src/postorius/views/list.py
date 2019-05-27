@@ -896,7 +896,7 @@ def list_settings(request, list_id=None, visible_section=None,
             except HTTPError as e:
                 messages.error(
                     request,
-                    _('An error occured: ') + e.reason)
+                    _('An error occurred: ') + e.reason)
             return redirect('list_settings', m_list.list_id, visible_section)
     else:
         form = form_class(initial=initial_data, mlist=m_list)
@@ -1003,7 +1003,7 @@ def list_bans(request, list_id):
                             addban_form.cleaned_data['email'])))
                 except HTTPError as e:
                     messages.error(
-                        request, _('An error occured: %s') % e.reason)
+                        request, _('An error occurred: %s') % e.reason)
                 except ValueError as e:
                     messages.error(request, _('Invalid data: %s') % e)
                 return redirect('list_bans', list_id)
@@ -1014,7 +1014,7 @@ def list_bans(request, list_id):
                     'The email {} has been un-banned'.format(
                         request.POST['email'])))
             except HTTPError as e:
-                messages.error(request, _('An error occured: %s') % e.reason)
+                messages.error(request, _('An error occurred: %s') % e.reason)
             except ValueError as e:
                 messages.error(request, _('Invalid data: %s') % e)
             return redirect('list_bans', list_id)
@@ -1075,7 +1075,7 @@ def list_header_matches(request, list_id):
                     errors.append(e)
             for e in errors:
                 messages.error(
-                    request, _('An error occured: %s') % e.reason)
+                    request, _('An error occurred: %s') % e.reason)
             if not errors:
                 messages.success(request, _('The header matches were'
                                             ' successfully modified.'))
