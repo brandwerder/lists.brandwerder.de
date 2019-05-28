@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:29+0200\n"
-"PO-Revision-Date: 2019-05-04 18:48+0000\n"
+"PO-Revision-Date: 2019-06-06 18:43+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "gnu-mailman/translations/nb_NO/>\n"
@@ -45,6 +45,8 @@ msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Domenet for dine e-postlister. For eksempel når du ønsker lister ala testing@"
+"eksempel.no, skriv inn eksempel.no her."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:72 forms/list_forms.py:629
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:55
@@ -141,15 +143,15 @@ msgstr ""
 
 #: forms/list_forms.py:86
 msgid "List Style"
-msgstr ""
+msgstr "Listestil"
 
 #: forms/list_forms.py:89
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Velg en listestil."
 
 #: forms/list_forms.py:90
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Velg en gyldig listestil."
 
 #: forms/list_forms.py:93
 msgid "Site admin has not created any domains"
@@ -195,7 +197,7 @@ msgstr "Bekreft, med påfølgende moderering"
 
 #: forms/list_forms.py:187 views/list.py:816
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Abonnementspraksis"
 
 #: forms/list_forms.py:189
 msgid ""
@@ -209,23 +211,24 @@ msgstr ""
 
 #: forms/list_forms.py:205
 msgid "Public archives"
-msgstr ""
+msgstr "Offentlige arkiver"
 
 #: forms/list_forms.py:206
 msgid "Private archives"
-msgstr ""
+msgstr "Private arkiver"
 
 #: forms/list_forms.py:207
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Ikke arkiver denne listen"
 
 #: forms/list_forms.py:213
 msgid "Archive policy"
-msgstr ""
+msgstr "Arkiveringspraksis"
 
 #: forms/list_forms.py:214
+#, fuzzy
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Praksis for arkivering meldinger fra denne listen"
 
 #: forms/list_forms.py:219
 msgid "Active archivers"
@@ -253,7 +256,7 @@ msgstr ""
 #: forms/list_forms.py:599 forms/list_forms.py:611 forms/list_forms.py:623
 #: forms/user_forms.py:47
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: forms/list_forms.py:256 forms/list_forms.py:264 forms/list_forms.py:377
 #: forms/list_forms.py:407 forms/list_forms.py:414 forms/list_forms.py:421
@@ -262,7 +265,7 @@ msgstr ""
 #: forms/list_forms.py:599 forms/list_forms.py:611 forms/list_forms.py:623
 #: forms/user_forms.py:47
 msgid "No"
-msgstr ""
+msgstr "Nei"
 
 #: forms/list_forms.py:258
 msgid "Require Explicit Destination"
@@ -323,23 +326,27 @@ msgstr ""
 
 #: forms/list_forms.py:306
 msgid "Maximum message size"
-msgstr ""
+msgstr "Maksimal meldingsstørrelse"
 
 #: forms/list_forms.py:309
 msgid ""
 "The maximum allowed message size. This can be used to prevent emails with "
 "large attachments. A size of 0 disables the check."
 msgstr ""
+"Største tillatte meldingsstørrelse. Dette kan brukes for å forhindre e-"
+"poster med store vedlegg. En størrelse på 0 skrur av kontrollen."
 
 #: forms/list_forms.py:314
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Maksimalt antall mottakere"
 
 #: forms/list_forms.py:317
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"Maksimalt antall mottakere av en melding. Dette kan brukes for å forhindre "
+"masseutsendelser fra å bli godkjent. En verdi på 0 skrur av kontrollen."
 
 #: forms/list_forms.py:335
 msgid "Invalid alias regexp: {}: {}"
@@ -424,8 +431,9 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:410
+#, fuzzy
 msgid "Filter content"
-msgstr ""
+msgstr "Filtrer innhold"
 
 #: forms/list_forms.py:411
 msgid ""
@@ -435,7 +443,7 @@ msgstr ""
 
 #: forms/list_forms.py:417
 msgid "Collapse alternatives"
-msgstr ""
+msgstr "Fold sammen alternativer"
 
 #: forms/list_forms.py:418
 msgid ""
@@ -454,7 +462,7 @@ msgstr ""
 
 #: forms/list_forms.py:432
 msgid "Anonymous list"
-msgstr ""
+msgstr "Anonym liste"
 
 #: forms/list_forms.py:433
 msgid ""
@@ -464,7 +472,7 @@ msgstr ""
 
 #: forms/list_forms.py:440
 msgid "Include RFC2369 headers"
-msgstr ""
+msgstr "Inkluder RFC2369-hoder"
 
 #: forms/list_forms.py:442
 msgid ""
@@ -571,24 +579,24 @@ msgstr ""
 
 #: forms/list_forms.py:533
 msgid "No automatic response"
-msgstr ""
+msgstr "Inget automatisk svar"
 
 #: forms/list_forms.py:537
 msgid "Autorespond to list owner"
-msgstr ""
+msgstr "Autosvar listeeier"
 
 #: forms/list_forms.py:538
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
-msgstr ""
+msgstr "Skal Mailman sende et autosvar til e-poster send til -eier-adressen?"
 
 #: forms/list_forms.py:541
 msgid "Autoresponse owner text"
-msgstr ""
+msgstr "Tekst for automatisk svar til eier"
 
 #: forms/list_forms.py:544
 msgid "Auto-response text to send to -owner emails."
-msgstr ""
+msgstr "Autosvartekst å sende til -eier e-poster."
 
 #: forms/list_forms.py:548
 msgid "Autorespond postings"
@@ -649,7 +657,7 @@ msgstr ""
 
 #: forms/list_forms.py:590
 msgid "Send welcome message"
-msgstr ""
+msgstr "Send velkomstmelding"
 
 #: forms/list_forms.py:592
 msgid ""
@@ -703,19 +711,19 @@ msgstr ""
 
 #: forms/list_forms.py:639
 msgid "A longer description of this mailing list."
-msgstr ""
+msgstr "En lengre beskrivelse av denne e-postlisten."
 
 #: forms/list_forms.py:643
 msgid "Display name"
-msgstr ""
+msgstr "Visningsnavn"
 
 #: forms/list_forms.py:645
 msgid "Display name is the name shown in the web interface."
-msgstr ""
+msgstr "Visningsnavn er navnet som vises i vevgrensesnittet."
 
 #: forms/list_forms.py:648
 msgid "Subject prefix"
-msgstr ""
+msgstr "Emneprefiks"
 
 #: forms/list_forms.py:664
 msgid "Emails to mass subscribe"
@@ -742,7 +750,7 @@ msgstr ""
 
 #: forms/list_forms.py:702
 msgid "Add ban"
-msgstr ""
+msgstr "Bannlys"
 
 #: forms/list_forms.py:704
 msgid ""
@@ -756,7 +764,7 @@ msgstr ""
 
 #: forms/list_forms.py:718
 msgid "Header"
-msgstr ""
+msgstr "Hode"
 
 #: forms/list_forms.py:719
 msgid "Email header to filter on (case-insensitive)."
@@ -764,15 +772,15 @@ msgstr ""
 
 #: forms/list_forms.py:721
 msgid "Please enter a header."
-msgstr ""
+msgstr "Skriv inn et hode."
 
 #: forms/list_forms.py:722
 msgid "Please enter a valid header."
-msgstr ""
+msgstr "Skriv inn et gyldig hode."
 
 #: forms/list_forms.py:724
 msgid "Pattern"
-msgstr ""
+msgstr "Mønster"
 
 #: forms/list_forms.py:725
 msgid "Regular expression matching the header's value."
@@ -788,23 +796,23 @@ msgstr ""
 
 #: forms/list_forms.py:730 templates/postorius/domain/index.html:25
 msgid "Action"
-msgstr ""
+msgstr "Handling"
 
 #: forms/list_forms.py:731
 msgid "Please enter a valid action."
-msgstr ""
+msgstr "Skriv inn en gyldig handling."
 
 #: forms/list_forms.py:734
 msgid "Action to take when a header matches"
-msgstr ""
+msgstr "Handling å utrette når et hode stemmer overens"
 
 #: forms/list_forms.py:763
 msgid "Moderation"
-msgstr ""
+msgstr "Moderering"
 
 #: forms/list_forms.py:765
 msgid "List default"
-msgstr ""
+msgstr "Listeforvalg"
 
 #: forms/list_forms.py:767
 msgid ""
@@ -822,47 +830,48 @@ msgstr ""
 
 #: forms/list_forms.py:787
 msgid "Select Email"
-msgstr ""
+msgstr "Velg e-post"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "E-postadresse"
 
 #: forms/member_forms.py:32
 msgid "Display Name"
-msgstr ""
+msgstr "Visningsnavn"
 
 #: forms/member_forms.py:35
 msgid "Please enter an display name."
-msgstr ""
+msgstr "Skriv inn et visningsnavn"
 
 #: forms/user_forms.py:49
 msgid "Regular"
-msgstr ""
+msgstr "Vanlig"
 
 #: forms/user_forms.py:50
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Klartekstsføljetonger"
 
 #: forms/user_forms.py:51
+#, fuzzy
 msgid "Mime Digests"
-msgstr ""
+msgstr "MIME-føljetonger"
 
 #: forms/user_forms.py:52
 msgid "Summary Digests"
-msgstr ""
+msgstr "Sammendragsføljetonger"
 
 #: forms/user_forms.py:54
 msgid "Enabled"
-msgstr ""
+msgstr "Påskrudd"
 
 #: forms/user_forms.py:54
 msgid "Disabled"
-msgstr ""
+msgstr "Avskrudd"
 
 #: forms/user_forms.py:59
 msgid "Delivery status"
-msgstr ""
+msgstr "Leveringsstatus"
 
 #: forms/user_forms.py:61
 msgid ""
@@ -875,7 +884,7 @@ msgstr ""
 
 #: forms/user_forms.py:71
 msgid "Delivery mode"
-msgstr ""
+msgstr "Leveringsmodus"
 
 #: forms/user_forms.py:73
 msgid ""
@@ -888,7 +897,7 @@ msgstr ""
 
 #: forms/user_forms.py:82
 msgid "Receive own postings"
-msgstr ""
+msgstr "Motta egne postinger"
 
 #: forms/user_forms.py:84
 msgid ""
@@ -906,7 +915,7 @@ msgstr ""
 
 #: forms/user_forms.py:97
 msgid "Hide address"
-msgstr ""
+msgstr "Skjul adresse"
 
 #: forms/user_forms.py:99
 msgid ""
@@ -1068,88 +1077,90 @@ msgstr ""
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
-msgstr ""
+msgstr "Du har ikke tilgang til å besøke denne siden."
 
 #: templates/404.html:5
 msgid "Page not found"
-msgstr ""
+msgstr "Fant ikke siden"
 
 #: templates/404.html:6
 msgid "This page either doesn't exist, or it moved somewhere else."
-msgstr ""
+msgstr "Enten finnes ikke denne siden, eller så er den flyttet annensteds hen."
 
 #: templates/500.html:24
 msgid "Server error"
-msgstr ""
+msgstr "Tjenerfeil"
 
 #: templates/500.html:25
 msgid "An error occurred while processing your request."
-msgstr ""
+msgstr "En feil inntraff under behandling av forespørselen din."
 
 #: templates/postorius/base.html:34
 msgid "Mailman logo"
-msgstr ""
+msgstr "Mailman-logo"
 
 #: templates/postorius/base.html:40
 msgid "Lists"
-msgstr ""
+msgstr "Lister"
 
 #: templates/postorius/base.html:45 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Domener"
 
 #: templates/postorius/base.html:50
 msgid "System Information"
-msgstr ""
+msgstr "Systeminformasjon"
 
 #: templates/postorius/base.html:57
 msgid "Archives"
-msgstr ""
+msgstr "Arkiv"
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
-msgstr ""
+msgstr "Mailman-innstillinger"
 
 #: templates/postorius/base.html:82
 msgid "Posting activity"
-msgstr ""
+msgstr "Postingsaktivitet"
 
 #: templates/postorius/base.html:88
+#, fuzzy
 msgid "Logout"
-msgstr ""
+msgstr "Logg ut"
 
 #: templates/postorius/base.html:95
+#, fuzzy
 msgid "Login"
-msgstr ""
+msgstr "Logg inn"
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "Registrering"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
-msgstr ""
+msgstr "Postorius-dokumentasjon"
 
 #: templates/postorius/base.html:121
 msgid "Postorius Version"
-msgstr ""
+msgstr "Postorius-versjon"
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
-msgstr ""
+msgstr "Bekreft domenefjerning"
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "Bekreft sletting"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
-msgstr ""
+msgstr "Er du sikker på at du ønsker å slette for godt"
 
 #: templates/postorius/domain/confirm_delete.html:21
 #, python-format
@@ -1168,23 +1179,23 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:42
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/lists/confirm_delete.html:25
 #: templates/postorius/lists/confirm_remove_role.html:18
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "Rediger domene"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "Legg til domene"
 
 #: templates/postorius/domain/index.html:36
 #: templates/postorius/domain/template_add.html:6
@@ -1202,53 +1213,53 @@ msgstr ""
 #: templates/postorius/domain/template_index.html:33
 #: templates/postorius/lists/template_list.html:31
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "Legg til domene"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr ""
+msgstr "Legg til et nytt domene"
 
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
 msgid "New Template"
-msgstr ""
+msgstr "Ny mal"
 
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
 msgid "Template Name"
-msgstr ""
+msgstr "Malnavn"
 
 #: templates/postorius/errors/generic.html:5
 msgid "Something went wrong"
-msgstr ""
+msgstr "Noe gikk galt"
 
 #: templates/postorius/index.html:6
 msgid "List Index"
-msgstr ""
+msgstr "Listeindeks"
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "E-postlister"
 
 #: templates/postorius/index.html:39
 msgid "Create New Domain"
-msgstr ""
+msgstr "Opprett nytt domene"
 
 #: templates/postorius/index.html:41
 msgid "Create New List"
-msgstr ""
+msgstr "Opprett ny liste"
 
 #: templates/postorius/index.html:53
 msgid "List name"
-msgstr ""
+msgstr "Listenavn"
 
 #: templates/postorius/index.html:54
 msgid "Post address"
-msgstr ""
+msgstr "Postadresse"
 
 #: templates/postorius/index.html:63
 msgid "unadvertised"
@@ -1270,23 +1281,25 @@ msgstr ""
 #: templates/postorius/lists/bans.html:8
 #: templates/postorius/menu/list_nav.html:40
 msgid "Banned addresses"
-msgstr ""
+msgstr "Bannlyste adresser"
 
 #: templates/postorius/lists/bans.html:26
 msgid "Ban email"
-msgstr ""
+msgstr "Bannlys e-post"
 
 #: templates/postorius/lists/bans.html:34
+#, fuzzy
 msgid "Currently banned addresses"
-msgstr ""
+msgstr "Bannlyste adresser"
 
 #: templates/postorius/lists/bans.html:47
 msgid "Un-ban this address"
-msgstr ""
+msgstr "Opphev bannlysning av denne adressen"
 
 #: templates/postorius/lists/bans.html:58
+#, fuzzy
 msgid "No addresses are currently banned."
-msgstr ""
+msgstr "Ingen adresser er bannlyst."
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
@@ -1306,16 +1319,17 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:5
 #: templates/postorius/lists/confirm_remove_role.html:12
+#, fuzzy
 msgid "Confirm remove role"
-msgstr ""
+msgstr "Bekreft fjerning av rolle"
 
 #: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
-msgstr ""
+msgstr "Er du sikker?"
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -1342,7 +1356,7 @@ msgstr ""
 
 #: templates/postorius/lists/header_matches.html:58
 msgid "Save changes"
-msgstr ""
+msgstr "Lagre endringer"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
@@ -1377,15 +1391,15 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:36
 msgid "Subject"
-msgstr ""
+msgstr "Emne"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Sender"
-msgstr ""
+msgstr "Avsender"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Reason"
-msgstr ""
+msgstr "Grunn"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Hold Date"
@@ -1397,7 +1411,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:79
 msgid "Attachments"
-msgstr ""
+msgstr "Vedlegg"
 
 #: templates/postorius/lists/held_messages.html:90
 msgid "Set member moderation"
@@ -1405,7 +1419,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:106
 msgid "Show Headers"
-msgstr ""
+msgstr "Vis hoder"
 
 #: templates/postorius/lists/held_messages.html:114
 msgid "There are currently no held messages."
@@ -1427,7 +1441,7 @@ msgstr ""
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
 msgid "Member options"
-msgstr ""
+msgstr "Medlemsvalg"
 
 #: templates/postorius/lists/memberoptions.html:15
 msgid "No Preferences Available"
@@ -1447,50 +1461,50 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:59
 msgid "CSV Export"
-msgstr ""
+msgstr "CSV-eksport"
 
 #: templates/postorius/lists/members.html:73
 #: templates/postorius/user/address_preferences.html:32
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: templates/postorius/lists/members.html:92
 msgid "Member Options"
-msgstr ""
+msgstr "Medlemsvalg"
 
 #: templates/postorius/lists/members.html:104
 msgid "Non-member Options"
-msgstr ""
+msgstr "Valg for ikke-medlemmer"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
-msgstr ""
+msgstr "Opprett liste"
 
 #: templates/postorius/lists/new.html:12
 msgid "Create a new list"
-msgstr ""
+msgstr "Opprett en ny liste"
 
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:28
 msgid "Settings"
-msgstr ""
+msgstr "Innstillinger"
 
 #: templates/postorius/lists/subscription_requests.html:7
 #: templates/postorius/menu/list_nav.html:11
 msgid "Subscription requests"
-msgstr ""
+msgstr "Abonnementsforespørsler"
 
 #: templates/postorius/lists/subscription_requests.html:19
 msgid "E-Mail Address"
-msgstr ""
+msgstr "E-postadresse"
 
 #: templates/postorius/lists/subscription_requests.html:20
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr ""
+msgstr "Bannlys"
 
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "There are currently no subscription requests for this list."
@@ -1499,11 +1513,11 @@ msgstr ""
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:9
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
-msgstr ""
+msgstr "For å kontakte listeeierne, bruk følgende e-postadresse:"
 
 #: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
@@ -1548,7 +1562,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:65
 msgid "Subscribe to this list"
-msgstr ""
+msgstr "Abonner på denne listen"
 
 #: templates/postorius/lists/summary.html:67
 #, python-format
@@ -1574,7 +1588,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:85
 msgid "Log In"
-msgstr ""
+msgstr "Logg inn"
 
 #: templates/postorius/lists/summary.html:90
 msgid ""
@@ -1590,39 +1604,39 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
-msgstr ""
+msgstr "Opprettet den"
 
 #: templates/postorius/lists/summary.html:109
 msgid "Last post at"
-msgstr ""
+msgstr "Siste post"
 
 #: templates/postorius/lists/summary.html:110
 msgid "Digest last sent at"
-msgstr ""
+msgstr "Føljetong sist sendt"
 
 #: templates/postorius/lists/summary.html:111
 msgid "Volume"
-msgstr ""
+msgstr "Lydstyrke"
 
 #: templates/postorius/menu/list_nav.html:18
 msgid "Users"
-msgstr ""
+msgstr "Bruker"
 
 #: templates/postorius/menu/list_nav.html:21
 msgid "Members"
-msgstr ""
+msgstr "Medlemmer"
 
 #: templates/postorius/menu/list_nav.html:22
 msgid "Non-Members"
-msgstr ""
+msgstr "Ikke-medlemmer"
 
 #: templates/postorius/menu/list_nav.html:23
 msgid "Moderators"
-msgstr ""
+msgstr "Moderatorer"
 
 #: templates/postorius/menu/list_nav.html:24
 msgid "Owners"
-msgstr ""
+msgstr "Eiere"
 
 #: templates/postorius/menu/list_nav.html:32
 msgid "Mass operations"
@@ -1634,12 +1648,12 @@ msgstr ""
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "Mailman-innstillinger"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8
 msgid "Subscriptions"
-msgstr ""
+msgstr "Abonnementer"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -1655,7 +1669,7 @@ msgstr ""
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
-msgstr ""
+msgstr "Systemoppsett"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -1688,7 +1702,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -1700,7 +1714,7 @@ msgstr ""
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "Abonnementsinnstillinger"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
@@ -1726,11 +1740,11 @@ msgstr ""
 
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
-msgstr ""
+msgstr "Leveringsmodus"
 
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
-msgstr ""
+msgstr "Rolle"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
@@ -1765,23 +1779,23 @@ msgstr ""
 
 #: views/list.py:94
 msgid "List {}s"
-msgstr ""
+msgstr "Liste {}er"
 
 #: views/list.py:108
 msgid "Add {}"
-msgstr ""
+msgstr "Legg til {}"
 
 #: views/list.py:111
 msgid "No {}s were found matching the search."
-msgstr ""
+msgstr "Ingen {}er ble funnet som samsvarte med søket."
 
 #: views/list.py:113
 msgid "List has no {}s"
-msgstr ""
+msgstr "Listen har ingen {}er"
 
 #: views/list.py:126
 msgid "The selected members have been unsubscribed"
-msgstr ""
+msgstr "Valgte medlemmer har fått sitt abonnement opphevet"
 
 #: views/list.py:144
 #, python-brace-format
@@ -1790,7 +1804,7 @@ msgstr ""
 
 #: views/list.py:185
 msgid "Member does not exist"
-msgstr ""
+msgstr "Medlemmet finnes ikke"
 
 #: views/list.py:201
 msgid "The member's preferences have been updated."
@@ -1817,11 +1831,11 @@ msgstr ""
 #: views/list.py:321
 #, python-format
 msgid "Subscription changed to %s"
-msgstr ""
+msgstr "Abonnement endret til %s"
 
 #: views/list.py:325 views/list.py:363 views/list.py:391
 msgid "Something went wrong. Please try again."
-msgstr ""
+msgstr "Noe gikk galt. Prøv igjen."
 
 #: views/list.py:354
 msgid ""
@@ -1832,7 +1846,7 @@ msgstr ""
 #: views/list.py:359
 #, python-format
 msgid "You are subscribed to %s."
-msgstr ""
+msgstr "Du abonnerer på %s."
 
 #: views/list.py:387
 msgid "Please check your inbox for further instructions"
@@ -1942,7 +1956,7 @@ msgstr ""
 
 #: views/list.py:810
 msgid "Automatic Responses"
-msgstr ""
+msgstr "Automatiske svar"
 
 #: views/list.py:811
 msgid "Alter Messages"
@@ -1954,7 +1968,7 @@ msgstr ""
 
 #: views/list.py:813
 msgid "Digest"
-msgstr ""
+msgstr "Føljetong"
 
 #: views/list.py:814
 msgid "Message Acceptance"
@@ -1962,11 +1976,12 @@ msgstr ""
 
 #: views/list.py:815
 msgid "Archiving"
-msgstr ""
+msgstr "Arkivering"
 
 #: views/list.py:865
+#, fuzzy
 msgid "The settings have been updated."
-msgstr ""
+msgstr "Innstillinger oppdatert."
 
 #: views/list.py:869
 msgid "An error occured: "
@@ -2011,7 +2026,7 @@ msgstr ""
 #: views/list.py:978 views/list.py:989
 #, python-format
 msgid "Invalid data: %s"
-msgstr ""
+msgstr "Ugyldig data: %s"
 
 #: views/list.py:984
 msgid "The email {} has been un-banned"
@@ -2023,28 +2038,28 @@ msgstr ""
 
 #: views/list.py:1057
 msgid "New header"
-msgstr ""
+msgstr "Nytt hode"
 
 #: views/list.py:1058
 msgid "New pattern"
-msgstr ""
+msgstr "Nytt mønster"
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "Meldingen finnes ikke"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "Vedlegget finnes ikke"
 
 #: views/user.py:77
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "Innstillingene dine har blitt oppdatert."
 
 #: views/user.py:79
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "Innstillingene dine endret seg ikke."
 
 #: views/user.py:195
 msgid "Subscription does not exist"
-msgstr ""
+msgstr "Abonnementet finnes ikke"
