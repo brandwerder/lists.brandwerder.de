@@ -75,7 +75,7 @@ Third, prepare the database:
     $ cd example_project
     $ python manage.py migrate
 
-This will create the ``postorius.db`` file (if you ar using SQLite) and will setup all the
+This will create the ``postorius.db`` file (if you are using SQLite) and will setup all the
 necessary db tables.
 
 To create a superuser which will act as an admin account for Postorius, run the
