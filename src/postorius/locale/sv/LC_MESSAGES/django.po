@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:29+0200\n"
-"PO-Revision-Date: 2019-06-06 18:43+0000\n"
+"PO-Revision-Date: 2019-06-19 13:01+0000\n"
 "Last-Translator: Kristoffer Grundström <kristoffer.grundstrom1983@gmail.com>"
 "\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.7\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -35,11 +35,11 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Vänligen fyll i ett domännamn"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Vänligen fyll i ett giltigt domännamn."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -54,7 +54,7 @@ msgstr "Beskrivning"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Aliasdomän"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
