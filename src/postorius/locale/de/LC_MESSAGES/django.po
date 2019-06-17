@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-10 21:46+0100\n"
-"PO-Revision-Date: 2019-05-14 07:48+0000\n"
+"PO-Revision-Date: 2019-06-19 13:01+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "translations/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.7\n"
 
 #: forms.py:33
 msgid "Hold for moderation"
@@ -1033,7 +1033,7 @@ msgstr "Archive"
 
 #: templates/postorius/base.html:67
 msgid "Account"
-msgstr "Account"
+msgstr "Konto"
 
 #: templates/postorius/base.html:71
 msgid "Mailman settings"
@@ -1041,7 +1041,7 @@ msgstr "Mailman-Einstellungen"
 
 #: templates/postorius/base.html:76
 msgid "Posting activity"
-msgstr "Post-Aktivität"
+msgstr "Posting-Aktivitäten"
 
 #: templates/postorius/base.html:82
 msgid "Logout"
@@ -1551,7 +1551,7 @@ msgstr "Mailman-Einstellungen"
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8
 msgid "Subscriptions"
-msgstr "Mitgliedschaften"
+msgstr "Abonnements"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
