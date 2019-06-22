@@ -108,7 +108,7 @@ every ``TestCase`` class.
 View Authorization
 ==================
 
-Three of Django's default User roles are relvant for Postorius:
+Three of Django's default User roles are relevant for Postorius:
 
 - Superuser: Can do everything.
 - AnonymousUser: Can view list index and info pages.
