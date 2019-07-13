@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:28+0200\n"
-"PO-Revision-Date: 2019-06-19 13:01+0000\n"
+"PO-Revision-Date: 2019-07-14 17:01+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
 "translations/ar/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.7\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1110,7 +1110,7 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "الحساب"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
