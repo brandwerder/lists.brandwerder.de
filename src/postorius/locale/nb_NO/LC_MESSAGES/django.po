@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:29+0200\n"
-"PO-Revision-Date: 2019-06-06 18:43+0000\n"
+"PO-Revision-Date: 2019-08-01 05:14+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "gnu-mailman/translations/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -59,7 +59,7 @@ msgstr ""
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Skriv inn et gyldig domenenavn, eller ingenting."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -99,15 +99,15 @@ msgstr ""
 
 #: forms/list_forms.py:51 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Listenavn"
 
 #: forms/list_forms.py:53
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Skriv inn et navn for din liste."
 
 #: forms/list_forms.py:54
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Skriv inn et gyldig listenavn."
 
 #: forms/list_forms.py:57
 msgid "Initial list owner address"
@@ -134,8 +134,9 @@ msgid "Hide this list in list index"
 msgstr ""
 
 #: forms/list_forms.py:82
+#, fuzzy
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Velg et eksisterende domene."
 
 #: forms/list_forms.py:83
 msgid "Choose a valid Mail Host"
@@ -452,13 +453,16 @@ msgstr ""
 
 #: forms/list_forms.py:424
 msgid "Convert html to plaintext"
-msgstr ""
+msgstr "Konverter HTML til klartekst"
 
 #: forms/list_forms.py:425
+#, fuzzy
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
+"Skal Mailman konvertere tekst/HTML-deler til klartekst? Denne konverteringer "
+"skjer etter at MIME-vedlegg har blitt strippet vekk."
 
 #: forms/list_forms.py:432
 msgid "Anonymous list"
@@ -571,11 +575,11 @@ msgstr ""
 
 #: forms/list_forms.py:531
 msgid "Respond and continue processing"
-msgstr ""
+msgstr "Besvar og fortsett behandling"
 
 #: forms/list_forms.py:532
 msgid "Respond and discard message"
-msgstr ""
+msgstr "Besvar og forkast melding"
 
 #: forms/list_forms.py:533
 msgid "No automatic response"
@@ -684,7 +688,7 @@ msgstr ""
 
 #: forms/list_forms.py:613
 msgid "Notify admin of membership changes"
-msgstr ""
+msgstr "Varsle administrator om medlemskapsendringer"
 
 #: forms/list_forms.py:614
 msgid "Should administrator get notices of subscribes and unsubscribes?"
@@ -707,7 +711,7 @@ msgstr ""
 
 #: forms/list_forms.py:638
 msgid "Information"
-msgstr ""
+msgstr "Informasjon"
 
 #: forms/list_forms.py:639
 msgid "A longer description of this mailing list."
@@ -746,7 +750,7 @@ msgstr ""
 
 #: forms/list_forms.py:683
 msgid "Add one email address on each line"
-msgstr ""
+msgstr "Legg til én e-postadresse på hver linje"
 
 #: forms/list_forms.py:702
 msgid "Add ban"
@@ -757,6 +761,8 @@ msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
+"Du kan bannlyse en enkelt e-postadresse eller bruke et regulært uttrykk for "
+"å jamføre med lignende e-postadresser."
 
 #: forms/list_forms.py:714
 msgid "Default antispam action"
