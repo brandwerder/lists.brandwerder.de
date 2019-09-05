@@ -37,19 +37,18 @@ along with mailman.client. If not, see <http://www.gnu.org/licenses/>.
 Requirements
 ============
 
-Postorius requires Python 3.5 or newer and mailmanclient, the official Python
-bindings for GNU Mailman.
+Postorius requires Python 3.5+.
 
 The minimum Django version is 1.11.
 
-Postorius needs a running version of GNU Mailman version 3.2.2
+Postorius needs a running version of GNU Mailman version 3.3.0
 
 
 Installation
 ============
 
 To install GNU Mailman Suite follow the instructions in the documentation:
-http://docs.mailman3.org/
+https://docs.mailman3.org/
 
 
 Acknowledgements
