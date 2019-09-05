@@ -45,7 +45,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   for moderator approval. (Closes #308)
 * Add support to add, view and remove domain owners.
 * Allow setting the visibility options for MailingList's member list.
-
+* Make page titles localizable.
 
 1.2.4
 =====
