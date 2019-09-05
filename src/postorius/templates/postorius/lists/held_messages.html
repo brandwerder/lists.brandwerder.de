@@ -10,7 +10,7 @@
 
 {% block content %}
 
-    {% list_nav 'list_held_messages' 'Held messages' %}
+    {% list_nav 'list_held_messages' 'msgid:title:list_held_messages' %}
 
     {% if held_messages|length > 0 %}
         <form method="post">
