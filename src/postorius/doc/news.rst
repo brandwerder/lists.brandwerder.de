@@ -18,9 +18,17 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+1.3.1
+=====
+
+(20XX-XX-XX)
+
+
 1.3.0
 =====
+
 (2019-09-04)
+
 * Fix a string substitution bug which would cause un-substituted raw string to
   be exposed as notification to admin. (Closes #327)
 * Add support for ``FILTER_VHOST`` option to filter MalingLists based on
