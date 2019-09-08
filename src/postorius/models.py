@@ -228,8 +228,16 @@ class EmailTemplate(models.Model):
     Footers on emails for decorations are also repsented as templates.
     """
 
+    # Ease differentiating the various Mailman templates by providing the
+    # template file's name (key) prepended in square brackets to the
+    # template's purpose (value).
+    _templates_list_choices = [
+        (t[0], "[{key}] - {value}".format(key=t[0], value=t[1]))
+        for t in TEMPLATES_LIST
+    ]
+
     name = models.CharField(
-        max_length=100, choices=TEMPLATES_LIST,
+        max_length=100, choices=_templates_list_choices,
         help_text=_('Choose the template you want to customize.'))
     data = models.TextField(
         help_text=_(
