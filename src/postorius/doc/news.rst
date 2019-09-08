@@ -23,6 +23,11 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 (20XX-XX-XX)
 
+* Show templates' file names in selection list where admins can pick
+  individual templates for customization. (See !425)
+* Make template short names more prominent on all email templates related
+  views. (See !425)
+
 
 1.3.0
 =====
@@ -54,6 +59,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Add support to add, view and remove domain owners.
 * Allow setting the visibility options for MailingList's member list.
 * Make page titles localizable.
+
 
 1.2.4
 =====

@@ -12,10 +12,15 @@
         <small>{{ domain.mail_host }}</small>
       </h1>
     </div>
-    
+
+    <h3>Template '{{ object.name }}'<br />
+        <small>{{ object.description }}</small>
+    </h3>
+
     <form action="" method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ object.description }}"?</p>
+        <p>Are you sure you want to delete the "{{ object.name }}" template
+           for domain "{{ object.identifier }}"?</p>
         <input class="btn btn-danger" type="submit" value="Confirm" />
         <a class="btn btn-info" href="{{ view.success_url }}">Cancel</a>
 
