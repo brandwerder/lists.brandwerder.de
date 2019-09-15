@@ -588,13 +588,11 @@ def _get_choosable_styles(request):
     styles = Style.objects.all()
     options = [(style['name'], style['description'])
                for style in styles['styles']]
-    # Reorder to put the default at the beginning
-    for style_option in options:
-        if style_option[0] == styles['default']:
-            options.remove(style_option)
-            options.insert(0, style_option)
-            break
     return options
+
+
+def _get_default_style():
+    return Style.objects.all()['default']
 
 
 @login_required
@@ -652,6 +650,7 @@ def list_new(request, template='postorius/lists/new.html'):
         form = ListNew(choosable_domains, choosable_styles, initial={
             'list_owner': request.user.email,
             'advertised': True,
+            'list_style': _get_default_style(),
             })
     return render(request, template, {'form': form})
 

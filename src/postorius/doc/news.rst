@@ -28,6 +28,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Make template short names more prominent on all email templates related
   views. (See !425)
 * Bind object attributes to local variables in {% blocktrans %} (See !439)
+* Set the initial style in new list form as the default style. (Closes #310)
 
 
 1.3.0
