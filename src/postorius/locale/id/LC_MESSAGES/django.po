@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-17 13:28+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-05-26 20:44+0000\n"
+"Last-Translator: Syahmin Sukhairi <syahmin@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
+"translations/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -33,11 +34,11 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Silakan masukkan nama domain"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Silakan masukkan nama domain yang benar."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -48,19 +49,20 @@ msgstr ""
 #: forms/domain_forms.py:54 forms/list_forms.py:72 forms/list_forms.py:629
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:55
 msgid "Description"
-msgstr ""
+msgstr "Deskripsi"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Domain Alias"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Silakan masukkan nama domain yang benar atau dikosongkan."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Biasanya kosong.  Hanya digunakan untuk konfigurasi Postfix yang tidak biasa."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -68,23 +70,23 @@ msgstr ""
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Silakan masukkan nama domain yang benar"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Paling tidak buat satu pilihan"
 
 #: forms/list_forms.py:33
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Tahan untuk dimoderasi"
 
 #: forms/list_forms.py:34
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Tolak (dengan pemberitahuan)"
 
 #: forms/list_forms.py:35
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Membuang (tanpa pemberitahuan)"
 
 #: forms/list_forms.py:36
 msgid "Accept immediately (bypass other rules)"
@@ -96,15 +98,15 @@ msgstr ""
 
 #: forms/list_forms.py:51 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Daftar Nama"
 
 #: forms/list_forms.py:53
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Silakan masukkan nama dari daftar anda."
 
 #: forms/list_forms.py:54
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Silakan masukkan daftar nama yang benar."
 
 #: forms/list_forms.py:57
 msgid "Initial list owner address"

@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-11-10 21:46+0100\n"
-"PO-Revision-Date: 2017-11-12 15:58+0100\n"
-"Last-Translator: Manfred Dohmen <manfred.dohmen@gmail.com>\n"
-"Language-Team: DE <manfred.dohmen@gmail.com>\n"
+"PO-Revision-Date: 2019-06-19 13:01+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
+"translations/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Weblate 3.7\n"
 
 #: forms.py:33
 msgid "Hold for moderation"
@@ -70,7 +71,7 @@ msgstr "Web-Host"
 
 #: forms.py:119
 msgid "Please enter a valid domain name"
-msgstr "Bitte geben Sie einen gültigen Domain-Namen an."
+msgstr "Bitte geben Sie einen gültigen Domain-Namen an"
 
 #: forms.py:126
 msgid "Email Address"
@@ -181,9 +182,9 @@ msgstr ""
 "Bestätigen: Mitglieder müssen eine Bestätigung anhand einer zugesandten E-"
 "Mail vornehmen\n"
 "Moderieren: Moderatoren müssen jede Mitgliedschaftsanfrage manuell "
-"autorisieren\n"
-"Bestätigen, dann Moderieren: Zuerst müssen Mitglieder die Bestätigung "
-"durchlaufen, dann ein Moderator autorisieren"
+"autorisieren.\n"
+"Bestätigen, dann Moderieren: zuerst müssen Mitglieder die Bestätigung "
+"durchlaufen, dann muss ein Moderator autorisieren."
 
 #: forms.py:285
 msgid "Public archives"
@@ -317,19 +318,16 @@ msgstr ""
 "Wie groß (in Kb) soll ein Digest sein, bevor das Versenden ausgelöst wird?"
 
 #: forms.py:393
-#, fuzzy
 msgid "DMARC mitigation action"
-msgstr "DMARC-Hilfmaßnahmen"
+msgstr "DMARC-Gegenmaßnahme"
 
 #: forms.py:397
-#, fuzzy
 msgid "Please choose a DMARC mitigation action."
-msgstr "Bitte wählen Sie eine DMARC-Aktion aus."
+msgstr "Bitte wählen Sie eine DMARC-Gegenmaßnahme aus."
 
 #: forms.py:399
-#, fuzzy
 msgid "No DMARC mitigations"
-msgstr "Keine DMARC-Hilfsmaßnahmen"
+msgstr "Keine DMARC-Gegenmaßnahme"
 
 #: forms.py:400
 msgid "Replace From: with list address"
@@ -353,53 +351,48 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
-"The action to apply to messages From: a domain publishing a DMARC policy of "
-"reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
-"True."
+"Die Aktion, die auf Nachrichten an eine Domain mit einer Reject-/Quarantine-"
+"DMARC-Richtlinie beziehungsweise auf alle Nachrichten anzuwenden ist, wenn \""
+"DMARC Unbedingt mildern\" auf \"Ja\" ist."
 
 #: forms.py:414
-#, fuzzy
 msgid "DMARC Mitigate unconditionally"
-msgstr "DMARC Mitigate unconditionally"
+msgstr "DMARC bedingungslose Gegenmaßnahme"
 
 #: forms.py:416
-#, fuzzy
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
-"If DMARC mitigation action is munge_from or wrap_message, should it apply to "
-"all messages regardless of the DMARC policy of the From: domain."
+"Wenn die DMARC-Gegenmaßnahme munge_from oder wrap_message ist, sollte sie "
+"für alle Nachrichten gelten, unabhängig von der DMARC-Richtlinie der From: "
+"Domain."
 
 #: forms.py:420
-#, fuzzy
 msgid "DMARC rejection notice"
-msgstr "DMARC rejection notice"
+msgstr "DMARC Ablehnungshinweis"
 
 #: forms.py:424
-#, fuzzy
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
 msgstr ""
-"Text to replace the default reason in any rejection notice to be sent when "
-"DMARC mitigation action of reject applies."
+"Text, um den Standardgrund in jeder Ablehnungsmitteilung zu ersetzen, die "
+"gesendet wird, wenn die DMARC-Gegenmaßnahme der Ablehnung angewendet wird."
 
 #: forms.py:427
-#, fuzzy
 msgid "DMARC wrapped message text"
-msgstr "DMARC wrapped message text"
+msgstr "DMARC verpackter Nachrichtentext"
 
 #: forms.py:431
-#, fuzzy
 msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
-"Text to be added as a separate text/plain MIME part preceding the original "
-"message part in the wrapped message when DMARC mitigation action of wrap "
-"message applies."
+"Text, der als separater Text-/Plain-MIME-Teil vor dem ursprünglichen "
+"Nachrichtenteil in der verpackten Nachricht hinzugefügt werden soll, wenn "
+"die DMARC-Gegenmaßnahme der verpackten Nachricht angewendet wird."
 
 #: forms.py:445
 msgid "Filter content"
@@ -501,7 +494,7 @@ msgid ""
 msgstr ""
 "Diese Option erlaubt es Administratoren, eine explizite Reply-To-Adresse zu "
 "setzen. Diese wird nur verwendet, wenn die Option zum expliziten Setzen des "
-"Reply-To-Headers aktiviert wird."
+"Reply-To-Headers aktiviert wird"
 
 #: forms.py:516
 msgid ""
@@ -530,7 +523,6 @@ msgid "Explicit Reply-to header set"
 msgstr "Expliziter Reply-To-Header gesetzt"
 
 #: forms.py:530
-#, fuzzy
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -553,26 +545,29 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"Where are replies to list messages directed? No Munging is strongly "
-"recommended for most mailing lists. \n"
-"This option controls what Mailman does to the Reply-To: header in messages "
-"flowing through this mailing list. When set to No Munging, no Reply-To: "
-"header is added by Mailman, although if one is present in the original "
-"message, it is not stripped. Setting this value to either Reply to List or "
-"Explicit Reply causes Mailman to insert a specific Reply-To: header in all "
-"messages, overriding the header in the original message if necessary "
-"(Explicit Reply inserts the value of reply_to_address). There are many "
-"reasons not to introduce or override the Reply-To: header. One is that some "
-"posters depend on their own Reply-To: settings to convey their valid return "
-"address. Another is that modifying Reply-To: makes it much more difficult to "
-"send private replies. See `Reply-To' Munging Considered Harmful for a "
-"general discussion of this issue. See Reply-To Munging Considered Useful for "
-"a dissenting opinion. Some mailing lists have restricted posting privileges, "
-"with a parallel list devoted to discussions. Examples are `patches' or "
-"`checkin' lists, where software changes are posted by a revision control "
-"system, but discussion about the changes occurs on a developers mailing "
-"list. To support these types of mailing lists, select Explicit Reply and set "
-"the Reply-To: address option to point to the parallel list."
+"Wohin werden Antworten auf Listennachrichten gerichtet? Kein Munging wird "
+"für die meisten Mailinglisten dringend empfohlen.\n"
+"Diese Option steuert, was Mailman mit dem Reply-To: Header in Nachrichten "
+"macht, die durch diese Mailingliste laufen. Wenn auf No Munging gesetzt, "
+"wird von Mailman kein Reply-To: Header hinzugefügt, obwohl, wenn einer in "
+"der ursprünglichen Nachricht vorhanden ist, dieser nicht entfernt wird. Wenn "
+"Sie diesen Wert entweder auf Reply to List oder Explicit Reply setzen, fügt "
+"Mailman einen bestimmten Reply-To: header in alle Nachrichten ein und "
+"überschreibt, wenn nötig, den Header in der Originalnachricht (Explicit "
+"Reply fügt den Wert von reply_to_address ein). Es gibt viele Gründe, den "
+"Header Reply-To: nicht einzufügen oder zu überschreiben. Zum einen hängen "
+"einige Poster von ihren eigenen Reply-To: Einstellungen ab, um ihre gültige "
+"Absenderadresse zu übermitteln. Eine andere ist die Änderung von Reply-To: "
+"macht es viel schwieriger, private Antworten zu senden. Siehe `Reply-To' "
+"Munging als Schädlich Erachtet für eine allgemeine Behandlung dieses Themas. "
+"Siehe Reply-To Munging als Nützlich Erachtet für eine abweichende Meinung. "
+"Einige Mailinglisten haben eingeschränkte Veröffentlichungsrechte, wobei "
+"eine parallele Liste für Diskussionen vorgesehen ist. Beispiele sind `"
+"Patches' oder `Checkin'-Listen, in denen Softwareänderungen von einem "
+"Versionskontrollsystem veröffentlicht werden, aber die Diskussion über die "
+"Änderungen findet auf einer Entwickler-Mailingliste statt. Um diese Art von "
+"Mailinglisten zu unterstützen, wählen Sie Explizite Antwort und setzen Sie "
+"die Option Reply-To: Adresse, um auf die parallele Liste zu zeigen."
 
 #: forms.py:555
 msgid "Pipeline"
@@ -647,7 +642,7 @@ msgstr ""
 
 #: forms.py:605
 msgid "Autoresponse request text"
-msgstr "Text für automatische Antworten auf Anfragen."
+msgstr "Text der Autoresponse-Anfrage"
 
 #: forms.py:608
 msgid "Auto-response text to send to -request emails."
@@ -723,10 +718,10 @@ msgid ""
 "on the arrival of new requests as well. "
 msgstr ""
 "Sollen die Listen-Moderatoren sofort Benachrichtigungen zu neuen Anfragen "
-"erhalten, ebenso tägliche Benachrichtigungen zu gesammelten Anfragen? Listen-"
+"erhalten, sowie tägliche Benachrichtigungen zu gesammelten Anfragen? Listen-"
 "Moderatoren (und Listen-Administratoren) erhalten tägliche Erinnerungen auf "
 "ausstehende Anfragen. Die Aktivierung dieser Option bewirkt zusätzlich "
-"sofortige Benachrichtigungen."
+"sofortige Benachrichtigungen. "
 
 #: forms.py:657
 msgid "Notify admin of membership changes"
@@ -744,7 +739,7 @@ msgstr "Anzeigen der Liste auf der Index-Seite"
 
 #: forms.py:671
 msgid "Choose whether to include this list on the list of all lists"
-msgstr "Wählen Sie, ob die Liste in die Liste aller Listen inkludiert wird."
+msgstr "Wählen Sie, ob die Liste in die Liste aller Listen aufgenommen wird"
 
 #: forms.py:677
 msgid ""
@@ -978,7 +973,7 @@ msgid ""
 msgstr ""
 "Falls Sie explizit in den To:- oder Cc:-Angaben einer Nachricht erscheinen, "
 "können Sie wählen nicht noch eine Kopie der Nachricht durch die Mailing-"
-"Liste zu erhalten. Aktivieren Sie diese Option, um keine Kopien zu erhalten."
+"Liste zu erhalten. Aktivieren Sie diese Option, um keine Kopien zu erhalten. "
 
 #: forms.py:943
 msgid "Moderation"
@@ -1002,7 +997,18 @@ msgid ""
 "message, with no notice sent to the post's author. Accept -- accepts any "
 "postings without any further checks. Defer -- default processing, run "
 "additional checks and accept the message. "
-msgstr "Standard-Aktion, wenn ein Mitglied an die Liste sendet."
+msgstr ""
+"Standardaktion, die ergriffen werden muss, wenn dieses Mitglied in der Liste "
+"veröffentlicht. Listenstandard - folgen Sie der Standard-Memberaktion der "
+"Liste. Hold -- dies hält die Nachricht zur Genehmigung durch die "
+"Listenmoderatoren bereit. Ablehnen - dadurch wird die Nachricht automatisch "
+"abgelehnt, indem eine Bounce-Mitteilung an den Autor des Beitrags gesendet "
+"wird. Der Text der Bounce-Mitteilung kann von Ihnen konfiguriert werden. "
+"Verwerfen - dadurch wird die Nachricht einfach verworfen, ohne dass eine "
+"Benachrichtigung an den Autor des Beitrags gesendet wird. Akzeptieren - "
+"akzeptiert alle Postings ohne weitere Kontrollen. Aufschieben -- "
+"Standardverarbeitung, zusätzliche Prüfungen durchführen und die Nachricht "
+"akzeptieren. "
 
 #: forms.py:969
 msgid "Select Email"
@@ -1027,7 +1033,7 @@ msgstr "Archive"
 
 #: templates/postorius/base.html:67
 msgid "Account"
-msgstr "Account"
+msgstr "Konto"
 
 #: templates/postorius/base.html:71
 msgid "Mailman settings"
@@ -1035,7 +1041,7 @@ msgstr "Mailman-Einstellungen"
 
 #: templates/postorius/base.html:76
 msgid "Posting activity"
-msgstr "Post-Aktivität"
+msgstr "Posting-Aktivitäten"
 
 #: templates/postorius/base.html:82
 msgid "Logout"
@@ -1235,7 +1241,7 @@ msgstr "Änderungen speichern"
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
 msgstr ""
-"Änderungen nicht gesichert, klicken Sie auf den Button, um diese zu sichern"
+"Änderungen nicht gesichert, klicken Sie auf den Button, um diese zu sichern."
 
 #: templates/postorius/lists/held_messages.html:8
 #: templates/postorius/menu/list_nav.html:9
@@ -1380,7 +1386,7 @@ msgstr "Info"
 
 #: templates/postorius/lists/summary.html:18
 msgid "To contact the list owners, use the following email address:"
-msgstr "Benutzen Sie folgende Adresse, um die Listen-Besitzer zu kontaktieren"
+msgstr "Benutzen Sie folgende Adresse, um die Listen-Besitzer zu kontaktieren:"
 
 #: templates/postorius/lists/summary.html:24
 msgid "You have to login to visit the archives of this list."
@@ -1545,7 +1551,7 @@ msgstr "Mailman-Einstellungen"
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8
 msgid "Subscriptions"
-msgstr "Mitgliedschaften"
+msgstr "Abonnements"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -1588,8 +1594,8 @@ msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
-"Alle Optionen, die hier nicht gesetzt angezeigt werden, werden zur Laufzeit "
-"aus den globalen Einstellungen übernommen (siehe anderes Tab)."
+"Alle Optionen, die hier nicht als gesetzt angezeigt werden, werden zur "
+"Laufzeit aus den globalen Einstellungen übernommen (siehe anderen Tab)"
 
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:66
@@ -1604,7 +1610,7 @@ msgstr "Mitgliedschafts-Einstellungen für"
 msgid "Use this form to change the email used for this subscription"
 msgstr ""
 "Benutzen Sie dieses Formular, um die E-Mail-Adresse Ihrer Mitgliedschaft zu "
-"ändern."
+"ändern"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
@@ -1620,9 +1626,9 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
-"Alle Optionen, die hier nicht gesetzt angezeigt werden, werden zur Laufzeit "
-"aus den globalen oder adressspezifischen Einstellungen übernommen (siehe "
-"andere Tabs)."
+"Alle Optionen, die hier nicht als gesetzt angezeigt werden, werden zur "
+"Laufzeit aus den globalen oder adressspezifischen Einstellungen übernommen ("
+"siehe andere Tabs)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
@@ -1784,7 +1790,7 @@ msgstr "Sie sind Mitglied folgender Listen: %s."
 
 #: views/list.py:359
 msgid "Please check your inbox for further instructions"
-msgstr "Bitte prüfen Sie Ihr E-Mail-Postfach für weitere Instruktionen."
+msgstr "Bitte prüfen Sie Ihr E-Mail-Postfach für weitere Anweisungen"
 
 #: views/list.py:378
 #, python-format
@@ -1810,7 +1816,7 @@ msgstr "Bitte füllen Sie das Formular korrekt aus."
 msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgstr ""
 "Die Mitgliedschaft der Adresse %(address)s bei der Liste %(list)s wurde "
-"beendet. "
+"beendet."
 
 #: views/list.py:469
 msgid "The selected messages were accepted"
@@ -1953,7 +1959,7 @@ msgstr "Ungültige Daten: %s"
 
 #: views/list.py:845
 msgid "The email {} has been un-banned"
-msgstr "Die Verbannung der E-Mail-Adresse {} wurde aufgehoben."
+msgstr "Die Verbannung der E-Mail-Adresse {} wurde aufgehoben"
 
 #: views/list.py:911
 msgid "The header matches were successfully modified."
@@ -1986,4 +1992,3 @@ msgstr "Ihre Einstellungen haben sich nicht geändert."
 #: views/user.py:195
 msgid "Subscription does not exist"
 msgstr "Mitgliedschaft existiert nicht"
-
