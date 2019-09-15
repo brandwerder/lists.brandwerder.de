@@ -10,7 +10,7 @@
 {% block content  %}
     {% list_nav 'templates' 'msgid:title:list_templates' %}
 
-<h3> Template '{{ object.name }}' <br />
+<h3>{% blocktrans with name=object.name %}Template '{{ name }}'{% endblocktrans %}<br />
     <small>{{ object.description }}</small>
 </h3>
 

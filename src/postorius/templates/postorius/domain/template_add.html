@@ -14,7 +14,7 @@
     </div>
 
     {% if object %}
-    <h3>{% blocktrans %}Template '{{ object.name }}'{% endblocktrans %}<br />
+    <h3>{% blocktrans with name=object.name %}Template '{{ name }}'{% endblocktrans %}<br />
         <small>{{ object.description }}</small>
     </h3>
     {% endif %}
