@@ -27,6 +27,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   individual templates for customization. (See !425)
 * Make template short names more prominent on all email templates related
   views. (See !425)
+* Bind object attributes to local variables in {% blocktrans %} (See !439)
 
 
 1.3.0
