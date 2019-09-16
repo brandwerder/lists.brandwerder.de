@@ -31,6 +31,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Set the initial style in new list form as the default style. (Closes #310)
 * Fix a bug where logged in users's index page view would cap the total number
   of lists for a role to 50. (Closes #335)
+* Fix a bug where handling non-existent held message can raise 500
+  exception. (Closes #349)
 
 1.3.0
 =====
