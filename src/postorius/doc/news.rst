@@ -35,7 +35,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   exception. (Closes #349)
 * Emit appropriate signals when Domain and MailingList is updated. (Closes
   #385)
-
+* Do not strip leading whitespaces in Email Templates. (Closes #301)
 
 1.3.0
 =====

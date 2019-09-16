@@ -41,6 +41,23 @@ from postorius.utils import LANGUAGES, get_mailman_client
 
 logger = logging.getLogger(__name__)
 
+_email_template_help_text = _(
+    'Note: Do not add any secret content in templates as they are '
+    'publicly accessible.\n'
+    'You can use these variables in the templates. \n'
+    '$hyperkitty_url: Permalink to archived message in Hyperkitty\n'
+    '$listname: Name of the Mailing List e.g. ant@example.com \n'
+    '$list_id: The List-ID header e.g. ant.example.com \n'
+    '$display_name: Display name of the mailing list e.g. Ant \n'
+    '$short_listname: Local part of the listname e.g. ant \n'
+    '$domain: The domain part of the listname e.g. example.com \n'
+    '$info: The mailing list\'s longer descriptive text \n'
+    '$request_email: The email address for -request address \n'
+    '$owner_email: The email address for -owner address \n'
+    '$site_email: The email address to reach the owners of the site \n'
+    '$language: The two letter language code for list\'s preferred language e.g. fr, en, de \n'  # noqa: E501
+    )
+
 
 @receiver(post_save, sender=User)
 def create_mailman_user(sender, **kwargs):
@@ -240,22 +257,7 @@ class EmailTemplate(models.Model):
         max_length=100, choices=_templates_list_choices,
         help_text=_('Choose the template you want to customize.'))
     data = models.TextField(
-        help_text=_(
-            'Note: Do not add any secret content in templates as they are '
-            'publicly accessible.\n'
-            'You can use these variables in the templates. \n'
-            '$hyperkitty_url: Permalink to archived message in Hyperkitty\n'
-            '$listname: Name of the Mailing List e.g. ant@example.com \n'
-            '$list_id: The List-ID header e.g. ant.example.com \n'
-            '$display_name: Display name of the mailing list e.g. Ant \n'
-            '$short_listname: Local part of the listname e.g. ant \n'
-            '$domain: The domain part of the listname e.g. example.com \n'
-            '$info: The mailing list\'s longer descriptive text \n'
-            '$request_email: The email address for -request address \n'
-            '$owner_email: The email address for -owner address \n'
-            '$site_email: The email address to reach the owners of the site \n'
-            '$language: The two letter language code for list\'s preferred language e.g. fr, en, de \n'  # noqa: E501
-        ),
+        help_text=_email_template_help_text,
         blank=True,
     )
     language = models.CharField(

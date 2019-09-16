@@ -28,6 +28,7 @@ from django_mailman3.lib.mailman import get_mailman_client
 
 from postorius.forms.fields import ListOfStringsField
 from postorius.languages import LANGUAGES
+from postorius.models import EmailTemplate, _email_template_help_text
 
 
 ACTION_CHOICES = (
@@ -837,3 +838,16 @@ class ChangeSubscriptionForm(forms.Form):
             required=False,
             widget=forms.Select(),
             choices=((address, address) for address in user_emails))
+
+
+class TemplateUpdateForm(forms.ModelForm):
+    data = forms.CharField(
+        label=_('Data'),
+        required=False,
+        strip=False,
+        widget=forms.Textarea(),
+        help_text=_email_template_help_text)
+
+    class Meta:
+        model = EmailTemplate
+        fields = ['data']
