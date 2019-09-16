@@ -39,6 +39,8 @@ from django.views.decorators.http import require_http_methods
 from allauth.account.models import EmailAddress
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.lib.paginator import MailmanPaginator, paginate
+from django_mailman3.signals import (
+    mailinglist_created, mailinglist_deleted, mailinglist_modified)
 
 from postorius.auth.decorators import (
     list_moderator_required, list_owner_required, superuser_required)
@@ -642,6 +644,8 @@ def list_new(request, template='postorius/lists/new.html'):
                 list_settings["advertised"] = form.cleaned_data['advertised']
                 list_settings.save()
                 messages.success(request, _("List created"))
+                mailinglist_created.send(sender=List,
+                                         list_id=mailing_list.list_id)
                 return redirect("list_summary",
                                 list_id=mailing_list.list_id)
             # TODO catch correct Error class:
@@ -766,6 +770,7 @@ def list_delete(request, list_id):
     the_list = List.objects.get_or_404(fqdn_listname=list_id)
     if request.method == 'POST':
         the_list.delete()
+        mailinglist_deleted.send(sender=List, list_id=list_id)
         return redirect("list_index")
     else:
         submit_url = reverse('list_delete',
@@ -911,6 +916,7 @@ def list_settings(request, list_id=None, visible_section=None,
                         list_settings[key] = form.cleaned_data[key]
                 list_settings.save()
                 messages.success(request, _('The settings have been updated.'))
+                mailinglist_modified.send(sender=List, list_id=m_list.list_id)
             except HTTPError as e:
                 messages.error(
                     request,
