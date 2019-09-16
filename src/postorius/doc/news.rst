@@ -33,6 +33,9 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   of lists for a role to 50. (Closes #335)
 * Fix a bug where handling non-existent held message can raise 500
   exception. (Closes #349)
+* Emit appropriate signals when Domain and MailingList is updated. (Closes
+  #385)
+
 
 1.3.0
 =====
