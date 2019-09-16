@@ -20,6 +20,7 @@
 import csv
 import email.utils
 import logging
+import sys
 
 from django.conf import settings
 from django.contrib import messages
@@ -687,7 +688,10 @@ def list_index_authenticated(request):
     for user_email in user_emails:
         try:
             all_lists.extend(
-                client.find_lists(user_email, role=role, mail_host=mail_host))
+                client.find_lists(user_email,
+                                  role=role,
+                                  mail_host=mail_host,
+                                  count=sys.maxsize))
         except HTTPError:
             # No lists exist with the given role for the given user.
             pass
@@ -695,11 +699,14 @@ def list_index_authenticated(request):
     # just redirect them to the index page with all lists.
     if len(all_lists) == 0 and role is None:
         return redirect(reverse('list_index') + '?all-lists')
-    # Render the list index page.
+    # Render the list index page with `check_advertised = False` since we don't
+    # need to check for advertised list given that all the users are related
+    # and know about the existence of the list anyway.
     context = {
         'lists': _unique_lists(all_lists),
         'domain_count': len(choosable_domains),
-        'role': role
+        'role': role,
+        'check_advertised': False,
     }
     return render(
         request,
@@ -735,6 +742,7 @@ def list_index(request, template='postorius/index.html'):
 
     return render(request, template,
                   {'lists': lists,
+                   'check_advertised': True,
                    'all_lists': True,
                    'domain_count': len(choosable_domains)})
 
