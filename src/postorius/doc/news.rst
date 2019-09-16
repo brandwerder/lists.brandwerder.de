@@ -29,7 +29,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   views. (See !425)
 * Bind object attributes to local variables in {% blocktrans %} (See !439)
 * Set the initial style in new list form as the default style. (Closes #310)
-
+* Fix a bug where logged in users's index page view would cap the total number
+  of lists for a role to 50. (Closes #335)
 
 1.3.0
 =====
