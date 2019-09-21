@@ -36,6 +36,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Emit appropriate signals when Domain and MailingList is updated. (Closes
   #385)
 * Do not strip leading whitespaces in Email Templates. (Closes #301)
+* Hold date for held messages are now displayed correctly. (Closes #312)
 
 1.3.0
 =====
