@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-09-28 11:55+0000\n"
+"Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
+"translations/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -25,50 +26,53 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"ウェブ UI を公開するドメイン。メールホストと同じにすることも別にすることもできます。<a href=\"%s\""
+">こちら</a>から利用するウェブホストのリストを編集できます。"
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "メールホスト"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "ドメイン名を入力してください"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "正しいドメイン名を入力してください。"
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"メーリングリストのドメイン。例えば testing@example.com という名前のリストにしたい場合、example.com と入力してください。"
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "エイリアスドメイン"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "正しいドメイン名を入れるか空にしてください。"
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "通常は空にします。Postfix の設定が特殊なときだけ使います。"
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "ウェブホスト"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "正しいドメイン名を入力してください"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
@@ -92,7 +96,7 @@ msgstr ""
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "即座に承認 (他のルールを無視)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
@@ -120,27 +124,27 @@ msgstr ""
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "メーリングリストのモデレータのみ"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "メーリングリストのメンバーのみ"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "誰でも"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "リストの名前"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "リストの名前を入力してください。"
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "正しいリスト名を入力してください。"
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
@@ -1185,11 +1189,11 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "アカウント"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
-msgstr ""
+msgstr "Mailman 設定"
 
 #: templates/postorius/base.html:82
 msgid "Posting activity"
@@ -1197,7 +1201,7 @@ msgstr ""
 
 #: templates/postorius/base.html:88
 msgid "Logout"
-msgstr ""
+msgstr "ログアウト"
 
 #: templates/postorius/base.html:95
 msgid "Login"
@@ -1205,7 +1209,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "登録"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1248,7 +1252,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:60
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1444,7 +1448,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -1790,7 +1794,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "購読"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
