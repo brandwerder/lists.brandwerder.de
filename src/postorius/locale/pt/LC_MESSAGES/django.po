@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-10-02 11:56+0000\n"
+"Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
+"translations/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -29,15 +30,15 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Hospedeiro de Correio"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Por favor, insira um nome de domínio"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Por favor, insira um nome de domínio válido."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -48,15 +49,15 @@ msgstr ""
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Pseudónimo do Domínio"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Por favor, digite um nome de domínio válido ou nada."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -64,7 +65,7 @@ msgstr ""
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Hospedeiro da Web"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
@@ -1185,19 +1186,19 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "Conta"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
-msgstr ""
+msgstr "Definições do Mailman"
 
 #: templates/postorius/base.html:82
 msgid "Posting activity"
-msgstr ""
+msgstr "Atividade de publicação"
 
 #: templates/postorius/base.html:88
 msgid "Logout"
-msgstr ""
+msgstr "Terminar sessão"
 
 #: templates/postorius/base.html:95
 msgid "Login"
@@ -1205,7 +1206,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "Registar"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
