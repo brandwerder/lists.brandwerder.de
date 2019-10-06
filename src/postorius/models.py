@@ -285,7 +285,8 @@ class EmailTemplate(models.Model):
         """API url is the remote url that Core can use to fetch templates"""
         base_url = getattr(settings, 'POSTORIUS_TEMPLATE_BASE_URL', None)
         if not base_url:
-            raise ImproperlyConfigured
+            raise ImproperlyConfigured(
+                'Setting "POSTORIUS_TEMPLATE_BASE_URL" is not configured.')
         resource_url = reverse(
             'rest_template',
             kwargs=dict(context=self.context,
