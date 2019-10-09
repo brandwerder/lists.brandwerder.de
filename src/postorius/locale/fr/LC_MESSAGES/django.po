@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-10-09 08:58+0000\n"
+"PO-Revision-Date: 2019-10-10 22:04+0000\n"
 "Last-Translator: Guinness <guinness@crans.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "translations/fr/>\n"
@@ -333,13 +333,15 @@ msgstr "Non"
 
 #: forms/list_forms.py:274
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Nécessite une destination explicite"
 
 #: forms/list_forms.py:276
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Cette vérification assure que l'adresse de la liste ou qu'un alias "
+"acceptable apparaît explicitement dans champs À : et Cc : dans le post."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
@@ -379,6 +381,16 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Action par défaut à effectuer lorsqu'un⋅e membre poste sur la liste\n"
+"Retenir : Retient le message en modération pour approbation.\n"
+"Rejeter : Automatiquement rejette le message en envoyant une notification de "
+"rebond à l'auteurice du post. Le texte de la notification de rebond peut "
+"être configuré.\n"
+"Ignorer : Jette simplement le message, sans envoyer de notification à "
+"l'auteurice du message.\n"
+"Accepter : Accepter tous les messages sans autre vérification.\n"
+"Traitement par défaut : Effectuer des vérifications supplémentaires et "
+"accepter le message."
 
 #: forms/list_forms.py:310
 #, fuzzy
