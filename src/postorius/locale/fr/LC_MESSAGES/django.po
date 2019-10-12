@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-09-04 05:25+0000\n"
-"Last-Translator: Swann Martinet <swann.ranskassa@laposte.net>\n"
+"PO-Revision-Date: 2019-10-10 22:04+0000\n"
+"Last-Translator: Guinness <guinness@crans.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -26,6 +26,9 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"Le nom de domaine qui servira l'interface Web. Il peut être le même ou bien "
+"différent du domaine de messagerie. Vous pouvez éditer la liste des hôtes "
+"Web disponibles <a href=\"%s\">ici</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
@@ -34,10 +37,8 @@ msgstr "Domaine de messagerie"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
-#, fuzzy
-#| msgid "Please enter a valid domain name."
 msgid "Please enter a domain name"
-msgstr "Veuillez entrer un nom de domaine valide."
+msgstr "Veuillez entrer un nom de domaine"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
@@ -49,6 +50,8 @@ msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Le nom de domaine pour vos listes de discussion. Par exemple, si vous voulez "
+"des listes comme test@example.com, entrez example.com ici."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -56,21 +59,19 @@ msgid "Description"
 msgstr "Description"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
-#, fuzzy
-#| msgid "Add a new Domain"
 msgid "Alias Domain"
-msgstr "Ajouter un nouveau Domaine"
+msgstr "Nom de domaine alias"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
-#, fuzzy
-#| msgid "Please enter a valid domain name."
 msgid "Please enter a valid domain name or nothing."
-msgstr "Veuillez entrer un nom de domaine valide."
+msgstr "Veuillez entrer un nom de domaine valide ou rien."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Normalement vide. Utilisé uniquement pour des configurations Postfix "
+"inhabituelles."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -78,20 +79,16 @@ msgstr "Hôte Web"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:78
-#, fuzzy
-#| msgid "Please enter a valid domain name."
 msgid "Please enter a valid domain name"
-msgstr "Veuillez entrer un nom de domaine valide."
+msgstr "Veuillez entrer un nom de domaine valide"
 
 #: forms/domain_forms.py:103
-#, fuzzy
-#| msgid "Owners"
 msgid "Owner's Email"
-msgstr "Propriétaires"
+msgstr "Propriétaire du courriel"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Effectuez au moins un choix"
 
 #: forms/list_forms.py:35
 #, fuzzy
@@ -109,45 +106,43 @@ msgstr "Jeter (pas de notification)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Accepter immédiatement (court-circuiter les autres règles)"
 
 #: forms/list_forms.py:39
-#, fuzzy
-#| msgid "Default email address"
 msgid "Default processing"
-msgstr "Adresse courriel par défaut"
+msgstr "Traitement par défaut"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Journalier"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "Hebdomadaire"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "Trimestriel"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Mensuel"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Annuel"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Seulement les modérateurices de la liste de diffusion"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Seulement les membres de la liste de diffusion"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "Tout le monde"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -243,7 +238,7 @@ msgstr "Votre nom (optionnel)"
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "Ouverte"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -251,22 +246,16 @@ msgid "Confirm"
 msgstr "Confirmer"
 
 #: forms/list_forms.py:193
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderate"
-msgstr "Modérateurs"
+msgstr "Modérée"
 
 #: forms/list_forms.py:194
-#, fuzzy
-#| msgid "Confirm Remove Role"
 msgid "Confirm, then moderate"
-msgstr "Confirmez le retrait du Rôle"
+msgstr "Confirmation, puis modération"
 
 #: forms/list_forms.py:203 views/list.py:869
-#, fuzzy
-#| msgid "Subscription rules"
 msgid "Subscription Policy"
-msgstr "Règles d'abonnement"
+msgstr "Politique d'abonnement"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -277,16 +266,19 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Ouverte : Les inscriptions sont acceptées automatiquement\n"
+"Confirmer : Les souscripteurices doivent confirmer leur abonnement en "
+"utilisant un courriel qui leur est envoyé\n"
+"Modérée : Les modérateurices doivent autoriser chaque inscription "
+"manuellement.\n"
+"Confirmation puis modérée : D'abord les souscripteurices doivent confirmer, "
+"puis un⋅e modérateurice doit autoriser."
 
 #: forms/list_forms.py:221
-#, fuzzy
-#| msgid "Public Archives"
 msgid "Public archives"
 msgstr "Archives publiques"
 
 #: forms/list_forms.py:222
-#, fuzzy
-#| msgid "Private Archives"
 msgid "Private archives"
 msgstr "Archives privées"
 
@@ -295,8 +287,6 @@ msgid "Do not archive this list"
 msgstr "Ne pas archiver cette liste"
 
 #: forms/list_forms.py:229
-#, fuzzy
-#| msgid "Archive Policy"
 msgid "Archive policy"
 msgstr "Politique d'archivage"
 
@@ -305,10 +295,8 @@ msgid "Policy for archiving messages for this list"
 msgstr "Politique d'archivage pour cette liste"
 
 #: forms/list_forms.py:235
-#, fuzzy
-#| msgid "Private Archives"
 msgid "Active archivers"
-msgstr "Archives privées"
+msgstr "Archives actives"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
@@ -345,17 +333,19 @@ msgstr "Non"
 
 #: forms/list_forms.py:274
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Nécessite une destination explicite"
 
 #: forms/list_forms.py:276
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Cette vérification assure que l'adresse de la liste ou qu'un alias "
+"acceptable apparaît explicitement dans champs À : et Cc : dans le post."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
-msgstr "Administrivia"
+msgstr "Routine administrative"
 
 #: forms/list_forms.py:284
 msgid ""
@@ -364,14 +354,17 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
+"Les tests de routine administrative vont tester les envois pour voir si ce "
+"sont réellement des requêtes administratives (telles que l'abonnement, le "
+"désabonnement, etc.), et les ajouteront à la file de requêtes "
+"administratives en attente, notifiant l'administrateurice de la nouvelle "
+"requête par la même occasion."
 
 #: forms/list_forms.py:291
-#, fuzzy
-#| msgid "Default action to take when a member posts to the list:"
 msgid "Default action to take when a member posts to the list"
 msgstr ""
 "Action par défaut à prendre lorsqu'une personne non abonnée envoie sur la "
-"liste :"
+"liste"
 
 #: forms/list_forms.py:293
 msgid "Please choose a default member action."
@@ -388,6 +381,16 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Action par défaut à effectuer lorsqu'un⋅e membre poste sur la liste\n"
+"Retenir : Retient le message en modération pour approbation.\n"
+"Rejeter : Automatiquement rejette le message en envoyant une notification de "
+"rebond à l'auteurice du post. Le texte de la notification de rebond peut "
+"être configuré.\n"
+"Ignorer : Jette simplement le message, sans envoyer de notification à "
+"l'auteurice du message.\n"
+"Accepter : Accepter tous les messages sans autre vérification.\n"
+"Traitement par défaut : Effectuer des vérifications supplémentaires et "
+"accepter le message."
 
 #: forms/list_forms.py:310
 #, fuzzy
@@ -1338,10 +1341,8 @@ msgid "Archives"
 msgstr "Archive"
 
 #: templates/postorius/base.html:73
-#, fuzzy
-#| msgid "My Account"
 msgid "Account"
-msgstr "Mon Compte"
+msgstr "Compte"
 
 #: templates/postorius/base.html:77
 #, fuzzy
@@ -1363,7 +1364,7 @@ msgstr "Connexion"
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "S'inscrire"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1637,10 +1638,8 @@ msgid "Are you sure?"
 msgstr "Etes-vous certains ?"
 
 #: templates/postorius/lists/confirm_remove_role.html:17
-#, fuzzy
-#| msgid "Remove "
 msgid "Remove"
-msgstr "Supprimer "
+msgstr "Supprimer"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 #, fuzzy
