@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-10-05 04:56+0000\n"
-"Last-Translator: ParkSeongSoo <syvf64@naver.com>\n"
+"PO-Revision-Date: 2019-11-01 05:03+0000\n"
+"Last-Translator: hyunwoo shin <harryshin96@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/ko/>\n"
+"postorius/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -26,6 +26,8 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"웹 UI를 제공할 도메인입니다.  이것은 메일 호스트와 같거나 다를 수 있습니다. 사용 가능한 웹 호스트 목록을 편집할 수 있습니다. <"
+"a href=\"%s\">here</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
@@ -63,7 +65,7 @@ msgstr "유효한 도메인명을 입력하거나 아무것도 입력하지마�
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "보통은 비어 있습니다. 비정상적인 Postfix 구성에만 사용됩니다."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -83,23 +85,23 @@ msgstr "최소한 하나를 선택해주세요"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
-msgstr ""
+msgstr "절제하다."
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "거부(통보 포함)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "폐기(알림 없음)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "즉시 수락(다른 규칙 무시)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "기본 처리"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -115,109 +117,109 @@ msgstr "계간"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "매월의"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "연간"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "메일링리스트 진행자만"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "메일링리스트 진행자만"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "아무도"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "목록 이름"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "목록의 이름을 입력하십시오."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "올바른 목록 이름을 입력하십시오."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "초기 목록 소유자 주소"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "목록 소유자의 이메일 주소를 입력하십시오."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr ""
+msgstr "이 목록을 광고하십니까?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr ""
+msgstr "목록 유형을 선택해주십시오."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "목록 색인에 이 목록 알림"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "목록 색인에 이 목록 숨기기"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "기존 도메인을 선택하십시오."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "올바른 메일 호스트 선택"
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "목록 스타일"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr ""
+msgstr "목록 스타일을 선택하십시오."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "올바른 목록 스타일을 선택하십시오."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "사이트 관리자가 도메인을 생성하지 않음"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "올바른 목록 이름을 입력하십시오."
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr ""
+msgstr "당신의 이메일 주소"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "이메일 주소를 입력하십시오."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "올바른 이메일 주소를 입력하십시오."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
-msgstr ""
+msgstr "이름(선택 사항)"
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "열다"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -226,15 +228,15 @@ msgstr "확인"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "적당한"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "확인 후 보통"
 
 #: forms/list_forms.py:203 views/list.py:869
 msgid "Subscription Policy"
-msgstr ""
+msgstr "서브스크립션 정책"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -245,34 +247,38 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"열기: 구독이 자동으로 추가됩니다.\n"
+"확인: 가입자는 자신에게 발송된 이메일을 사용하여 가입을 확인해야 합니다.\n"
+"중간값: 의장은 각 구독을 수동으로 승인해야 합니다.\n"
+"Moderate(중간값: 먼저 가입자들은 확인을 해야 하고, 그 다음 진행자는 승인을 받아야 합니다."
 
 #: forms/list_forms.py:221
 msgid "Public archives"
-msgstr ""
+msgstr "공개 아카이브"
 
 #: forms/list_forms.py:222
 msgid "Private archives"
-msgstr ""
+msgstr "개인 아카이브"
 
 #: forms/list_forms.py:223
 msgid "Do not archive this list"
-msgstr ""
+msgstr "이 목록을 보관하지 않음"
 
 #: forms/list_forms.py:229
 msgid "Archive policy"
-msgstr ""
+msgstr "보관 정책"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "이 목록에 대한 메시지 보관 정책"
 
 #: forms/list_forms.py:235
 msgid "Active archivers"
-msgstr ""
+msgstr "능동아카이버"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "허용되는 별칭"
 
 #: forms/list_forms.py:263
 msgid ""
@@ -284,6 +290,10 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"이는 'require_pricit_destination'이 활성화된 경우 목록 게시 주소 대신 To: 또는 Cc:에서 허용되는 주소와 "
+"regexps 일치 주소의 목록입니다. 항목은 전자 메일 주소 또는 전자 메일 주소와 일치하는 regexps입니다. regexps는 '^"
+"'로 시작하는 항목이며 메시지의 모든 수신자 주소에 대해 일치합니다. 매칭은 Python의 r.match() 함수로 수행되며, 이는 "
+"그들이 문자열의 시작 부분에 고정되어 있다는 것을 의미합니다."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -292,7 +302,7 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "Yes"
-msgstr ""
+msgstr "그렇습니다."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -301,21 +311,21 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "No"
-msgstr ""
+msgstr "아닙니다"
 
 #: forms/list_forms.py:274
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "명시적 목적지 필요"
 
 #: forms/list_forms.py:276
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
-msgstr ""
+msgstr "이 확인은 목록 게시 주소 또는 허용 가능한 별칭이 게시물의 수신인: 또는 Cc: 헤더에 명시적으로 나타나는지 확인하십시오."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
-msgstr ""
+msgstr "관리자"
 
 #: forms/list_forms.py:284
 msgid ""
