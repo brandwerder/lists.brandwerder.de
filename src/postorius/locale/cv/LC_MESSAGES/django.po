@@ -1104,7 +1104,7 @@ msgstr ""
 
 #: template_list.py:54
 msgid ""
-"The notice sent to a poster when their message is being held or moderator "
+"The notice sent to a poster when their message is being held for moderator "
 "approval."
 msgstr ""
 
