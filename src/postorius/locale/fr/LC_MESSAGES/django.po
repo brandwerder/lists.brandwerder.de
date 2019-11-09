@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-10-10 22:04+0000\n"
-"Last-Translator: Guinness <guinness@crans.org>\n"
+"PO-Revision-Date: 2019-10-23 11:53+0000\n"
+"Last-Translator: homycal <jullien.nom@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/fr/>\n"
+"postorius/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.9.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1639,7 +1639,7 @@ msgstr "Etes-vous certains ?"
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr "Supprimer"
+msgstr "Retirer"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 #, fuzzy
