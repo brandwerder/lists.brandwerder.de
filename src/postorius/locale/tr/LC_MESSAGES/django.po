@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-11-25 03:51+0000\n"
+"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/tr/>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -25,213 +26,219 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"Web kullanıcı arayüzünün sunulmasını istediğiniz alan adı. Bu Posta Ana "
+"Bilgisayarıyla aynı veya farklı olabilir. Mevcut web ana bilgisayarlarının "
+"listesini <a href=\"%s\">buradan</a> düzenleyebilirsiniz."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Posta Ana Bilgisayarı"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Lütfen bir alan adı girin"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Lütfen geçerli bir alan adı girin."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Posta listelerinizin alan adı. Örneğin test@example.com gibi listeler "
+"istiyorsanız, buraya example.com yazın."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Açıklama"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Takma Alan Adı"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Lütfen geçerli bir alan adı girin veya hiçbir şey girmeyin."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Normalde boş.  Sadece olağandışı Postfix yapılandırmaları için kullanılır."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Web Ana Bilgisayarı"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Lütfen geçerli bir alan adı girin"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Sahibin E-postası"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "En az bir seçim yapın"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Denetleme için beklet"
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Reddet (bildirimle birlikte)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "At (bildirim yok)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Hemen kabul et (diğer kuralları atla)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "Varsayılan işleme"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Günlük"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "Haftalık"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "Üç aylık"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Aylık"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Yıllık"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Sadece posta listesi moderatörleri"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Sadece posta listesi üyeleri"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "Herhangi biri"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Liste Adı"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Lütfen listeniz için bir ad girin."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Lütfen geçerli bir liste adı girin."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "İlk liste sahibi adresi"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Lütfen liste sahibinin e-posta adresini girin."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Bu listenin reklamını yap?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Lütfen bir liste türü seçin."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Bu listenin liste dizininde reklamını yap"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Bu listeyi liste dizininde gizle"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Mevcut bir alan adı seçin."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Geçerli bir Posta Ana Bilgisayarı seçin"
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "Liste Stili"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Bir Liste Stili seçin."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Geçerli bir Liste Stili seçin."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Site yöneticisi herhangi bir alan adı oluşturmadı"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Lütfen geçerli bir liste adı girin"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr ""
+msgstr "E-posta adresiniz"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Lütfen bir e-posta adresi girin."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Lütfen geçerli bir e-posta adresi girin."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Adınız (isteğe bağlı)"
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "Açık"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Onayla"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "Denetle"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Onayla, ardından denetle"
 
 #: forms/list_forms.py:203 views/list.py:869
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Abonelik Politikası"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -242,34 +249,41 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Açık: Abonelikler otomatik olarak eklenir\n"
+"Onayla: Abonelerin, kendisine gönderilen bir e-postayı kullanarak aboneliği "
+"onaylamaları gerekir\n"
+"Denetle: Moderatörlerin her aboneliği manuel olarak yetkilendirmeleri "
+"gerekir.\n"
+"Onayla, ardından denetle: İlk önce abonelerin onaylaması gerekir, ardından "
+"bir moderatörün yetkilendirmesi gerekir."
 
 #: forms/list_forms.py:221
 msgid "Public archives"
-msgstr ""
+msgstr "Herkese açık arşivler"
 
 #: forms/list_forms.py:222
 msgid "Private archives"
-msgstr ""
+msgstr "Özel arşivler"
 
 #: forms/list_forms.py:223
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Bu listeyi arşivleme"
 
 #: forms/list_forms.py:229
 msgid "Archive policy"
-msgstr ""
+msgstr "Arşiv politikası"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Bu liste için mesajları arşivleme politikası"
 
 #: forms/list_forms.py:235
 msgid "Active archivers"
-msgstr ""
+msgstr "Aktif arşivciler"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Kabul edilebilir takma adlar"
 
 #: forms/list_forms.py:263
 msgid ""
@@ -281,6 +295,14 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Bu, `require_explicit_destination' etkinleştirildiğinde liste gönderim "
+"adresinin yerine geçecek, Kime: veya Bilgi: alanlarında kabul edilen "
+"adreslerin ve adreslerle eşleşen regexp'lerin, satır başına bir adet olmak "
+"üzere, bir listesidir.  Girdiler ya e-posta adresleridir ya da e-posta "
+"adresleriyle eşleşen regexp'lerdir.  Regexp'ler `^' ile başlayan ve "
+"mesajdaki tüm alıcı adreslerine karşı eşleştirilen girdilerdir. Eşleşme "
+"Python re.match() fonksiyonu ile yapılmaktadır, yani string'in başlangıcına "
+"sabitlenmişlerdir."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -289,7 +311,7 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "Yes"
-msgstr ""
+msgstr "Evet"
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -298,21 +320,24 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "No"
-msgstr ""
+msgstr "Hayır"
 
 #: forms/list_forms.py:274
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "Belirgin Hedef İste"
 
 #: forms/list_forms.py:276
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Bu, liste gönderme adresinin veya kabul edilebilir bir takma adın "
+"gönderideki bir Kime: veya Bilgi: başlığında açıkça görünmesini sağlamak "
+"için kontrol eder."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
-msgstr ""
+msgstr "Yönetici işleri"
 
 #: forms/list_forms.py:284
 msgid ""
@@ -321,14 +346,19 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
+"Yönetici işleri testleri, gönderilerin gerçekten bir yönetici işi isteği ("
+"abone olma, abonelikten çıkma, vb. gibi) anlamına gelip gelmediğini görmek "
+"için kontrol eder ve bunu yönetici istekleri kuyruğuna ekler, yeni isteği "
+"yöneticiye bildirir."
 
 #: forms/list_forms.py:291
 msgid "Default action to take when a member posts to the list"
 msgstr ""
+"Bir üye listeye gönderi gönderdiğinde gerçekleştirilecek varsayılan eylem"
 
 #: forms/list_forms.py:293
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "Lütfen varsayılan bir üye eylemi seçin."
 
 #: forms/list_forms.py:297
 msgid ""
@@ -341,14 +371,24 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"Bir üye listeye gönderi gönderdiğinde gerçekleştirilecek varsayılan eylem.\n"
+"Beklet: bu, liste moderatörleri tarafından onaylanması için mesajı bekletir."
+"\n"
+"Reddet: bu, gönderinin yazarına bir geri dönüş bildirimi göndererek mesajı "
+"otomatik olarak reddeder. Geri dönüş bildiriminin metni sizin tarafınızdan "
+"yapılandırılabilir.\n"
+"At: bu, gönderinin yazarına bildirimde bulunmadan yalnızca iletiyi atar.\n"
+"Kabul et: başka kontroller yapmadan gönderileri kabul eder.\n"
+"Varsayılan İşlem: ek kontroller gerçekleştir ve mesajı kabul et."
 
 #: forms/list_forms.py:310
 msgid "Default action to take when a non-member posts to the list"
 msgstr ""
+"Üye olmayan biri listeye gönderi gönderdiğinde yapılacak varsayılan eylem"
 
 #: forms/list_forms.py:312
 msgid "Please choose a default non-member action."
-msgstr ""
+msgstr "Lütfen varsayılan bir üye olmayan eylemi seçin."
 
 #: forms/list_forms.py:316
 msgid ""
@@ -356,94 +396,101 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"Üye olmayan birinden bir gönderi alındığında, mesajın göndereni açıkça kabul "
+"edilen, tutulan, reddedilen (geri dönen) ve atılan adreslerin listesiyle "
+"eşleştirilir. Eşleşme bulunamazsa, bu eylem gerçekleştirilir."
 
 #: forms/list_forms.py:322
 msgid "Maximum message size"
-msgstr ""
+msgstr "Maksimum mesaj boyutu"
 
 #: forms/list_forms.py:325
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"KB cinsinden izin verilen maksimum mesaj boyutu. Bu, büyük ekleri olan e-"
+"postaları önlemek için kullanılabilir. 0 boyutu kontrolü devre dışı bırakır."
 
 #: forms/list_forms.py:330
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Maksimum alıcı sayısı"
 
 #: forms/list_forms.py:333
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"Bir mesaj için maksimum alıcı sayısı. Bu, toplu postaların kabul edilmesini "
+"önlemek için kullanılabilir. 0 değeri kontrolü devre dışı bırakır."
 
 #: forms/list_forms.py:351
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Geçersiz takma ad regexp: {}: {}"
 
 #: forms/list_forms.py:357
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "Geçersiz takma ad e-postası: {}"
 
 #: forms/list_forms.py:369
 msgid "Enable Digests"
-msgstr ""
+msgstr "Özetleri Etkinleştir"
 
 #: forms/list_forms.py:370
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "Mailman bu PostaListesi için özetleri etkinleştirmeli mi?"
 
 #: forms/list_forms.py:376
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Özeti Periyodik Olarak Gönder"
 
 #: forms/list_forms.py:377
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Mailman özetleri düzenli aralıklarla göndermeli mi?"
 
 #: forms/list_forms.py:383
 msgid "Digest Frequency"
-msgstr ""
+msgstr "Özet Sıklığı"
 
 #: forms/list_forms.py:384
 msgid "At what frequency should Mailman send out digests?"
-msgstr ""
+msgstr "Mailman özetleri hangi sıklıkta göndermeli?"
 
 #: forms/list_forms.py:387
 msgid "Digest size threshold"
-msgstr ""
+msgstr "Özet boyutu eşiği"
 
 #: forms/list_forms.py:388
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Bir özet gönderilmeden önce kaç Kb büyüklüğe ulaşmalı?"
 
 #: forms/list_forms.py:397
 msgid "DMARC mitigation action"
-msgstr ""
+msgstr "DMARC azaltma eylemi"
 
 #: forms/list_forms.py:401
 msgid "Please choose a DMARC mitigation action."
-msgstr ""
+msgstr "Lütfen bir DMARC azaltma eylemi seçin."
 
 #: forms/list_forms.py:403
 msgid "No DMARC mitigations"
-msgstr ""
+msgstr "DMARC azaltma yok"
 
 #: forms/list_forms.py:404
 msgid "Replace From: with list address"
-msgstr ""
+msgstr "Kimden: alanını liste adresiyle değiştir"
 
 #: forms/list_forms.py:406
 msgid "Wrap the message in an outer message From: the list."
-msgstr ""
+msgstr "Kimden: liste olacak şekilde mesajı başka bir mesajın içine koy."
 
 #: forms/list_forms.py:407
 msgid "Reject the message"
-msgstr ""
+msgstr "Mesajı reddet"
 
 #: forms/list_forms.py:408
 msgid "Discard the message"
-msgstr ""
+msgstr "Mesajı at"
 
 #: forms/list_forms.py:410
 msgid ""
@@ -451,30 +498,37 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
+"Kimden: bir reddet veya karantinaya al DMARC politikası yayınlayan bir alan "
+"adından gelen mesajlara veya DMARC Azaltma koşulsuz olarak Doğru ise tüm "
+"mesajlara uygulanacak eylem."
 
 #: forms/list_forms.py:417
 msgid "DMARC Mitigate unconditionally"
-msgstr ""
+msgstr "Koşulsuz olarak DMARC Azaltma"
 
 #: forms/list_forms.py:419
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
+"DMARC azaltma eylemi munge_from veya wrap_message ise, Kimden: alan adının "
+"DMARC politikasından bağımsız olarak tüm mesajlar için geçerli olmalıdır."
 
 #: forms/list_forms.py:423
 msgid "DMARC rejection notice"
-msgstr ""
+msgstr "DMARC reddetme bildirimi"
 
 #: forms/list_forms.py:427
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
 msgstr ""
+"DMARC azaltma reddetme eylemi uygulandığında gönderilecek herhangi bir ret "
+"bildiriminde varsayılan nedeni değiştirecek metin."
 
 #: forms/list_forms.py:430
 msgid "DMARC wrapped message text"
-msgstr ""
+msgstr "DMARC sarılmış mesaj metni"
 
 #: forms/list_forms.py:434
 msgid ""
@@ -482,49 +536,58 @@ msgid ""
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
+"DMARC azaltma mesajı sarmala eylemi uygulandığında sarılı mesajdaki orijinal "
+"mesaj bölümünden önce ayrı bir metin/düz MIME bölümü olarak eklenecek metin."
 
 #: forms/list_forms.py:447
 msgid "Filter content"
-msgstr ""
+msgstr "İçeriği filtrele"
 
 #: forms/list_forms.py:448
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
 msgstr ""
+"Mailman, liste trafiğinin içeriğini aşağıdaki ayarlara göre filtrelemeli "
+"midir?"
 
 #: forms/list_forms.py:454
 msgid "Collapse alternatives"
-msgstr ""
+msgstr "Alternatifleri daralt"
 
 #: forms/list_forms.py:455
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
+"Mailman, çok kısımlı/alternatifi ilk kısmın içeriğine göre daraltmalı mıdır?"
 
 #: forms/list_forms.py:461
 msgid "Convert html to plaintext"
-msgstr ""
+msgstr "HTML'i düz metne dönüştür"
 
 #: forms/list_forms.py:462
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
+"Mailman, text/html kısımlarını düz metne dönüştürmeli midir? Bu dönüştürme, "
+"MIME ekleri çıkarıldıktan sonra gerçekleşir."
 
 #: forms/list_forms.py:469
 msgid "Anonymous list"
-msgstr ""
+msgstr "Anonim liste"
 
 #: forms/list_forms.py:470
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
+"Bir mesajın göndereni, onu liste adresi ile değiştirerek gizle (Kimden, "
+"Gönderen ve Cevapla alanlarını kaldırır)"
 
 #: forms/list_forms.py:477
 msgid "Include RFC2369 headers"
-msgstr ""
+msgstr "RFC2369 başlıklarını dahil et"
 
 #: forms/list_forms.py:479
 msgid ""
@@ -539,6 +602,17 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
+"Evet şiddetle tavsiye edilir. RFC 2369, normal olarak liste üyeliğine "
+"gönderilen her mesaja eklenen bir Liste-* başlık seti tanımlar. Bunlar, "
+"standartlara uygun posta okuyucular kullanan son kullanıcılara büyük ölçüde "
+"yardımcı olmaktadır. Normalde her zaman etkin olmalıdırlar. Ancak, tüm posta "
+"okuyucuları henüz standartlara uygun değildir ve uyumlu olmayan posta "
+"okuyucuları kullanan çok sayıda üyeniz varsa, bu başlıklardan rahatsız "
+"olabilirler. İlk olarak üyelerinizi bu başlıkların neden var olduğu ve "
+"onları posta istemcilerinde nasıl gizleyecekleri konusunda eğitmeye "
+"çalışmalısınız. Son çare olarak, bu başlıkları devre dışı bırakabilirsiniz, "
+"ancak bu önerilmez (ve aslında, bu başlıkları devre dışı bırakma yeteneğiniz "
+"nihayetinde kaybolabilir)."
 
 #: forms/list_forms.py:495
 msgid "Include the list post header"
@@ -1185,19 +1259,19 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "Hesap"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
-msgstr ""
+msgstr "Mailman ayarları"
 
 #: templates/postorius/base.html:82
 msgid "Posting activity"
-msgstr ""
+msgstr "Gönderme etkinliği"
 
 #: templates/postorius/base.html:88
 msgid "Logout"
-msgstr ""
+msgstr "Oturumu kapat"
 
 #: templates/postorius/base.html:95
 msgid "Login"
@@ -1205,7 +1279,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "Kaydol"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1248,7 +1322,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:60
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1444,7 +1518,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -1507,7 +1581,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:36
 msgid "Subject"
-msgstr ""
+msgstr "Konu"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Sender"
@@ -1790,7 +1864,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "Abonelikler"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
