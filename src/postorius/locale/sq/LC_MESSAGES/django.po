@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-11-06 18:47+0200\n"
+"PO-Revision-Date: 2019-12-03 18:06+0000\n"
+"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
+"Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -150,7 +151,7 @@ msgstr "Ju lutemi, jepni një emër të vlefshëm liste."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Adresë e të zotit fillestar të listës"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
@@ -329,8 +330,8 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
-"Kjo kontrollon për t’u siguruar se adresa e postimit në listë ose një alias "
-"i pranueshëm shfaqet shprehimisht te një fushë Për: ose Cc: te postimit."
+"Kjo kontrollon për t’u siguruar se adresa e postimit në listë, ose një alias "
+"i pranueshëm, shfaqet shprehimisht te një fushë Për: ose Cc: te postimi."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
@@ -464,15 +465,15 @@ msgstr ""
 
 #: forms/list_forms.py:397
 msgid "DMARC mitigation action"
-msgstr ""
+msgstr "Veprim zbutje efektesh DMARC"
 
 #: forms/list_forms.py:401
 msgid "Please choose a DMARC mitigation action."
-msgstr ""
+msgstr "Ju lutemi, zgjidhni një veprim zbutje efektesh DMARC."
 
 #: forms/list_forms.py:403
 msgid "No DMARC mitigations"
-msgstr ""
+msgstr "Pa Zbutje DMARC"
 
 #: forms/list_forms.py:404
 msgid "Replace From: with list address"
@@ -480,7 +481,7 @@ msgstr "Zëvendëso Nga: me adresë liste"
 
 #: forms/list_forms.py:406
 msgid "Wrap the message in an outer message From: the list."
-msgstr ""
+msgstr "Mbështille mesazhin në një mesazh të jashtëm Nga: lista."
 
 #: forms/list_forms.py:407
 msgid "Reject the message"
@@ -496,30 +497,40 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
+"Veprimi që duhet kryer mbi mesazhe Nga: një përkatësi që publikon një "
+"rregull DMARC hedhjeje poshtë ose kalimi në karantinë, ose mbi krejt "
+"mesazhet, nëse është përzgjedhur <em>Zbutje e pakushtëzuar efektesh "
+"DMARC</em>."
 
 #: forms/list_forms.py:417
 msgid "DMARC Mitigate unconditionally"
-msgstr ""
+msgstr "Zbutje e pakushtëzuar efektesh DMARC"
 
 #: forms/list_forms.py:419
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
+"Nëse veprimi për zbutje efektesh DMARC është <em>munge_from</em> ose "
+"<em>wrap_message</em>, do të duhej të aplikohej mbi krejt mesazhet, "
+"pavarësisht nga rregulli DMARC për përkatësinë Nga:."
 
 #: forms/list_forms.py:423
 msgid "DMARC rejection notice"
-msgstr ""
+msgstr "Njoftim hedhje poshtë nga DMARC"
 
 #: forms/list_forms.py:427
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
 msgstr ""
+"Tekst për zëvendësim të arsyes parazgjedhje në çfarëdo njoftimi hedhjeje "
+"poshtë që dërgohet kur për zbutje efektesh DMARC aplikohet veprimi i hedhjes "
+"poshtë."
 
 #: forms/list_forms.py:430
 msgid "DMARC wrapped message text"
-msgstr ""
+msgstr "Tekst mesazhi të mbështjellë DMARC"
 
 #: forms/list_forms.py:434
 msgid ""
@@ -527,6 +538,9 @@ msgid ""
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
+"Tekst për t’u shtuar si një pjesë MIME më vete, tekst/e thjeshtë, që i "
+"paraprin pjesës së mesazhit origjinal në mesazhin e mbështjellë kur për "
+"zbutje efektesh DMARC aplikohet veprimi i mbështjelljes së mesazheve."
 
 #: forms/list_forms.py:447
 msgid "Filter content"
@@ -649,18 +663,17 @@ msgstr "Ju lutemi, përzgjidhni një veprim reply-to."
 
 #: forms/list_forms.py:522
 msgid "No Munging"
-msgstr ""
+msgstr "Pa Rishkrim Kryesh"
 
 #: forms/list_forms.py:524
 msgid "Explicit Reply-to header set"
-msgstr ""
+msgstr "U caktua krye eksplicite <em>Reply-to</em>"
 
 #: forms/list_forms.py:525
 msgid "Explicit Reply-to set; no Cc added"
-msgstr ""
+msgstr "U caktua krye eksplicite <em>Reply-to</em>; s’u shtua Cc"
 
 #: forms/list_forms.py:527
-#, fuzzy
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -685,30 +698,32 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"Për ku drejtohen përgjigjet ndaj mesazheve të listës? “No Munging” "
+"Për ku drejtohen përgjigjet ndaj mesazheve të listës? “Pa Rishkrim Kryesh” "
 "këshillohet me forcë për shumicën e listave të postimeve. \n"
-"Kjo mundësi kontrollon se ç’bën Mailman-i me kryet Reply-To: te mesazhe që "
-"rrjedhin nëpër listën e postimeve. Kur caktohet si “No Munging”, s’shtohet "
-"ndonjë krye Reply-To: nga Mailman-i, edhe pse, nëse te mesazhi origjinal ka "
-"të pranishme një të tillë, ajo nuk hiqet. Caktimi i kësaj vlere si "
-"“Përgjigjuni te Lista”, “Përgjigje Eksplicite”, apo “Vetëm Përgjigje” e bën "
-"Mailman-in të futë një krye specifike Reply-To: në krejt mesazhet, duke "
-"anashkaluar kryet në mesazhin origjinal, në qoftë e nevojshme (“Përgjigje "
-"Eksplicite” fut vlerën e reply_to_address). “Explicit Reply-to set; no Cc "
-"added” është e dobishme për lista vetëm për njoftime, kur doni të shmangni "
-"dikë nga përgjigja te adresa e listës. Ka plot arsye për të mos futur ose "
-"për të mos anashkaluar kryet Reply-To:. Njëra është se disa sisteme postimi "
-"varen nga rregullimet e tyre për Reply-To: për to convey adresën e tyre të "
-"vlefshme të kthimit.Një tjetër është se ndryshimi i Reply-To: e bën shumë më "
-"të vështirë dërgimin e përgjigjeve private. Për një diskutim në përgjithësi "
-"të kësaj çështjeje, shihni “`Reply-To' Munging Considered Harmful”. Për "
-"opinione që s’pajtohen me këtë, shihni “Reply-To Munging Considered Useful”. "
-"Disa lista postimesh kanë privilegje të kufizuara postimi, me një listë "
-"paralele kushtuar diskutimeve. Shembuj janë lista `patches' ose `checkin', "
-"ku ndryshimet e software-ti postohen sipas një sistemi versioni kontrollesh, "
-"por diskutimi rreth ndryshimeve ndodh te një listë postimesh për "
-"zhvilluesit. Për mbulim të këtyre llojeve të listave, përzgjidhni “Explicit "
-"Reply” dhe caktojeni mundësinë për adresën Reply-To: të shpjerë te lista "
+"Kjo mundësi kontrollon se ç’bën Mailman-i me kryet <em>Reply-To:</em> te "
+"mesazhe që rrjedhin nëpër listën e postimeve. Kur caktohet si “Pa Rishkrim "
+"Kryesh”, s’shtohet ndonjë krye <em>Reply-To:</em> nga Mailman-i, edhe pse, "
+"nëse te mesazhi origjinal ka të pranishme një të tillë, ajo nuk hiqet. "
+"Caktimi i kësaj vlere si “Përgjigjuni te Lista”, “Përgjigje Eksplicite”, apo "
+"“Vetëm Përgjigje” e bën Mailman-in të futë një krye specifike <em>Reply-"
+"To:</em> në krejt mesazhet, duke anashkaluar kryet në mesazhin origjinal, në "
+"qoftë e nevojshme (“Përgjigje Eksplicite” fut vlerën e "
+"<em>reply_to_address</em>). “U caktua krye eksplicite <em>Reply-to</em>; s’u "
+"shtua Cc” është e dobishme për lista vetëm për njoftime, kur doni të "
+"shmangni dikë nga përgjigja te adresa e listës. Ka plot arsye për të mos "
+"futur ose për të mos anashkaluar kryet <em>Reply-To:</em>. Njëra është se "
+"disa sisteme postimi varen nga rregullimet e tyre për <em>Reply-To:</em> për "
+"të përcjellë adresën e tyre të vlefshme të kthimit.Një tjetër është se "
+"ndryshimi i <em>Reply-To:</em> e bën shumë më të vështirë dërgimin e "
+"përgjigjeve private. Për një diskutim në përgjithësi të kësaj çështjeje, "
+"shihni “`Reply-To' Munging Considered Harmful”. Për opinione që s’pajtohen "
+"me këtë, shihni “Reply-To Munging Considered Useful”. Disa lista postimesh "
+"kanë privilegje të kufizuara postimi, me një listë paralele kushtuar "
+"diskutimeve. Shembuj janë lista `patches' ose `checkin', ku ndryshimet e "
+"software-it postohen sipas një sistemi versioni kontrollesh, ndërsa "
+"diskutimi rreth ndryshimeve ndodh te një listë postimesh për zhvilluesit. "
+"Për mbulim të këtyre llojeve të listave, përzgjidhni “Përgjigje Eksplicite” "
+"dhe caktojeni mundësinë për adresën <em>Reply-To:</em> të shpjerë te lista "
 "paralele."
 
 #: forms/list_forms.py:555
@@ -794,7 +809,7 @@ msgstr "Tekst kërkese vetëpërgjigje për t’u dërguar te email-e -request."
 
 #: forms/list_forms.py:608
 msgid "Autoresponse grace period"
-msgstr ""
+msgstr "Periudhë afati vetëpërgjigjesh"
 
 #: forms/list_forms.py:610
 msgid ""
@@ -802,6 +817,9 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
+"Numër ditësh mes vetëpërgjigjesh për adresën e listës së postimeve, ose atë "
+"<em>-request/-owner</em> prej të njëjtit postues. Vëreni zero (ose vlerë "
+"negative) për pa periudhë afati (domethënë, vetëpërgjigje për çdo mesazh)."
 
 #: forms/list_forms.py:618
 msgid "Notify users of held messages"
@@ -2089,6 +2107,8 @@ msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
+"Çfarëdo mundësish që këtu shfaqen si të pacaktuara, përdoren me vlera të "
+"marra nga parapëlqimet tuaja globale (që mund të shihen te skeda tjetër)"
 
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
@@ -2117,6 +2137,9 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
+"Çfarëdo mundësish që këtu shfaqen si të pacaktuara, përdoren me vlera të "
+"marra nga parapëlqimet tuaja globale ose ato për një adresë specifike (që "
+"mund të shihen te skeda tjetër)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
@@ -2436,7 +2459,7 @@ msgstr "Pas Mesazhesh"
 
 #: views/list.py:865
 msgid "DMARC Mitigations"
-msgstr ""
+msgstr "Zbutjeeee efektesh DMARC"
 
 #: views/list.py:866
 msgid "Digest"
