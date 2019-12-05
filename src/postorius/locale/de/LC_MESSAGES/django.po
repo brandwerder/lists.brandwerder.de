@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2019-10-09 08:58+0000\n"
-"Last-Translator: Stefan Auditor <stefan.auditor@erdfisch.de>\n"
+"PO-Revision-Date: 2019-12-10 16:25+0000\n"
+"Last-Translator: Niels Lefeld <nile@ni-le.nl>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/de/>\n"
+"postorius/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -152,10 +152,8 @@ msgid "Please enter a valid list name."
 msgstr "Bitte geben Sie einen gültigen Namen für Ihre Liste an."
 
 #: forms/list_forms.py:73
-#, fuzzy
-#| msgid "Inital list owner address"
 msgid "Initial list owner address"
-msgstr "Initialer Besitzer der Liste"
+msgstr "Adresse des initialen Besitzers der Liste"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
@@ -190,10 +188,8 @@ msgid "List Style"
 msgstr "Listen-Typ"
 
 #: forms/list_forms.py:105
-#, fuzzy
-#| msgid "Please choose a list type."
 msgid "Choose a List Style."
-msgstr "Bitte wählen Sie einen Listen-Typ."
+msgstr "Wählen Sie einen Listen-Stil."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
@@ -344,6 +340,8 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Diese Prüfung stellt sicher, dass die einreichende Adresse oder ein "
+"akzeptabler Alias explizit im To: oder Cc:-Header des Posts enthalten ist."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
@@ -370,17 +368,6 @@ msgid "Please choose a default member action."
 msgstr "Bitte wählen Sie eine Standard-Aktion für Mitglieder aus."
 
 #: forms/list_forms.py:297
-#, fuzzy
-#| msgid ""
-#| "Default action to take when a member posts to the list.\n"
-#| "Hold: This holds the message for approval by the list moderators.\n"
-#| "Reject: this automatically rejects the message by sending a bounce notice "
-#| "to the post's author. The text of the bounce notice can be configured by "
-#| "you.\n"
-#| "Discard: this simply discards the message, with no notice sent to the "
-#| "post's author.\n"
-#| "Accept: accepts any postings without any further checks.\n"
-#| "Defer: default processing, run additional checks and accept the message."
 msgid ""
 "Default action to take when a member posts to the list.\n"
 "Hold: This holds the message for approval by the list moderators.\n"
@@ -399,8 +386,7 @@ msgstr ""
 "Ihnen konfiguriert werden.\n"
 "Verwerfen: Dies verwirft die Nachricht einfach ohne Hinweis an den Autor.\n"
 "Akzeptieren: Akzeptiert alle Nachrichten ohne weitere Prüfungen.\n"
-"Zurückstellen: Standardverarbeitung, weitere Prüfungen ausführen und "
-"Nachricht akzeptieren."
+"Standardverarbeitung: weitere Prüfungen ausführen und Nachricht akzeptieren."
 
 #: forms/list_forms.py:310
 #, fuzzy
@@ -425,65 +411,61 @@ msgstr ""
 
 #: forms/list_forms.py:322
 msgid "Maximum message size"
-msgstr ""
+msgstr "Maximale Nachrichtengröße"
 
 #: forms/list_forms.py:325
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"Die maximale Nachrichtengröße in KB. Dies kann benutzt werden, um "
+"Nachrichten mit großen Anhängen zu verhindern. Eine Größe von 0 KB "
+"unterdrückt diese Prüfung."
 
 #: forms/list_forms.py:330
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Maximale Anzahl an Empfängern"
 
 #: forms/list_forms.py:333
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"Die maximale Anzahl an Empfängern für eine Nachricht. Dies kann genutzt "
+"werden, um die Annahme von Massenmails zu verhindern. Ein Wert von 0 "
+"unterdrückt diese Prüfung."
 
 #: forms/list_forms.py:351
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Ungültiger Alias-Regexp: {}: {}"
 
 #: forms/list_forms.py:357
-#, fuzzy
-#| msgid "Invalid data: %s"
 msgid "Invalid alias email: {}"
-msgstr "Ungültige Daten: %s"
+msgstr "Ungültige Alias-Email: {}"
 
 #: forms/list_forms.py:369
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "Enable Digests"
-msgstr "Mime-Digests"
+msgstr "Aktiviere Digests"
 
 #: forms/list_forms.py:370
-#, fuzzy
-#| msgid "Should Mailman send an auto-response to mailing list posters?"
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
-"Soll Mailman automatische Antworten an den Absender von Nachrichten senden?"
+msgstr "Soll Mailman Digests für diese Mailingliste ermöglichen?"
 
 #: forms/list_forms.py:376
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Verschicke regelmäßig Digests"
 
 #: forms/list_forms.py:377
-#, fuzzy
-#| msgid "Should Mailman send an auto-response to mailing list posters?"
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
-"Soll Mailman automatische Antworten an den Absender von Nachrichten senden?"
+msgstr "Soll Mailman regelmäßig Digests versenden?"
 
 #: forms/list_forms.py:383
 msgid "Digest Frequency"
-msgstr ""
+msgstr "Digest-Häufigkeit"
 
 #: forms/list_forms.py:384
 msgid "At what frequency should Mailman send out digests?"
-msgstr ""
+msgstr "Mit welcher Häufigkeit soll Mailman Digests versenden?"
 
 #: forms/list_forms.py:387
 msgid "Digest size threshold"
@@ -700,35 +682,10 @@ msgid "Explicit Reply-to header set"
 msgstr "Expliziter Reply-To-Header gesetzt"
 
 #: forms/list_forms.py:525
-#, fuzzy
-#| msgid "Explicit reply-to address"
 msgid "Explicit Reply-to set; no Cc added"
-msgstr "Explizite Reply-To-Adresse"
+msgstr "Explizitees Reply-To gesetzt; kein Cc hinzugefügt"
 
 #: forms/list_forms.py:527
-#, fuzzy
-#| msgid ""
-#| "Where are replies to list messages directed? No Munging is strongly "
-#| "recommended for most mailing lists. \n"
-#| "This option controls what Mailman does to the Reply-To: header in "
-#| "messages flowing through this mailing list. When set to No Munging, no "
-#| "Reply-To: header is added by Mailman, although if one is present in the "
-#| "original message, it is not stripped. Setting this value to either Reply "
-#| "to List or Explicit Reply causes Mailman to insert a specific Reply-To: "
-#| "header in all messages, overriding the header in the original message if "
-#| "necessary (Explicit Reply inserts the value of reply_to_address). There "
-#| "are many reasons not to introduce or override the Reply-To: header. One "
-#| "is that some posters depend on their own Reply-To: settings to convey "
-#| "their valid return address. Another is that modifying Reply-To: makes it "
-#| "much more difficult to send private replies. See `Reply-To' Munging "
-#| "Considered Harmful for a general discussion of this issue. See Reply-To "
-#| "Munging Considered Useful for a dissenting opinion. Some mailing lists "
-#| "have restricted posting privileges, with a parallel list devoted to "
-#| "discussions. Examples are `patches' or `checkin' lists, where software "
-#| "changes are posted by a revision control system, but discussion about the "
-#| "changes occurs on a developers mailing list. To support these types of "
-#| "mailing lists, select Explicit Reply and set the Reply-To: address option "
-#| "to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -759,10 +716,12 @@ msgstr ""
 "macht, die durch diese Mailingliste laufen. Wenn auf No Munging gesetzt, "
 "wird von Mailman kein Reply-To: Header hinzugefügt, obwohl, wenn einer in "
 "der ursprünglichen Nachricht vorhanden ist, dieser nicht entfernt wird. Wenn "
-"Sie diesen Wert entweder auf Reply to List oder Explicit Reply setzen, fügt "
-"Mailman einen bestimmten Reply-To: header in alle Nachrichten ein und "
-"überschreibt, wenn nötig, den Header in der Originalnachricht (Explicit "
-"Reply fügt den Wert von reply_to_address ein). Es gibt viele Gründe, den "
+"Sie diesen Wert entweder auf Reply to List, Explicit Reply oder Reply Only "
+"setzen, fügt Mailman einen bestimmten Reply-To: header in alle Nachrichten "
+"ein und überschreibt, wenn nötig, den Header in der Originalnachricht ("
+"Explicit Reply fügt den Wert von reply_to_address ein). Explizites Reply-To "
+"gesetzt; kein Cc hinzugefügt ist für announce-only Listen nützlich, um "
+"Antworten an die Listenadresse zu verhindern. Es gibt viele Gründe, den "
 "Header Reply-To: nicht einzufügen oder zu überschreiben. Zum einen hängen "
 "einige Poster von ihren eigenen Reply-To: Einstellungen ab, um ihre gültige "
 "Absenderadresse zu übermitteln. Eine andere ist die Änderung von Reply-To: "
@@ -770,8 +729,8 @@ msgstr ""
 "Munging als Schädlich Erachtet für eine allgemeine Behandlung dieses Themas. "
 "Siehe Reply-To Munging als Nützlich Erachtet für eine abweichende Meinung. "
 "Einige Mailinglisten haben eingeschränkte Veröffentlichungsrechte, wobei "
-"eine parallele Liste für Diskussionen vorgesehen ist. Beispiele sind "
-"`Patches' oder `Checkin'-Listen, in denen Softwareänderungen von einem "
+"eine parallele Liste für Diskussionen vorgesehen ist. Beispiele sind `"
+"Patches' oder `Checkin'-Listen, in denen Softwareänderungen von einem "
 "Versionskontrollsystem veröffentlicht werden, aber die Diskussion über die "
 "Änderungen findet auf einer Entwickler-Mailingliste statt. Um diese Art von "
 "Mailinglisten zu unterstützen, wählen Sie Explizite Antwort und setzen Sie "
@@ -872,10 +831,8 @@ msgstr ""
 "bedacht wird."
 
 #: forms/list_forms.py:618
-#, fuzzy
-#| msgid "Notify admin of membership changes"
 msgid "Notify users of held messages"
-msgstr "Administratoren über Änderungen an Mitgliedschaften benachrichtigen"
+msgstr "User über zurückgehaltene Nachrichten informieren"
 
 #: forms/list_forms.py:620
 msgid ""
@@ -883,18 +840,15 @@ msgid ""
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
 msgstr ""
+"Soll Mailman User über Nachrichten informieren, die zur Freigabe "
+"zurückgehalten werden? Falls Sie 'Nein' auswählen, wird den Usern keine "
+"Benachrichtigung über ausstehende Freigaben ihrer Nachrichten zugesandt."
 
 #: forms/list_forms.py:627
 msgid "Send welcome message"
 msgstr "Willkommensnachricht senden"
 
 #: forms/list_forms.py:629
-#, fuzzy
-#| msgid ""
-#| "Send welcome message to newly subscribed members? Turn this off only if "
-#| "you plan on subscribing people manually and don't want them to know that "
-#| "you did so. This option is most useful for transparently migrating lists "
-#| "from some other mailing list manager to Mailman."
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -904,9 +858,11 @@ msgid ""
 msgstr ""
 "Willkommensnachrichten an neue Mitglieder senden? Deaktivieren Sie diese "
 "Option nur dann, wenn Sie Leute selbst als Mitglied zufügen wollen und "
-"wollen, dass diese das nicht mitbekommen. Diese Option erscheint am meisten "
-"sinnvoll für transparente Migrationen von einem anderen Mailing-Listen-"
-"Manager zu Mailman."
+"wollen, dass diese das nicht mitbekommen. Dies auf Nein zu stellen, "
+"erscheint am meisten sinnvoll für transparente Migrationen von einem anderen "
+"Mailinglisten-Manager zu Mailman.\n"
+"Den Text der Wilkommensnachricht kann über den Template-Tab eingestellt "
+"werden."
 
 #: forms/list_forms.py:638
 msgid "Admin immed notify"
@@ -977,15 +933,15 @@ msgstr "Prefix für Betreff"
 
 #: forms/list_forms.py:690
 msgid "Preferred Language"
-msgstr ""
+msgstr "Bevorzugte Sprache"
 
 #: forms/list_forms.py:696
 msgid "Members List Visibility"
-msgstr ""
+msgstr "Sichtbarkeit der Mitgliederliste"
 
 #: forms/list_forms.py:700
 msgid "Who is allowed to see members list for this MailingList?"
-msgstr ""
+msgstr "Wem ist es erlaubt, die Mitgliederliste dieser Mailingliste zu sehen?"
 
 #: forms/list_forms.py:714
 msgid "Emails to mass subscribe"
@@ -1015,10 +971,8 @@ msgid "Emails to Unsubscribe"
 msgstr "E-Mail-Adresse zur Massenaustragung"
 
 #: forms/list_forms.py:733
-#, fuzzy
-#| msgid "The email address %s is not valid."
 msgid "Add one email address on each line"
-msgstr "Die E-Mail-Adresse %s ist nicht gültig."
+msgstr "Füge eine Emailadresse pro Zeile hinzu"
 
 #: forms/list_forms.py:752
 msgid "Add ban"
@@ -1089,16 +1043,6 @@ msgid "List default"
 msgstr "Listenstandard"
 
 #: forms/list_forms.py:817
-#, fuzzy
-#| msgid ""
-#| "Default action to take when this member posts to the list. List default "
-#| "-- follow the list's default member action. Hold -- This holds the "
-#| "message for approval by the list moderators. Reject -- this automatically "
-#| "rejects the message by sending a bounce notice to the post's author. The "
-#| "text of the bounce notice can be configured by you. Discard -- this "
-#| "simply discards the message, with no notice sent to the post's author. "
-#| "Accept -- accepts any postings without any further checks. Defer -- "
-#| "default processing, run additional checks and accept the message. "
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1112,16 +1056,18 @@ msgid ""
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
 "Standardaktion, die ergriffen werden muss, wenn dieses Mitglied in der Liste "
-"veröffentlicht. Listenstandard - folgen Sie der Standard-Memberaktion der "
-"Liste. Hold -- dies hält die Nachricht zur Genehmigung durch die "
-"Listenmoderatoren bereit. Ablehnen - dadurch wird die Nachricht automatisch "
-"abgelehnt, indem eine Bounce-Mitteilung an den Autor des Beitrags gesendet "
-"wird. Der Text der Bounce-Mitteilung kann von Ihnen konfiguriert werden. "
-"Verwerfen - dadurch wird die Nachricht einfach verworfen, ohne dass eine "
-"Benachrichtigung an den Autor des Beitrags gesendet wird. Akzeptieren - "
-"akzeptiert alle Postings ohne weitere Kontrollen. Aufschieben -- "
-"Standardverarbeitung, zusätzliche Prüfungen durchführen und die Nachricht "
-"akzeptieren. "
+"veröffentlicht.\n"
+"Listenstandard - folgen Sie der Standard-Memberaktion der Liste.\n"
+"Hold -- dies hält die Nachricht zur Genehmigung durch die Listenmoderatoren "
+"bereit.\n"
+"Ablehnen -- dadurch wird die Nachricht automatisch abgelehnt, indem eine "
+"Bounce-Mitteilung an den Autor des Beitrags gesendet wird. Der Text der "
+"Bounce-Mitteilung kann von Ihnen konfiguriert werden.\n"
+"Verwerfen -- dadurch wird die Nachricht einfach verworfen, ohne dass eine "
+"Benachrichtigung an den Autor des Beitrags gesendet wird.\n"
+"Akzeptieren -- akzeptiert alle Postings ohne weitere Kontrollen.\n"
+"Standardverarbeitung -- zusätzliche Prüfungen durchführen und die Nachricht "
+"akzeptieren. \n"
 
 #: forms/list_forms.py:837
 msgid "Select Email"
@@ -1129,7 +1075,7 @@ msgstr "E-Mail auswählen"
 
 #: forms/list_forms.py:845
 msgid "Data"
-msgstr ""
+msgstr "Daten"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
@@ -1142,10 +1088,8 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter a valid list name."
 msgid "Please enter an display name."
-msgstr "Bitte geben Sie einen gültigen Namen für Ihre Liste an."
+msgstr "Bitte geben Sie einen Anzeigenamen an."
 
 #: forms/user_forms.py:49
 msgid "Regular"
@@ -1248,15 +1192,9 @@ msgstr ""
 
 #: forms/user_forms.py:107
 msgid "Receive list copies (possible duplicates)"
-msgstr ""
+msgstr "Empfange Listenkopien (möglicherweise Duplikate)"
 
 #: forms/user_forms.py:109
-#, fuzzy
-#| msgid ""
-#| "When you are listed explicitly in the To: or Cc: headers of a list "
-#| "message, you can opt to not receive another copy from the mailing list. "
-#| "Select Yes to avoid receiving copies from the mailing list; select No to "
-#| "receive copies. "
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1264,7 +1202,8 @@ msgid ""
 msgstr ""
 "Falls Sie explizit in den To:- oder Cc:-Angaben einer Nachricht erscheinen, "
 "können Sie wählen nicht noch eine Kopie der Nachricht durch die Mailing-"
-"Liste zu erhalten. Aktivieren Sie diese Option, um keine Kopien zu erhalten. "
+"Liste zu erhalten. Wählen Sie Ja, um Kopien zu erhalten. Wählen Sie Nein, um "
+"keine Kopien zu erhalten."
 
 #: models.py:45
 msgid ""
@@ -1284,72 +1223,101 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
+"Hinweis: Fügen Sie keine vertraulichen Inhalte in Vorlagen hinzu, da diese "
+"öffentlich verfügbar sind.\n"
+"Sie können folgende Variablen in Vorlagen verwenden.\n"
+"$hyperkitty_url: Permalink zur archivierten Nachricht in Hyperkitty\n"
+"$listname: Name der Mailing-Liste, z.B. ant@example.com \n"
+"$list_id: Die List-ID Kopfzeile, z.B. ant.example.com \n"
+"$display_name: Anzeigename der Mailing-Liste, z.B. Ant \n"
+"$short_listname: Lokalteil des Listennamens,  z.B. ant \n"
+"$domain: Der Domainteil des Listennamens, z.B. example.com \n"
+"$info: Der ausführliche Beschreibungstext der Liste\n"
+"$request_email: Die -request Emailadresse\n"
+"$owner_email: Die -owner Emailadresse\n"
+"$site_email: Die Emailadresse, um den Seitenbetreiber zu erreichen\n"
+"$language: Der zweibuchstabige Sprachcode für die bevorzugte Sprache der "
+"Liste, z.B. fr, en, de \n"
 
 #: models.py:258
 msgid "Choose the template you want to customize."
-msgstr ""
+msgstr "Wählen Sie die zu bearbeitende Vorlage."
 
 #: models.py:265
 msgid ""
 "Language for the template, this should be the list's preferred language."
-msgstr ""
+msgstr "Sprache der Vorlage, dies sollte die bevorzugte Sprache der Liste sein."
 
 #: template_list.py:26
 msgid ""
 "Sent to the list administrators when moderator approval for a posting is "
 "required."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, wenn Moderatoren-Freigabe für "
+"ein Posting erforderlich ist."
 
 #: template_list.py:28
 msgid ""
 "Sent to the list administrators when moderator approval for a subscription "
 "request is required."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, wenn Moderatoren-Freigabe für "
+"eine Eintragungsanfrage erforderlich ist."
 
 #: template_list.py:30
 msgid ""
 "Sent to the list administrators when moderator approval for an "
 "unsubscription request is required."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, wenn Moderatoren-Freigabe für "
+"eine Austragungsanfrage erforderlich ist."
 
 #: template_list.py:32
 msgid ""
 "Sent to the list administrators to notify them when a new member has been "
 "subscribed."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, um über die Eintragung eines "
+"neuen Mitgliedes zu benachrichtigen."
 
 #: template_list.py:34
 msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, wenn eine Bounce-Nachricht "
+"mit unbekanntem Format erhalten wurde."
 
 #: template_list.py:36
 msgid ""
 "Sent to the list administrators to notify them when a member has been "
 "unsubscribed."
 msgstr ""
+"Wird an die Listen-Administratoren verschickt, um über die Austragung eines "
+"Mitgliedes zu benachrichtigen."
 
 #: template_list.py:38
 msgid "The footer for a digest message."
-msgstr ""
+msgstr "Die Fußzeilen einer Digest-Nachricht."
 
 #: template_list.py:40
 msgid "The header for a digest message."
-msgstr ""
+msgstr "Die Kopfzeilen einer Digest-Nachricht."
 
 #: template_list.py:42
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
+"Der Titelblock einer Digest-Nachricht, z.B. eine allgemeine Einleitung für "
+"alle Digest-Nachrichten."
 
 #: template_list.py:44
 msgid "The footer for a regular (non-digest) message."
-msgstr ""
+msgstr "Die Fußzeilen einer regulären (nicht-digest) Nachricht."
 
 #: template_list.py:46
 msgid "The header for a regular (non-digest) message."
-msgstr ""
+msgstr "Die Kopfzeilen einer regulären (nicht-digest) Nachricht."
 
 #: template_list.py:48
 msgid ""
