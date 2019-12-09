@@ -54,7 +54,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'django-mailman3>=1.2.0a1',
-        'Django>=1.11,<2.3',
+        'Django>=1.11,<3.1',
         'mailmanclient>=3.2.3a2',
         'readme_renderer[md]',
     ],

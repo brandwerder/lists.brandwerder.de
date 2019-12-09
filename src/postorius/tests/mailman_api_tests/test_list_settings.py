@@ -19,7 +19,6 @@
 
 from django.contrib.auth.models import User
 from django.urls import reverse
-from django.utils import six
 
 from allauth.account.models import EmailAddress
 
@@ -273,7 +272,7 @@ class ListSettingsTest(ViewTestCase):
                       args=('foo.example.com', 'message_acceptance'))
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        for field, value in six.iteritems(initial_values):
+        for field, value in initial_values.items():
             self.assertEqual(
                 self.foo_list.settings[field], value,
                 'Field: {}'.format(field))
@@ -294,7 +293,7 @@ class ListSettingsTest(ViewTestCase):
         self.assertHasSuccessMessage(response)
         # Get a new list object to avoid caching
         m_list = List.objects.get(fqdn_listname='foo.example.com')
-        for field, value in six.iteritems(updated_values):
+        for field, value in updated_values.items():
             self.assertEqual(
                 m_list.settings[field], value,
                 'Field: {}'.format(field))

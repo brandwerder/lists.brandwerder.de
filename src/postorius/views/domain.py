@@ -17,13 +17,13 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+from urllib.error import HTTPError
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.models import Site
 from django.http import Http404
 from django.shortcuts import redirect, render
-from django.utils.six.moves.urllib.error import HTTPError
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 

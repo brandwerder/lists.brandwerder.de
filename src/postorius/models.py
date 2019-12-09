@@ -20,6 +20,7 @@ from __future__ import (
     absolute_import, division, print_function, unicode_literals)
 
 import logging
+from urllib.error import HTTPError
 from urllib.parse import urljoin
 
 from django.conf import settings
@@ -30,8 +31,7 @@ from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
 from django.http import Http404
 from django.urls import reverse
-from django.utils.six.moves.urllib.error import HTTPError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from mailmanclient import MailmanConnectionError
 

@@ -21,6 +21,7 @@ import csv
 import email.utils
 import logging
 import sys
+from urllib.error import HTTPError
 
 from django.conf import settings
 from django.contrib import messages
@@ -32,7 +33,6 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.decorators import method_decorator
-from django.utils.six.moves.urllib.error import HTTPError
 from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
