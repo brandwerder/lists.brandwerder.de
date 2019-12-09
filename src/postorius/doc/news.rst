@@ -21,7 +21,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.1
 =====
 
-(20XX-XX-XX)
+(2019-12-08)
 
 * Show templates' file names in selection list where admins can pick
   individual templates for customization. (See !425)
