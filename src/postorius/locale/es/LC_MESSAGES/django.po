@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2019-12-10 16:25+0000\n"
-"Last-Translator: Pablo Montepagano <pmontepagano@gmail.com>\n"
+"PO-Revision-Date: 2019-12-11 13:45+0000\n"
+"Last-Translator: Federico Sayd <federicosayd@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -220,7 +220,7 @@ msgstr ""
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
