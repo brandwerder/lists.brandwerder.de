@@ -23,6 +23,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 (20XX-XX-XX)
 
+* Do not show pagination, when user is authenticated. (Closes #387)
 
 1.3.1
 =====

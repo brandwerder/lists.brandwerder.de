@@ -81,7 +81,9 @@
         {% if user.is_superuser %}
             <small>* {% trans 'Only admins see unadvertised lists in the list index.' %}</small>
         {% endif %}
-        {% paginator lists %}
+        {% if not user.is_authenticated or "all-lists" in request.GET %}
+            {% paginator lists %}
+        {% endif %}
     {% else %}
         <p>{% trans 'There are currently no mailing lists.' %}</p>
     {% endif %}
