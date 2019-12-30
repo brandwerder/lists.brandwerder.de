@@ -1,16 +1,5 @@
 image: maxking/mailman-ci-runner
 
-
-py35-django-1.11:
-  stage: test
-  script:
-  - tox -e py35-django111
-
-py36-django-1.11:
-  stage: test
-  script:
-  - tox -e py36-django111
-
 py37-django-20:
   stage: test
   script:
