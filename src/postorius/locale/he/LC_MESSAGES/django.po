@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-12-26 13:21+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/he/>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 3.10\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -25,213 +26,217 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
+"שם התחום ממנו יוגש מנשק המשתמש המקוון. יכול להיות זהה למארח הדוא״ל. ניתן "
+"לערוך את רשימת המארחים הזמינים דרך <a href=\"%s\">כאן</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "מארח דוא״ל"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "נא להקליד שם תחום"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "נא להקליד שם תחום תקני."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"שם התחום לרשימות הדיוור שלך. למשל, כדי לקבל רשימות בנוסח testing@"
+"example.com, יש למלא כאן example.com."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "שם תחום ככינוי"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "נא להקליד שם תחום תקני או כלום."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "בדרך כלל ריק. משמש לטובת הגדרות משונות של Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "מארח אתר"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "נא להקליד שם תחום תקני"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "כתובת הדוא״ל של הבעלים"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "יש לבחור אחד לפחות"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
-msgstr ""
+msgstr "החזקה לפיקוח"
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "לדחות (עם התראה)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "להשליך (ללא התראה)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "לקבל ישירות (לעקוף כללים אחרים)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "עיבוד כבררת מחדל"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "יומי"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "שבועי"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "רבעוני"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "חודשי"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "שנתי"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "רק מפקחי רשימת הדיוור"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "רק חברי רשימת הדיוור"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "כולם"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "שם הרשימה"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "נא להקליד את שם הרשימה שלך."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "נא להקליד שם תקני לרשימה."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "כתובת הבעלים של הרשימה הראשונית"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "נא להקליד את כתובת הדוא״ל של בעלי הרשימה."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr ""
+msgstr "לפרסם את הרשימה הזו?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr ""
+msgstr "נא לבחור סוג רשימה."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "לפרסם את הרשימה הזאת במפתח הרשימות"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "להסתיר את הרשימה הזאת ממפתח הרשימות"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "בחירת שם תחום קיים."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "בחירת מארח דוא״ל תקני"
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "סגנון רשימה"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr ""
+msgstr "נא לבחור סגנון רשימה."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "נא לבחור סגנון רשימה תקני."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "הנהלת האתר לא יצרה שמות תחום כלשהם"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "נא למלא שם רשימה תקני"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr ""
+msgstr "כתובת הדוא״ל שלך"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "נא להקליד כתובת דוא״ל."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "נא להקליד כתובת דוא״ל תקנית."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
-msgstr ""
+msgstr "שמך (רשות)"
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "פתוח"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "באימות"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "בפיקוח"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "באימות ואז פיקוח"
 
 #: forms/list_forms.py:203 views/list.py:869
 msgid "Subscription Policy"
-msgstr ""
+msgstr "מדיניות מינוי"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -242,34 +247,38 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"פתוח: מינויים נוספים אוטומטית.\n"
+"באימות: המנויים צריכים לאמת את המינוי באמצעות הודעה שנשלחת אליהם בדוא״ל.\n"
+"בפיקוח: על המפקחים לאשר כל מינוי ידנית.\n"
+"באימות ואז פיקוח: תחילה על המנויים לאמת ולאחר מכן נדרש אישור מהמפקחים."
 
 #: forms/list_forms.py:221
 msgid "Public archives"
-msgstr ""
+msgstr "ארכיונים ציבוריים"
 
 #: forms/list_forms.py:222
 msgid "Private archives"
-msgstr ""
+msgstr "ארכיונים פרטיים"
 
 #: forms/list_forms.py:223
 msgid "Do not archive this list"
-msgstr ""
+msgstr "לא להעביר את הרשימה לארכיון"
 
 #: forms/list_forms.py:229
 msgid "Archive policy"
-msgstr ""
+msgstr "מדיניות ארכיון"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "מדיניות להעברת ההודעות של הרשימה הזו לארכיון"
 
 #: forms/list_forms.py:235
 msgid "Active archivers"
-msgstr ""
+msgstr "מעבדי ארכיון פעילים"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "כינויים מקובלים"
 
 #: forms/list_forms.py:263
 msgid ""
@@ -281,6 +290,13 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"זו רשימה של כתובות וביטויים רגולריים, אחד לשורה, שתואמים כתובות שמקובלות "
+"בשדות או: או עותק: במקום כתובת הפרסום של הרשימה כאשר האפשרות "
+"‚require_explicit_destination’ (דרישת יעד מפורש) פעילה.  הרשומות יכולות "
+"להיות כתובות דוא״ל או ביטויים רגולריים שתואמים לכתובות דוא״ל.  ביטויים "
+"רגולריים הם ביטויים שמתחילים ב־‚^’ ומתבצעת התאמה בעזרתם לכל כתובת מען "
+"בהודעה. ההתאמה מתבצעת בעזרת הפונקציה re.match()‎ ב־Python, כלומר שהן נצמדות "
+"לתחילת המחרוזת."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -289,7 +305,7 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "Yes"
-msgstr ""
+msgstr "כן"
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -298,21 +314,23 @@ msgstr ""
 #: forms/list_forms.py:615 forms/list_forms.py:624 forms/list_forms.py:636
 #: forms/list_forms.py:648 forms/list_forms.py:660 forms/user_forms.py:47
 msgid "No"
-msgstr ""
+msgstr "לא"
 
 #: forms/list_forms.py:274
 msgid "Require Explicit Destination"
-msgstr ""
+msgstr "דרישת יעד מפורש"
 
 #: forms/list_forms.py:276
 msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"בדיקות אלו מוודאות שכתובת הפרסום של הרשימה או כינוי מקובל מופיעים בכותרות אל:"
+" או עותק: בפרסום."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
-msgstr ""
+msgstr "מנהלתיות"
 
 #: forms/list_forms.py:284
 msgid ""
@@ -321,14 +339,17 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
+"בדיקות מנהלתיות בודקות את הפרסומים כדי להבין האם מדובר בבקשה מנהלית (כגון "
+"מינוי,ביטול מינוי וכן הלאה) ותוסיף אותה לתור הבקשות המנהליות וגם תודה להנהלה "
+"על הבקשה החדשה שנכנסה לתור."
 
 #: forms/list_forms.py:291
 msgid "Default action to take when a member posts to the list"
-msgstr ""
+msgstr "פעולת בררת המחדל כשחבר מפרסם אל הרשימה"
 
 #: forms/list_forms.py:293
 msgid "Please choose a default member action."
-msgstr ""
+msgstr "נא לבחור פעולת חבר כבררת מחדל."
 
 #: forms/list_forms.py:297
 msgid ""
@@ -341,14 +362,21 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
+"פעולת בררת המחדל כאשר אחד החברים מפרסם הודעה לרשימה.\n"
+"להחזיק: ההודעה מוחזקת עד לאישור מפקחי הרשימה.\n"
+"לדחות: ההודעה נדחית אוטומטית על ידי שליחת התראת החזרה ליוצר הרשומה. ניתן "
+"להתאים אישית את הטקסט שבהתראת ההחזרה.\n"
+"להשליך: פעולה זו פשוט משליכה את ההודעה, ללא כל התראה שנשלחת ליוצר הרשומה.\n"
+"לקבל: קבלת כל הפרסומים בלי לבדוק.\n"
+"עיבוד בררת מחדל: הרצת בדיקות נוספות ולקבל את ההודעה."
 
 #: forms/list_forms.py:310
 msgid "Default action to take when a non-member posts to the list"
-msgstr ""
+msgstr "פעולת בררת המחדל כשמשתמש שאינו חבר מפרסם אל הרשימה"
 
 #: forms/list_forms.py:312
 msgid "Please choose a default non-member action."
-msgstr ""
+msgstr "נא לבחור פעולת בררת מחדל למשתמש שאינו חבר."
 
 #: forms/list_forms.py:316
 msgid ""
@@ -356,94 +384,100 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"כאשר מתקבלת הודעה ממשתמש שאינו חבר, השולח נבדק מול רשימות הכתובות המקובלות, "
+"המוחזקות, הנדחות (החזרה) והמושלכות."
 
 #: forms/list_forms.py:322
 msgid "Maximum message size"
-msgstr ""
+msgstr "גודל ההודעה המרבי"
 
 #: forms/list_forms.py:325
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"גודל ההודעה המרבי המותר בקילובתים. ניתן להשתמש בזה כדי לחסום הודעות עם קבצים "
+"גדולים מצורפים. גודל של 0 משבית את הבדיקה."
 
 #: forms/list_forms.py:330
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "מספר הנמענים המרבי"
 
 #: forms/list_forms.py:333
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"מספר הנמענים המרבי להודעה. ניתן להשתמש בזה כדי למנוע קבלה של הודעות שמופצות "
+"להמונים. ערך של 0 משבית את הבדיקה."
 
 #: forms/list_forms.py:351
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "ביטוי רגולרי שגוי לכינוי {}:‏ {}"
 
 #: forms/list_forms.py:357
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "דוא״ל שגוי לכינוי: {}"
 
 #: forms/list_forms.py:369
 msgid "Enable Digests"
-msgstr ""
+msgstr "הפעלת תקצירים"
 
 #: forms/list_forms.py:370
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "האם על Mailman להפעיל תקצירים עבור רשימת דיוור זו?"
 
 #: forms/list_forms.py:376
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "שליחת תקצירים באופן סדיר"
 
 #: forms/list_forms.py:377
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "האם על Mailman לשלוח תקצירים באופן סדיר?"
 
 #: forms/list_forms.py:383
 msgid "Digest Frequency"
-msgstr ""
+msgstr "תדירות התקצירים"
 
 #: forms/list_forms.py:384
 msgid "At what frequency should Mailman send out digests?"
-msgstr ""
+msgstr "באיזו תדירות על Mailman לשלוח תקצירים?"
 
 #: forms/list_forms.py:387
 msgid "Digest size threshold"
-msgstr ""
+msgstr "סף גודל תקצירים"
 
 #: forms/list_forms.py:388
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "כמה גודל בקילובתים על תקציר לצבור בטרם שליחתו?"
 
 #: forms/list_forms.py:397
 msgid "DMARC mitigation action"
-msgstr ""
+msgstr "פעולת אפחות DMARC"
 
 #: forms/list_forms.py:401
 msgid "Please choose a DMARC mitigation action."
-msgstr ""
+msgstr "נא לבחור פעולת אפחות DMARC."
 
 #: forms/list_forms.py:403
 msgid "No DMARC mitigations"
-msgstr ""
+msgstr "אין פעולות אפחות DMARC"
 
 #: forms/list_forms.py:404
 msgid "Replace From: with list address"
-msgstr ""
+msgstr "החלפת מאת: בכתובת הרשימה"
 
 #: forms/list_forms.py:406
 msgid "Wrap the message in an outer message From: the list."
-msgstr ""
+msgstr "לעטוף את ההודעה במאת: חיצוני מהרשימה."
 
 #: forms/list_forms.py:407
 msgid "Reject the message"
-msgstr ""
+msgstr "לדחות את ההודעה"
 
 #: forms/list_forms.py:408
 msgid "Discard the message"
-msgstr ""
+msgstr "להתעלם מההודעה"
 
 #: forms/list_forms.py:410
 msgid ""
@@ -451,6 +485,8 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
+"הפעולה שיש להחיל על הודעה שהשדה מאת: בהן הוא של שם תחום שמפרסם מדיניות DMARC "
+"של דחייה או בידוד או לכל ההודעות אם אפחות DMARC ללא התניה מוגדר לאמת."
 
 #: forms/list_forms.py:417
 msgid "DMARC Mitigate unconditionally"
@@ -485,46 +521,50 @@ msgstr ""
 
 #: forms/list_forms.py:447
 msgid "Filter content"
-msgstr ""
+msgstr "סינון תוכן"
 
 #: forms/list_forms.py:448
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
-msgstr ""
+msgstr "האם על Mailman לסנן את תוכן תעבורת הרשימה בהתאם להגדרות שלהלן?"
 
 #: forms/list_forms.py:454
 msgid "Collapse alternatives"
-msgstr ""
+msgstr "צמצום חלופות"
 
 #: forms/list_forms.py:455
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
-msgstr ""
+msgstr "האם על Mailman לצמצם ריבוי חלקים/חלופות לתוכן החלק הראשון?"
 
 #: forms/list_forms.py:461
 msgid "Convert html to plaintext"
-msgstr ""
+msgstr "המרת html לטקסט פשוט"
 
 #: forms/list_forms.py:462
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
+"האם על Mailman להמיר חלקי טקסט/html לטקס פשוט? המרה זו מתבצעת לאחר הפשטת "
+"הקבצים המצורפים ב־MIME."
 
 #: forms/list_forms.py:469
 msgid "Anonymous list"
-msgstr ""
+msgstr "רשימה אלמונית"
 
 #: forms/list_forms.py:470
 msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
+"להסתיר את שולח ההודעה תוך החלפת הנמען בכתובת הרשימה (הסרת השדות מאת - From, "
+"נמען - Sender ותגובה אל - Reply-To)"
 
 #: forms/list_forms.py:477
 msgid "Include RFC2369 headers"
-msgstr ""
+msgstr "לכלול כותרות RFC2369"
 
 #: forms/list_forms.py:479
 msgid ""
@@ -623,24 +663,24 @@ msgstr ""
 
 #: forms/list_forms.py:568
 msgid "Respond and continue processing"
-msgstr ""
+msgstr "להשיב ולהמשיך בעיבוד"
 
 #: forms/list_forms.py:569
 msgid "Respond and discard message"
-msgstr ""
+msgstr "להשיב ולהשליך את ההודעה"
 
 #: forms/list_forms.py:570
 msgid "No automatic response"
-msgstr ""
+msgstr "ללא מענה אוטומטית"
 
 #: forms/list_forms.py:574
 msgid "Autorespond to list owner"
-msgstr ""
+msgstr "להשיב אוטומטית לבעלי הרשימה"
 
 #: forms/list_forms.py:575
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
-msgstr ""
+msgstr "האם על Mailman לשלוח מענה אוטומטית להודעות שנשלחות לכתובת בעלי הקבוצה?"
 
 #: forms/list_forms.py:578
 msgid "Autoresponse owner text"
@@ -779,7 +819,7 @@ msgstr ""
 
 #: forms/list_forms.py:690
 msgid "Preferred Language"
-msgstr ""
+msgstr "שפה מועדפת"
 
 #: forms/list_forms.py:696
 msgid "Members List Visibility"
@@ -1029,7 +1069,7 @@ msgstr ""
 #: models.py:265
 msgid ""
 "Language for the template, this should be the list's preferred language."
-msgstr ""
+msgstr "שפת התבנית, זאת אמורה להיות השפה המועדפת של הרשימה."
 
 #: template_list.py:26
 msgid ""
@@ -1091,13 +1131,13 @@ msgstr ""
 #: template_list.py:48
 msgid ""
 "The message sent to subscribers when a subscription confirmation is required."
-msgstr ""
+msgstr "ההודעה נשלחת למנויים כאשר צריך לאמת את המינוי."
 
 #: template_list.py:50
 msgid ""
 "The message sent to subscribers when an unsubscription confirmation is "
 "required."
-msgstr ""
+msgstr "ההודעה נשלחת למנויים כאשר צריך לאמת את ביטול המינוי."
 
 #: template_list.py:52
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
@@ -1173,7 +1213,7 @@ msgstr ""
 #: templates/postorius/base.html:45 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "שמות תחום"
 
 #: templates/postorius/base.html:50
 msgid "System Information"
@@ -1185,19 +1225,19 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "חשבון"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
-msgstr ""
+msgstr "הגדרות Mailman"
 
 #: templates/postorius/base.html:82
 msgid "Posting activity"
-msgstr ""
+msgstr "פעילות פרסום"
 
 #: templates/postorius/base.html:88
 msgid "Logout"
-msgstr ""
+msgstr "יציאה"
 
 #: templates/postorius/base.html:95
 msgid "Login"
@@ -1205,7 +1245,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "הרשמה"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1221,11 +1261,11 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:5
 msgid "Confirm domain removal"
-msgstr ""
+msgstr "אימות הסרת שם תחום"
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "אימות המחיקה"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
@@ -1248,7 +1288,7 @@ msgstr ""
 #: templates/postorius/lists/template_list.html:32
 #: templates/postorius/menu/list_nav.html:60
 msgid "Delete"
-msgstr ""
+msgstr "מחיקה"
 
 #: templates/postorius/domain/confirm_delete.html:34
 #: templates/postorius/domain/template_delete.html:28
@@ -1262,11 +1302,11 @@ msgstr ""
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "עריכת שם תחום"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "הוספת שם תחום"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
@@ -1302,15 +1342,15 @@ msgstr ""
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "הוספת שם תחום"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr ""
+msgstr "הוספת שם תחום חדש"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
-msgstr ""
+msgstr "הוספת בעלות על שם תחום "
 
 #: templates/postorius/domain/owners.html:12
 msgid "Add a new owner to"
@@ -1336,6 +1376,10 @@ msgid ""
 "           for domain \"%(identifier)s\"?\n"
 "           "
 msgstr ""
+"\n"
+"           למחוק את התבנית „%(name)s”\n"
+"           לשם התחום „%(identifier)s”?\n"
+"           "
 
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
@@ -1366,7 +1410,7 @@ msgstr ""
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
-msgstr ""
+msgstr "יצירת שם תחום חדש"
 
 #: templates/postorius/index.html:42
 msgid "Create New List"
@@ -1436,7 +1480,7 @@ msgstr ""
 #: templates/postorius/lists/confirm_remove_role.html:5
 #: templates/postorius/lists/confirm_remove_role.html:12
 msgid "Confirm remove role"
-msgstr ""
+msgstr "אימות הסרת תפקיד"
 
 #: templates/postorius/lists/confirm_remove_role.html:14
 msgid "Are you sure?"
@@ -1444,7 +1488,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "הסרה"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
@@ -1507,7 +1551,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:36
 msgid "Subject"
-msgstr ""
+msgstr "נושא"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Sender"
@@ -1565,83 +1609,83 @@ msgstr ""
 
 #: templates/postorius/lists/memberoptions.html:16
 msgid "You are not the owner for this list"
-msgstr ""
+msgstr "אין לך בעלות על הרשימה הזו"
 
 #: templates/postorius/lists/members.html:8
 msgid "List members"
-msgstr ""
+msgstr "חברי הרשימה"
 
 #: templates/postorius/lists/members.html:43
 msgid "Search members..."
-msgstr ""
+msgstr "חיפוש חברים…"
 
 #: templates/postorius/lists/members.html:59
 msgid "CSV Export"
-msgstr ""
+msgstr "ייצוא CSV"
 
 #: templates/postorius/lists/members.html:73
 #: templates/postorius/user/address_preferences.html:32
 msgid "Address"
-msgstr ""
+msgstr "כתובת"
 
 #: templates/postorius/lists/members.html:92
 msgid "Member Options"
-msgstr ""
+msgstr "אפשרויות חבר"
 
 #: templates/postorius/lists/members.html:104
 msgid "Non-member Options"
-msgstr ""
+msgstr "אפשרויות למשתמש שאינו חבר"
 
 #: templates/postorius/lists/new.html:6
 msgid "Create list"
-msgstr ""
+msgstr "יצירת רשימה"
 
 #: templates/postorius/lists/new.html:12
 msgid "Create a new list"
-msgstr ""
+msgstr "יצירת רשימה חדשה"
 
 #: templates/postorius/lists/pending_confirmations.html:19
 #: templates/postorius/lists/subscription_requests.html:19
 msgid "E-Mail Address"
-msgstr ""
+msgstr "כתובת דוא״ל"
 
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
 msgid "Actions"
-msgstr ""
+msgstr "פעולות"
 
 #: templates/postorius/lists/pending_confirmations.html:29
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr ""
+msgstr "חסימה"
 
 #: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:40
 msgid "There are currently no subscription requests for this list."
-msgstr ""
+msgstr "אין בקשות מינוי לרשימה זו."
 
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:46
 msgid "Settings"
-msgstr ""
+msgstr "הגדרות"
 
 #: templates/postorius/lists/subscription_requests.html:7
 #: templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
-msgstr ""
+msgstr "בקשות מינוי"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:9
 msgid "Info"
-msgstr ""
+msgstr "מידע"
 
 #: templates/postorius/lists/summary.html:21
 msgid "To contact the list owners, use the following email address:"
-msgstr ""
+msgstr "כדי ליצור קשר עם בעלי הרשימה, יש להשתמש בכתובת הדוא״ל הבאה:"
 
 #: templates/postorius/lists/summary.html:27
 msgid "You have to login to visit the archives of this list."
-msgstr ""
+msgstr "עליך להיכנס כדי לבקר בארכיוני הרשימה הזו."
 
 #: templates/postorius/lists/summary.html:32
 #, python-format
@@ -1655,11 +1699,11 @@ msgstr ""
 #: templates/postorius/lists/summary.html:45
 #: templates/postorius/lists/summary.html:79
 msgid "Subscription / Unsubscription"
-msgstr ""
+msgstr "מינוי / ביטול מינוי"
 
 #: templates/postorius/lists/summary.html:47
 msgid "You are subscribed to this list with the following address:"
-msgstr ""
+msgstr "נרשמת לרשימה הזו עם הכתובת הבאה:"
 
 #: templates/postorius/lists/summary.html:51
 #, python-format
@@ -1669,20 +1713,26 @@ msgid ""
 "\"%(user_list_options_url)s\">your list options page</a>\n"
 "              "
 msgstr ""
+"\n"
+"                יש לך אפשרות לנהל את המינוי שלך דרך <a href=\""
+"%(user_list_options_url)s\">עמוד אפשרויות הרשימה שלך</a>\n"
+"              "
 
 #: templates/postorius/lists/summary.html:59
 msgid "Unsubscribe"
-msgstr ""
+msgstr "ביטול מינוי"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
 "You have a subscription request pending. If you don't hear back soon, please "
 "contact the list owners."
 msgstr ""
+"ממתינה לך בקשת מינוי. אם לא תתקבל שום תגובה בקרוב, נא ליצור קשר עם בעלי "
+"הרשימה."
 
 #: templates/postorius/lists/summary.html:65
 msgid "Subscribe to this list"
-msgstr ""
+msgstr "מינוי לרשימה הזו"
 
 #: templates/postorius/lists/summary.html:67
 #, python-format
@@ -1695,6 +1745,12 @@ msgid ""
 "                  or use the form below:\n"
 "              "
 msgstr ""
+"\n"
+"                  כדי להירשם ניתן לשלוח הודעה עם הנושא ‚subscribe’ אל\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
+">%(address)s</a>\n"
+"                  או להשתמש בטופס שלהלן:\n"
+"              "
 
 #: templates/postorius/lists/summary.html:80
 msgid ""
@@ -1708,7 +1764,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:85
 msgid "Log In"
-msgstr ""
+msgstr "כניסה"
 
 #: templates/postorius/lists/summary.html:90
 msgid ""
@@ -1717,26 +1773,30 @@ msgid ""
 "        If you wish to do so, please use the form below.\n"
 "        "
 msgstr ""
+"\n"
+"        ניתן גם להירשם מבלי ליצור חשבון.\n"
+"        כדי לעשות זאת יש להשתמש בטופס שלהלן.\n"
+"        "
 
 #: templates/postorius/lists/summary.html:106
 msgid "List metrics"
-msgstr ""
+msgstr "מדדי הרשימה"
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
-msgstr ""
+msgstr "נוצרה במועד"
 
 #: templates/postorius/lists/summary.html:109
 msgid "Last post at"
-msgstr ""
+msgstr "פרסום אחרון במועד"
 
 #: templates/postorius/lists/summary.html:110
 msgid "Digest last sent at"
-msgstr ""
+msgstr "תקציר אחרון נשלח במועד"
 
 #: templates/postorius/lists/summary.html:111
 msgid "Volume"
-msgstr ""
+msgstr "נפח"
 
 #: templates/postorius/lists/template_delete.html:19
 #, python-format
@@ -1746,237 +1806,245 @@ msgid ""
 "     from list \"%(identifier)s\"?\n"
 "     "
 msgstr ""
+"\n"
+"     למחוק את התבנית „%(name)s”\n"
+"     מהרשימה „%(identifier)s”?\n"
+"     "
 
 #: templates/postorius/menu/list_nav.html:19
 msgid "Pending Approval"
-msgstr ""
+msgstr "בהמתנה לאישור"
 
 #: templates/postorius/menu/list_nav.html:22
 msgid "Pending Confirmation"
-msgstr ""
+msgstr "בהמתנה לאימות"
 
 #: templates/postorius/menu/list_nav.html:36
 msgid "Users"
-msgstr ""
+msgstr "משתמשים"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Members"
-msgstr ""
+msgstr "חברים"
 
 #: templates/postorius/menu/list_nav.html:40
 msgid "Non-Members"
-msgstr ""
+msgstr "לא חברים"
 
 #: templates/postorius/menu/list_nav.html:41
 msgid "Moderators"
-msgstr ""
+msgstr "מפקחים"
 
 #: templates/postorius/menu/list_nav.html:50
 msgid "Mass operations"
-msgstr ""
+msgstr "פעולות כמותיות"
 
 #: templates/postorius/menu/list_nav.html:54
 msgid "Mass removal"
-msgstr ""
+msgstr "הסרה כמותית"
 
 #: templates/postorius/menu/list_nav.html:58
 msgid "Ban List"
-msgstr ""
+msgstr "רשימת חסימה"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
-msgstr ""
+msgstr "הגדרות Mailman"
 
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "מינויים"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
-msgstr ""
+msgstr "העדפות גלובליות של Mailman"
 
 #: templates/postorius/menu/user_nav.html:9
 msgid "Address-based preferences"
-msgstr ""
+msgstr "העדפות תלויות כתובת"
 
 #: templates/postorius/menu/user_nav.html:10
 msgid "List-based preferences"
-msgstr ""
+msgstr "העדפות תלויות רשימה"
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
-msgstr ""
+msgstr "הגדרות מערכת"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
 msgid "Subscription preferences"
-msgstr ""
+msgstr "העדפות מינוי"
 
 #: templates/postorius/user/address_preferences.html:17
 #: templates/postorius/user/mailman_settings.html:17
 #: templates/postorius/user/subscription_preferences.html:17
 msgid "No preferences available"
-msgstr ""
+msgstr "אין העדפות זמינות"
 
 #: templates/postorius/user/address_preferences.html:18
 #: templates/postorius/user/mailman_settings.html:19
 #: templates/postorius/user/subscription_preferences.html:19
 msgid ""
 "You are not yet subscribed to any lists, so you have no Mailman preferences."
-msgstr ""
+msgstr "לא נרשמת לאף רשימה, לכן אין לך העדפות של Mailman."
 
 #: templates/postorius/user/address_preferences.html:20
 msgid "Each email address can have specific Mailman preferences."
-msgstr ""
+msgstr "לכל כתובת דוא״ל יכולות להיות העדפות Mailman משלה."
 
 #: templates/postorius/user/address_preferences.html:21
 msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
+"כל האפשרויות שמופיעות כאן כבלתי מוגדרות מתקבלות בזמן ההתחלה בירושה מההעדפות "
+"הגלובליות (ניתן לצפייה בלשונית אחרת)"
 
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
-msgstr ""
+msgstr "אפשרויות מינוי עבור"
 
 #: templates/postorius/user/list_options.html:18
 msgid "Use this form to change the email used for this subscription"
-msgstr ""
+msgstr "יש להשתמש בטופס זה כדי לשנות את כתובת הדוא״ל שמשמשת את המינוי הזה"
 
 #: templates/postorius/user/mailman_settings.html:7
 msgid "Subscription settings"
-msgstr ""
+msgstr "הגדרות מינוי"
 
 #: templates/postorius/user/subscription_preferences.html:21
 msgid "Each list subscription can have specific Mailman preferences."
-msgstr ""
+msgstr "לכל מינוי לרשימה יכולות להיות העדפות Mailman משלו."
 
 #: templates/postorius/user/subscription_preferences.html:22
 msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
+"כל האפשרויות שמופיעות כאן שאינן מוגדרות מתקבלות בירושה בזמן ההתחלה מההעדפות "
+"הגלובליות או מאלו שתלויות בכתובת (ניתן לצפייה בלשוניות אחרות)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
-msgstr ""
+msgstr "מינוי"
 
 #: templates/postorius/user/subscriptions.html:17
 msgid "You are subscribed to the following mailing lists:"
-msgstr ""
+msgstr "נרשמת לרשימות הדיוור הבאות:"
 
 #: templates/postorius/user/subscriptions.html:23
 msgid "Subscription Address"
-msgstr ""
+msgstr "כתובת מינוי"
 
 #: templates/postorius/user/subscriptions.html:24
 msgid "Delivery Mode"
-msgstr ""
+msgstr "מצב משלוח"
 
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
-msgstr ""
+msgstr "תפקיד"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
-msgstr ""
+msgstr "עדיין לא נרשמת לאף רשימה."
 
 #: templatetags/nav_helpers.py:27
 msgid "Header Filters"
-msgstr ""
+msgstr "מסנני כותרות"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr ""
+msgstr "כתובות חסומות"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
-msgstr ""
+msgstr "מחיקת רשימה"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
-msgstr ""
+msgstr "הודעות מוחזקות"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr ""
+msgstr "הסרה כמותית"
 
 #: templatetags/nav_helpers.py:32
 msgid "Mass Subscription"
-msgstr ""
+msgstr "רישום כמותי"
 
 #: templatetags/nav_helpers.py:33
 msgid "Subscription Options"
-msgstr ""
+msgstr "אפשרויות מינוי"
 
 #: templatetags/nav_helpers.py:34
 msgid "List Settings"
-msgstr ""
+msgstr "הגדרות רשימה"
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "סיכום"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
-msgstr ""
+msgstr "אימות הסרת כל החברים"
 
 #: templatetags/nav_helpers.py:39
 msgid "Address-based Settings"
-msgstr ""
+msgstr "הגדרות תלויות כתובת"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
-msgstr ""
+msgstr "הגדרות מינוי"
 
 #: templatetags/nav_helpers.py:41
 msgid "Global Settings"
-msgstr ""
+msgstr "הגדרות גלובליות"
 
 #: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
-msgstr ""
+msgstr "ה־API מסוג REST של Mailman אינו זמין נא להפעיל את הליבה של Mailman."
 
 #: views/domain.py:76
 msgid "New Domain registered"
-msgstr ""
+msgstr "נרשם שם תחום חדש"
 
 #: views/domain.py:113
 #, python-format
 msgid "Domain %s updated"
-msgstr ""
+msgstr "שם התחום %s עודכן"
 
 #: views/domain.py:116 views/list.py:664
 msgid "Please check the errors below"
-msgstr ""
+msgstr "נא לעיין בשגיאות שלהלן"
 
 #: views/domain.py:140
 #, python-format
 msgid "The domain %s has been deleted."
-msgstr ""
+msgstr "שם התחום %s נמחק."
 
 #: views/domain.py:145
 #, python-format
 msgid "The domain could not be deleted: %s"
-msgstr ""
+msgstr "לא ניתן למחוק את שם התחום: %s"
 
 #: views/domain.py:163
 msgid "Added {} as an owner for {}"
-msgstr ""
+msgstr "הבעלות עברה אל {} על {}"
 
 #: views/domain.py:192
 msgid "{} is not an owner for {}"
-msgstr ""
+msgstr "למשתמש {} אין בעלות על {}"
 
 #: views/domain.py:199
 msgid "Removed {} as an owner for {}"
-msgstr ""
+msgstr "הבעלות של {} על {} הוסרה"
 
 #: views/list.py:103
 msgid "List {}s"
@@ -1984,7 +2052,7 @@ msgstr ""
 
 #: views/list.py:117
 msgid "Add {}"
-msgstr ""
+msgstr "הוספת {}"
 
 #: views/list.py:120
 msgid "No {}s were found matching the search."
@@ -1996,282 +2064,283 @@ msgstr ""
 
 #: views/list.py:135
 msgid "The selected members have been unsubscribed"
-msgstr ""
+msgstr "המינוי של החברים הנבחרים בוטל"
 
 #: views/list.py:153
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr ""
+msgstr "{email} נוסף בתפקיד {role}"
 
 #: views/list.py:194
 msgid "Member does not exist"
-msgstr ""
+msgstr "החבר לא קיים"
 
 #: views/list.py:210
 msgid "The member's preferences have been updated."
-msgstr ""
+msgstr "העדפות החבר עודכנו."
 
 #: views/list.py:219
 msgid "No change to the member's moderation."
-msgstr ""
+msgstr "אין שינוי בפיקוח על החבר."
 
 #: views/list.py:231
 msgid "The member's moderation settings have been updated."
-msgstr ""
+msgstr "הגדרות הפיקוח על החבר עודכנו."
 
 #: views/list.py:315
 msgid "You are already subscribed"
-msgstr ""
+msgstr "כבר נרשמת"
 
 #: views/list.py:325
 msgid ""
 "Your request to change the email for this subscription was submitted and is "
 "waiting for moderator approval."
 msgstr ""
+"הבקשה שלך לשנות את כתובת הדוא״ל של המינוי הזה הוגשה וממתינה לאישור המפקחים."
 
 #: views/list.py:330
 #, python-format
 msgid "Subscription changed to %s"
-msgstr ""
+msgstr "המינוי השתנה לכדי %s"
 
 #: views/list.py:334 views/list.py:372 views/list.py:400
 msgid "Something went wrong. Please try again."
-msgstr ""
+msgstr "משהו השתבש. נא לנסות שוב."
 
 #: views/list.py:363
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
-msgstr ""
+msgstr "בקשת המינוי שלך הוגשה והיא ממתינה לאישור המפקחים."
 
 #: views/list.py:368
 #, python-format
 msgid "You are subscribed to %s."
-msgstr ""
+msgstr "נרשמת אל %s."
 
 #: views/list.py:396
 msgid "Please check your inbox for further instructions"
-msgstr ""
+msgstr "נא לחפש הנחיות נוספות בתיבת הדואר הנכנס שלכם"
 
 #: views/list.py:415
 #, python-format
 msgid "%s has been unsubscribed from this list."
-msgstr ""
+msgstr "המינוי של %s לרשימה הזו הופסק."
 
 #: views/list.py:440
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
-msgstr ""
+msgstr "הכתובת %(address)s נרשמה אל %(list)s."
 
 #: views/list.py:447 views/list.py:484
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "כתובת הדוא״ל %s אינה תקינה."
 
 #: views/list.py:470
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "נא למלא את הטופס כראוי."
 
 #: views/list.py:477
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
-msgstr ""
+msgstr "המינוי של הכתובת %(address)s לרשימה %(list)s הופסק."
 
 #: views/list.py:506
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "ההודעות הנבחרות התקבלו"
 
 #: views/list.py:510
 msgid "The selected messages were rejected"
-msgstr ""
+msgstr "ההודעות הנבחרות נדחו"
 
 #: views/list.py:514
 msgid "The selected messages were discarded"
-msgstr ""
+msgstr "ההודעות הנבחרות הושלכו"
 
 #: views/list.py:516
 msgid "Message could not be found"
-msgstr ""
+msgstr "לא ניתן למצוא את ההודעה"
 
 #: views/list.py:544
 msgid "The message was accepted"
-msgstr ""
+msgstr "ההודעה התקבלה"
 
 #: views/list.py:547
 msgid "The message was rejected"
-msgstr ""
+msgstr "ההודעה נדחתה"
 
 #: views/list.py:550
 msgid "The message was discarded"
-msgstr ""
+msgstr "ההודעה הושלכה"
 
 #: views/list.py:555
 msgid "Held message was not found."
-msgstr ""
+msgstr "ההודעה שהוחזקה לא נמצאה."
 
 #: views/list.py:568
 msgid "Moderation action for {} set to {}"
-msgstr ""
+msgstr "פעולת פיקוח עבור {} הוגדרה לכדי {}"
 
 #: views/list.py:573
 msgid "Failed to set moderation action: {}"
-msgstr ""
+msgstr "הגדרת פעולת הפיקוח נכשלה: {}"
 
 #: views/list.py:625
 msgid "Choose a Domain"
-msgstr ""
+msgstr "בחירת שם תחום"
 
 #: views/list.py:646
 msgid "List created"
-msgstr ""
+msgstr "הרשימה נוצרה"
 
 #: views/list.py:658
 msgid "Mailing List already exists."
-msgstr ""
+msgstr "רשימת הדיוור כבר קיימת."
 
 #: views/list.py:794
 msgid "Subscriptions pending user confirmation"
-msgstr ""
+msgstr "המינויים ממתינים לאימות המשתמש"
 
 #: views/list.py:807
 msgid "Subscriptions pending approval"
-msgstr ""
+msgstr "המינויים ממתינים לאישור"
 
 #: views/list.py:839
 msgid "The request has been accepted."
-msgstr ""
+msgstr "הבקשה התקבלה."
 
 #: views/list.py:840
 msgid "The request has been rejected."
-msgstr ""
+msgstr "הבקשה נדחתה."
 
 #: views/list.py:841
 msgid "The request has been discarded."
-msgstr ""
+msgstr "הבקשה הושלכה."
 
 #: views/list.py:842
 msgid "The request has been defered."
-msgstr ""
+msgstr "הבקשה עוכבה."
 
 #: views/list.py:853
 #, python-format
 msgid "The request was already moderated: %s"
-msgstr ""
+msgstr "הבקשה נבחנה על ידי הפיקוח: %s"
 
 #: views/list.py:856
 #, python-format
 msgid "The request could not be moderated: %s"
-msgstr ""
+msgstr "לא ניתן להפעיל פיקוח על הבקשה: %s"
 
 #: views/list.py:862
 msgid "List Identity"
-msgstr ""
+msgstr "זהות הרשימה"
 
 #: views/list.py:863
 msgid "Automatic Responses"
-msgstr ""
+msgstr "מענה אוטומטי"
 
 #: views/list.py:864
 msgid "Alter Messages"
-msgstr ""
+msgstr "עריכת ההודעות"
 
 #: views/list.py:865
 msgid "DMARC Mitigations"
-msgstr ""
+msgstr "אפחותי DMARC"
 
 #: views/list.py:866
 msgid "Digest"
-msgstr ""
+msgstr "תקציר"
 
 #: views/list.py:867
 msgid "Message Acceptance"
-msgstr ""
+msgstr "קבלת הודעות"
 
 #: views/list.py:868
 msgid "Archiving"
-msgstr ""
+msgstr "העברה לארכיון"
 
 #: views/list.py:918
 msgid "The settings have been updated."
-msgstr ""
+msgstr "ההגדרות עודכנו."
 
 #: views/list.py:923
 msgid "An error occurred: "
-msgstr ""
+msgstr "אירעה שגיאה: "
 
 #: views/list.py:947
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
-msgstr ""
+msgstr "המשתמש %(email)s אינו בקבוצה %(role)s"
 
 #: views/list.py:953
 msgid "Removing the last owner is impossible"
-msgstr ""
+msgstr "הסרת הבעלים האחרונים אינה אפשרית"
 
 #: views/list.py:967
 #, python-format
 msgid "The user could not be removed: %(msg)s"
-msgstr ""
+msgstr "לא ניתן להסיר את המשתמש: %(msg)s"
 
 #: views/list.py:970
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
-msgstr ""
+msgstr "המשתמש %(address)s הוסר מהקבוצה %(role)s."
 
 #: views/list.py:988
 msgid "No member is subscribed to the list currently."
-msgstr ""
+msgstr "כרגע אין אף חבר שמנוי לרשימה."
 
 #: views/list.py:998
 msgid "All members have been unsubscribed from the list."
-msgstr ""
+msgstr "המינוי של כל החברים לרשימה הופסק."
 
 #: views/list.py:1026
 msgid "The email {} has been banned."
-msgstr ""
+msgstr "כתובת הדוא״ל {} נחסמה."
 
 #: views/list.py:1030 views/list.py:1041 views/list.py:1102
 #, python-format
 msgid "An error occurred: %s"
-msgstr ""
+msgstr "אירעה שגיאה: %s"
 
 #: views/list.py:1032 views/list.py:1043
 #, python-format
 msgid "Invalid data: %s"
-msgstr ""
+msgstr "נתונים שגויים: %s"
 
 #: views/list.py:1038
 msgid "The email {} has been un-banned"
-msgstr ""
+msgstr "חסימת כתובת הדוא״ל {} בוטלה"
 
 #: views/list.py:1104
 msgid "The header matches were successfully modified."
-msgstr ""
+msgstr "התאמות הכותרת נערכו בהצלחה."
 
 #: views/list.py:1111
 msgid "New header"
-msgstr ""
+msgstr "כותרת חדשה"
 
 #: views/list.py:1112
 msgid "New pattern"
-msgstr ""
+msgstr "תבנית חדשה"
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "ההודעה אינה קיימת"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "הקובץ המצורף אינו קיים"
 
 #: views/user.py:77
 msgid "Your preferences have been updated."
-msgstr ""
+msgstr "ההעדפות שלך עודכנו."
 
 #: views/user.py:79
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "ההעדפות שלך לא השתנו."
 
 #: views/user.py:195
 msgid "Subscription does not exist"
-msgstr ""
+msgstr "המינוי אינו קיים"
