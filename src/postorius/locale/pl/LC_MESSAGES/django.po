@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
 "PO-Revision-Date: 2020-01-03 23:05+0000\n"
-"Last-Translator: Aleksander Dzierżanowski "
-"<aleksander.dzierzanowski@gmail.com>\n"
+"Last-Translator: kakiremora <piotrek.pastuszak2003@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
 "Language: pl\n"
@@ -36,7 +35,7 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Dostawca Poczty"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
