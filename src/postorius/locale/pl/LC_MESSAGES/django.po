@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2020-01-03 23:05+0000\n"
+"PO-Revision-Date: 2020-01-05 16:21+0000\n"
 "Last-Translator: kakiremora <piotrek.pastuszak2003@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
@@ -43,7 +43,7 @@ msgstr "Proszę podaj nazwę domeny"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Proszę podaj prawidłową nazwę domeny."
+msgstr "Wpisz poprawną nazwę domeny."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -64,7 +64,7 @@ msgstr "Alias domeny"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr "Proszę podaj prawidłową nazwę domeny lub pozostaw pustą zawartość."
+msgstr "Wpisz poprawną nazwę domeny lub pozostaw puste."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -108,11 +108,11 @@ msgstr "Zachowanie domyślne"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Dziennie"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "Tygodniowo"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
@@ -120,11 +120,11 @@ msgstr "Kwartalnie"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Miesięcznie"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Rocznie"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
@@ -140,23 +140,23 @@ msgstr "Ktokolwiek"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Nazwa Listy"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Wpisz nazwę dla twojej listy."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Wpisz poprawną nazwę listy."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Adres oryginalnego właściciela listy"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Wpisz adres oryginalnego właściciela listy."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
@@ -164,7 +164,7 @@ msgstr ""
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Wybierz typ listy."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
@@ -172,11 +172,11 @@ msgstr ""
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Ukryj tą listę na spisie list"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Wybierz istniejącą domenę"
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
@@ -184,50 +184,50 @@ msgstr ""
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "Styl listy"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Wybierz styl listy."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Wybierz poprawny styl listy."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Administrator strony nie utworzył żadnej domeny"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "Wpisz poprawną nazwę listy"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr ""
+msgstr "Twój adres e-mail"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Wpisz adres e-mail."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Wpisz poprawny adres e-mail."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Twoje imię (opcjonalnie)"
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "Otwórz"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Akceptuj"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
@@ -253,19 +253,19 @@ msgstr ""
 
 #: forms/list_forms.py:221
 msgid "Public archives"
-msgstr ""
+msgstr "Publiczne archiwa"
 
 #: forms/list_forms.py:222
 msgid "Private archives"
-msgstr ""
+msgstr "Prywatne archiwa"
 
 #: forms/list_forms.py:223
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Nie archiwuj tej listy"
 
 #: forms/list_forms.py:229
 msgid "Archive policy"
-msgstr ""
+msgstr "Polityka archiwizacji"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
@@ -273,7 +273,7 @@ msgstr ""
 
 #: forms/list_forms.py:235
 msgid "Active archivers"
-msgstr ""
+msgstr "Aktywni archiwizatorzy"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
