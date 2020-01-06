@@ -431,11 +431,12 @@ def list_mass_subscribe(request, list_id):
                     # Parse the data to get the address and the display name
                     display_name, address = email.utils.parseaddr(data)
                     validate_email(address)
-                    mailing_list.subscribe(address=address,
-                                           display_name=display_name,
-                                           pre_verified=True,
-                                           pre_confirmed=True,
-                                           pre_approved=True)
+                    mailing_list.subscribe(
+                        address=address,
+                        display_name=display_name,
+                        pre_verified=form.cleaned_data['pre_verified'],
+                        pre_confirmed=form.cleaned_data['pre_confirmed'],
+                        pre_approved=form.cleaned_data['pre_approved'])
                     messages.success(
                         request, _('The address %(address)s has been'
                                    ' subscribed to %(list)s.') %

@@ -297,3 +297,63 @@ class ListSettingsTest(ViewTestCase):
             self.assertEqual(
                 m_list.settings[field], value,
                 'Field: {}'.format(field))
+
+    def test_mass_subscribe_options(self):
+        self.client.login(username='testsu', password='testpass')
+        mlist = List.objects.get(fqdn_listname='foo.example.com')
+        updated_values = {
+            'emails': 'john3@example.com',
+            'pre_verified': True,
+            'pre_confirmed': True,
+            'pre_approved': True,
+        }
+        url = reverse('mass_subscribe',
+                      args=('foo.example.com',))
+        response = self.client.post(url, updated_values)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.members), 1)
+
+        # Now, let's see if we can moderate.
+        self.foo_list.settings['subscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+
+        updated_values = {
+            'emails': 'john@example.com',
+            'pre_confirmed': True,
+            'pre_approved': True,
+            'pre_verified': True
+        }
+
+        self.assertEqual(len(mlist.members), 1)
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.members), 2)
+        # With pre_confirmed = False, there should be a pending subscription
+        # event.
+        updated_values = {
+            'emails': 'john2@example.com',
+            'pre_confirmed': True,
+            'pre_verified': True
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        # Now, there should be a pending request to confirm.
+        self.assertEqual(len(mlist.members), 2)
+        self.assertEqual(len(mlist.requests), 1)
+        self.assertEqual(mlist.requests[0].get('token_owner'), 'moderator')
+
+        # Test mass subscribe without all options.
+        self.foo_list.settings['subscription_policy'] = 'confirm_then_moderate'
+        self.foo_list.settings.save()
+
+        updated_values = {
+            'emails': 'john4@example.com',
+            'pre_confirmed': False,
+            'pre_verified': True
+        }
+
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.requests), 2)
+        self.assertEqual(mlist.requests[1].get('token_owner'), 'subscriber')
