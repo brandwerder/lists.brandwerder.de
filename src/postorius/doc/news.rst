@@ -26,6 +26,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 * Do not show pagination, when user is authenticated. (Closes #387)
 * Drop support for Django 1.11.
+* Add support to choose options for ``pre_confirm``, ``pre_approve`` and
+  ``pre_verify`` when mass subscribing. (Fixes #203)
 
 1.3.1
 =====

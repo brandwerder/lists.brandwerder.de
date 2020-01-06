@@ -723,6 +723,35 @@ class ListMassSubscription(forms.Form):
             ),
     )
 
+    pre_confirmed = forms.BooleanField(
+        label=_('Pre confirm'),
+        initial=True,
+        required=False,
+        help_text=_(
+            'If checked, users will not have to confirm their subscription.'),
+        widget=forms.CheckboxInput()
+        )
+
+    pre_approved = forms.BooleanField(
+        label=_('Pre approved'),
+        initial=True,
+        required=False,
+        help_text=_(
+            'If checked, moderators will not have to approve the subscription'
+            ' request.',),
+        widget=forms.CheckboxInput()
+        )
+
+    pre_verified = forms.BooleanField(
+        label=_('Pre Verified'),
+        initial=False,
+        required=False,
+        help_text=_(
+            'If checked, users will not have to verify that their '
+            'email address is valid.'),
+        widget=forms.CheckboxInput()
+        )
+
 
 class ListMassRemoval(forms.Form):
 
