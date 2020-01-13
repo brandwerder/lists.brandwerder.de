@@ -21,8 +21,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.2
 =====
 
-(20XX-XX-XX)
-
+(2020-01-12)
 
 * Do not show pagination, when user is authenticated. (Closes #387)
 * Drop support for Django 1.11.
