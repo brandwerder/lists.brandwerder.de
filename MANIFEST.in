@@ -1,6 +1,6 @@
 include COPYING
 include *.rst
-recursive-include src/postorius *.py *.html *.js *.rst *.txt
+recursive-include src/postorius *.py *.html *.js *.rst *.txt *.po
 prune src/postorius/doc/_build
 graft src/postorius/static
 include src/postorius/doc/Makefile
