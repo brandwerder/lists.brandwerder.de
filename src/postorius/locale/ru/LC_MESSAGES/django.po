@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-05-20 21:48+0000\n"
-"Last-Translator: Евгений Егоров <megabazoooka@gmail.com>\n"
+"PO-Revision-Date: 2020-01-15 19:21+0000\n"
+"Last-Translator: Juri Grabowski <hosted-weblate@jugra.de>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/ru/>\n"
+"postorius/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 3.7-dev\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -222,7 +222,7 @@ msgstr ""
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Подтвердить"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
@@ -1208,7 +1208,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "Регистрация"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1447,7 +1447,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
