@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-08-01 05:14+0000\n"
+"PO-Revision-Date: 2020-01-21 17:29+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/gnu-"
-"mailman/translations/nb_NO/>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/postorius/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -89,51 +89,52 @@ msgstr ""
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Avslå (med merknad)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Forkast (uten merknad)"
 
 #: forms/list_forms.py:38
+#, fuzzy
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Godta umiddelbart (uten innvirkning fra andre regler)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "Forvalgt behandling"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Daglig"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "Ukentlig"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "Kvartalsvist"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Månedlig"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Årlig"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Kun e-postlistemoderatorer"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Kun e-postlistemedlemmer"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "Hvem som helst"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -149,11 +150,11 @@ msgstr "Skriv inn et gyldig listenavn."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Opprinnelig listeeier-adresse"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Skriv inn listeeierens e-postadresse."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
@@ -799,11 +800,11 @@ msgstr "Emneprefiks"
 
 #: forms/list_forms.py:690
 msgid "Preferred Language"
-msgstr ""
+msgstr "Foretrukket språk"
 
 #: forms/list_forms.py:696
 msgid "Members List Visibility"
-msgstr ""
+msgstr "Synlighet for medlemsliste"
 
 #: forms/list_forms.py:700
 msgid "Who is allowed to see members list for this MailingList?"
@@ -874,11 +875,11 @@ msgstr ""
 
 #: forms/list_forms.py:777
 msgid "Please enter a pattern."
-msgstr ""
+msgstr "Angi et mønster."
 
 #: forms/list_forms.py:778
 msgid "Please enter a valid pattern."
-msgstr ""
+msgstr "Angi et gyldig mønster."
 
 #: forms/list_forms.py:780 templates/postorius/domain/index.html:26
 msgid "Action"
@@ -920,7 +921,7 @@ msgstr "Velg e-post"
 
 #: forms/list_forms.py:845
 msgid "Data"
-msgstr ""
+msgstr "Data"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
@@ -1696,7 +1697,7 @@ msgstr ""
 #: templates/postorius/lists/summary.html:45
 #: templates/postorius/lists/summary.html:79
 msgid "Subscription / Unsubscription"
-msgstr ""
+msgstr "Abonnering / opphevelse av abonnement"
 
 #: templates/postorius/lists/summary.html:47
 msgid "You are subscribed to this list with the following address:"
@@ -1713,7 +1714,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:59
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Opphev abonnement"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
@@ -1820,7 +1821,7 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:54
 msgid "Mass removal"
-msgstr ""
+msgstr "Massefjerning"
 
 #: templates/postorius/menu/list_nav.html:58
 #, fuzzy
@@ -2040,7 +2041,7 @@ msgstr ""
 
 #: views/domain.py:199
 msgid "Removed {} as an owner for {}"
-msgstr ""
+msgstr "Fjernet {} som eier for {}"
 
 #: views/list.py:103
 msgid "List {}s"
@@ -2065,7 +2066,7 @@ msgstr "Valgte medlemmer har fått sitt abonnement opphevet"
 #: views/list.py:153
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
-msgstr ""
+msgstr "{email} har blitt lagt til med rollen {role}"
 
 #: views/list.py:194
 msgid "Member does not exist"
@@ -2073,7 +2074,7 @@ msgstr "Medlemmet finnes ikke"
 
 #: views/list.py:210
 msgid "The member's preferences have been updated."
-msgstr ""
+msgstr "Medlemmets innstillinger har blitt oppdatert."
 
 #: views/list.py:219
 msgid "No change to the member's moderation."
@@ -2085,7 +2086,7 @@ msgstr ""
 
 #: views/list.py:315
 msgid "You are already subscribed"
-msgstr ""
+msgstr "Du har allerede abonnert"
 
 #: views/list.py:325
 msgid ""
@@ -2130,11 +2131,11 @@ msgstr ""
 #: views/list.py:447 views/list.py:484
 #, python-format
 msgid "The email address %s is not valid."
-msgstr ""
+msgstr "E-postadressen %s er ugyldig."
 
 #: views/list.py:470
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "Fyll ut skjemaet rett."
 
 #: views/list.py:477
 #, python-format
@@ -2143,11 +2144,11 @@ msgstr ""
 
 #: views/list.py:506
 msgid "The selected messages were accepted"
-msgstr ""
+msgstr "De valgte meldingene ble godtkjent"
 
 #: views/list.py:510
 msgid "The selected messages were rejected"
-msgstr ""
+msgstr "De valgte meldingene ble avslått"
 
 #: views/list.py:514
 msgid "The selected messages were discarded"
@@ -2155,19 +2156,19 @@ msgstr ""
 
 #: views/list.py:516
 msgid "Message could not be found"
-msgstr ""
+msgstr "Meldingen ble ikke funnet"
 
 #: views/list.py:544
 msgid "The message was accepted"
-msgstr ""
+msgstr "Meldingen ble godkjent"
 
 #: views/list.py:547
 msgid "The message was rejected"
-msgstr ""
+msgstr "Meldingen ble avslått"
 
 #: views/list.py:550
 msgid "The message was discarded"
-msgstr ""
+msgstr "Meldingen ble forkastet"
 
 #: views/list.py:555
 #, fuzzy
@@ -2177,19 +2178,19 @@ msgstr "Fant ikke siden"
 
 #: views/list.py:568
 msgid "Moderation action for {} set to {}"
-msgstr ""
+msgstr "Modereringshandling for {} satt til {}"
 
 #: views/list.py:573
 msgid "Failed to set moderation action: {}"
-msgstr ""
+msgstr "Klarte ikke å sette modereringshandling: {}"
 
 #: views/list.py:625
 msgid "Choose a Domain"
-msgstr ""
+msgstr "Velg et domene"
 
 #: views/list.py:646
 msgid "List created"
-msgstr ""
+msgstr "Liste opprettet"
 
 #: views/list.py:658
 msgid "Mailing List already exists."
@@ -2209,15 +2210,15 @@ msgstr "Abonnementsinnstillinger"
 
 #: views/list.py:839
 msgid "The request has been accepted."
-msgstr ""
+msgstr "Forespørselen har blitt godtatt."
 
 #: views/list.py:840
 msgid "The request has been rejected."
-msgstr ""
+msgstr "Forespørselen har blitt avslått."
 
 #: views/list.py:841
 msgid "The request has been discarded."
-msgstr ""
+msgstr "Forespørselen har blitt forkastet."
 
 #: views/list.py:842
 msgid "The request has been defered."
@@ -2226,7 +2227,7 @@ msgstr ""
 #: views/list.py:853
 #, python-format
 msgid "The request was already moderated: %s"
-msgstr ""
+msgstr "Forespørselen har allerede blitt moderert: %s"
 
 #: views/list.py:856
 #, python-format
@@ -2235,7 +2236,7 @@ msgstr ""
 
 #: views/list.py:862
 msgid "List Identity"
-msgstr ""
+msgstr "Listeidentitet"
 
 #: views/list.py:863
 msgid "Automatic Responses"
@@ -2304,7 +2305,7 @@ msgstr ""
 #: views/list.py:1030 views/list.py:1041 views/list.py:1102
 #, python-format
 msgid "An error occurred: %s"
-msgstr ""
+msgstr "En feil inntraff: %s"
 
 #: views/list.py:1032 views/list.py:1043
 #, python-format
