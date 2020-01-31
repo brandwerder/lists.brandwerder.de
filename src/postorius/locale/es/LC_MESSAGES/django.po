@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-01-31 22:48+0000\n"
-"Last-Translator: Paco <pacoc@pangea.org>\n"
+"Last-Translator: Mercè M. Tarrés <comunicacio@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -296,6 +296,14 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Esto es una lista de direcciones y secuencias de caracteres (regexps), una "
+"por línea, que corresponden a direcciones aceptadas en los campos Para: o Cc:"
+", en lugar de la dirección de registro de lista cuando se habilita \""
+"require_explicit_destination\". Las entradas son direcciones de correo o "
+"regexps que corresponden a direcciones de correo. Las regexps son entradas "
+"que empiezan por `^' y son enfrentadas con cada dirección destinataria en el "
+"mensaje. Las combinaciones se realizan con la función re.match() de Python, "
+"lo que quiere decir que están ancladas al inicio de cada cadena."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -424,8 +432,9 @@ msgstr ""
 "verificación."
 
 #: forms/list_forms.py:351
+#, fuzzy
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Alias de regexp inválido: {}: {}"
 
 #: forms/list_forms.py:357
 msgid "Invalid alias email: {}"
@@ -492,11 +501,15 @@ msgid "Discard the message"
 msgstr "Descartar el mensaje"
 
 #: forms/list_forms.py:410
+#, fuzzy
 msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
+"La acción a aplicar a los mensajes De: un dominio que lance una norma DMARC "
+"de rechazo o cuarentena o para todos los mensajes si la regla DMARC Mitigate "
+"incondicionalmente es cierta."
 
 #: forms/list_forms.py:417
 msgid "DMARC Mitigate unconditionally"
@@ -507,6 +520,8 @@ msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
+"Si la acción de mitigación DMARC es munge_from o wrap_message, debería "
+"aplicarse a todos los mensajes a pesar de la norma DMARC del dominio De:."
 
 #: forms/list_forms.py:423
 msgid "DMARC rejection notice"
@@ -517,17 +532,25 @@ msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
 msgstr ""
+"Texto para sustituir al motivo por defecto en cualquier notificación de "
+"rechazo que deba ser enviada cuando se aplique la acción de mitigación de "
+"rechazo DMARC."
 
 #: forms/list_forms.py:430
+#, fuzzy
 msgid "DMARC wrapped message text"
-msgstr ""
+msgstr "Texto del mensaje 'envuelto' DMARC"
 
 #: forms/list_forms.py:434
+#, fuzzy
 msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
+"Texto que se agregará como una parte MIME de texto plano separada que "
+"preceda a la parte del mensaje original en el mensaje envuelto cuando se "
+"aplica la acción de mitigación de DMARC del mensaje de ajuste."
 
 #: forms/list_forms.py:447
 msgid "Filter content"
@@ -549,6 +572,8 @@ msgstr "Combinar las alternativas"
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
+"¿Debería Mailman colapsar su contenido multiparte/alternativo a su primera "
+"parte?"
 
 #: forms/list_forms.py:461
 msgid "Convert html to plaintext"
@@ -614,6 +639,8 @@ msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
 msgstr ""
+"Esto se puede establecer en 'No' para anunciar listas que no deseen incluir "
+"el encabezado List-Post porque no se recomienda enviar a la lista."
 
 #: forms/list_forms.py:501
 msgid "Explicit reply-to address"
@@ -684,6 +711,34 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
+"¿A dónde son dirigidas las respuestas a los mensajes de la lista? Se "
+"recomienda encarecidamente usar No Munging para la mayoría de las listas de "
+"correo.\n"
+"Esta opción controla lo que Mailman le hace al encabezado 'Reply-To:' "
+"(Responder-a:) en los mensajes que fluyen a través de esta lista de correo. "
+"Cuando se habilita 'No Munging', Mailman no agrega un encabezado de "
+"'Responder a':, aunque si el mensaje original ya incluía uno, éste no se "
+"elimina. Establecer este valor en 'Responder a la lista', 'Responder "
+"explícitamente' o 'Responder solo' hace que Mailman inserte un encabezado "
+"específico de 'Responder a:' en todos los mensajes, anulando el encabezado "
+"del mensaje original si es necesario (la opción 'Respuesta explícita' "
+"inserta el valor de 'reply_to_address'). Cuando se habilita 'Respuesta "
+"explícita', 'no Cc added' es útil para listas de solo anuncios donde se "
+"desea evitar que alguien responda a la dirección de la lista. Hay muchas "
+"razones para no introducir o anular el encabezado 'Reply-To:'. Una es que "
+"algunos remitentes dependen de su propia configuración de 'Responder a:' "
+"para transmitir su dirección de retorno válida. Otra es que modificar el "
+"campo 'Responder a:' hace que sea mucho más difícil enviar respuestas "
+"privadas. Consulta \"Munging de 'Responder a' considerado perjudicial\" si "
+"deseas ver una discusión general sobre este tema. Consulta \"Munging de "
+"'Responder a' considerado útil\" para una opinión discordante. Algunas "
+"listas de correo tienen privilegios de publicación restringidos, con una "
+"lista paralela dedicada a las discusiones. Ejemplos de ello son las listas "
+"de 'parches' o 'checkin', donde los cambios de software son publicados por "
+"un sistema de control de revisión, pero la discusión sobre los cambios se da "
+"en una lista de correo de desarrolladores. Para admitir estos tipos de "
+"listas de correo, selecciona 'Respuesta explícita' y configura la opción "
+"'Responder a:' una dirección para que apunte a la lista paralela."
 
 #: forms/list_forms.py:555
 msgid "Pipeline"
@@ -774,6 +829,10 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
+"Número de días entre las respuestas automáticas a la lista de correo o a la "
+"dirección del solicitante/propietario por parte del mismo remitente. Déjalo "
+"en cero (o negativo) para ningún período de gracia (es decir, respuesta "
+"automática a todos los mensajes)."
 
 #: forms/list_forms.py:618
 msgid "Notify users of held messages"
@@ -810,7 +869,7 @@ msgstr ""
 
 #: forms/list_forms.py:638
 msgid "Admin immed notify"
-msgstr ""
+msgstr "Notificación inmediata a las personas administradoras"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -901,6 +960,13 @@ msgid ""
 "jdoe@example.com (John Doe)\n"
 "Use the last three to associate a display name with the address\n"
 msgstr ""
+"Los siguientes formatos son aceptados:\n"
+"jdoe@example.com\n"
+"&lt;jdoe@example.com&gt;\n"
+"John Doe &lt;jdoe@example.com&gt;\n"
+"\"John Doe\" &lt;jdoe@example.com&gt;\n"
+"jdoe@example.com (John Doe)\n"
+"Usa los tres últimos para asociar un nombre público con la dirección\n"
 
 #: forms/list_forms.py:732
 msgid "Emails to Unsubscribe"
@@ -934,6 +1000,8 @@ msgstr "Cabecera"
 #: forms/list_forms.py:769
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
+"Encabezado de correo electrónico para filtrar (no distingue entre mayúsculas "
+"y minúsculas)."
 
 #: forms/list_forms.py:771
 msgid "Please enter a header."
@@ -980,6 +1048,7 @@ msgid "List default"
 msgstr "Lista por defecto"
 
 #: forms/list_forms.py:817
+#, fuzzy
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -992,6 +1061,20 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
+"Acción predeterminada a llevar a cabo cuando este miembro publique en la "
+"lista. \n"
+"Lista predeterminada: siga la acción del miembro predeterminado de la lista."
+"\n"
+"Retén: mantiene el mensaje pendiente de aprobación por parte de los "
+"moderadores de la lista.\n"
+"Rechaza: esto rechaza automáticamente el mensaje enviando un aviso de "
+"devolución al autor de la publicación. Puedes configurar el texto del aviso "
+"de devolución.\n"
+"Descarta: esto simplemente descarta el mensaje, sin que se envíe ninguna "
+"notificación al autor de la publicación.\n"
+"Acepta: acepta cualquier publicación sin más controles.\n"
+"Procesamiento predeterminado: ejecute comprobaciones adicionales y acepte el "
+"mensaje. \n"
 
 #: forms/list_forms.py:837
 msgid "Select Email"
@@ -1121,6 +1204,10 @@ msgid ""
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
+"Cuando tu dirección sea indicada explícitamente en los encabezados 'Para:' o "
+"'Cc:' de un mensaje a la lista, puedes optar por no recibir otra copia de la "
+"lista de correo. Selecciona 'Sí' para recibir copias. Selecciona 'No' para "
+"evitar recibir copias de la lista de correo"
 
 #: models.py:45
 msgid ""
@@ -1140,6 +1227,25 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
+"Nota: No agregue ningún contenido secreto a las plantillas, ya que son de "
+"acceso público.\n"
+"Puede usar estas variables en las plantillas.\n"
+"$hyperkitty_url: Enlace permanente al mensaje archivado en Hyperkitty\n"
+"$listname: nombre de la Lista de Correo, p.ej. lahormiga@example.com\n"
+"$list_id: el encabezado del identificador de lista (List-ID), p.ej. "
+"lahormiga.example.com\n"
+"$display_name: nombre público de la lista de correo, p.ej. La Hormiga\n"
+"$short_listname: parte local del nombre de la lista, p.ej. hormiga\n"
+"$dominio: la parte del dominio del nombre de la lista, p.ej. example.com\n"
+"$info: el texto descriptivo extenso de la lista de correo\n"
+"$request_email: la dirección de correo electrónico de la dirección "
+"solicitante\n"
+"$owner_email: la dirección de correo electrónico de la dirección del "
+"propietario\n"
+"$site_email: la dirección de correo electrónico para comunicarte con los "
+"propietarios del sitio\n"
+"$idioma: el código de idioma de dos letras para el idioma preferido de la "
+"lista, p.ej. es, ca, fr, en, de \n"
 
 #: models.py:258
 msgid "Choose the template you want to customize."
@@ -1211,6 +1317,8 @@ msgstr "El encabezado de un mensaje de resumen."
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
+"El resumen \"masthead\" (cabecera); es decir, una introducción común para "
+"todos los mensajes de resumen."
 
 #: template_list.py:44
 msgid "The footer for a regular (non-digest) message."
@@ -1246,6 +1354,8 @@ msgid ""
 "The notice sent to a poster when their message is being held for moderator "
 "approval."
 msgstr ""
+"El aviso enviado a un remitente cuando su mensaje es retenido para "
+"aprobación del moderador."
 
 #: template_list.py:56
 msgid ""
@@ -1260,6 +1370,8 @@ msgid ""
 "Notice sent to a poster when their message has been received by the mailing "
 "list."
 msgstr ""
+"Aviso enviado a un remitente cuando su mensaje ha sido recibido por la lista "
+"de correo."
 
 #: template_list.py:60
 msgid ""
@@ -1274,6 +1386,8 @@ msgid ""
 "Notice sent to a poster when their message has been rejected by the list’s "
 "moderator."
 msgstr ""
+"Aviso enviado a un remitente cuando su mensaje ha sido rechazado por el "
+"moderador de la lista."
 
 #: template_list.py:64
 msgid ""
@@ -1467,9 +1581,9 @@ msgstr "Añadir un nuevo propietario a"
 #: templates/postorius/domain/template_delete.html:16
 #: templates/postorius/lists/template_delete.html:13
 #: templates/postorius/lists/template_update.html:13
-#, python-format
+#, fuzzy, python-format
 msgid "Template '%(name)s'"
-msgstr ""
+msgstr "Plantilla '%(name)s'"
 
 #: templates/postorius/domain/template_delete.html:11
 msgid "Delete Template"
@@ -1483,6 +1597,10 @@ msgid ""
 "           for domain \"%(identifier)s\"?\n"
 "           "
 msgstr ""
+"\n"
+"           ¿Seguro que deseas borrar la plantilla \"%(name)s\"\n"
+"           para el dominio \"%(identifier)s\"?\n"
+"           "
 
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
@@ -1810,6 +1928,11 @@ msgid ""
 "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
 "          "
 msgstr ""
+"\n"
+"            Para consultar las anteriores publicaciones de esta lista, "
+"visita\n"
+"            <a href=\"%(hyperkitty_list_url)s\">los archivos</a>.\n"
+"          "
 
 #: templates/postorius/lists/summary.html:45
 #: templates/postorius/lists/summary.html:79
@@ -1904,7 +2027,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:106
 msgid "List metrics"
-msgstr ""
+msgstr "Métricas de la lista"
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
@@ -1986,11 +2109,11 @@ msgstr "Preferencias globales de Mailman"
 
 #: templates/postorius/menu/user_nav.html:9
 msgid "Address-based preferences"
-msgstr ""
+msgstr "Preferencias basadas en las direcciones"
 
 #: templates/postorius/menu/user_nav.html:10
 msgid "List-based preferences"
-msgstr ""
+msgstr "Preferencias basadas en las listas"
 
 #: templates/postorius/system_information.html:6
 msgid "System Configuration"
@@ -2027,6 +2150,8 @@ msgid ""
 "Any options showing as not set here have inherit at runtime from your global "
 "preferences (viewable on other tab)"
 msgstr ""
+"Cualquier opción que parezca no establecida aquí se hereda en tiempo real "
+"desde tus preferencias globales (se puede consultar en otra pestaña)"
 
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
@@ -2057,6 +2182,9 @@ msgid ""
 "Any options showing as not set inherit at runtime from your global or "
 "address specific preferences (viewable on other tabs)"
 msgstr ""
+"Cualquier opción que parezca no establecida, se hereda en tiempo real de tus "
+"preferencias globales o específicas de cada dirección (visible en otras "
+"pestañas)"
 
 #: templates/postorius/user/subscription_preferences.html:32
 msgid "Subscription"
@@ -2124,7 +2252,7 @@ msgstr "Confirmar la eliminación de todos los miembros"
 
 #: templatetags/nav_helpers.py:39
 msgid "Address-based Settings"
-msgstr ""
+msgstr "Configuración basada en direcciones"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
@@ -2375,11 +2503,11 @@ msgstr "Respuestas automáticas"
 
 #: views/list.py:864
 msgid "Alter Messages"
-msgstr ""
+msgstr "Modificar mensajes"
 
 #: views/list.py:865
 msgid "DMARC Mitigations"
-msgstr ""
+msgstr "Mitigaciones DMARC"
 
 #: views/list.py:866
 msgid "Digest"
@@ -2387,7 +2515,7 @@ msgstr "Resumen"
 
 #: views/list.py:867
 msgid "Message Acceptance"
-msgstr ""
+msgstr "Aceptación de mensaje"
 
 #: views/list.py:868
 msgid "Archiving"
