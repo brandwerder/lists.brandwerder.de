@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-01-19 13:09+0000\n"
-"Last-Translator: Victoriano Giralt <victoriano@uma.es>\n"
+"PO-Revision-Date: 2020-01-31 15:13+0000\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.2\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -324,6 +324,8 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Esto verifica que la dirección de envío de la lista o un alias aceptable "
+"aparece explícitamente en un encabezado Para: o CC: en la publicación."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
@@ -384,6 +386,9 @@ msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"El tamaño máximo de mensaje permitido en KB. Esto se puede usar para evitar "
+"correos electrónicos con archivos adjuntos muy grandes. Un tamaño de 0 "
+"deshabilita la verificación."
 
 #: forms/list_forms.py:330
 msgid "Maximum number of recipients"
@@ -394,6 +399,9 @@ msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"El número máximo de destinatarios para un mensaje. Esto se puede usar para "
+"evitar que se acepten correos masivos. Un valor de 0 deshabilita la "
+"verificación."
 
 #: forms/list_forms.py:351
 msgid "Invalid alias regexp: {}: {}"
@@ -510,6 +518,8 @@ msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
 msgstr ""
+"¿Debería Mailman filtrar el contenido del tráfico de la lista de acuerdo con "
+"la siguiente configuración?"
 
 #: forms/list_forms.py:454
 msgid "Collapse alternatives"
@@ -539,6 +549,8 @@ msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
+"Ocultar el remitente de un mensaje, sustituyéndolo por la dirección de la "
+"lista (Elimina los campos De, Remitente y Responder a)"
 
 #: forms/list_forms.py:477
 msgid "Include RFC2369 headers"
@@ -2310,5 +2322,6 @@ msgid "Your preferences did not change."
 msgstr ""
 
 #: views/user.py:195
+#, fuzzy
 msgid "Subscription does not exist"
-msgstr ""
+msgstr "La suscripción no existe"
