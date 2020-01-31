@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-01-31 15:13+0000\n"
+"PO-Revision-Date: 2020-01-31 15:15+0000\n"
 "Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -33,15 +33,15 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr "Servidor de correo"
+msgstr "Servidor de alojamiento de correo"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr "Indique un nombre de dominio, por favor"
+msgstr "Indique un nombre de dominio"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Indique un nombre de dominio válido, por favor."
+msgstr "Indique un nombre de dominio válido."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -2306,6 +2306,5 @@ msgid "Your preferences did not change."
 msgstr ""
 
 #: views/user.py:195
-#, fuzzy
 msgid "Subscription does not exist"
 msgstr "La suscripción no existe"
