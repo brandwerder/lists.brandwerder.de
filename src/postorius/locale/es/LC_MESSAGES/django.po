@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-01-31 22:48+0000\n"
+"PO-Revision-Date: 2020-02-01 16:16+0000\n"
 "Last-Translator: Mercè M. Tarrés <comunicacio@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -432,7 +432,6 @@ msgstr ""
 "verificación."
 
 #: forms/list_forms.py:351
-#, fuzzy
 msgid "Invalid alias regexp: {}: {}"
 msgstr "Alias de regexp inválido: {}: {}"
 
@@ -501,15 +500,14 @@ msgid "Discard the message"
 msgstr "Descartar el mensaje"
 
 #: forms/list_forms.py:410
-#, fuzzy
 msgid ""
 "The action to apply to messages From: a domain publishing a DMARC policy of "
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
-"La acción a aplicar a los mensajes De: un dominio que lance una norma DMARC "
-"de rechazo o cuarentena o para todos los mensajes si la regla DMARC Mitigate "
-"incondicionalmente es cierta."
+"La acción a aplicar a los mensajes 'De:' un dominio que lance una norma "
+"DMARC de rechazo o cuarentena o para todos los mensajes si aplica la regla "
+"DMARC Mitigate, incondicionalmente es cierta (True)."
 
 #: forms/list_forms.py:417
 msgid "DMARC Mitigate unconditionally"
@@ -537,20 +535,18 @@ msgstr ""
 "rechazo DMARC."
 
 #: forms/list_forms.py:430
-#, fuzzy
 msgid "DMARC wrapped message text"
-msgstr "Texto del mensaje 'envuelto' DMARC"
+msgstr "Texto del mensaje ajustado ('wrapped') DMARC"
 
 #: forms/list_forms.py:434
-#, fuzzy
 msgid ""
 "Text to be added as a separate text/plain MIME part preceding the original "
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
 "Texto que se agregará como una parte MIME de texto plano separada que "
-"preceda a la parte del mensaje original en el mensaje envuelto cuando se "
-"aplica la acción de mitigación de DMARC del mensaje de ajuste."
+"preceda a la parte del mensaje original en el mensaje ajustado ('wrapped') "
+"cuando se aplica la acción de mitigación de DMARC del mensaje de ajuste."
 
 #: forms/list_forms.py:447
 msgid "Filter content"
@@ -1048,7 +1044,6 @@ msgid "List default"
 msgstr "Lista por defecto"
 
 #: forms/list_forms.py:817
-#, fuzzy
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1073,7 +1068,7 @@ msgstr ""
 "Descarta: esto simplemente descarta el mensaje, sin que se envíe ninguna "
 "notificación al autor de la publicación.\n"
 "Acepta: acepta cualquier publicación sin más controles.\n"
-"Procesamiento predeterminado: ejecute comprobaciones adicionales y acepte el "
+"Procesamiento predeterminado: ejecuta comprobaciones adicionales y acepta el "
 "mensaje. \n"
 
 #: forms/list_forms.py:837
@@ -1581,7 +1576,7 @@ msgstr "Añadir un nuevo propietario a"
 #: templates/postorius/domain/template_delete.html:16
 #: templates/postorius/lists/template_delete.html:13
 #: templates/postorius/lists/template_update.html:13
-#, fuzzy, python-format
+#, python-format
 msgid "Template '%(name)s'"
 msgstr "Plantilla '%(name)s'"
 
@@ -2530,9 +2525,9 @@ msgid "An error occurred: "
 msgstr "Se ha producido un error: "
 
 #: views/list.py:947
-#, fuzzy, python-format
+#, python-format
 msgid "The user %(email)s is not in the %(role)s group"
-msgstr "El usuario %(email)s no esta en el grupo %(rol)s"
+msgstr "El correo %(email)s del usuario/a no está en el grupo %(role)s"
 
 #: views/list.py:953
 msgid "Removing the last owner is impossible"
@@ -2544,7 +2539,7 @@ msgid "The user could not be removed: %(msg)s"
 msgstr "El usuario no pudo ser eliminado: %(msg)s"
 
 #: views/list.py:970
-#, fuzzy, python-format
+#, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr "El usuario %(address)s ha sido borrado del grupo %(role)s."
 
