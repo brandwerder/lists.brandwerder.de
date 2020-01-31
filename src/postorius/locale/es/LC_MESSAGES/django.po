@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-01-31 15:15+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -2279,7 +2279,7 @@ msgstr ""
 
 #: views/list.py:1104
 msgid "The header matches were successfully modified."
-msgstr ""
+msgstr "Las coincidencias de encabezado se modificaron correctamente."
 
 #: views/list.py:1111
 msgid "New header"
@@ -2287,23 +2287,24 @@ msgstr "Nueva cabecera"
 
 #: views/list.py:1112
 msgid "New pattern"
-msgstr ""
+msgstr "Nuevo patrón"
 
 #: views/rest.py:60
 msgid "Message does not exist"
-msgstr ""
+msgstr "El mensaje no existe"
 
 #: views/rest.py:97
 msgid "Attachment does not exist"
-msgstr ""
+msgstr "El archivo adjunto no existe"
 
 #: views/user.py:77
 msgid "Your preferences have been updated."
 msgstr "Tus preferencias se han actualizado"
 
 #: views/user.py:79
+#, fuzzy
 msgid "Your preferences did not change."
-msgstr ""
+msgstr "Tus preferencias no cambiaron."
 
 #: views/user.py:195
 msgid "Subscription does not exist"
