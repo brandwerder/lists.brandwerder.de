@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-02-01 16:16+0000\n"
-"Last-Translator: Mercè M. Tarrés <comunicacio@pangea.org>\n"
+"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -33,7 +33,7 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr "Servidor de alojamiento de correo"
+msgstr "Servidor de correo"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
@@ -58,7 +58,7 @@ msgstr "Descripción"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr "Dominio alternativo"
+msgstr "Dominio alias"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
@@ -72,7 +72,7 @@ msgstr ""
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr "Servidor web"
+msgstr "Servidor Web"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
@@ -100,11 +100,11 @@ msgstr "Descartar (sin notificación)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr "Aceptar inmediatamente (saltar el resto de reglas)"
+msgstr "Aceptar inmediatamente (saltar otras reglas)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr "Proceso por defecto"
+msgstr "Procesamiento por defecto"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -204,7 +204,7 @@ msgstr "Por favor, indique un nombre de lista válido"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr "Su dirección de correo-e"
+msgstr "Su dirección de correo"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
@@ -227,15 +227,15 @@ msgstr "Abrir"
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr "Confirmada"
+msgstr "Confirmar"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr "Moderada"
+msgstr "Moderar"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr "Confirmada y moderada"
+msgstr "Confirmar, seguido de Moderar"
 
 #: forms/list_forms.py:203 views/list.py:869
 msgid "Subscription Policy"
@@ -250,13 +250,13 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Abiedrta: Las suscripciones se añaden directamente.\n"
-"Confirmada: Los suscriptores deben confirmar la suscripción usando el correo "
+"Abir: Las suscripciones se añaden directamente.\n"
+"Confirmar: Los suscriptores deben confirmar la suscripción usando el correo "
 "que se les envía.\n"
-"Moderada: Los moderadores tendrán que autorizar cada suscripción de forma "
+"Moderar: Los moderadores tendrán que autorizar cada suscripción de forma "
 "manual.\n"
-"Confirmada y Moderada: Los subscriptores deben confirmar, y luego un "
-"moderador tiene que autorizar."
+"Confirmar seguido de Moderar: Los subscriptores deben confirmar, y luego un "
+"moderador debe autorizar."
 
 #: forms/list_forms.py:221
 msgid "Public archives"
@@ -276,7 +276,7 @@ msgstr "Política de archivo"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
-msgstr "Política para archivar los mensajes de esta lista"
+msgstr "Política para archivar mensajes de esta lista"
 
 #: forms/list_forms.py:235
 msgid "Active archivers"
@@ -284,7 +284,7 @@ msgstr "Archivadores activos"
 
 #: forms/list_forms.py:260
 msgid "Acceptable aliases"
-msgstr "Alias aceptados"
+msgstr "Alias aceptables"
 
 #: forms/list_forms.py:263
 msgid ""
@@ -296,14 +296,13 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
-"Esto es una lista de direcciones y secuencias de caracteres (regexps), una "
-"por línea, que corresponden a direcciones aceptadas en los campos Para: o Cc:"
-", en lugar de la dirección de registro de lista cuando se habilita \""
-"require_explicit_destination\". Las entradas son direcciones de correo o "
-"regexps que corresponden a direcciones de correo. Las regexps son entradas "
-"que empiezan por `^' y son enfrentadas con cada dirección destinataria en el "
-"mensaje. Las combinaciones se realizan con la función re.match() de Python, "
-"lo que quiere decir que están ancladas al inicio de cada cadena."
+"Esta es una lista de direcciones y expresiones regulares (regexps), una por "
+"línea, que corresponden a direcciones aceptadas en los campos Para: o Cc:, "
+"en lugar de la dirección de registro de lista cuando se habilita `"
+"require_explicit_destination'.  Las entradas son direcciones de correo o "
+"regexps que corresponden a direcciones de correo. Las regexps empiezan por `^"
+"' y se aplican a cada dirección destinataria en el mensaje. Se aplican con "
+"la función re.match() de Python, por lo que aplican al inicio de cada cadena."
 
 #: forms/list_forms.py:272 forms/list_forms.py:280 forms/list_forms.py:366
 #: forms/list_forms.py:373 forms/list_forms.py:414 forms/list_forms.py:444
@@ -333,11 +332,11 @@ msgid ""
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
 "Esto verifica que la dirección de envío de la lista o un alias aceptable "
-"aparece explícitamente en un encabezado Para: o CC: en la publicación."
+"aparece explícitamente en un encabezado Para: o CC: en el envío."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
-msgstr "Administrivia"
+msgstr "Aspectos administrativos"
 
 #: forms/list_forms.py:284
 msgid ""
@@ -346,10 +345,10 @@ msgid ""
 "it to the the administrative requests queue, notifying the administrator of "
 "the new request, in the process."
 msgstr ""
-"Las pruebas de administración comprobarán las publicaciones para ver si "
-"realmente se tratan de solicitudes administrativas (como suscribirse, darse "
-"de baja, etc.), y las añadirán a la cola de solicitudes administrativas, "
-"notificando al administrador de la nueva solicitud, en el proceso."
+"Las pruebas administrativas comprobarán los envíos para ver si realmente se "
+"tratan de solicitudes administrativas (como suscribirse, darse de baja, etc.)"
+", y las añadirán a la cola de solicitudes administrativas, notificando al "
+"administrador de la nueva solicitud, en el proceso."
 
 #: forms/list_forms.py:291
 msgid "Default action to take when a member posts to the list"
@@ -359,7 +358,7 @@ msgstr ""
 
 #: forms/list_forms.py:293
 msgid "Please choose a default member action."
-msgstr "Por favor, escoja una acción por defecto para suscriptores."
+msgstr "Por favor, escoja una acción por defecto para miembros."
 
 #: forms/list_forms.py:297
 msgid ""
