@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-03 10:34+0000\n"
+"PO-Revision-Date: 2020-02-04 07:07+0000\n"
 "Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -58,11 +58,11 @@ msgstr "Descripción"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr "Dominio alias"
+msgstr "Alias de dominio"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr "Por favor, indique un dominio válido o nada."
+msgstr "Indique un dominio válido o nada."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -76,7 +76,7 @@ msgstr "Servidor Web"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr "Por favor, indique un dominio válido"
+msgstr "Indique un dominio válido"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
@@ -144,11 +144,11 @@ msgstr "Nombre de la lista"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr "Por favor, indique un nombre para su lista."
+msgstr "Indique un nombre para su lista."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr "Por favor, indique un nombre de lista válido."
+msgstr "Indique un nombre de lista válido."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
@@ -156,15 +156,15 @@ msgstr "Dirección inicial del propietario de la lista"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr "Por favor, indique la dirección del propietario de la lista."
+msgstr "Indique la dirección del propietario de la lista."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr "¿Anunciar esta lista?"
+msgstr "¿Mostrar esta lista?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr "Por favor, elija un tipo de lista."
+msgstr "Elija un tipo de lista."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
@@ -200,7 +200,7 @@ msgstr "El administrador del sitio no ha creado dominios"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr "Por favor, indique un nombre de lista válido"
+msgstr "Indique un nombre de lista válido"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
@@ -209,12 +209,12 @@ msgstr "Su dirección de correo"
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr "Por favor, indique una dirección de correo."
+msgstr "Indique una dirección de correo."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr "Por favor, indique una dirección de correo válida."
+msgstr "Indique una dirección de correo válida."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
@@ -332,7 +332,7 @@ msgid ""
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
 "Esto verifica que la dirección de envío de la lista o un alias aceptable "
-"aparece explícitamente en un encabezado Para: o CC: en el envío."
+"aparece explícitamente en una cabecera Para: o CC: en el envío."
 
 #: forms/list_forms.py:282
 msgid "Administrivia"
@@ -358,7 +358,7 @@ msgstr ""
 
 #: forms/list_forms.py:293
 msgid "Please choose a default member action."
-msgstr "Por favor, escoja una acción por defecto para miembros."
+msgstr "Escoja una acción por defecto para miembros."
 
 #: forms/list_forms.py:297
 msgid ""
@@ -389,7 +389,7 @@ msgstr "Acción por defecto cuando alguien no suscrito envíe a la lista"
 
 #: forms/list_forms.py:312
 msgid "Please choose a default non-member action."
-msgstr "Por favor, escoja una acción por defecto para no suscritos."
+msgstr "Escoja una acción por defecto para no suscritos."
 
 #: forms/list_forms.py:316
 msgid ""
@@ -473,7 +473,7 @@ msgstr "Acción de mitigación DMARC"
 
 #: forms/list_forms.py:401
 msgid "Please choose a DMARC mitigation action."
-msgstr "Por favor, escoja una acción DMARC de mitigación."
+msgstr "Escoja una acción DMARC de mitigación."
 
 #: forms/list_forms.py:403
 msgid "No DMARC mitigations"
@@ -481,11 +481,11 @@ msgstr "Sin mitigaciones DMARC"
 
 #: forms/list_forms.py:404
 msgid "Replace From: with list address"
-msgstr "Sustituir el From: con la dirección de la lista"
+msgstr "Sustituir el remitente (From:) con la dirección de la lista"
 
 #: forms/list_forms.py:406
 msgid "Wrap the message in an outer message From: the list."
-msgstr "Incluir el mensaje en otro enviado De: la lista."
+msgstr "Incluir el mensaje en otro enviado desde (From:) la lista."
 
 #: forms/list_forms.py:407
 msgid "Reject the message"
@@ -631,8 +631,8 @@ msgid ""
 "This can be set to no for announce lists that do not wish to include the "
 "List-Post header because posting to the list is discouraged."
 msgstr ""
-"Esto se puede poner a no para anunciar listas que no deseen incluir el "
-"encabezado List-Post porque no se recomienda enviar a la lista."
+"Esto se puede poner a no para anunciar listas que no deseen incluir la "
+"cabecera List-Post porque no se recomienda enviar a la lista."
 
 #: forms/list_forms.py:501
 msgid "Explicit reply-to address"
@@ -664,7 +664,7 @@ msgstr "Responder a la lista"
 
 #: forms/list_forms.py:520
 msgid "Please choose a reply-to action."
-msgstr "Por favor, escoja una acción para las respuestas (reply-to)."
+msgstr "Escoja una acción para las respuestas (reply-to)."
 
 #: forms/list_forms.py:522
 msgid "No Munging"
@@ -672,11 +672,11 @@ msgstr "No Ofuscar"
 
 #: forms/list_forms.py:524
 msgid "Explicit Reply-to header set"
-msgstr "Cabecera reply-to explícita definida"
+msgstr "Cabecera Responder a (Reply-to) explícita definida"
 
 #: forms/list_forms.py:525
 msgid "Explicit Reply-to set; no Cc added"
-msgstr "Cabecera Reply-to definida; no añadir Cc"
+msgstr "Cabecera Responder a (Reply-to) definida; no añadir Cc"
 
 #: forms/list_forms.py:527
 msgid ""
@@ -706,7 +706,7 @@ msgstr ""
 "¿A dónde se dirigen las respuestas a mensajes de la lista? Se recomienda "
 "encarecidamente usar No Ofuscar (No Munging) para la mayoría de listas de "
 "correo.\n"
-"Esta opción controla lo que Mailman le hace al encabezado Reply-To: "
+"Esta opción controla lo que Mailman le hace a la cabecera Reply-To: "
 "(Responder-A:) en los mensajes que pasan por esta lista de correo. Cuando se "
 "habilita No Ofuscar, Mailman no agrega una cabecera de Responder-A:, aunque "
 "si el mensaje original ya incluía uno, éste no se elimina. Establecer este "
@@ -737,7 +737,7 @@ msgstr "Cadena de procesamiento"
 
 #: forms/list_forms.py:560
 msgid "Type of pipeline you want to use for this mailing list"
-msgstr "Tipo de cadena de proceso para usaren esta lista"
+msgstr "Tipo de cadena de proceso para usar en esta lista"
 
 #: forms/list_forms.py:568
 msgid "Respond and continue processing"
@@ -965,14 +965,14 @@ msgstr "Añadir una dirección de correo electrónico en cada línea"
 
 #: forms/list_forms.py:752
 msgid "Add ban"
-msgstr "Añadir prohibición"
+msgstr "Añadir bloqueo"
 
 #: forms/list_forms.py:754
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
-"Puede prohibir una sola dirección de correo electrónico o utilizar una "
+"Puede bloquear una sola dirección de correo electrónico o utilizar una "
 "expresión regular que encaje con direcciones de correo electrónico similares."
 
 #: forms/list_forms.py:764
@@ -990,11 +990,11 @@ msgstr ""
 
 #: forms/list_forms.py:771
 msgid "Please enter a header."
-msgstr "Por favor, introducir una cabecera."
+msgstr "Introduzca una cabecera."
 
 #: forms/list_forms.py:772
 msgid "Please enter a valid header."
-msgstr "Por favor, introducir una cabecera válida."
+msgstr "Introduzca una cabecera válida."
 
 #: forms/list_forms.py:774
 msgid "Pattern"
@@ -1006,11 +1006,11 @@ msgstr "Expresión regular que encaje con el valor de la cabecera."
 
 #: forms/list_forms.py:777
 msgid "Please enter a pattern."
-msgstr "Por favor, introducir un patrón."
+msgstr "Introduzca un patrón."
 
 #: forms/list_forms.py:778
 msgid "Please enter a valid pattern."
-msgstr "Por favor, introducir un patrón válido."
+msgstr "Introduzca un patrón válido."
 
 #: forms/list_forms.py:780 templates/postorius/domain/index.html:26
 msgid "Action"
@@ -1018,7 +1018,7 @@ msgstr "Acción"
 
 #: forms/list_forms.py:781
 msgid "Please enter a valid action."
-msgstr "Por favor, introducir una acción válida."
+msgstr "Introduzca una acción válida."
 
 #: forms/list_forms.py:784
 msgid "Action to take when a header matches"
@@ -1076,7 +1076,7 @@ msgstr "Nombre a mostrar"
 
 #: forms/member_forms.py:35
 msgid "Please enter an display name."
-msgstr "Por favor, introduce un nombre a mostrar."
+msgstr "Introduzca un nombre a mostrar."
 
 #: forms/user_forms.py:49
 msgid "Regular"
@@ -1212,7 +1212,7 @@ msgstr ""
 "Puede usar estas variables en las plantillas.\n"
 "$hyperkitty_url: Enlace permanente al mensaje archivado en Hyperkitty\n"
 "$listname: nombre de la Lista de Correo, p.ej. hormiga@example.com\n"
-"$list_id: el encabezado del identificador de lista (List-ID), p.ej. "
+"$list_id: la cabecera del identificador de lista (List-ID), p.ej. "
 "hormiga.example.com\n"
 "$display_name: nombre público de la lista de correo, p.ej. Hormiga\n"
 "$short_listname: parte local del nombre de la lista, p.ej. hormiga\n"
@@ -1625,7 +1625,7 @@ msgstr "Dirección de envío"
 
 #: templates/postorius/index.html:66
 msgid "unadvertised"
-msgstr "sin mostrar"
+msgstr "no se muestra"
 
 #: templates/postorius/index.html:78
 msgid ""
@@ -1650,7 +1650,7 @@ msgstr "Direcciones bloqueadas"
 
 #: templates/postorius/lists/bans.html:26
 msgid "Ban email"
-msgstr "Prohibir correo"
+msgstr "Bloquear correo"
 
 #: templates/postorius/lists/bans.html:34
 msgid "Currently banned addresses"
@@ -1867,7 +1867,7 @@ msgstr "Acciones"
 #: templates/postorius/lists/pending_confirmations.html:29
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr "Prohibir"
+msgstr "Bloquear"
 
 #: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:40
@@ -1944,7 +1944,7 @@ msgid ""
 "contact the list owners."
 msgstr ""
 "Tiene una solicitud de suscripción pendiente. Si no recibe respuesta pronto, "
-"por favor contacte con los propietarios de la lista."
+"contacte con los propietarios de la lista."
 
 #: templates/postorius/lists/summary.html:65
 msgid "Subscribe to this list"
@@ -1979,8 +1979,8 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"        Para suscribirse o darse de baja de esta lista, por favor, iniciar "
-"sesión antes.\n"
+"        Para suscribirse o darse de baja de esta lista, iniciar sesión antes."
+"\n"
 "        Si no ha iniciado sesión anteriormente, puede que tenga que "
 "configurar una cuenta\n"
 "        con la dirección de correo adecuada.\n"
@@ -1999,7 +1999,7 @@ msgid ""
 msgstr ""
 "\n"
 "        También puede suscribirse sin crear una cuenta.\n"
-"        Si desea hacerlo, por favor usa el formulario siguiente.\n"
+"        Si desea hacerlo, use el formulario siguiente.\n"
 "        "
 
 #: templates/postorius/lists/summary.html:106
@@ -2008,11 +2008,11 @@ msgstr "Métricas de la lista"
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
-msgstr "Creado en"
+msgstr "Creado el"
 
 #: templates/postorius/lists/summary.html:109
 msgid "Last post at"
-msgstr "Último mensaje en"
+msgstr "Último mensaje el"
 
 #: templates/postorius/lists/summary.html:110
 msgid "Digest last sent at"
@@ -2069,7 +2069,7 @@ msgstr "Eliminación en bloque"
 
 #: templates/postorius/menu/list_nav.html:58
 msgid "Ban List"
-msgstr "Lista de prohibidos"
+msgstr "Lista de correos bloqueados"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
@@ -2193,7 +2193,7 @@ msgstr "Filtros de cabecera"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr "Direcciones prohibidas"
+msgstr "Direcciones bloqueadas"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
@@ -2241,8 +2241,7 @@ msgstr "Configuración global"
 
 #: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
-msgstr ""
-"API de Mailman REST no disponible. Por favor, iniciar el núcleo de Mailman."
+msgstr "API de Mailman REST no disponible. Inicie el núcleo de Mailman."
 
 #: views/domain.py:76
 msgid "New Domain registered"
@@ -2255,7 +2254,7 @@ msgstr "Dominio %s actualizado"
 
 #: views/domain.py:116 views/list.py:664
 msgid "Please check the errors below"
-msgstr "Por favor, comprobar los errores siguientes"
+msgstr "Comprobar los errores siguientes"
 
 #: views/domain.py:140
 #, python-format
@@ -2322,7 +2321,7 @@ msgstr "La configuración de moderación de miembros se ha actualizado."
 
 #: views/list.py:315
 msgid "You are already subscribed"
-msgstr "Ya estás suscrito"
+msgstr "Ya está suscrito"
 
 #: views/list.py:325
 msgid ""
@@ -2356,7 +2355,7 @@ msgstr "Está suscrito a %s."
 
 #: views/list.py:396
 msgid "Please check your inbox for further instructions"
-msgstr "Por favor, comprobar su buzón de entrada para más instrucciones"
+msgstr "Comprobar su buzón de entrada para más instrucciones"
 
 #: views/list.py:415
 #, python-format
@@ -2375,7 +2374,7 @@ msgstr "La dirección de correo %s no es válida."
 
 #: views/list.py:470
 msgid "Please fill out the form correctly."
-msgstr "Por favor, rellenar el formulario correctamente."
+msgstr "Rellene el formulario correctamente."
 
 #: views/list.py:477
 #, python-format
