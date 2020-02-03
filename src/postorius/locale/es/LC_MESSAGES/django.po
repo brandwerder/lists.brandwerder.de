@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-02-03 10:34+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -80,7 +80,7 @@ msgstr "Por favor, indique un dominio válido"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr "Dirección del propietario"
+msgstr "Correo del propietario"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
@@ -449,7 +449,7 @@ msgstr "Enviar resúmenes (digest) periódicamente"
 
 #: forms/list_forms.py:377
 msgid "Should Mailman send out digests periodically?"
-msgstr "¿Debe Mailman enviar acumulados (digest) periódicamente?"
+msgstr "¿Debe Mailman enviar resúmenes (digest) periódicamente?"
 
 #: forms/list_forms.py:383
 msgid "Digest Frequency"
