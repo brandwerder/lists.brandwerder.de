@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2019-12-26 13:21+0000\n"
+"PO-Revision-Date: 2020-02-04 07:07+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 3.11-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -500,7 +500,7 @@ msgstr ""
 
 #: forms/list_forms.py:423
 msgid "DMARC rejection notice"
-msgstr ""
+msgstr "הודעת דחיית DMARC"
 
 #: forms/list_forms.py:427
 msgid ""
@@ -592,13 +592,15 @@ msgstr ""
 
 #: forms/list_forms.py:501
 msgid "Explicit reply-to address"
-msgstr ""
+msgstr "כתובת תגובה (reply-to) מפורשת"
 
 #: forms/list_forms.py:504
 msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
+"אפשרות זו מאפשרת למנהלים להגדיר כתובת תגובה (Reply-to) מפורשת. משמש רק אם "
+"כתובת התגובה מוגדרת להשתמש בכותרת שמוגדרת באופן מפורש"
 
 #: forms/list_forms.py:512
 msgid ""
@@ -609,11 +611,11 @@ msgstr ""
 
 #: forms/list_forms.py:516 forms/list_forms.py:523
 msgid "Reply goes to list"
-msgstr ""
+msgstr "התגובה חוזרת לרשימה"
 
 #: forms/list_forms.py:520
 msgid "Please choose a reply-to action."
-msgstr ""
+msgstr "נא לבחור פעולה בתגובה (reply-to)."
 
 #: forms/list_forms.py:522
 msgid "No Munging"
@@ -655,11 +657,11 @@ msgstr ""
 
 #: forms/list_forms.py:555
 msgid "Pipeline"
-msgstr ""
+msgstr "תצורת התמסרות"
 
 #: forms/list_forms.py:560
 msgid "Type of pipeline you want to use for this mailing list"
-msgstr ""
+msgstr "סוג תצורת ההתמסרות בה ברצונך להשתמש עבור רשימת דיוור זו"
 
 #: forms/list_forms.py:568
 msgid "Respond and continue processing"
