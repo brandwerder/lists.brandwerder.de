@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-05 13:13+0000\n"
+"PO-Revision-Date: 2020-02-05 13:19+0000\n"
 "Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
@@ -2327,11 +2327,11 @@ msgstr "esborrar Llista"
 
 #: templatetags/nav_helpers.py:30
 msgid "Held Messages"
-msgstr ""
+msgstr "Missatges retinguts"
 
 #: templatetags/nav_helpers.py:31
 msgid "Mass Removal"
-msgstr ""
+msgstr "Eliminació massiva"
 
 #: templatetags/nav_helpers.py:32
 #, fuzzy
@@ -2365,7 +2365,7 @@ msgstr "Configuració segons adreces"
 
 #: templatetags/nav_helpers.py:40
 msgid "Subscription Settings"
-msgstr ""
+msgstr "Configuració de la subscripció"
 
 #: templatetags/nav_helpers.py:41
 #, fuzzy
@@ -2507,7 +2507,7 @@ msgstr "Està subscrit a% s."
 
 #: views/list.py:396
 msgid "Please check your inbox for further instructions"
-msgstr ""
+msgstr "Consultar la vostra bústia per a més instruccions"
 
 #: views/list.py:415
 #, fuzzy, python-format
@@ -2517,7 +2517,7 @@ msgstr "% S s'ha donat de baixa d'aquesta llista."
 #: views/list.py:440
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
-msgstr ""
+msgstr "L’adreça %(address)s s’ha subscrit a %(list)s."
 
 #: views/list.py:447 views/list.py:484
 #, fuzzy, python-format
@@ -2526,12 +2526,12 @@ msgstr "L'adreça de correu% s no és vàlida."
 
 #: views/list.py:470
 msgid "Please fill out the form correctly."
-msgstr ""
+msgstr "Ompliu el formulari correctament."
 
 #: views/list.py:477
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
-msgstr ""
+msgstr "L’adreça %(address)s s’ha donat de baixa de %(list)s."
 
 #: views/list.py:506
 #, fuzzy
@@ -2545,11 +2545,11 @@ msgstr "Els missatges seleccionats van ser rebutjats"
 
 #: views/list.py:514
 msgid "The selected messages were discarded"
-msgstr ""
+msgstr "S'han descartat els missatges seleccionats"
 
 #: views/list.py:516
 msgid "Message could not be found"
-msgstr ""
+msgstr "No s'ha trobat el missatge"
 
 #: views/list.py:544
 #, fuzzy
@@ -2558,7 +2558,7 @@ msgstr "El missatge va ser acceptat"
 
 #: views/list.py:547
 msgid "The message was rejected"
-msgstr ""
+msgstr "El missatge es va rebutjar"
 
 #: views/list.py:550
 msgid "The message was discarded"
