@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-02-05 13:19+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -1130,7 +1130,6 @@ msgid "Delivery mode"
 msgstr "Modalitat d’entrega"
 
 #: forms/user_forms.py:73
-#, fuzzy
 msgid ""
 "If you select summary digests , you'll get posts bundled together (usually "
 "one per day but possibly more on busy lists), instead of singly when they're "
@@ -1142,7 +1141,7 @@ msgstr ""
 "però possiblement més en llistes amb molt trànsit), en lloc d'un a un tal "
 "com s'enviïn. El seu lector de correu pot o no admetre tractar resums MIME. "
 "En general, els resums MIME són preferibles, però si té problemes per llegir-"
-"los, seleccionar resums en text simple."
+"los, seleccionar resums en text sense format."
 
 #: forms/user_forms.py:82
 #, fuzzy
