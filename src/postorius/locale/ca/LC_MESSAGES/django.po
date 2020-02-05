@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-05 12:18+0000\n"
+"PO-Revision-Date: 2020-02-05 13:13+0000\n"
 "Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
@@ -665,7 +665,7 @@ msgstr "Definir la capçalera Respondre (Reply-to) de manera explícita"
 
 #: forms/list_forms.py:525
 msgid "Explicit Reply-to set; no Cc added"
-msgstr ""
+msgstr "Capçalera Respondre (Reply-to) explícita; no s'ha afegit CC"
 
 #: forms/list_forms.py:527
 msgid ""
@@ -736,7 +736,7 @@ msgstr ""
 
 #: forms/list_forms.py:585
 msgid "Autorespond postings"
-msgstr ""
+msgstr "Autorespond missatges"
 
 #: forms/list_forms.py:586
 msgid "Should Mailman send an auto-response to mailing list posters?"
@@ -746,7 +746,7 @@ msgstr ""
 
 #: forms/list_forms.py:589
 msgid "Autoresponse postings text"
-msgstr ""
+msgstr "Text de les missatges d'autoresposta"
 
 #: forms/list_forms.py:592
 msgid "Auto-response text to send to mailing list posters."
@@ -876,7 +876,7 @@ msgstr "El nom de visualització és el nom que es mostra a la interfície web."
 
 #: forms/list_forms.py:685
 msgid "Subject prefix"
-msgstr ""
+msgstr "Prefix de assumpte"
 
 #: forms/list_forms.py:690
 msgid "Preferred Language"
@@ -1023,27 +1023,27 @@ msgstr "Regular"
 
 #: forms/user_forms.py:50
 msgid "Plain Text Digests"
-msgstr ""
+msgstr "Resums de text sense format"
 
 #: forms/user_forms.py:51
 msgid "Mime Digests"
-msgstr ""
+msgstr "Resums MIme"
 
 #: forms/user_forms.py:52
 msgid "Summary Digests"
-msgstr ""
+msgstr "Recull dels resums"
 
 #: forms/user_forms.py:54
 msgid "Enabled"
-msgstr ""
+msgstr "Activat"
 
 #: forms/user_forms.py:54
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: forms/user_forms.py:59
 msgid "Delivery status"
-msgstr ""
+msgstr "Estat d'entrega"
 
 #: forms/user_forms.py:61
 msgid ""
@@ -1053,10 +1053,15 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
+"Estableix aquesta opció a Activat per rebre missatges publicats a aquesta "
+"llista de correu. Configureu-lo a Desactivat si voleu romandre subscrit, "
+"però no voleu que us envieu el correu durant un temps (per exemple, que "
+"esteu de vacances). Si desactiveu l'enviament de correu, no oblideu tornar a "
+"activar-lo quan torneu; no es tornarà a activar automàticament."
 
 #: forms/user_forms.py:71
 msgid "Delivery mode"
-msgstr ""
+msgstr "Modalitat d’entrega"
 
 #: forms/user_forms.py:73
 msgid ""
