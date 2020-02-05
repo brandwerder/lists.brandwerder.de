@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-05 11:30+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"PO-Revision-Date: 2020-02-05 11:31+0000\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -649,19 +649,19 @@ msgstr ""
 
 #: forms/list_forms.py:516 forms/list_forms.py:523
 msgid "Reply goes to list"
-msgstr ""
+msgstr "Respondre a la llista"
 
 #: forms/list_forms.py:520
 msgid "Please choose a reply-to action."
-msgstr ""
+msgstr "Tria una acció de resposta."
 
 #: forms/list_forms.py:522
 msgid "No Munging"
-msgstr ""
+msgstr "No ofuscar"
 
 #: forms/list_forms.py:524
 msgid "Explicit Reply-to header set"
-msgstr ""
+msgstr "Definir la capçalera Respondre (Reply-to) de manera explícita"
 
 #: forms/list_forms.py:525
 msgid "Explicit Reply-to set; no Cc added"
@@ -695,40 +695,44 @@ msgstr ""
 
 #: forms/list_forms.py:555
 msgid "Pipeline"
-msgstr ""
+msgstr "Cadena de processament"
 
 #: forms/list_forms.py:560
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr ""
+"Tipus de cadena de processament que voleu utilitzar per a aquesta llista"
 
 #: forms/list_forms.py:568
 msgid "Respond and continue processing"
-msgstr ""
+msgstr "Respondre i continuar processant"
 
 #: forms/list_forms.py:569
 msgid "Respond and discard message"
-msgstr ""
+msgstr "Respondre i descartar el missatge"
 
 #: forms/list_forms.py:570
 msgid "No automatic response"
-msgstr ""
+msgstr "Sense resposta automàtica"
 
 #: forms/list_forms.py:574
 msgid "Autorespond to list owner"
-msgstr ""
+msgstr "Resposta automàtica al propietari de la llista"
 
 #: forms/list_forms.py:575
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
+"Mailman hauria d’enviar una resposta automàtica als correus electrònics "
+"enviats a l’adreça del propietari?"
 
 #: forms/list_forms.py:578
 msgid "Autoresponse owner text"
-msgstr ""
+msgstr "Text del propietari de la resposta automàtica"
 
 #: forms/list_forms.py:581
 msgid "Auto-response text to send to -owner emails."
 msgstr ""
+"Text de resposta automàtica per enviar correus electrònics al propietari."
 
 #: forms/list_forms.py:585
 msgid "Autorespond postings"
@@ -737,18 +741,21 @@ msgstr ""
 #: forms/list_forms.py:586
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
+"Mailman hauria d’enviar una resposta automàtica als que s'envien a la "
+"llista??"
 
 #: forms/list_forms.py:589
 msgid "Autoresponse postings text"
 msgstr ""
 
 #: forms/list_forms.py:592
+#, fuzzy
 msgid "Auto-response text to send to mailing list posters."
-msgstr ""
+msgstr "Text de resposta automàtica per enviar-los als que s'envien a la llista"
 
 #: forms/list_forms.py:596
 msgid "Autorespond requests"
-msgstr ""
+msgstr "Respondre automàticament a les sol·licituds"
 
 #: forms/list_forms.py:598
 msgid ""
@@ -756,18 +763,23 @@ msgid ""
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
+"Mailman hauria d’enviar una resposta automàtica als correus electrònics "
+"enviats a l’adreça de sol·licitud? Si trieu sí, decidiu si voleu que Mailman "
+"descarti el correu electrònic original o el reenvieu al sistema com a ordre "
+"de correu normal."
 
 #: forms/list_forms.py:603
 msgid "Autoresponse request text"
-msgstr ""
+msgstr "Text de sol·licitud de resposta automàtica"
 
 #: forms/list_forms.py:606
 msgid "Auto-response text to send to -request emails."
 msgstr ""
+"Text de resposta automàtica per enviar a correus de sol·licitud (-request)."
 
 #: forms/list_forms.py:608
 msgid "Autoresponse grace period"
-msgstr ""
+msgstr "Període de gràcia per resposta automàtica"
 
 #: forms/list_forms.py:610
 msgid ""
@@ -775,10 +787,14 @@ msgid ""
 "request/-owner address from the same poster. Set to zero (or negative) for "
 "no grace period (i.e. auto-respond to every message)."
 msgstr ""
+"Nombre de dies entre respostes automàtiques a la llista de correu o a "
+"l'adreça de sol·licitud/propietari del mateix envio. Configureu-ho a zero (o "
+"negatiu) sense període de gràcia (és a dir, responen automàticament a tots "
+"els missatges)."
 
 #: forms/list_forms.py:618
 msgid "Notify users of held messages"
-msgstr ""
+msgstr "Notifiqueu als usuaris de missatges retinguts"
 
 #: forms/list_forms.py:620
 msgid ""
@@ -786,10 +802,13 @@ msgid ""
 "say 'No', no notifications will be sent to users about the pending approval "
 "on their messages."
 msgstr ""
+"Mailman hauria de notificar als usuaris sobre els seus missatges retinguts "
+"per a la seva aprovació. Si diuen \"No\", no s'enviarà cap notificació als "
+"usuaris sobre l'aprovació pendent dels seus missatges."
 
 #: forms/list_forms.py:627
 msgid "Send welcome message"
-msgstr ""
+msgstr "Enviar missatge de benvinguda"
 
 #: forms/list_forms.py:629
 msgid ""
@@ -802,7 +821,7 @@ msgstr ""
 
 #: forms/list_forms.py:638
 msgid "Admin immed notify"
-msgstr ""
+msgstr "Notificació immediata de l'administrador"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -816,19 +835,19 @@ msgstr ""
 
 #: forms/list_forms.py:650
 msgid "Notify admin of membership changes"
-msgstr ""
+msgstr "Notificar a l'administrador els canvis d'afiliació"
 
 #: forms/list_forms.py:651
 msgid "Should administrator get notices of subscribes and unsubscribes?"
-msgstr ""
+msgstr "L’administrador hauria de rebre avisos de subscripcions i de baixa?"
 
 #: forms/list_forms.py:662
 msgid "Show list on index page"
-msgstr ""
+msgstr "Mostra la llista a la pàgina d'índex"
 
 #: forms/list_forms.py:663
 msgid "Choose whether to include this list on the list of all lists"
-msgstr ""
+msgstr "Trieu si voleu incloure aquesta llista a la llista de totes les llistes"
 
 #: forms/list_forms.py:669
 msgid ""
@@ -836,22 +855,25 @@ msgid ""
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
 msgstr ""
+"Aquesta descripció s'utilitza quan la llista de correu es mostra amb altres "
+"llistes de distribució, o en capçaleres, etc. Hauria de ser tan succinta com "
+"es pot aconseguir, alhora que identifiques quina és la llista."
 
 #: forms/list_forms.py:675
 msgid "Information"
-msgstr ""
+msgstr "Informació"
 
 #: forms/list_forms.py:676
 msgid "A longer description of this mailing list."
-msgstr ""
+msgstr "Una descripció més llarga d'aquesta llista de correu."
 
 #: forms/list_forms.py:680
 msgid "Display name"
-msgstr ""
+msgstr "Nom de visualització"
 
 #: forms/list_forms.py:682
 msgid "Display name is the name shown in the web interface."
-msgstr ""
+msgstr "El nom de visualització és el nom que es mostra a la interfície web."
 
 #: forms/list_forms.py:685
 msgid "Subject prefix"
@@ -859,19 +881,19 @@ msgstr ""
 
 #: forms/list_forms.py:690
 msgid "Preferred Language"
-msgstr ""
+msgstr "Llengua preferida"
 
 #: forms/list_forms.py:696
 msgid "Members List Visibility"
-msgstr ""
+msgstr "Visibilitat de la llista de membres"
 
 #: forms/list_forms.py:700
 msgid "Who is allowed to see members list for this MailingList?"
-msgstr ""
+msgstr "Qui pot veure la llista de membres d'aquesta llista de correu?"
 
 #: forms/list_forms.py:714
 msgid "Emails to mass subscribe"
-msgstr ""
+msgstr "Correus electrònics per subscriure's massivament"
 
 #: forms/list_forms.py:716
 msgid ""
@@ -886,77 +908,81 @@ msgstr ""
 
 #: forms/list_forms.py:732
 msgid "Emails to Unsubscribe"
-msgstr ""
+msgstr "Correus electrònics per donar-se de baixa"
 
 #: forms/list_forms.py:733
 msgid "Add one email address on each line"
-msgstr ""
+msgstr "Afegir una adreça de correu a cada línia"
 
 #: forms/list_forms.py:752
 msgid "Add ban"
-msgstr ""
+msgstr "Afegir veto"
 
 #: forms/list_forms.py:754
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
+"Podeu prohibir una sola adreça de correu o utilitzar una expressió regular "
+"perquè coincideixi amb adreces de correu similars."
 
 #: forms/list_forms.py:764
 msgid "Default antispam action"
-msgstr ""
+msgstr "Acció antispam per defecte"
 
 #: forms/list_forms.py:768
 msgid "Header"
-msgstr ""
+msgstr "Capçalera"
 
 #: forms/list_forms.py:769
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
+"Capçalera de correu electrònic per filtrar (sensible a majúscules i "
+"minúscules)."
 
 #: forms/list_forms.py:771
 msgid "Please enter a header."
-msgstr ""
+msgstr "Introdueixi una capçalera."
 
 #: forms/list_forms.py:772
 msgid "Please enter a valid header."
-msgstr ""
+msgstr "Introdueixi una capçalera vàlida."
 
 #: forms/list_forms.py:774
 msgid "Pattern"
-msgstr ""
+msgstr "Patró"
 
 #: forms/list_forms.py:775
 msgid "Regular expression matching the header's value."
-msgstr ""
+msgstr "Expressió regular que coincideix amb el valor de la capçalera."
 
 #: forms/list_forms.py:777
 msgid "Please enter a pattern."
-msgstr ""
+msgstr "Introdueixi un patró."
 
 #: forms/list_forms.py:778
 msgid "Please enter a valid pattern."
-msgstr ""
+msgstr "Introdueixi un patró vàlid."
 
 #: forms/list_forms.py:780 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Acció"
 
 #: forms/list_forms.py:781
 msgid "Please enter a valid action."
-msgstr ""
+msgstr "Introdueixi una acció vàlida."
 
 #: forms/list_forms.py:784
 msgid "Action to take when a header matches"
-msgstr ""
+msgstr "Acció a prendre quan coincideix una capçalera"
 
 #: forms/list_forms.py:813
 msgid "Moderation"
-msgstr ""
+msgstr "Moderació"
 
 #: forms/list_forms.py:815
 msgid "List default"
-msgstr ""
+msgstr "Llista per omissió"
 
 #: forms/list_forms.py:817
 msgid ""
@@ -974,11 +1000,11 @@ msgstr ""
 
 #: forms/list_forms.py:837
 msgid "Select Email"
-msgstr ""
+msgstr "Seleccioneu correu electrònic"
 
 #: forms/list_forms.py:845
 msgid "Data"
-msgstr ""
+msgstr "Dades"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
@@ -1479,23 +1505,23 @@ msgstr ""
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
-msgstr ""
+msgstr "Vetar adreces"
 
 #: templates/postorius/lists/bans.html:26
 msgid "Ban email"
-msgstr ""
+msgstr "Vetar correu"
 
 #: templates/postorius/lists/bans.html:34
 msgid "Currently banned addresses"
-msgstr ""
+msgstr "Adreces vetades actualment"
 
 #: templates/postorius/lists/bans.html:47
 msgid "Un-ban this address"
-msgstr ""
+msgstr "Treure veto a aquesta adreça"
 
 #: templates/postorius/lists/bans.html:58
 msgid "No addresses are currently banned."
-msgstr ""
+msgstr "Actualment no hi ha adreces vetades."
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
@@ -1693,7 +1719,7 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:29
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr ""
+msgstr "Vetar"
 
 #: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:40
@@ -1861,7 +1887,7 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:58
 msgid "Ban List"
-msgstr ""
+msgstr "Llista de vetos"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
@@ -1973,7 +1999,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr ""
+msgstr "Adreces vetades"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
@@ -2308,7 +2334,7 @@ msgstr ""
 
 #: views/list.py:1026
 msgid "The email {} has been banned."
-msgstr ""
+msgstr "El correu {} ha estat vetat."
 
 #: views/list.py:1030 views/list.py:1041 views/list.py:1102
 #, python-format
@@ -2322,7 +2348,7 @@ msgstr ""
 
 #: views/list.py:1038
 msgid "The email {} has been un-banned"
-msgstr ""
+msgstr "A l'correu electrònic {} se li ha tret el veto"
 
 #: views/list.py:1104
 msgid "The header matches were successfully modified."
