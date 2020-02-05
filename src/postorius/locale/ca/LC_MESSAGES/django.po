@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
 "PO-Revision-Date: 2020-02-05 12:18+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -1007,19 +1007,19 @@ msgstr "Dades"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "Adreça de correu electrònic"
 
 #: forms/member_forms.py:32
 msgid "Display Name"
-msgstr ""
+msgstr "Nom de visualització"
 
 #: forms/member_forms.py:35
 msgid "Please enter an display name."
-msgstr ""
+msgstr "Introduïu un nom de visualització."
 
 #: forms/user_forms.py:49
 msgid "Regular"
-msgstr ""
+msgstr "Regular"
 
 #: forms/user_forms.py:50
 msgid "Plain Text Digests"
