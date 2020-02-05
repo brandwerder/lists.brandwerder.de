@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-04 07:07+0000\n"
+"PO-Revision-Date: 2020-02-05 12:30+0000\n"
 "Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -672,7 +672,7 @@ msgstr "No Ofuscar"
 
 #: forms/list_forms.py:524
 msgid "Explicit Reply-to header set"
-msgstr "Cabecera Responder a (Reply-to) explícita definida"
+msgstr "Definir la cabecera Responder a (Reply-to) de forma explícita"
 
 #: forms/list_forms.py:525
 msgid "Explicit Reply-to set; no Cc added"
@@ -806,7 +806,7 @@ msgstr "Texto de la solicitud de auto-respuesta"
 
 #: forms/list_forms.py:606
 msgid "Auto-response text to send to -request emails."
-msgstr "Texto de auto-respuesta a enviar a mensajes -request."
+msgstr "Texto de auto-respuesta a enviar a mensajes solicitud (-request)."
 
 #: forms/list_forms.py:608
 msgid "Autoresponse grace period"
@@ -965,14 +965,14 @@ msgstr "Añadir una dirección de correo electrónico en cada línea"
 
 #: forms/list_forms.py:752
 msgid "Add ban"
-msgstr "Añadir bloqueo"
+msgstr "Añadir veto"
 
 #: forms/list_forms.py:754
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
-"Puede bloquear una sola dirección de correo electrónico o utilizar una "
+"Puede vetar una sola dirección de correo electrónico o utilizar una "
 "expresión regular que encaje con direcciones de correo electrónico similares."
 
 #: forms/list_forms.py:764
@@ -1646,23 +1646,23 @@ msgstr "Actualmente no hay listas de correo."
 
 #: templates/postorius/lists/bans.html:8
 msgid "Banned addresses"
-msgstr "Direcciones bloqueadas"
+msgstr "Direcciones vetadas"
 
 #: templates/postorius/lists/bans.html:26
 msgid "Ban email"
-msgstr "Bloquear correo"
+msgstr "Vetar correo"
 
 #: templates/postorius/lists/bans.html:34
 msgid "Currently banned addresses"
-msgstr "Direcciones actualmente bloqueadas"
+msgstr "Direcciones actualmente vetadas"
 
 #: templates/postorius/lists/bans.html:47
 msgid "Un-ban this address"
-msgstr "Desbloquear esta dirección"
+msgstr "Quitar veto a esta dirección"
 
 #: templates/postorius/lists/bans.html:58
 msgid "No addresses are currently banned."
-msgstr "Actualmente no hay ninguna dirección bloqueada."
+msgstr "Actualmente no hay ninguna dirección vetada."
 
 #: templates/postorius/lists/confirm_delete.html:13
 msgid "Are you sure you want to permanently delete this list?"
@@ -1867,7 +1867,7 @@ msgstr "Acciones"
 #: templates/postorius/lists/pending_confirmations.html:29
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr "Bloquear"
+msgstr "Vetar"
 
 #: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:40
@@ -2069,7 +2069,7 @@ msgstr "Eliminación en bloque"
 
 #: templates/postorius/menu/list_nav.html:58
 msgid "Ban List"
-msgstr "Lista de correos bloqueados"
+msgstr "Lista de correos vetados"
 
 #: templates/postorius/menu/user_nav.html:4
 msgid "Mailman Settings"
@@ -2193,7 +2193,7 @@ msgstr "Filtros de cabecera"
 
 #: templatetags/nav_helpers.py:28
 msgid "Banned Addresses"
-msgstr "Direcciones bloqueadas"
+msgstr "Direcciones vetadas"
 
 #: templatetags/nav_helpers.py:29
 msgid "Delete List"
@@ -2532,7 +2532,7 @@ msgstr "Todos los miembros han sido dados de baja de la lista."
 
 #: views/list.py:1026
 msgid "The email {} has been banned."
-msgstr "La dirección de correo {} ha sido bloqueada."
+msgstr "La dirección de correo {} ha sido vetada."
 
 #: views/list.py:1030 views/list.py:1041 views/list.py:1102
 #, python-format
@@ -2546,7 +2546,7 @@ msgstr "Datos no válidos: %s"
 
 #: views/list.py:1038
 msgid "The email {} has been un-banned"
-msgstr "La dirección de correo {} ha sido desbloqueada"
+msgstr "A la dirección de correo {} se le ha quitado el veto"
 
 #: views/list.py:1104
 msgid "The header matches were successfully modified."
