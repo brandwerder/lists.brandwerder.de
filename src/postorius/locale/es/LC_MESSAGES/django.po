@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:39+0200\n"
-"PO-Revision-Date: 2020-02-05 12:30+0000\n"
+"PO-Revision-Date: 2020-02-08 06:15+0000\n"
 "Last-Translator: Paco <pacoc@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
@@ -528,8 +528,8 @@ msgid ""
 "DMARC mitigation action of reject applies."
 msgstr ""
 "Texto para sustituir al motivo por defecto en cualquier notificación de "
-"rechazo que deba ser enviada cuando se aplique la acción DMARC de mitigación "
-"de rechazo aplica."
+"rechazo que deba ser enviada cuando se aplique la acción de mitigación DMARC "
+"de rechazo."
 
 #: forms/list_forms.py:430
 msgid "DMARC wrapped message text"
@@ -570,15 +570,15 @@ msgstr ""
 
 #: forms/list_forms.py:461
 msgid "Convert html to plaintext"
-msgstr "Convertir html a texto simple"
+msgstr "Convertir html a texto sin formato"
 
 #: forms/list_forms.py:462
 msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
-"¿Debería Mailman convertir partes text/html a texto simple? Esta conversión "
-"se produce después de quitar los adjuntos MIME."
+"¿Debería Mailman convertir partes text/html a texto sin formato? Esta "
+"conversión se produce después de quitar los adjuntos MIME."
 
 #: forms/list_forms.py:469
 msgid "Anonymous list"
@@ -1084,7 +1084,7 @@ msgstr "Normal"
 
 #: forms/user_forms.py:50
 msgid "Plain Text Digests"
-msgstr "Resúmenes de texto simple"
+msgstr "Resúmenes de texto sin formato"
 
 #: forms/user_forms.py:51
 msgid "Mime Digests"
@@ -1136,7 +1136,7 @@ msgstr ""
 "pero posiblemente más en listas con mucho tráfico), en lugar de uno a uno "
 "tal como se envíen. Su lector de correo puede o no admitir tratar resúmenes "
 "MIME. En general, los resúmenes MIME son preferibles, pero si tiene "
-"problemas para leerlos, seleccionar resúmenes en texto simple."
+"problemas para leerlos, seleccionar resúmenes en texto sin formato."
 
 #: forms/user_forms.py:82
 msgid "Receive own postings"
