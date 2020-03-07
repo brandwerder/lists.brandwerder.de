@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-02-27 20:33+0000\n"
+"Last-Translator: akoscomp <nagy.akos@libreoffice.ro>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
+"postorius/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -33,158 +34,162 @@ msgstr ""
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Írjon be egy domain nevet"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Írjon be egy érvényes domain nevet."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"A levelezőlista domainje. Például ha egy teszt@példa.hu levelezőlistát "
+"szeretne, a példa.hu-t kell beírnia."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:666
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Leírás"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
+#, fuzzy
 msgid "Alias Domain"
-msgstr ""
+msgstr "Alias Domain"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Írjon be egy érvényes domain nevet vagy semmit."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Alap esetben üres.  Nem szokványos Postfix beállítás esetén használandó."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Web hoszt"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Írjon be egy érvényes domain nevet"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Tulajdonos e-mail"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Legalább egyet válasszon ki"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
-msgstr ""
+msgstr "Felfüggesztve, moderálandó"
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Elutasít (üzenettel)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr ""
+msgstr "Elvet (nincs üzenet)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Azonnal elfogad (további szabályok átugrása)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "Alapértelmezett feldolgozás"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Napi"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
-msgstr ""
+msgstr "Heti"
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "Negyedéventi"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Havi"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Évi"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr ""
+msgstr "Csak levelezőlista moderátorok"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Csak levelezőlista tagok"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "Bárki"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr ""
+msgstr "Lista neve"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr ""
+msgstr "Írjon be egy nevet a listájának."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr ""
+msgstr "Írjon be egy érvényes listanevet."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr ""
+msgstr "Kezdeti listatulajdonos címe"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "Adja meg a lista tulajdonosának e-mail címét."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Hirdesse ezt a listát?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
-msgstr ""
+msgstr "Válassza ki a lista típusát."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Hirdesse a listát a listaindexben"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr ""
+msgstr "Rejtse el a listát a listaindexben"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Válasszon egy létező domaint."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Válasszon egy létező Mail hosztot"
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "Listastílus"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr ""
+msgstr "Válasszon egy listastílust."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "Válasszon egy érvényes listastílust."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
@@ -196,42 +201,43 @@ msgstr ""
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr ""
+msgstr "Az e-mail címe"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:757
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr ""
+msgstr "Írjon be egy e-mail címet."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:758
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Írjon be egy érvényes e-mail címet."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
-msgstr ""
+msgstr "Neve (nem kötelező)"
 
 #: forms/list_forms.py:191
+#, fuzzy
 msgid "Open"
-msgstr ""
+msgstr "Nyitott"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Megerősít"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "Moderál"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Megerősít, majd moderál"
 
 #: forms/list_forms.py:203 views/list.py:869
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Feliratkozási szabály"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -245,19 +251,19 @@ msgstr ""
 
 #: forms/list_forms.py:221
 msgid "Public archives"
-msgstr ""
+msgstr "Publikus archívumok"
 
 #: forms/list_forms.py:222
 msgid "Private archives"
-msgstr ""
+msgstr "Privát archívumok"
 
 #: forms/list_forms.py:223
 msgid "Do not archive this list"
-msgstr ""
+msgstr "Ne archiválja a listát"
 
 #: forms/list_forms.py:229
 msgid "Archive policy"
-msgstr ""
+msgstr "Archiválási szabály"
 
 #: forms/list_forms.py:230
 msgid "Policy for archiving messages for this list"
@@ -1185,7 +1191,7 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "Fiók"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
@@ -1205,7 +1211,7 @@ msgstr ""
 
 #: templates/postorius/base.html:99
 msgid "Sign Up"
-msgstr ""
+msgstr "Regisztráció"
 
 #: templates/postorius/base.html:117
 msgid "Postorius Documentation"
@@ -1444,7 +1450,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Töröl"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"
