@@ -33,21 +33,22 @@
         </form>
     {% endif %}
 
-    {% if members|length > 0 %}
-        {% if form.choices.errors %}
-            <div class="alert alert-danger">{{ form.choices.errors }}</div>
-        {% endif %}
-        <div class="pull-left margin-bottom">
-            <form action="{% url 'list_members' list.list_id role %}" method="get" class="form-inline">
-                <div class="input-group">
-                    <input type="text" name="q" value="{{ query }}" class="form-control" placeholder="{% trans 'Search members...' %}" aria-label="Search box" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit" aria-label="Search"><span class="glyphicon glyphicon-search"></span></button>
-                    </span>
-                </div>
-            </form>
-        </div>
+
+    {% if form.choices.errors %}
+        <div class="alert alert-danger">{{ form.choices.errors }}</div>
     {% endif %}
+    <!-- Member search form -->
+    <div class="pull-left margin-bottom">
+        <form action="{% url 'list_members' list.list_id role %}" method="get" class="form-inline">
+            <div class="input-group">
+                <input type="text" name="q" value="{{ query }}" class="form-control" placeholder="{% trans 'Search members...' %}" aria-label="Search box" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" aria-label="Search"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+
 
     {% if members|length > 0 %}
         {% if role == 'member' %}
