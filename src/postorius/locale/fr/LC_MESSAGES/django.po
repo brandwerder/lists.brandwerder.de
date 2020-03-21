@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:40+0200\n"
-"PO-Revision-Date: 2020-01-24 22:21+0000\n"
-"Last-Translator: Lucas Rot <lucas.r065@yahoo.fr>\n"
+"PO-Revision-Date: 2020-03-23 03:48+0000\n"
+"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -183,20 +183,14 @@ msgid "Choose an existing Domain."
 msgstr "Choisissez un domaine existant."
 
 #: forms/list_forms.py:99
-#, fuzzy
-#| msgid "Enter a valid Mail Host"
 msgid "Choose a valid Mail Host"
 msgstr "Choisissez un serveur de courriel valide"
 
 #: forms/list_forms.py:102
-#, fuzzy
-#| msgid "List created"
 msgid "List Style"
 msgstr "Apparence de la liste"
 
 #: forms/list_forms.py:105
-#, fuzzy
-#| msgid "Please choose a list type."
 msgid "Choose a List Style."
 msgstr "Choisissez une apparence de liste."
 
