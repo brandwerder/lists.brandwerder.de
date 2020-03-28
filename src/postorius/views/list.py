@@ -50,7 +50,7 @@ from postorius.forms import (
     DMARCMitigationsForm, ListAddBanForm, ListAnonymousSubscribe,
     ListAutomaticResponsesForm, ListHeaderMatchForm, ListHeaderMatchFormset,
     ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
-    ListSubscribe, ListSubscriptionPolicyForm, MemberForm, MemberModeration,
+    ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
     MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import Domain, List, Mailman404Error, Style
@@ -867,7 +867,7 @@ SETTINGS_SECTION_NAMES = (
     ('digest', _('Digest')),
     ('message_acceptance', _('Message Acceptance')),
     ('archiving', _('Archiving')),
-    ('subscription_policy', _('Subscription Policy')),
+    ('subscription_policy', _('Member Policy')),
 )
 
 SETTINGS_FORMS = {
@@ -878,7 +878,7 @@ SETTINGS_FORMS = {
     'digest': DigestSettingsForm,
     'message_acceptance': MessageAcceptanceForm,
     'archiving': ArchiveSettingsForm,
-    'subscription_policy': ListSubscriptionPolicyForm,
+    'subscription_policy': MemberPolicyForm,
 }
 
 
