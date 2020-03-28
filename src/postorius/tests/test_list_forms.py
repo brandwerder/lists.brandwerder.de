@@ -25,7 +25,7 @@ from postorius.forms.list_forms import (
     DMARCMitigationsForm, ListAddBanForm, ListAnonymousSubscribe,
     ListAutomaticResponsesForm, ListHeaderMatchForm, ListIdentityForm,
     ListMassRemoval, ListMassSubscription, ListNew, ListSubscribe,
-    ListSubscriptionPolicyForm, MemberModeration, MessageAcceptanceForm)
+    MemberModeration, MemberPolicyForm, MessageAcceptanceForm)
 from postorius.tests.utils import create_mock_list
 
 
@@ -495,14 +495,17 @@ class TestArchiveSettingsForm(TestCase):
                          ['hyperkitty', 'pipermail'])
 
 
-class TestListSubscriptionPolicyForm(TestCase):
+class TestMemberPolicyForm(TestCase):
 
     def test_required_fields(self):
-        form = ListSubscriptionPolicyForm({}, mlist=None)
+        form = MemberPolicyForm({}, mlist=None)
         self.assertFalse(form.is_valid())
         self.assertTrue('subscription_policy' in form.errors)
-        form = ListSubscriptionPolicyForm(dict(subscription_policy='confirm'),
-                                          mlist=None)
+        self.assertTrue('unsubscription_policy' in form.errors)
+        form = MemberPolicyForm(
+            dict(subscription_policy='confirm',
+                 unsubscription_policy='confirm'),
+            mlist=None)
         self.assertTrue(form.is_valid())
 
 
