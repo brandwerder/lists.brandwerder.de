@@ -513,8 +513,9 @@ class DigestSettingsForm(ListSettingsForm):
         choices=DIGEST_FREQUENCY_CHOICES,
         widget=forms.RadioSelect,
         required=False,
-        label=_('Digest Frequency'),
-        help_text=_('At what frequency should Mailman send out digests?'),
+        label=_('Digest Volume Frequency'),
+        help_text=_('At what frequency should Mailman increment the digest '
+                    'volume number and reset the issue number?'),
         )
     digest_size_threshold = forms.DecimalField(
         label=_('Digest size threshold'),
