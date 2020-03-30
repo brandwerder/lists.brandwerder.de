@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
 "PO-Revision-Date: 2020-03-30 18:31+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Jaume Ortolà i Font <jaumeortola@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -309,10 +309,8 @@ msgstr ""
 "Especifica si aquesta llista ha de fer processament automàtic de rebots o no."
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "Llindar de la mida dels resums"
+msgstr "Llindar de la puntuació de rebots"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -1264,10 +1262,8 @@ msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
 #: forms/list_forms.py:946
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Prefix de assumpte"
+msgstr "NNTP inclou prefix d'assumpte "
 
 #: forms/list_forms.py:947
 msgid ""
