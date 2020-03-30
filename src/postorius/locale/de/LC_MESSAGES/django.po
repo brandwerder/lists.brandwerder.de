@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-03-30 15:04+0000\n"
+"PO-Revision-Date: 2020-03-31 02:17+0000\n"
 "Last-Translator: Paul <paulwiesinger+weblate@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
@@ -260,10 +260,8 @@ msgstr ""
 "durchlaufen, dann muss ein Moderator autorisieren."
 
 #: forms/list_forms.py:214
-#, fuzzy
-#| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
-msgstr "Mitgliedschaftsrichtlinie"
+msgstr "Abmelderichtlinie"
 
 #: forms/list_forms.py:216
 msgid ""
