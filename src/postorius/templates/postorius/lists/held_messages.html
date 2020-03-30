@@ -73,9 +73,9 @@
                 </h4>
               </div>
               <div class="modal-body">
-                  <div class="hidden" id="held-message-headers"></div>
+                  <div class="d-none" id="held-message-headers"></div>
                   <div id="held-message-content"></div>
-                  <div class="hidden" id="held-message-attachment-header">
+                  <div class="d-none" id="held-message-attachment-header">
                     <hr />
                     <h3>{% trans "Attachments" %}</h3>
                   </div>
@@ -102,7 +102,7 @@
                   </form>
                 </div>
                 <div class="col-md-6">
-                    <a href="#" target="_blank" id="message-source-btn" class="btn btn-default">Show Source</a>
+                    <a href="#" target="_blank" id="message-source-btn" class="btn btn-primary">Show Source</a>
                     <button type="button" class="btn btn-info pull-right" id="toggle-headers" data-toggle="button" aria-pressed="false" autocomplete="off">
                       {% trans 'Show Headers' %}
                     </button>
