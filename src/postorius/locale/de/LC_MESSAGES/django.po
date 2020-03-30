@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
 "PO-Revision-Date: 2020-03-31 02:17+0000\n"
-"Last-Translator: Paul <paulwiesinger+weblate@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -308,7 +308,7 @@ msgstr "Behandle Zurückgewiesene"
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
-msgstr ""
+msgstr "Gibt an ob diese Liste Bounce Meassages automatisch verarbeitet"
 
 #: forms/list_forms.py:234
 #, fuzzy
