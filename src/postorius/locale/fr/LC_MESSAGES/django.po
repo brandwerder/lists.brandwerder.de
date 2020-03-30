@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-03-23 03:48+0000\n"
-"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2020-03-31 02:17+0000\n"
+"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -2065,7 +2065,7 @@ msgstr "Accepter"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Subject"
-msgstr "Sujet"
+msgstr "Sujets"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Sender"
