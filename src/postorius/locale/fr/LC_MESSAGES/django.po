@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
 "PO-Revision-Date: 2020-03-31 22:55+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -267,14 +267,6 @@ msgid "Un-Subscription Policy"
 msgstr "Politique de désabonnement"
 
 #: forms/list_forms.py:216
-#, fuzzy
-#| msgid ""
-#| "Open: Subscriptions are added automatically\n"
-#| "Confirm: Subscribers need to confirm the subscription using an email sent "
-#| "to them\n"
-#| "Moderate: Moderators will have to authorize each subscription manually.\n"
-#| "Confirm then Moderate: First subscribers have to confirm, then a "
-#| "moderator needs to authorize."
 msgid ""
 "Open: Un-Subscriptions happen automatically\n"
 "Confirm: Subscribers need to confirm the un-subscription using an email sent "
@@ -283,13 +275,13 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Ouverte : Les inscriptions sont acceptées automatiquement\n"
-"Confirmer : Les souscripteurices doivent confirmer leur abonnement en "
-"utilisant un courriel qui leur est envoyé\n"
-"Modérée : Les modérateurices doivent autoriser chaque inscription "
-"manuellement.\n"
-"Confirmation puis modérée : D'abord les souscripteurices doivent confirmer, "
-"puis un⋅e modérateurice doit autoriser."
+"Ouverte : Les désbonnements se font automatiquement\n"
+"Confirmer : Les abonnés doivent confirmer leur désabonnement en utilisant un "
+"courriel qui leur est envoyé\n"
+"Modérée : Les modérateurs devront valider chaque désabonnement manuellement."
+"\n"
+"Confirmation puis modérée : Les abonnés doivent d'abord confirmer, puis un "
+"modérateur doit valider."
 
 #: forms/list_forms.py:225 forms/list_forms.py:251 forms/list_forms.py:260
 #: forms/list_forms.py:346 forms/list_forms.py:354 forms/list_forms.py:499
@@ -314,21 +306,18 @@ msgid "No"
 msgstr "Non"
 
 #: forms/list_forms.py:227
-#, fuzzy
-#| msgid "Bounces"
 msgid "Process Bounces"
-msgstr "Rebonds"
+msgstr "Traitement des rejets"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Détermine si cette liste doit ou non traiter automatiquement les rejets."
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "Seuil de la taille des condensés"
+msgstr "Seuil du score de rejet"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -336,10 +325,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Ceci est le score de rejet au-dessus duquel l'abonnement d'un membre sera "
+"automatiquement désactivé. Quand l'abonnement est réactivé, le score de "
+"rejet sera remis à zéro."
 
 #: forms/list_forms.py:242
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "L'information sur le rejet est caduque après"
 
 #: forms/list_forms.py:245
 msgid ""
@@ -347,12 +339,13 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Le nombre de jours après lequel une information de rejet d'un membre est "
+"considérée caduque. Il aucun nouveau rejet n'a été reçu dans l'intervalle, "
+"le score de rejet sera remis à zéro. Cette valeur doit être un entier. "
 
 #: forms/list_forms.py:253
-#, fuzzy
-#| msgid "Notify admin of membership changes"
 msgid "Notify owner on disable"
-msgstr "Notifier l'administrateur des changements d'abonnements"
+msgstr "Notifier le propriétaire des désactivations"
 
 #: forms/list_forms.py:255
 msgid ""
