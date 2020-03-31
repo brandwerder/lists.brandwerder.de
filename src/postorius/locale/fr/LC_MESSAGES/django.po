@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-03-31 20:13+0000\n"
-"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
+"PO-Revision-Date: 2020-03-31 22:55+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -263,10 +263,8 @@ msgstr ""
 "puis un⋅e modérateurice doit autoriser."
 
 #: forms/list_forms.py:214
-#, fuzzy
-#| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
-msgstr "Politique d'abonnement"
+msgstr "Politique de désabonnement"
 
 #: forms/list_forms.py:216
 #, fuzzy
