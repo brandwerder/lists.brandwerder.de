@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-03-31 22:55+0000\n"
-"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
+"PO-Revision-Date: 2020-04-01 12:55+0000\n"
+"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -353,31 +353,36 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Cette option active ou désactive la notification des propriétaires de la "
+"liste quand l'abonnement d'un·e membre est désactivé automatiquement à la "
+"suite du dépassement du seuil de rejets. "
 
 #: forms/list_forms.py:262
-#, fuzzy
-#| msgid "Confirm Remove Role"
 msgid "Notify owner on removal"
-msgstr "Confirmez le retrait du Rôle"
+msgstr "Notifier les propriétaires à la suppression"
 
 #: forms/list_forms.py:264
+#, fuzzy
 msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Cette option contrôle la notification des propriétaires de la liste quand un·"
+"e membre est désinscrit·e à la suite de l'exhaustion de leur notifications "
+"désactivées. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Intervalle entre les avertissement de désactivations à cause des rejets"
 
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "Nombre de jour entre les notifications de désactivation."
 
 #: forms/list_forms.py:278
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Avertissements quand une désactivation est provoquée par des rejets"
 
 #: forms/list_forms.py:281
 msgid ""
@@ -386,6 +391,10 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Le nombre de notifications qu'un·e membre à l'abonnement désactivé recevra "
+"avant que son adresse soit supprimée de la liste. Mettre à 0 pour supprimer "
+"immédiatement une adresse de la liste dès que le seuil de rejets est "
+"atteint. Cette valeur doit être un entier. "
 
 #: forms/list_forms.py:295
 msgid "Public archives"
@@ -425,6 +434,15 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Ceci est une liste d'adresses et d'expressions régulières (une par ligne) "
+"correspondant aux adresses acceptables dans les champs To: ou Cc: à la place "
+"de l'adresse de la liste quand l'option `require_explicit_destination' est "
+"activée. Les entrées de la liste sont soit des adresses e-mail soit des "
+"expressions régulières correspondant à des adresses e-mail. Les expressions "
+"régulières commencent par `^' et sont testées sur chaque adresse "
+"destinataire du message. La correspondance est effectuée à l'aide du module "
+"re.match() de Python, ce qui veut dire que les expressions régulières "
+"s'appliquent du début de la chaîne de caractères."
 
 #: forms/list_forms.py:348
 msgid "Require Explicit Destination"
@@ -503,30 +521,38 @@ msgid ""
 "against the list of explicitly accepted, held, rejected (bounced), and "
 "discarded addresses. If no match is found, then this action is taken."
 msgstr ""
+"Quand un message est reçu depuis un·e non-membre l'adresse d'expédition du "
+"message est vérifiée avec la liste des adresses explicitement autorisées, "
+"retenues, rejetées et ignorées. Si aucune correspondance n'est trouvée c'est "
+"cette action qui est utilisée."
 
 #: forms/list_forms.py:396
 msgid "Maximum message size"
-msgstr ""
+msgstr "Taille maximum d'un message"
 
 #: forms/list_forms.py:399
 msgid ""
 "The maximum allowed message size in KB. This can be used to prevent emails "
 "with large attachments. A size of 0 disables the check."
 msgstr ""
+"La taille maximum d'un message en Ko. Cela peut servir à éviter les e-mails "
+"avec de grosses pièces-jointes. La taille 0 désactive la vérification."
 
 #: forms/list_forms.py:404
 msgid "Maximum number of recipients"
-msgstr ""
+msgstr "Nombre maximum de destinataires"
 
 #: forms/list_forms.py:407
 msgid ""
 "The maximum number of recipients for a message. This can be used to prevent "
 "mass mailings from being accepted. A value of 0 disables the check."
 msgstr ""
+"Le nombre maximum de destinataires pour un message. Cela peut être utilisé "
+"pour éviter les envois massifs. La valeur 0 désactive la vérification."
 
 #: forms/list_forms.py:421
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Accepter ces non-membres"
 
 #: forms/list_forms.py:424
 msgid ""
@@ -540,7 +566,7 @@ msgstr ""
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Retenir ces non-membres"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -552,10 +578,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:446
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Reject these non-members"
-msgstr "Envoyer un message de bienvenue"
+msgstr "Rejeter ces non-membres"
 
 #: forms/list_forms.py:449
 msgid ""
@@ -567,10 +591,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:459
-#, fuzzy
-#| msgid "Respond and discard message"
 msgid "Discard these non-members"
-msgstr "Répondre et abandonner le message"
+msgstr "Ignorer ces non-membres"
 
 #: forms/list_forms.py:462
 msgid ""
