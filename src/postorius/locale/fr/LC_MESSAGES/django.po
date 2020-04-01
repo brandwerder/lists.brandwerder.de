@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-01 19:45+0000\n"
+"PO-Revision-Date: 2020-04-01 20:47+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -571,7 +571,7 @@ msgstr ""
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr "Suspendre ces non-abonnés"
+msgstr "Retenir ces non-abonnés"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -581,10 +581,17 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"Il s'agit d'une liste d'expressions rationnelles, une par ligne, "
+"correspondant à des adresses de non-abonnés, dont les envois sont "
+"automatiquement retenus. Les lignes sont des expressions rationnelles "
+"commençant par « ^ » et appliquées à l'adresse de l'expéditeur du message. "
+"Alors que des adresses qui ne sont pas des expressions rationnelles peuvent "
+"être employées ici, il est préférable d'ajouter ces adresses en tant que non-"
+"abonné et mettre la modération des non-abonnés à « Retenir »."
 
 #: forms/list_forms.py:446
 msgid "Reject these non-members"
-msgstr "Rejeter ces non-membres"
+msgstr "Rejeter ces non-abonnés"
 
 #: forms/list_forms.py:449
 msgid ""
@@ -594,10 +601,18 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"Il s'agit d'une liste d'expressions rationnelles, une par ligne, "
+"correspondant à des adresses de non-abonnés, dont les envois sont "
+"automatiquement rejetés avec notification à l'expéditeur. Les lignes sont "
+"des expressions rationnelles commençant par « ^ » et appliquées à l'adresse "
+"de l'expéditeur du message. Alors que des adresses qui ne sont pas des "
+"expressions rationnelles peuvent être employées ici, il est préférable "
+"d'ajouter ces adresses en tant que non-abonné et mettre la modération des "
+"non-abonnés à « Rejeter »."
 
 #: forms/list_forms.py:459
 msgid "Discard these non-members"
-msgstr "Ignorer ces non-membres"
+msgstr "Ignorer ces non-abonnés"
 
 #: forms/list_forms.py:462
 msgid ""
@@ -607,86 +622,85 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"Il s'agit d'une liste d'expressions rationnelles, une par ligne, "
+"correspondant à des adresses de non-abonnés, dont les envois sont "
+"automatiquement ignorés. Les lignes sont des expressions rationnelles "
+"commençant par « ^ » et appliquées à l'adresse de l'expéditeur du message. "
+"Alors que des adresses qui ne sont pas des expressions rationnelles peuvent "
+"être employées ici, il est préférable d'ajouter ces adresses en tant que non-"
+"abonné et mettre la modération des non-abonnés à « Ignorer »."
 
 #: forms/list_forms.py:484
 msgid "Invalid alias regexp: {}: {}"
-msgstr ""
+msgstr "Alias d'expression rationnelle incorrect : {} : {}"
 
 #: forms/list_forms.py:490
 msgid "Invalid alias email: {}"
-msgstr ""
+msgstr "Alias de courriel incorrect : {}"
 
 #: forms/list_forms.py:502
-#, fuzzy
-#| msgid "Mime Digests"
 msgid "Enable Digests"
-msgstr "Mime des Condensés"
+msgstr "Activer les condensés"
 
 #: forms/list_forms.py:503
 msgid "Should Mailman enable digests for this MailingList?"
-msgstr ""
+msgstr "Mailman doit-il activer les condensés pour cette liste de diffusion ?"
 
 #: forms/list_forms.py:509
 msgid "Send Digest Periodically"
-msgstr ""
+msgstr "Envoyer les condensés régulièrement"
 
 #: forms/list_forms.py:510
 msgid "Should Mailman send out digests periodically?"
-msgstr ""
+msgstr "Maiman doit-il expédier des condensés régulièrement ?"
 
 #: forms/list_forms.py:516
 msgid "Digest Volume Frequency"
-msgstr ""
+msgstr "Fréquence du volume des condensés"
 
 #: forms/list_forms.py:517
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
 msgstr ""
+"À quelle fréquence Mailman devrait il incrémenter le numéro du volume des "
+"condensés et remettre à zéro le numéro de publication ?"
 
 #: forms/list_forms.py:521
 msgid "Digest size threshold"
-msgstr "Seuil de la taille des condensés"
+msgstr "Seuil de taille des condensés"
 
 #: forms/list_forms.py:522
 msgid "How big in Kb should a digest be before it gets sent out?"
-msgstr ""
+msgstr "Quelle taille en Ko doit atteindre un condensé avant d'être expédié ?"
 
 #: forms/list_forms.py:531
 msgid "DMARC mitigation action"
-msgstr ""
+msgstr "Action d'atténuation de DMARC"
 
 #: forms/list_forms.py:535
-#, fuzzy
-#| msgid "Please choose a reply-to action."
 msgid "Please choose a DMARC mitigation action."
-msgstr "Veuillez choisir une action de réponse."
+msgstr "Veuillez choisir une action d'atténuation de DMARC."
 
 #: forms/list_forms.py:537
-#, fuzzy
-#| msgid "Notifications"
 msgid "No DMARC mitigations"
-msgstr "Notifications"
+msgstr "Aucune atténuation de DMARC"
 
 #: forms/list_forms.py:538
 msgid "Replace From: with list address"
-msgstr ""
+msgstr "Remplacer « From: » avec l'adresse de la liste"
 
 #: forms/list_forms.py:540
 msgid "Wrap the message in an outer message From: the list."
-msgstr ""
+msgstr "Inclure le message dans un message avec le « From: » de la liste."
 
 #: forms/list_forms.py:541
-#, fuzzy
-#| msgid "Send welcome message"
 msgid "Reject the message"
-msgstr "Envoyer un message de bienvenue"
+msgstr "Rejeter le message"
 
 #: forms/list_forms.py:542
-#, fuzzy
-#| msgid "Respond and discard message"
 msgid "Discard the message"
-msgstr "Répondre et abandonner le message"
+msgstr "Ignorer le message"
 
 #: forms/list_forms.py:544
 msgid ""
@@ -694,30 +708,39 @@ msgid ""
 "reject or quarantine or to all messages if DMARC Mitigate unconditionally is "
 "True."
 msgstr ""
+"L'action à appliquer aux messages avec un « From: » d'un domaine publiant "
+"une politique DMARC de rejet ou de quarantaine à tous les messages si "
+"l'atténuation inconditionnelle de DMARC est à « Vrai »."
 
 #: forms/list_forms.py:551
 msgid "DMARC Mitigate unconditionally"
-msgstr ""
+msgstr "Atténuation DMARC inconditionnelle"
 
 #: forms/list_forms.py:553
 msgid ""
 "If DMARC mitigation action is munge_from or wrap_message, should it apply to "
 "all messages regardless of the DMARC policy of the From: domain."
 msgstr ""
+"Si l'action d'atténation DMARC est « munge_from » ou « wrap_message », doit-"
+"elle s'appliquer à tous les messages indépendamment de la politique DMARC du "
+"domaine « From: »."
 
 #: forms/list_forms.py:557
 msgid "DMARC rejection notice"
-msgstr ""
+msgstr "Avertissement de rejet DMARC"
 
 #: forms/list_forms.py:561
 msgid ""
 "Text to replace the default reason in any rejection notice to be sent when "
 "DMARC mitigation action of reject applies."
 msgstr ""
+"Texte pour remplacer le motif par défaut de tout avertissement de rejet qui "
+"sera envoyé lorsqu'une action de rejet s'applique lors de l'atténuation "
+"DMARC."
 
 #: forms/list_forms.py:564
 msgid "DMARC wrapped message text"
-msgstr ""
+msgstr "Texte de message DMARC inclus"
 
 #: forms/list_forms.py:568
 msgid ""
@@ -725,10 +748,13 @@ msgid ""
 "message part in the wrapped message when DMARC mitigation action of wrap "
 "message applies."
 msgstr ""
+"Text qui sera ajouté comme un élément MIME text/plain distinct avant "
+"l'élément de contenant le message originel dans le message d'inclusion "
+"lorsque l'action d'atténuation de DMARC en incluant le message s'applique."
 
 #: forms/list_forms.py:574
 msgid "None"
-msgstr ""
+msgstr "Aucun"
 
 #: forms/list_forms.py:575
 msgid "Individual"
@@ -736,7 +762,7 @@ msgstr ""
 
 #: forms/list_forms.py:576
 msgid "Full"
-msgstr ""
+msgstr "Complet"
 
 #: forms/list_forms.py:580
 msgid ""
