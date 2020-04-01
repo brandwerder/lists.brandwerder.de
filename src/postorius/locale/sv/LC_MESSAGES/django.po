@@ -8,17 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:15-0700\n"
-"PO-Revision-Date: 2019-06-19 13:01+0000\n"
-"Last-Translator: Kristoffer Grundström <kristoffer.grundstrom1983@gmail."
-"com>\n"
+"PO-Revision-Date: 2020-03-31 20:13+0000\n"
+"Last-Translator: Andreas Johansson <andjo@lysator.liu.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/sv/>\n"
+"postorius/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -221,7 +220,7 @@ msgstr ""
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "Bekräfta"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
@@ -1520,7 +1519,7 @@ msgstr ""
 
 #: templates/postorius/base.html:73
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 #: templates/postorius/base.html:77
 msgid "Mailman settings"
@@ -1779,7 +1778,7 @@ msgstr ""
 
 #: templates/postorius/lists/confirm_remove_role.html:17
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #: templates/postorius/lists/confirm_removeall_subscribers.html:6
 msgid "Unsubscribe all members"

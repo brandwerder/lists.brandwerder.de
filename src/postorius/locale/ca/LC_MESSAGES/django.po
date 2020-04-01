@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-02-06 10:12+0000\n"
-"Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
+"PO-Revision-Date: 2020-03-30 18:31+0000\n"
+"Last-Translator: Jaume Ortolà i Font <jaumeortola@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ca/>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -257,20 +257,10 @@ msgstr ""
 "llavors un moderador ha d'autoritzar."
 
 #: forms/list_forms.py:214
-#, fuzzy
-#| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
-msgstr "Política de subscripció"
+msgstr "Política de cancel·lació de subscripció"
 
 #: forms/list_forms.py:216
-#, fuzzy
-#| msgid ""
-#| "Open: Subscriptions are added automatically\n"
-#| "Confirm: Subscribers need to confirm the subscription using an email sent "
-#| "to them\n"
-#| "Moderate: Moderators will have to authorize each subscription manually.\n"
-#| "Confirm then Moderate: First subscribers have to confirm, then a "
-#| "moderator needs to authorize."
 msgid ""
 "Open: Un-Subscriptions happen automatically\n"
 "Confirm: Subscribers need to confirm the un-subscription using an email sent "
@@ -279,10 +269,10 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Oberta: les subscripcions s'afegeixen automàticament\n"
-"Confirmada: els subscriptors han de confirmar la subscripció mitjançant un "
+"Oberta: les cancel·lacions es fan automàticament\n"
+"Confirmada: els subscriptors han de confirmar la cancel·lació mitjançant un "
 "correu electrònic enviat a ells\n"
-"Moderada: els moderadors hauran d'autoritzar cada subscripció manualment.\n"
+"Moderada: els moderadors hauran d'autoritzar cada cancel·lació manualment.\n"
 "Confirmació seguida de moderació: els primers subscriptors han de confirmar, "
 "llavors un moderador ha d'autoritzar."
 
@@ -310,18 +300,17 @@ msgstr "No"
 
 #: forms/list_forms.py:227
 msgid "Process Bounces"
-msgstr ""
+msgstr "Processa els rebots"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Especifica si aquesta llista ha de fer processament automàtic de rebots o no."
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "Llindar de la mida dels resums"
+msgstr "Llindar de la puntuació de rebots"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -1273,10 +1262,8 @@ msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
 #: forms/list_forms.py:946
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Prefix de assumpte"
+msgstr "NNTP inclou prefix d'assumpte "
 
 #: forms/list_forms.py:947
 msgid ""
