@@ -25,6 +25,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
+* Added links to Reply-To munging articles.  (Closes #401)
 
 1.3.2
 =====
