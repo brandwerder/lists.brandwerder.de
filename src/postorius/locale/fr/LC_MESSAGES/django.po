@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-01 12:55+0000\n"
-"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
+"PO-Revision-Date: 2020-04-01 19:45+0000\n"
+"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -362,15 +362,14 @@ msgid "Notify owner on removal"
 msgstr "Notifier les propriétaires à la suppression"
 
 #: forms/list_forms.py:264
-#, fuzzy
 msgid ""
 "This option controls whether or not the list owner is notified when a member "
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
-"Cette option contrôle la notification des propriétaires de la liste quand un·"
-"e membre est désinscrit·e à la suite de l'exhaustion de leur notifications "
-"désactivées. "
+"Cette option contrôle la notification du ou des propriétaires de la liste "
+"quand un membre est désinscrit après que leurs notifications de "
+"désactivation ont été épuisées. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
@@ -506,10 +505,8 @@ msgstr ""
 "accepter le message."
 
 #: forms/list_forms.py:384
-#, fuzzy
-#| msgid "Default action to take when a non-member posts to thelist:"
 msgid "Default action to take when a non-member posts to the list"
-msgstr "Action par défaut à prendre lorsqu'un non-membre envoie sur la liste :"
+msgstr "Action à effectuer par défaut lorsqu'un non-abonné envoie vers la liste"
 
 #: forms/list_forms.py:386
 msgid "Please choose a default non-member action."
@@ -563,10 +560,18 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"Il s'agit d'une liste d'expressions rationnelles, une par ligne, "
+"correspondant à des adresses qui sont autorisées à envoyer vers cette liste "
+"de diffusion sans être abonné à la liste. Les lignes sont des expressions "
+"rationnelles commençant par « ^ » et appliquées à l'adresse de l'expéditeur "
+"du message. Alors que des adresses qui ne sont pas des expressions "
+"rationnelles peuvent être employées ici, il est préférable d'ajouter ces "
+"adresses en tant que non-abonné et mettre la modération des non-abonnés à « "
+"Traitement par défaut »."
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr "Retenir ces non-membres"
+msgstr "Suspendre ces non-abonnés"
 
 #: forms/list_forms.py:437
 msgid ""
