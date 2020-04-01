@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:15-0700\n"
-"PO-Revision-Date: 2020-03-31 02:17+0000\n"
+"PO-Revision-Date: 2020-04-01 03:42+0000\n"
 "Last-Translator: Derek Zhou <derek@3qin.us>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hans/>\n"
@@ -1826,7 +1826,7 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Subject"
-msgstr ""
+msgstr "主题"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Sender"
@@ -2109,7 +2109,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "订阅"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
