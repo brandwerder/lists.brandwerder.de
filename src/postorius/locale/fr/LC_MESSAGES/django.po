@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-01 20:47+0000\n"
+"PO-Revision-Date: 2020-04-02 21:59+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -758,7 +758,7 @@ msgstr "Aucun"
 
 #: forms/list_forms.py:575
 msgid "Individual"
-msgstr ""
+msgstr "Individuelle"
 
 #: forms/list_forms.py:576
 msgid "Full"
@@ -775,13 +775,22 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    Aucun : aucune personnalisation.\n"
+"\n"
+"    Individuel : chacun reçoit une unique copie du message et il y "
+"a           quelques substitutions supplémentaires de variables, mais aucune "
+"entête n'est modifiée.\n"
+"\n"
+"    Complet : tout de la personnalisation « individuelle » ainsi "
+"que           la modification de l'entête du destinataire. "
 
 #: forms/list_forms.py:590 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:100
 #: templates/postorius/lists/pending_confirmations.html:28
 #: templates/postorius/lists/subscription_requests.html:30
 msgid "Discard"
-msgstr "Jeter"
+msgstr "Ignorer"
 
 #: forms/list_forms.py:591 templates/postorius/lists/held_messages.html:28
 #: templates/postorius/lists/held_messages.html:99
@@ -791,11 +800,11 @@ msgstr "Rejeter"
 
 #: forms/list_forms.py:592
 msgid "Forward"
-msgstr ""
+msgstr "Faire suivre"
 
 #: forms/list_forms.py:593
 msgid "Preserve"
-msgstr ""
+msgstr "Conserver"
 
 #: forms/list_forms.py:596
 msgid ""
@@ -806,26 +815,32 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"Action à entreprendre sur les messages qui n'ont pas de contenu\n"
+"après filtrage.\n"
+" Ignorer = ignorer silencieusement le message.\n"
+" Rejeter = ignorer le message et notifier l'expéditeur.\n"
+" Faire suivre = faire suivre le message au(x) propriétaire(s) de la liste.\n"
+" Conserver = enregistrer le message dans qfiles/bad.\n"
 
 #: forms/list_forms.py:613
 msgid "Personalize"
-msgstr ""
+msgstr "Personnaliser"
 
 #: forms/list_forms.py:619
 msgid "Filter content"
-msgstr "Filtrer le contenu"
+msgstr "Contenus à filtrer"
 
 #: forms/list_forms.py:620
 msgid ""
 "Should Mailman filter the content of list traffic according to the settings "
 "below?"
 msgstr ""
+"Mailman doit-il filtrer le contenu du trafic d'une liste selon les "
+"paramètres ci-dessous ?"
 
 #: forms/list_forms.py:623
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter types"
-msgstr "Filtrer le contenu"
+msgstr "Types à flitrer"
 
 #: forms/list_forms.py:626
 msgid ""
@@ -833,20 +848,21 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"MimeTypes à filtrer dans les messages entrants. Une liste de types communs "
+"peut être trouvée <a href=\"https://developer.mozilla.org/fr/docs/Web/HTTP/"
+"Basics_of_HTTP/MIME_types/Common_types\">ici </a>"
 
 #: forms/list_forms.py:631
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter extensions"
-msgstr "Filtrer le contenu"
+msgstr "Extensions à filtrer"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "Extensions à filtrer dans les messages entrants."
 
 #: forms/list_forms.py:637
 msgid "Pass types"
-msgstr ""
+msgstr "Types à laisser passer"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -854,25 +870,28 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"MimeTypes a laisser passer dans les messages entrants. Une liste de types "
+"communs peut être trouvée <a href=\"https://developer.mozilla.org/fr/docs/"
+"Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">ici </a>"
 
 #: forms/list_forms.py:645
-#, fuzzy
-#| msgid "Moderators"
 msgid "Pass extensions"
-msgstr "Modérateurs"
+msgstr "Extensions à laisser passer"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "Extension à laisser passer dans les messages entrants."
 
 #: forms/list_forms.py:654
 msgid "Collapse alternatives"
-msgstr "Réduire les alternatives"
+msgstr "Agréger les alternatives"
 
 #: forms/list_forms.py:655
 msgid ""
 "Should Mailman collapse multipart/alternative to its first part content?"
 msgstr ""
+"Mailman doit-il agréger les multipart/alternative à leur premier type de "
+"contenu ?"
 
 #: forms/list_forms.py:661
 #, fuzzy
@@ -951,9 +970,9 @@ msgid ""
 "This option allows admins to set an explicit Reply-to address. It is only "
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
-"Cette option permet aux administrateurs de spécifier une adresse explicite "
-"Reply-to. C'est uniquement utilisé si reply-to est positionné pour utiliser "
-"un en-tête explicite."
+"Cette option permet aux administrateurs de spécifier une adresse Reply-to "
+"explicite. C'est utilisé uniquement si reply-to est positionné pour utiliser "
+"un en-tête explicite"
 
 #: forms/list_forms.py:718
 msgid ""
@@ -1015,7 +1034,7 @@ msgstr ""
 
 #: forms/list_forms.py:761
 msgid "Pipeline"
-msgstr "Pipeline"
+msgstr "Conduite"
 
 #: forms/list_forms.py:766
 msgid "Type of pipeline you want to use for this mailing list"
@@ -1260,10 +1279,8 @@ msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
 #: forms/list_forms.py:946
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Préfixe du Sujet"
+msgstr "Préfixe de l'objet à inclure en NNTP "
 
 #: forms/list_forms.py:947
 msgid ""
@@ -2107,7 +2124,7 @@ msgstr "Accepter"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Subject"
-msgstr "Sujets"
+msgstr "Objet"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Sender"
