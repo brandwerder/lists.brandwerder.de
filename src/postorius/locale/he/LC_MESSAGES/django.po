@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-03-30 15:04+0000\n"
+"PO-Revision-Date: 2020-04-02 21:59+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -303,10 +303,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "סף גודל תקצירים"
+msgstr "סף ניקוד החזרה"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -314,10 +312,12 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"זה ניקוד ההחזרה שיוביל להשבתת מינוי של חבר. כאשר המינוי יופעל מחדש, ניקוד "
+"ההחזרה יאופס."
 
 #: forms/list_forms.py:242
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "פרטי החזרה יפוגו לאחר"
 
 #: forms/list_forms.py:245
 msgid ""
@@ -325,6 +325,8 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"מספר הימים שלאחריו פרטי ההחזרה של החבר נחשבים למיושנים. אם לא התקבלו החזרות "
+"חדשות בזמן הזה, ניקוד ההחזרה מאופס. ערך זה חייב להיות מספר שלם וחיובי. "
 
 #: forms/list_forms.py:253
 msgid "Notify owner on disable"
@@ -336,6 +338,8 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"אפשרות זו שולטת האם בעלי הרשימה יקבלו הודעה או לא כאשר מינוי של חבר מושבת "
+"אוטומטית עקב הגעה לסף החזרה. "
 
 #: forms/list_forms.py:262
 msgid "Notify owner on removal"
