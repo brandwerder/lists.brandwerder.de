@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-02 21:59+0000\n"
+"PO-Revision-Date: 2020-04-03 21:15+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -894,10 +894,8 @@ msgstr ""
 "contenu ?"
 
 #: forms/list_forms.py:661
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter Action"
-msgstr "Filtrer le contenu"
+msgstr "Action de filtrage"
 
 #: forms/list_forms.py:667
 msgid "Convert html to plaintext"
@@ -908,6 +906,8 @@ msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
+"Mailman doit-il  convertir les éléments text/html en texte brut ? Cette "
+"conversion se déroule après que les pièces jointes MIME ont été extirpées."
 
 #: forms/list_forms.py:675
 msgid "Anonymous list"
@@ -918,10 +918,12 @@ msgid ""
 "Hide the sender of a message, replacing it with the list address (Removes "
 "From, Sender and Reply-To fields)"
 msgstr ""
+"Cacher l'expéditeur d'un message, en le remplaçant par l'adresse de la liste "
+"(supprime les champs From, Sender et Reply-To)"
 
 #: forms/list_forms.py:683
 msgid "Include RFC2369 headers"
-msgstr "Inclure les en-têtes RFC2369"
+msgstr "Inclure les entêtes RFC2369"
 
 #: forms/list_forms.py:685
 msgid ""
@@ -936,22 +938,22 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
-"Oui est hautement recommandé. La RFC 2369 définit un ensemble d'en-têtes "
-"List-* qui sont normalement ajoutés à chaque message envoyé aux membres de "
-"la liste. Ceci aide grandement les utilisateurs qui se servent de logiciels "
-"de messagerie conformes aux standards. Ils devraient normalement toujours "
-"êtres activés. Cependant, tous les logiciels de messagerie ne sont pas "
-"encore conformes au standard et si vous avez un grand nombre d'inscrts qui "
-"utilisent de tels logiciels, ils pourraient être dérangés par ces en-têtes. "
-"Vous devriez d'abord essayer d'éduquer vos inscrits vis-à-vis de l'existance "
-"de ces en-têtes et comment ils peuvent les cacher dans leurs logiciels de "
-"messagerie. En dernier recours, vous pouvez désactiver ces en-têtes mais "
-"ceci n'est pas recommandé (et, en fait, votre capacité à désactiver ces en-"
-"têtes pourrait disparaître)."
+"Oui est hautement recommandé. La RFC 2369 définit un ensemble d'entêtes "
+"List-* qui sont normalement ajoutés à chaque message envoyé aux abonnés de "
+"la liste. Elles aident grandement les utilisateurs qui se servent de "
+"logiciels de messagerie conformes aux standards. Ils devraient normalement "
+"toujours êtres activés. Cependant, tous les logiciels de messagerie ne sont "
+"pas encore conformes aux standards et si vous avez un grand nombre d'abonnés "
+"qui utilisent de tels logiciels de messagerie non-conformes, ils pourraient "
+"être embarrassés par ces entêtes. Vous devriez d'abord essayer d'instruire "
+"vos abonnés de la raison de l'existence de ces entêtes et comment les cacher "
+"dans leurs logiciels de messagerie. En dernier recours, vous pouvez "
+"désactiver ces entêtes mais ceci n'est pas recommandé (et, de fait, votre "
+"capacité de désactiver ces entêtes pourrait finir par disparaître)."
 
 #: forms/list_forms.py:701
 msgid "Include the list post header"
-msgstr "Inclure l'en-tête d'envoi de la liste"
+msgstr "Inclure l'entête d'envoi de la liste"
 
 #: forms/list_forms.py:703
 msgid ""
@@ -959,7 +961,7 @@ msgid ""
 "List-Post header because posting to the list is discouraged."
 msgstr ""
 "Ceci peut être positionné à Non pour les listes d'annonces qui ne souhaitent "
-"pas inclure l'en-tête List-Post car l'envoi sur celle-ci est découragé."
+"pas inclure l'entête List-Post car l'expédition sur la liste est découragée."
 
 #: forms/list_forms.py:707
 msgid "Explicit reply-to address"
@@ -971,8 +973,8 @@ msgid ""
 "used if the reply-to is set to use an explicitly set header"
 msgstr ""
 "Cette option permet aux administrateurs de spécifier une adresse Reply-to "
-"explicite. C'est utilisé uniquement si reply-to est positionné pour utiliser "
-"un en-tête explicite"
+"explicite. C'est utilisé seulement si reply-to est positionné pour utiliser "
+"un jeu d'entêtes explicite"
 
 #: forms/list_forms.py:718
 msgid ""
@@ -980,9 +982,9 @@ msgid ""
 "stripped? If so, this will be done regardless of whether an explict Reply-"
 "To: header is added by Mailman or not."
 msgstr ""
-"Est-ce que les en-têtes Reply-To: trouvés dans les messages originaux "
-"devraient être retirés ? Si tel est le cas, ceci sera fait même si Mailman "
-"ajoute un en-tête explicite Reply-To: ou non."
+"Est-ce que les entêtes Reply-To: trouvées dans le message original doivent "
+"être extirpées ? Si tel est le cas, ceci sera fait indépendamment de l'ajout "
+"ou non d'une entête Reply-To: explicite par Mailman."
 
 #: forms/list_forms.py:722 forms/list_forms.py:729
 msgid "Reply goes to list"
@@ -998,13 +1000,11 @@ msgstr "Pas d'altération"
 
 #: forms/list_forms.py:730
 msgid "Explicit Reply-to header set"
-msgstr "En-tête explicite Reply-to défini"
+msgstr "Entête explicite Reply-to défini"
 
 #: forms/list_forms.py:731
-#, fuzzy
-#| msgid "Explicit reply-to address"
 msgid "Explicit Reply-to set; no Cc added"
-msgstr "Adresse explicite de réponse (reply-to)"
+msgstr "Reply-to explicite défini ; aucun Cc ajouté"
 
 #: forms/list_forms.py:733
 msgid ""
@@ -1039,10 +1039,11 @@ msgstr "Conduite"
 #: forms/list_forms.py:766
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr ""
+"Type de conduite que vous désirez utiliser pour cette liste de diffusion"
 
 #: forms/list_forms.py:774
 msgid "Respond and continue processing"
-msgstr "Répondre et continuer la traitement"
+msgstr "Répondre et continuer le traitement"
 
 #: forms/list_forms.py:775
 msgid "Respond and discard message"
@@ -1060,16 +1061,18 @@ msgstr "Réponse automatique au propriétaire de la liste"
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
+"Mailman doit-il envoyer une réponse automatique aux messages envoyés à "
+"l'adresse -owner du/des propriétaire(s) de la liste ?"
 
 #: forms/list_forms.py:784
 msgid "Autoresponse owner text"
 msgstr "Text d'autoréponse au propriétaire"
 
 #: forms/list_forms.py:787
-#, fuzzy
-#| msgid "Autorespond to list owner"
 msgid "Auto-response text to send to -owner emails."
-msgstr "Réponse automatique au propriétaire de la liste"
+msgstr ""
+"Texte de réponse automatique à envoyer aux courriels pour -owner, "
+"propriétaire(s) de la liste."
 
 #: forms/list_forms.py:791
 msgid "Autorespond postings"
@@ -1078,16 +1081,15 @@ msgstr "Réponses automatiques"
 #: forms/list_forms.py:792
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
+"Mailman doit-il envoyer une réponse automatique aux expéditeurs à la liste ?"
 
 #: forms/list_forms.py:795
 msgid "Autoresponse postings text"
 msgstr "Texte de réponse automatique"
 
 #: forms/list_forms.py:798
-#, fuzzy
-#| msgid "Autorespond to list owner"
 msgid "Auto-response text to send to mailing list posters."
-msgstr "Réponse automatique au propriétaire de la liste"
+msgstr "Texte de réponse automatique à envoyer aux expéditeurs à la liste."
 
 #: forms/list_forms.py:802
 msgid "Autorespond requests"
@@ -1105,10 +1107,8 @@ msgid "Autoresponse request text"
 msgstr "Texte de réponse automatique aux requêtes"
 
 #: forms/list_forms.py:812
-#, fuzzy
-#| msgid "Autoresponse request text"
 msgid "Auto-response text to send to -request emails."
-msgstr "Texte de réponse automatique aux requêtes"
+msgstr "Texte de réponse automatique à envoyer aux message à -request."
 
 #: forms/list_forms.py:814
 msgid "Autoresponse grace period"
@@ -1122,10 +1122,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:824
-#, fuzzy
-#| msgid "Notify admin of membership changes"
 msgid "Notify users of held messages"
-msgstr "Notifier l'administrateur des changements d'abonnements"
+msgstr "Notifier les utilisateurs des messages retenus"
 
 #: forms/list_forms.py:826
 msgid ""
@@ -1168,16 +1166,16 @@ msgstr "Notifier l'administrateur des changements d'abonnements"
 #: forms/list_forms.py:857
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
+"L'administrateur doit-il recevoir les notifications d'abonnement et de "
+"désabonnement ?"
 
 #: forms/list_forms.py:862
-#, fuzzy
-#| msgid "Moderate"
 msgid "Not Moderated"
-msgstr "Modérée"
+msgstr "Non-modérée"
 
 #: forms/list_forms.py:863
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "Modérée mais ouverte à toutes les publications"
 
 #: forms/list_forms.py:864
 #, fuzzy
