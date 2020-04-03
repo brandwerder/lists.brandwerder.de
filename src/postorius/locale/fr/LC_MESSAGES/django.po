@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-03 21:15+0000\n"
+"PO-Revision-Date: 2020-04-03 22:02+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -1185,11 +1185,11 @@ msgstr "Modérée"
 
 #: forms/list_forms.py:875
 msgid "Show list on index page"
-msgstr ""
+msgstr "Afficher la liste sur la page d'index"
 
 #: forms/list_forms.py:876
 msgid "Choose whether to include this list on the list of all lists"
-msgstr ""
+msgstr "Choisir d'inclure ou non cette liste dans la liste de toutes les listes"
 
 #: forms/list_forms.py:882
 msgid ""
@@ -1199,14 +1199,12 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:888
-#, fuzzy
-#| msgid "Formatting"
 msgid "Information"
-msgstr "Formatage"
+msgstr "Information"
 
 #: forms/list_forms.py:889
 msgid "A longer description of this mailing list."
-msgstr ""
+msgstr "Une description plus longue de cette liste de diffusion."
 
 #: forms/list_forms.py:893
 msgid "Display name"
@@ -1218,27 +1216,24 @@ msgstr ""
 
 #: forms/list_forms.py:898
 msgid "Subject prefix"
-msgstr "Préfixe du Sujet"
+msgstr "Préfixe de l'objet"
 
 #: forms/list_forms.py:903
-#, fuzzy
-#| msgid "Default/Preferred language"
 msgid "Preferred Language"
-msgstr "Langue par défaut/préférée"
+msgstr "Langue préférée"
 
 #: forms/list_forms.py:909
 msgid "Members List Visibility"
-msgstr ""
+msgstr "Visibilité des abonnés"
 
 #: forms/list_forms.py:913
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr ""
+"Qui a le droit de voir la liste des abonnés pour cette liste de diffusion ?"
 
 #: forms/list_forms.py:918
-#, fuzzy
-#| msgid "Gateways"
 msgid "Gateway to mail"
-msgstr "Passerelles"
+msgstr "Passerelle pour les courriels"
 
 #: forms/list_forms.py:919
 msgid ""
@@ -1267,10 +1262,8 @@ msgid "The name of the linked newsgroup."
 msgstr ""
 
 #: forms/list_forms.py:936
-#, fuzzy
-#| msgid "Generic nonmember action"
 msgid "Newsgroup moderation"
-msgstr "Action générique pour les non-membres"
+msgstr "Modération des groupes de nouvelles"
 
 #: forms/list_forms.py:940
 msgid "The moderation policy for the linked newsgroup, if there is one."
