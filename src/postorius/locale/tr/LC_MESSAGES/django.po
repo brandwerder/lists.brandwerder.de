@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:15-0700\n"
-"PO-Revision-Date: 2019-12-03 18:06+0000\n"
+"PO-Revision-Date: 2020-04-04 07:58+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -258,20 +258,10 @@ msgstr ""
 "bir moderatörün yetkilendirmesi gerekir."
 
 #: forms/list_forms.py:214
-#, fuzzy
-#| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
-msgstr "Abonelik Politikası"
+msgstr "Abonelik İptal Politikası"
 
 #: forms/list_forms.py:216
-#, fuzzy
-#| msgid ""
-#| "Open: Subscriptions are added automatically\n"
-#| "Confirm: Subscribers need to confirm the subscription using an email sent "
-#| "to them\n"
-#| "Moderate: Moderators will have to authorize each subscription manually.\n"
-#| "Confirm then Moderate: First subscribers have to confirm, then a "
-#| "moderator needs to authorize."
 msgid ""
 "Open: Un-Subscriptions happen automatically\n"
 "Confirm: Subscribers need to confirm the un-subscription using an email sent "
@@ -280,11 +270,11 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"Açık: Abonelikler otomatik olarak eklenir\n"
-"Onayla: Abonelerin, kendisine gönderilen bir e-postayı kullanarak aboneliği "
-"onaylamaları gerekir\n"
-"Denetle: Moderatörlerin her aboneliği manuel olarak yetkilendirmeleri "
-"gerekir.\n"
+"Açık: Abonelik iptalleri otomatik olarak gerçekleşir\n"
+"Onayla: Abonelerin, kendisine gönderilen bir e-postayı kullanarak abonelik "
+"iptalini onaylamaları gerekir\n"
+"Denetle: Moderatörlerin her abonelik iptalini manuel olarak "
+"yetkilendirmeleri gerekir.\n"
 "Onayla, ardından denetle: İlk önce abonelerin onaylaması gerekir, ardından "
 "bir moderatörün yetkilendirmesi gerekir."
 
@@ -320,10 +310,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "Özet boyutu eşiği"
+msgstr "Geri dönme puanı eşiği"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -344,10 +332,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:253
-#, fuzzy
-#| msgid "Notify users of held messages"
 msgid "Notify owner on disable"
-msgstr "Bekletilen mesajlardan kullanıcıları haberdar et"
+msgstr "Devre dışı bırakıldığında sahibine bildir"
 
 #: forms/list_forms.py:255
 msgid ""
@@ -357,10 +343,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:262
-#, fuzzy
-#| msgid "Confirm domain removal"
 msgid "Notify owner on removal"
-msgstr "Alan adı kaldırmayı onayla"
+msgstr "Kaldırma işleminde sahibine bildir"
 
 #: forms/list_forms.py:264
 msgid ""
@@ -566,10 +550,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:446
-#, fuzzy
-#| msgid "Reject the message"
 msgid "Reject these non-members"
-msgstr "Mesajı reddet"
+msgstr "Bu üye olmayanları reddet"
 
 #: forms/list_forms.py:449
 msgid ""
@@ -581,10 +563,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:459
-#, fuzzy
-#| msgid "Discard the message"
 msgid "Discard these non-members"
-msgstr "Mesajı at"
+msgstr "Bu üye olmayanları at"
 
 #: forms/list_forms.py:462
 msgid ""
@@ -620,18 +600,16 @@ msgid "Should Mailman send out digests periodically?"
 msgstr "Mailman özetleri düzenli aralıklarla göndermeli mi?"
 
 #: forms/list_forms.py:516
-#, fuzzy
-#| msgid "Digest Frequency"
 msgid "Digest Volume Frequency"
-msgstr "Özet Sıklığı"
+msgstr "Özet Cilt Sıklığı"
 
 #: forms/list_forms.py:517
-#, fuzzy
-#| msgid "At what frequency should Mailman send out digests?"
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
-msgstr "Mailman özetleri hangi sıklıkta göndermeli?"
+msgstr ""
+"Mailman özet cilt numarasını hangi sıklıkta artırmalı ve sayı numarasını "
+"sıfırlamalıdır?"
 
 #: forms/list_forms.py:521
 msgid "Digest size threshold"
@@ -788,10 +766,8 @@ msgstr ""
 "midir?"
 
 #: forms/list_forms.py:623
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter types"
-msgstr "İçeriği filtrele"
+msgstr "Filtrelenecek türler"
 
 #: forms/list_forms.py:626
 msgid ""
@@ -801,10 +777,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:631
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter extensions"
-msgstr "İçeriği filtrele"
+msgstr "Filtrelenecek uzantılar"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
@@ -822,10 +796,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:645
-#, fuzzy
-#| msgid "Mass operations"
 msgid "Pass extensions"
-msgstr "Toplu operasyonlar"
+msgstr "İzin verilecek uzantılar"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
@@ -842,10 +814,8 @@ msgstr ""
 "Mailman, çok kısımlı/alternatifi ilk kısmın içeriğine göre daraltmalı mıdır?"
 
 #: forms/list_forms.py:661
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter Action"
-msgstr "İçeriği filtrele"
+msgstr "Filtre Eylemi"
 
 #: forms/list_forms.py:667
 msgid "Convert html to plaintext"
@@ -1159,20 +1129,16 @@ msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr "Yönetici abone olma ve abonelikleri iptal etme bildirimleri almalı mı?"
 
 #: forms/list_forms.py:862
-#, fuzzy
-#| msgid "Moderate"
 msgid "Not Moderated"
-msgstr "Denetle"
+msgstr "Denetlenmiyor"
 
 #: forms/list_forms.py:863
 msgid "Moderated but allows for open posting"
 msgstr ""
 
 #: forms/list_forms.py:864
-#, fuzzy
-#| msgid "Moderate"
 msgid "Moderated"
-msgstr "Denetle"
+msgstr "Denetleniyor"
 
 #: forms/list_forms.py:875
 msgid "Show list on index page"
@@ -1253,20 +1219,16 @@ msgid "The name of the linked newsgroup."
 msgstr ""
 
 #: forms/list_forms.py:936
-#, fuzzy
-#| msgid "Set member moderation"
 msgid "Newsgroup moderation"
-msgstr "Üye denetimini ayarla"
+msgstr "Haber grubu yönetimi"
 
 #: forms/list_forms.py:940
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
 #: forms/list_forms.py:946
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Konu öneki"
+msgstr "NNTP Include konu ön eki "
 
 #: forms/list_forms.py:947
 msgid ""
@@ -1297,10 +1259,8 @@ msgstr ""
 "Görünen adı adresle ilişkilendirmek için son üçü kullanın\n"
 
 #: forms/list_forms.py:975
-#, fuzzy
-#| msgid "Confirm"
 msgid "Pre confirm"
-msgstr "Onayla"
+msgstr "Ön onay"
 
 #: forms/list_forms.py:979
 msgid "If checked, users will not have to confirm their subscription."
@@ -2829,10 +2789,8 @@ msgid "Archiving"
 msgstr "Arşivleme"
 
 #: views/list.py:870
-#, fuzzy
-#| msgid "Member options"
 msgid "Member Policy"
-msgstr "Üye seçenekleri"
+msgstr "Üye Politikası"
 
 #: views/list.py:919
 msgid "The settings have been updated."
