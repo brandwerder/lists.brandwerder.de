@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-03 22:02+0000\n"
+"PO-Revision-Date: 2020-04-04 07:58+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -996,15 +996,15 @@ msgstr "Veuillez choisir une action de réponse."
 
 #: forms/list_forms.py:728
 msgid "No Munging"
-msgstr "Pas d'altération"
+msgstr "Aucune altération"
 
 #: forms/list_forms.py:730
 msgid "Explicit Reply-to header set"
-msgstr "Entête explicite Reply-to défini"
+msgstr "Entête explicite Reply-to définie"
 
 #: forms/list_forms.py:731
 msgid "Explicit Reply-to set; no Cc added"
-msgstr "Reply-to explicite défini ; aucun Cc ajouté"
+msgstr "Reply-to explicite défini ; aucun « Cc » d'ajouté"
 
 #: forms/list_forms.py:733
 msgid ""
@@ -1031,15 +1031,43 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
+"Vers quoi les réponses aux messages de la listes sont-elles dirigées ? « "
+"Aucune altération » est fortement recommandé pour la plupart des listes de "
+"diffusion. \n"
+"Cette option gère ce que Mailman fait à l'entête Reply-To: dans les messages "
+"passant par cette liste de diffusion. Quand positionnée à « Aucun "
+"altrération », aucune entête Reply-To: n'est ajoutée par Mailman et si une "
+"est présente dans le message original, elle n'est pas ôtée. Positionner "
+"cette valeur soit à  « Répondre à la liste », « Réponse explicite », ou « "
+"Répondre seulement » conduit Mailman à insérer une entête Reply-To: "
+"explicite dans tous les messages, remplaçant l'entête dans le message "
+"originel si nécessaire (« Réponse explicite » insère la valeur de "
+"reply_to_address). « Reply-to explicite défini ; aucun \"Cc\" d'ajouté » est "
+"utilie pour les listes réservées aux annonces pour lesquelles vous voulez "
+"éviter que quelqu'un réponde à l'adresse de la liste. Il y a de nombreuses "
+"raisons de ne pas introduire ou remplacer l'entête Reply-To:. L'une d'elles "
+"est que certains expéditeurs dépendent de leur propre configuration de Reply-"
+"To: pour communiquer leur adresse valide de retour. Une autre est que "
+"modifier Reply-To: rend beaucoup plus difficile d'envoyer des réponses "
+"privées. Voir « l'altération du Reply-To considérée comme dommageable » pour "
+"une discussion générale de cette question. Voir « l'altération de Reply-To "
+"considérée comme recommendable » pour une opinion différente. Certaines "
+"listes de diffuion ont des droits d'expédition restreints, avec une liste "
+"parallèle dédiée aux discussions. Des exemples sont les listes de « "
+"correctifs » ou « dépôt de code » où les changements logiciels sont expédiés "
+"par un système de gestion de versions mais pour lesquelles les discussions "
+"sur les changements se déroulent sur la liste de diffusion des développeurs. "
+"Pour gérer ces types de listes de diffusion, choisissez « Réponse explicite »"
+" et positionnez l'adresse Reply-To: pour diriger vers la liste parallèle."
 
 #: forms/list_forms.py:761
 msgid "Pipeline"
-msgstr "Conduite"
+msgstr "Traitement"
 
 #: forms/list_forms.py:766
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr ""
-"Type de conduite que vous désirez utiliser pour cette liste de diffusion"
+"Type de traitement que vous désirez utiliser pour cette liste de diffusion"
 
 #: forms/list_forms.py:774
 msgid "Respond and continue processing"
@@ -1047,11 +1075,11 @@ msgstr "Répondre et continuer le traitement"
 
 #: forms/list_forms.py:775
 msgid "Respond and discard message"
-msgstr "Répondre et abandonner le message"
+msgstr "Répondre et éliminer le message"
 
 #: forms/list_forms.py:776
 msgid "No automatic response"
-msgstr "Pas de réponse automatique"
+msgstr "Aucune réponse automatique"
 
 #: forms/list_forms.py:780
 msgid "Autorespond to list owner"
@@ -1066,13 +1094,11 @@ msgstr ""
 
 #: forms/list_forms.py:784
 msgid "Autoresponse owner text"
-msgstr "Text d'autoréponse au propriétaire"
+msgstr "Texte de réponse automatique au propriétaire(s)"
 
 #: forms/list_forms.py:787
 msgid "Auto-response text to send to -owner emails."
-msgstr ""
-"Texte de réponse automatique à envoyer aux courriels pour -owner, "
-"propriétaire(s) de la liste."
+msgstr "Texte de réponse automatique à envoyer aux courriels destinés à -owner."
 
 #: forms/list_forms.py:791
 msgid "Autorespond postings"
@@ -1085,7 +1111,7 @@ msgstr ""
 
 #: forms/list_forms.py:795
 msgid "Autoresponse postings text"
-msgstr "Texte de réponse automatique"
+msgstr "Texte des réponses automatiques"
 
 #: forms/list_forms.py:798
 msgid "Auto-response text to send to mailing list posters."
@@ -1101,6 +1127,10 @@ msgid ""
 "If you choose yes, decide whether you want Mailman to discard the original "
 "email, or forward it on to the system as a normal mail command."
 msgstr ""
+"Mailman doit-il envoyer une réponse automatique aux courriels expédiés à "
+"l'adresse -request ? Si vous répondez positivement, décidez si vous voulez "
+"que Mailman élimine le message originel ou le fasse suivre au système comme "
+"un courriel de commande normal."
 
 #: forms/list_forms.py:809
 msgid "Autoresponse request text"
@@ -1108,7 +1138,7 @@ msgstr "Texte de réponse automatique aux requêtes"
 
 #: forms/list_forms.py:812
 msgid "Auto-response text to send to -request emails."
-msgstr "Texte de réponse automatique à envoyer aux message à -request."
+msgstr "Texte de réponse automatique à envoyer aux courriels à -request."
 
 #: forms/list_forms.py:814
 msgid "Autoresponse grace period"
