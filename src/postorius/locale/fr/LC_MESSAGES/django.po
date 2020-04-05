@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-04 22:09+0000\n"
+"PO-Revision-Date: 2020-04-05 23:36+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -906,8 +906,8 @@ msgid ""
 "Should Mailman convert text/html parts to plain text? This conversion "
 "happens after MIME attachments have been stripped."
 msgstr ""
-"Mailman doit-il  convertir les éléments text/html en texte brut ? Cette "
-"conversion se déroule après que les pièces jointes MIME ont été extirpées."
+"Mailman doit-il convertir les éléments text/html en texte brut ? Cette "
+"conversion se déroule après que les pièces jointes MIME ont été ôtées."
 
 #: forms/list_forms.py:675
 msgid "Anonymous list"
@@ -1229,8 +1229,6 @@ msgid "Moderated but allows for open posting"
 msgstr "Modérée mais ouverte à toutes les publications"
 
 #: forms/list_forms.py:864
-#, fuzzy
-#| msgid "Moderate"
 msgid "Moderated"
 msgstr "Modérée"
 
@@ -1248,6 +1246,10 @@ msgid ""
 "lists, or in headers, and so forth. It should be as succinct as you can get "
 "it, while still identifying what the list is."
 msgstr ""
+"Cette description est utilisée lorsque la liste de diffusion est listée "
+"parmi d'autre listes de diffusion ou dans les entêtes et ainsi de suite. "
+"Elle devrait donc être aussi succinte que possible tout en décrivant ce "
+"qu'est la liste."
 
 #: forms/list_forms.py:888
 msgid "Information"
@@ -1259,11 +1261,11 @@ msgstr "Une description plus longue de cette liste de diffusion."
 
 #: forms/list_forms.py:893
 msgid "Display name"
-msgstr "Identité"
+msgstr "Nom public"
 
 #: forms/list_forms.py:895
 msgid "Display name is the name shown in the web interface."
-msgstr ""
+msgstr "Le nom public est le nom affiché dans l'interface."
 
 #: forms/list_forms.py:898
 msgid "Subject prefix"
@@ -1291,26 +1293,28 @@ msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
+"Indicateur signifiant que les publications sur le groupe de nouvelles lié "
+"doivent être barrées vers la liste"
 
 #: forms/list_forms.py:925
-#, fuzzy
-#| msgid "Gateways"
 msgid "Gateway to news"
-msgstr "Passerelles"
+msgstr "Passerelle vers les nouvelles"
 
 #: forms/list_forms.py:926
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
+"Indicateur signifiant que les expéditions vers la liste doivent être barrées "
+"vers le groupe de nouvelles lié."
 
 #: forms/list_forms.py:930
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "Groupe de nouvelles lié"
 
 #: forms/list_forms.py:933
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "Le nom du groupe de nouvelles lié."
 
 #: forms/list_forms.py:936
 msgid "Newsgroup moderation"
@@ -1319,6 +1323,8 @@ msgstr "Modération des groupes de nouvelles"
 #: forms/list_forms.py:940
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
+"La politique de modération pour le groupe de nouvelles lié, s'il en existe "
+"une."
 
 #: forms/list_forms.py:946
 msgid "NNTP Include subject prefix "
@@ -1329,6 +1335,8 @@ msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"Indicateur signifiant si l'« objet préfix » de la liste devra être inclus "
+"dans les expéditions déclenchées vers usenet."
 
 #: forms/list_forms.py:962
 msgid "Emails to mass subscribe"
