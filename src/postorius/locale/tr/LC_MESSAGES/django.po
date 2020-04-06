@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:15-0700\n"
-"PO-Revision-Date: 2020-04-04 07:58+0000\n"
+"PO-Revision-Date: 2020-04-07 05:50+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -302,12 +302,14 @@ msgstr "Hayır"
 
 #: forms/list_forms.py:227
 msgid "Process Bounces"
-msgstr ""
+msgstr "Geri Dönmeleri İşle"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Bu listenin geri dönmeleri otomatik olarak işlemesi gerekip gerekmediğini "
+"belirtir."
 
 #: forms/list_forms.py:234
 msgid "Bounce score threshold"
@@ -319,10 +321,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Bu, bir üyenin aboneliğinin otomatik olarak devre dışı bırakılacağı  geri "
+"dönme puanıdır. Abonelik yeniden etkinleştirildiğinde,  geri dönme puanları "
+"sıfırlanır."
 
 #: forms/list_forms.py:242
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Geri dönme bilgisi eskime süresi"
 
 #: forms/list_forms.py:245
 msgid ""
@@ -330,6 +335,9 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Bir üyenin geri dönme bilgilerinin eski olduğunun kabul edileceği gün "
+"sayısı. Bu aralıkta yeni bir geri dönüş alınmadıysa, geri dönme puanı "
+"sıfırlanır. Bu değer bir tam sayı olmalıdır. "
 
 #: forms/list_forms.py:253
 msgid "Notify owner on disable"
@@ -341,6 +349,9 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Bu seçenek, bir üyenin aboneliği geri dönme eşiğine ulaşıldığı için otomatik "
+"olarak devre dışı bırakıldığında liste sahibinin bilgilendirilip "
+"bildirilmeyeceğini kontrol eder. "
 
 #: forms/list_forms.py:262
 msgid "Notify owner on removal"
@@ -352,6 +363,9 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Bu seçenek, bir üye devre dışı bırakılma bildirimleri tükendikten sonra "
+"listeden kaldırıldığında liste sahibinin bilgilendirilip bildirilmeyeceğini "
+"kontrol eder. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
