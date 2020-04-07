@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-07 20:49+0000\n"
+"PO-Revision-Date: 2020-04-08 03:01+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -1852,10 +1852,8 @@ msgid "System Information"
 msgstr "Système d'information"
 
 #: templates/postorius/base.html:57
-#, fuzzy
-#| msgid "Archive"
 msgid "Archives"
-msgstr "Archive"
+msgstr "Archives"
 
 #: templates/postorius/base.html:73
 msgid "Account"
@@ -1886,32 +1884,24 @@ msgid "Postorius Documentation"
 msgstr "Documentation de Postorius"
 
 #: templates/postorius/base.html:121
-#, fuzzy
-#| msgid "Postorius Documentation"
 msgid "Postorius Version"
-msgstr "Documentation de Postorius"
+msgstr "Version de Postorius"
 
 #: templates/postorius/base.html:124
 msgid "Happy Mailman Day!"
 msgstr "Joyeuse journée de Mailman !"
 
 #: templates/postorius/domain/confirm_delete.html:5
-#, fuzzy
-#| msgid "Confirm Remove Role"
 msgid "Confirm domain removal"
-msgstr "Confirmez le retrait du Rôle"
+msgstr "Confirmez la suppression du domaine"
 
 #: templates/postorius/domain/confirm_delete.html:13
-#, fuzzy
-#| msgid "Confirm Deletion"
 msgid "Confirm deletion"
 msgstr "Confirmer la suppression"
 
 #: templates/postorius/domain/confirm_delete.html:17
-#, fuzzy
-#| msgid "Are you sure you want to permanently delete this list?"
 msgid "Are you sure you want to permanently delete"
-msgstr "Etes-vous certain de vouloir supprimer cette liste définitivement ?"
+msgstr "Êtes-vous certain de vouloir supprimer définitivement"
 
 #: templates/postorius/domain/confirm_delete.html:21
 #, python-format
@@ -1950,10 +1940,8 @@ msgid "Edit domain"
 msgstr "Éditer le domaine"
 
 #: templates/postorius/domain/index.html:14
-#, fuzzy
-#| msgid "Add a new Domain"
 msgid "Add Domain"
-msgstr "Ajouter un nouveau Domaine"
+msgstr "Ajouter un domaine"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
@@ -1961,16 +1949,12 @@ msgid "Owners"
 msgstr "Propriétaires"
 
 #: templates/postorius/domain/index.html:43
-#, fuzzy
-#| msgid "Remove "
 msgid "remove"
-msgstr "Supprimer "
+msgstr "supprimer"
 
 #: templates/postorius/domain/index.html:47
-#, fuzzy
-#| msgid "Address"
 msgid "Add"
-msgstr "Adresse"
+msgstr "Ajouter"
 
 #: templates/postorius/domain/index.html:50
 #: templates/postorius/domain/template_add.html:6
@@ -1992,26 +1976,20 @@ msgid "Edit"
 msgstr "Éditer"
 
 #: templates/postorius/domain/new.html:6
-#, fuzzy
-#| msgid "Add a new Domain"
 msgid "Add domain"
-msgstr "Ajouter un nouveau Domaine"
+msgstr "Ajouter un domaine"
 
 #: templates/postorius/domain/new.html:12
-#, fuzzy
-#| msgid "Add a new Domain"
 msgid "Add a new domain"
-msgstr "Ajouter un nouveau Domaine"
+msgstr "Ajouter un nouveau domaine"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
 msgstr "Ajouter un·e propriétaire de domaine "
 
 #: templates/postorius/domain/owners.html:12
-#, fuzzy
-#| msgid "Add a new Domain"
 msgid "Add a new owner to"
-msgstr "Ajouter un nouveau Domaine"
+msgstr "Ajouter un nouveau propriétaire à"
 
 #: templates/postorius/domain/template_add.html:17
 #: templates/postorius/domain/template_delete.html:16
@@ -2022,10 +2000,8 @@ msgid "Template '%(name)s'"
 msgstr "Modèle '%(name)s'"
 
 #: templates/postorius/domain/template_delete.html:11
-#, fuzzy
-#| msgid "Delete List"
 msgid "Delete Template"
-msgstr "Supprimer la Liste"
+msgstr "Supprimer le modèle"
 
 #: templates/postorius/domain/template_delete.html:22
 #, python-format
@@ -2060,10 +2036,8 @@ msgid "Something went wrong"
 msgstr "Quelque chose s'est mal passé"
 
 #: templates/postorius/index.html:6
-#, fuzzy
-#| msgid "List name"
 msgid "List Index"
-msgstr "Nom de la liste"
+msgstr "Listes"
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
@@ -2082,16 +2056,12 @@ msgid "List name"
 msgstr "Nom de la liste"
 
 #: templates/postorius/index.html:55
-#, fuzzy
-#| msgid "List address"
 msgid "Post address"
-msgstr "Adresse de la liste"
+msgstr "Adresse d'expédition"
 
 #: templates/postorius/index.html:66
-#, fuzzy
-#| msgid "advertised"
 msgid "unadvertised"
-msgstr "advertised"
+msgstr "sans publicité"
 
 #: templates/postorius/index.html:78
 msgid ""
@@ -2459,11 +2429,11 @@ msgid ""
 "              "
 msgstr ""
 "\n"
-"                  Pour vous abonner vous pouvez envoyer un email à\n"
+"                  Pour vous abonner vous pouvez envoyer un courriel à\n"
 "                  <a href=\"mailto:%(address)s?subject=Subscribe\""
 ">%(address)s</a>\n"
-"                  avec le mot 'subscribe' dans le sujet ou utiliser\n"
-"                  le formulaire ci-dessous :\n"
+"                  avec le mot  « subscribe » dans l'objet ou utiliser le "
+"formulaire suivant :\n"
 "              "
 
 #: templates/postorius/lists/summary.html:80
