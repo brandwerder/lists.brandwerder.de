@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
 "PO-Revision-Date: 2020-04-07 20:49+0000\n"
-"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
+"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -1481,39 +1481,38 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
-"Action par défaut quand ce·tte membre envoie un message à la liste.\n"
-"Liste -- utiliser la configuration de la liste.\n"
-"Retenir -- retenir ce message en attendant l'approbation par les personnes "
-"modérant la liste.\n"
-"Rejeter -- rejeter le message avec une notification envoyée à l'adresse de "
-"l'expéditeur·ice. Vous pouvez modifier le texte de la notification.\n"
-"Éliminer -- éliminer ce message sans envoi de notification à l'adresse de "
-"l'expéditeur·ice.\n"
-"Accepter -- accepte tous les messages sans vérifications supplémentaire.\n"
-"Traitement par défaut -- effectue d'autres vérifications avant d'accepter le "
-"message. \n"
+"Action par défaut à effectuer lorsque cet abonné expédie à la liste.\n"
+"Action par défaut de la liste -- utiliser l'action par défaut de la liste.\n"
+"Retenir -- retient le message en attendant sa validation par les modérateurs "
+"de la liste.\n"
+"Rejeter -- rejete le message automatiquement en envoyant une notification de "
+"rejet à l'expéditeur. Le texte de la notification de rejet peut être défini "
+"par vous.\n"
+"Éliminer -- élimine simplement le message, sans envoi de notification à "
+"l'expéditeur.\n"
+"Accepter -- accepte tous les messages sans autre vérification.\n"
+"Traitement par défaut -- effectue des vérifications supplémentaires avant "
+"d'accepter le message. \n"
 
 #: forms/list_forms.py:1114
 msgid "Select Email"
-msgstr "Sélectionner un email"
+msgstr "Choisir un courriel"
 
 #: forms/list_forms.py:1122
 msgid "Data"
-msgstr "Donnée(s)"
+msgstr "Données"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr "Adresse courriel"
+msgstr "Adresse de courriel"
 
 #: forms/member_forms.py:32
 msgid "Display Name"
-msgstr "Nom à afficher"
+msgstr "Nom public"
 
 #: forms/member_forms.py:35
-#, fuzzy
-#| msgid "Please enter a display name."
 msgid "Please enter an display name."
-msgstr "Veuillez entrer un nom d'affichage."
+msgstr "Veuillez entrer un nom public."
 
 #: forms/user_forms.py:49
 msgid "Regular"
@@ -1525,11 +1524,11 @@ msgstr "Condensés en texte brut"
 
 #: forms/user_forms.py:51
 msgid "Mime Digests"
-msgstr "Mime des Condensés"
+msgstr "Condensés en type Mime"
 
 #: forms/user_forms.py:52
 msgid "Summary Digests"
-msgstr "Condensés résumés"
+msgstr "Condensés en résumés"
 
 #: forms/user_forms.py:54
 msgid "Enabled"
@@ -1541,7 +1540,7 @@ msgstr "Désactivé"
 
 #: forms/user_forms.py:59
 msgid "Delivery status"
-msgstr "Etat de Distribution"
+msgstr "État de distribution"
 
 #: forms/user_forms.py:61
 msgid ""
@@ -1551,16 +1550,16 @@ msgid ""
 "mail delivery, don't forget to re-enable it when you come back; it will not "
 "be automatically re-enabled."
 msgstr ""
-"Positionner cette option à Activé pour recevoir les messages postés sur "
-"cette liste de discussion. Postionner la à Désactivé si vous souhaitez "
-"rester abonné mais ne voulez pas recevoir les courriels pour un moment (par "
-"exemple, si vous partez en vacances). Si vous désactivez la distribution de "
-"courriels, n'oubliez pas de la réactiver quand vous revenez ; ce ne sera pas "
-"automatiquement réactivé."
+"Positionner cette option à « Activé » pour recevoir les messages expédiés "
+"sur cette liste de discussion. Postionnez-la à « Désactivé » si vous voulez "
+"rester abonné mais ne voulez pas recevoir les courriels pendant un moment ("
+"par exemple, si vous partez en vacances). Si vous désactivez la distribution "
+"de courriels, n'oubliez pas de la réactiver lorsque vous revenez ; elle ne "
+"sera pas automatiquement réactivée."
 
 #: forms/user_forms.py:71
 msgid "Delivery mode"
-msgstr "Mode de Distribution"
+msgstr "Mode de distribution"
 
 #: forms/user_forms.py:73
 msgid ""
@@ -1570,12 +1569,12 @@ msgid ""
 "digests are preferred, but if you have a problem reading them, select plain "
 "text digests."
 msgstr ""
-"Si vous sélectionnez condensés résumés, vous recevrez les messages groupés "
-"ensemble (habituellement, un par jour mais potentiellement plus sur les "
-"listes à haut trafic) à la place de recevoir chaque message séparément. "
-"Votre logiciel de message pourrait ou non supporter le MIME des condensés. "
-"En général, les MIME de condensés sont préférés mais si vous avez des "
-"problèmes pour les lire, choisissez condensés en texte brut."
+"Si vous sélectionnez condensés de résumés, vous recevrez les messages "
+"groupés ensemble (habituellement, un par jour mais possiblement plus sur les "
+"listes à haut trafic) à la place de recevoir chaque message "
+"individuellement. Votre logiciel de messagerie peut ou non accepter les "
+"condensés en MIME. En général, les condensés en MIME sont préférés mais si "
+"vous avez des problèmes pour les lire, choisissez condensés en texte brut."
 
 #: forms/user_forms.py:82
 msgid "Receive own postings"
@@ -1586,19 +1585,19 @@ msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
 msgstr ""
-"Normalement, vous recevrez une copie de chacun de vos messages envoyés sur "
-"cette liste. Si vous ne souhaitez pas recevoir de copie, postionnez cette "
-"option à Non."
+"Normalement, vous recevrez une copie de chacun des messages que vous "
+"expédiez sur cette liste. Si vous ne voulez pas recevoir cette copie, "
+"positionnez cette option à « Non »."
 
 #: forms/user_forms.py:91
 msgid "Acknowledge posts"
-msgstr "Accuser la réception des messages"
+msgstr "Accusés réception"
 
 #: forms/user_forms.py:93
 msgid "Receive acknowledgement mail when you send mail to the list?"
 msgstr ""
-"Recevoir un accusé de reception quand vous envoyez un courriel sur cette "
-"liste ?"
+"Recevoir un courriel d'accusé de réception lorsque vous expédiez un courriel "
+"à la liste ?"
 
 #: forms/user_forms.py:97
 msgid "Hide address"
@@ -1611,31 +1610,26 @@ msgid ""
 "email address to show up on this membership roster at all, select Yes for "
 "this option."
 msgstr ""
-"Quand quelqu'un consulte la liste des membres, votre adresse courriel est "
-"normalement affichée (de manière offusquée pour contrer les spammeurs). Si "
-"vous ne souhaitez pas du tout voir votre adresse courriel s'afficher dans la "
-"liste des abonnés, sélectionnez Oui pour cette option."
+"Quand quelqu'un consulte la liste des abonnés, votre adresse de courriel est "
+"normalement affichée (de manière contournée pour contrer les industriels du "
+"pourriel). Si vous ne souhaitez pas du tout voir votre adresse de courriel "
+"s'afficher dans la liste des abonnés, sélectionnez « Oui » pour cette option."
 
 #: forms/user_forms.py:107
 msgid "Receive list copies (possible duplicates)"
-msgstr "Recevoir des copies de la liste (envois en double possibles)"
+msgstr "Recevoir les messages de la liste (doublons possibles)"
 
 #: forms/user_forms.py:109
-#, fuzzy
-#| msgid ""
-#| "When you are listed explicitly in the To: or Cc: headers of a list "
-#| "message, you can opt to not receive another copy from the mailing list. "
-#| "Select Yes to avoid receiving copies from the mailing list; select No to "
-#| "receive copies. "
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
 "receive copies. Select No to avoid receiving copies from the mailing list"
 msgstr ""
-"Quand vous êtes explicitement listé dans les en-têtes To: ou Cc: d'un "
+"Quand vous êtes explicitement mentionné dans les entêtes To: ou Cc: d'un "
 "message de la liste, vous pouvez décider de ne pas recevoir une autre copie "
-"de la liste de discussion. Sélectionnez Oui pour ne pas recevoir de copies "
-"de la liste de discussion ; sélectionnez Non pour recevoir des copies."
+"de la liste de discussion. Choisissez « Oui » pour recevoir des copies. "
+"Choisissez « Non » pour éviter de recevoir des copies de la liste de "
+"diffusion"
 
 #: models.py:45
 #, fuzzy
