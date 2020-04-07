@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
 "PO-Revision-Date: 2020-04-07 20:23+0000\n"
-"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
+"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -1340,7 +1340,7 @@ msgstr ""
 
 #: forms/list_forms.py:962
 msgid "Emails to mass subscribe"
-msgstr "Adresses courriels à inscrire en nombre"
+msgstr "Adresses de courriel à inscrire en nombre"
 
 #: forms/list_forms.py:964
 msgid ""
@@ -1352,25 +1352,23 @@ msgid ""
 "jdoe@example.com (John Doe)\n"
 "Use the last three to associate a display name with the address\n"
 msgstr ""
-"Les formats suivants sont acceptés :\n"
-"cmichu@example.com\n"
-"&lt;cmichu@example.com&gt;\n"
-"Camille Michu &lt;cmichu@example.com&gt;\n"
-"\"Camille Michu\" &lt;cmichu@example.com&gt;\n"
-"cmichu@example.com (Camille Michu)\n"
-"Utilisez les trois dernières formes pour associer un nom à l'adresse\n"
+"Les formes suivantes sont acceptés :\n"
+"ctartempion@example.com\n"
+"&lt;ctartempion@example.com&gt;\n"
+"Camille Tartempion &lt;ctartempion@example.com&gt;\n"
+"\"Camille Tartempion\" &lt;ctartempion@example.com&gt;\n"
+"ctartempion@example.com (Camille Tartempion)\n"
+"Utilisez les trois dernières pour associer un nom public à l'adresse\n"
 
 #: forms/list_forms.py:975
-#, fuzzy
-#| msgid "Confirm"
 msgid "Pre confirm"
-msgstr "Confirmer"
+msgstr "Pré-confirmé"
 
 #: forms/list_forms.py:979
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
-"Si cette case est cochée les utilisateur·ices n'auront pas besoin de "
-"confirmer leur inscription."
+"Si cette case est cochée les utilisateurs n'auront pas besoin de confirmer "
+"leur abonnement."
 
 #: forms/list_forms.py:984
 msgid "Pre approved"
@@ -1380,8 +1378,8 @@ msgstr "Pré-approuvées"
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
-"Si cette case est cochée, les modérateur·ices n'auront pas besoin "
-"d'approuver les demandes d'inscription."
+"Si cette case est cochée, les modérateurs n'auront pas besoin de valider les "
+"demandes d'abonnement."
 
 #: forms/list_forms.py:994
 msgid "Pre Verified"
@@ -1391,20 +1389,16 @@ msgstr "Pré-vérifiées"
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
-"Si cette case est cochée, la validité des adresses email des utilisateur·"
-"ices ne sera pas vérifiée."
+"Si cette case est cochée, les utilisateurs n'auront pas à prouver que leur "
+"adresse de courriel est correcte."
 
 #: forms/list_forms.py:1009
-#, fuzzy
-#| msgid "Emails to mass subscribe"
 msgid "Emails to Unsubscribe"
-msgstr "Adresses courriels à inscrire en nombre"
+msgstr "Adresses de courriels à désabonner"
 
 #: forms/list_forms.py:1010
-#, fuzzy
-#| msgid "Add another email address to your account"
 msgid "Add one email address on each line"
-msgstr "Ajouter une autre adresse courriel à votre compte"
+msgstr "Ajouter une adresse de courriel par ligne"
 
 #: forms/list_forms.py:1029
 msgid "Add ban"
@@ -1415,12 +1409,12 @@ msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
-"Vous pouvez bannir une seule adresse email ou bannir des adresses similaires "
-"en utilisant une expression régulière."
+"Vous pouvez bannir une seule adresse de courriel ou utiliser une expression "
+"rationnelle correspondant à des adresses de courriel similaires."
 
 #: forms/list_forms.py:1041
 msgid "Default antispam action"
-msgstr "Action anti-spam par défaut"
+msgstr "Action anti-pourriel par défaut"
 
 #: forms/list_forms.py:1045
 msgid "Header"
@@ -1431,16 +1425,12 @@ msgid "Email header to filter on (case-insensitive)."
 msgstr "Filtrer sur l'entête de message (sans tenir compte de la casse)."
 
 #: forms/list_forms.py:1048
-#, fuzzy
-#| msgid "Please enter a password."
 msgid "Please enter a header."
-msgstr "Veuillez entrer un mot de passe."
+msgstr "Veuillez entrer une entête."
 
 #: forms/list_forms.py:1049
-#, fuzzy
-#| msgid "Please enter a valid password."
 msgid "Please enter a valid header."
-msgstr "Veuillez entrer un mot de passe valide."
+msgstr "Veuillez entrer une entête valide."
 
 #: forms/list_forms.py:1051
 msgid "Pattern"
@@ -1448,7 +1438,7 @@ msgstr "Motif"
 
 #: forms/list_forms.py:1052
 msgid "Regular expression matching the header's value."
-msgstr "Expression régulière correspondant au contenu de l'entête."
+msgstr "Expression rationnelle correspondant au contenu de l'entête."
 
 #: forms/list_forms.py:1054
 msgid "Please enter a pattern."
@@ -1456,7 +1446,7 @@ msgstr "Veuillez entrer un motif."
 
 #: forms/list_forms.py:1055
 msgid "Please enter a valid pattern."
-msgstr "Veuillez entrer un motif valide."
+msgstr "Veuillez entrer un motif correct."
 
 #: forms/list_forms.py:1057 templates/postorius/domain/index.html:26
 msgid "Action"
@@ -1464,11 +1454,11 @@ msgstr "Action"
 
 #: forms/list_forms.py:1058
 msgid "Please enter a valid action."
-msgstr "Veuillez entrer une action valide."
+msgstr "Veuillez entrer une action correcte."
 
 #: forms/list_forms.py:1061
 msgid "Action to take when a header matches"
-msgstr "Action par défaut quand un entête correspond"
+msgstr "Action à effectuer quand une entête correspond"
 
 #: forms/list_forms.py:1090
 msgid "Moderation"
