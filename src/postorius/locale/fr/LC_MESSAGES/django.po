@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-28 17:14-0700\n"
-"PO-Revision-Date: 2020-04-05 23:36+0000\n"
-"Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
+"PO-Revision-Date: 2020-04-07 20:00+0000\n"
+"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
 "Language: fr\n"
@@ -1352,6 +1352,13 @@ msgid ""
 "jdoe@example.com (John Doe)\n"
 "Use the last three to associate a display name with the address\n"
 msgstr ""
+"Les formats suivants sont acceptés :\n"
+"cmichu@example.com\n"
+"&lt;cmichu@example.com&gt;\n"
+"Camille Michu &lt;cmichu@example.com&gt;\n"
+"\"Camille Michu\" &lt;cmichu@example.com&gt;\n"
+"cmichu@example.com (Camille Michu)\n"
+"Utilisez les trois dernières formes pour associer un nom à l'adresse\n"
 
 #: forms/list_forms.py:975
 #, fuzzy
@@ -1362,24 +1369,30 @@ msgstr "Confirmer"
 #: forms/list_forms.py:979
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
+"Si cette case est cochée les utilisateur·ices n'auront pas besoin de "
+"confirmer leur inscription."
 
 #: forms/list_forms.py:984
 msgid "Pre approved"
-msgstr ""
+msgstr "Pré-approuvées"
 
 #: forms/list_forms.py:988
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
+"Si cette case est cochée, les modérateur·ices n'auront pas besoin "
+"d'approuver les demandes d'inscription."
 
 #: forms/list_forms.py:994
 msgid "Pre Verified"
-msgstr ""
+msgstr "Pré-vérifiées"
 
 #: forms/list_forms.py:998
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
+"Si cette case est cochée, la validité des adresses email des utilisateur·"
+"ices ne sera pas vérifiée."
 
 #: forms/list_forms.py:1009
 #, fuzzy
@@ -1395,25 +1408,27 @@ msgstr "Ajouter une autre adresse courriel à votre compte"
 
 #: forms/list_forms.py:1029
 msgid "Add ban"
-msgstr ""
+msgstr "Bannir"
 
 #: forms/list_forms.py:1031
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
 msgstr ""
+"Vous pouvez bannir une seule adresse email ou bannir des adresses similaires "
+"en utilisant une expression régulière."
 
 #: forms/list_forms.py:1041
 msgid "Default antispam action"
-msgstr ""
+msgstr "Action anti-spam par défaut"
 
 #: forms/list_forms.py:1045
 msgid "Header"
-msgstr ""
+msgstr "Entête"
 
 #: forms/list_forms.py:1046
 msgid "Email header to filter on (case-insensitive)."
-msgstr ""
+msgstr "Filtrer sur l'entête de message (sans tenir compte de la casse)."
 
 #: forms/list_forms.py:1048
 #, fuzzy
@@ -1429,53 +1444,39 @@ msgstr "Veuillez entrer un mot de passe valide."
 
 #: forms/list_forms.py:1051
 msgid "Pattern"
-msgstr ""
+msgstr "Motif"
 
 #: forms/list_forms.py:1052
 msgid "Regular expression matching the header's value."
-msgstr ""
+msgstr "Expression régulière correspondant au contenu de l'entête."
 
 #: forms/list_forms.py:1054
-#, fuzzy
-#| msgid "Please enter a password."
 msgid "Please enter a pattern."
-msgstr "Veuillez entrer un mot de passe."
+msgstr "Veuillez entrer un motif."
 
 #: forms/list_forms.py:1055
-#, fuzzy
-#| msgid "Please enter a valid password."
 msgid "Please enter a valid pattern."
-msgstr "Veuillez entrer un mot de passe valide."
+msgstr "Veuillez entrer un motif valide."
 
 #: forms/list_forms.py:1057 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Action"
 
 #: forms/list_forms.py:1058
-#, fuzzy
-#| msgid "Please enter a valid password."
 msgid "Please enter a valid action."
-msgstr "Veuillez entrer un mot de passe valide."
+msgstr "Veuillez entrer une action valide."
 
 #: forms/list_forms.py:1061
-#, fuzzy
-#| msgid "Default action to take when a member posts to the list:"
 msgid "Action to take when a header matches"
-msgstr ""
-"Action par défaut à prendre lorsqu'une personne non abonnée envoie sur la "
-"liste :"
+msgstr "Action par défaut quand un entête correspond"
 
 #: forms/list_forms.py:1090
-#, fuzzy
-#| msgid "Moderators"
 msgid "Moderation"
-msgstr "Modérateurs"
+msgstr "Modération"
 
 #: forms/list_forms.py:1092
-#, fuzzy
-#| msgid "List created"
 msgid "List default"
-msgstr "Liste créée"
+msgstr "Liste par défaut"
 
 #: forms/list_forms.py:1094
 msgid ""
@@ -1490,24 +1491,33 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
+"Action par défaut quand ce·tte membre envoie un message à la liste.\n"
+"Liste -- utiliser la configuration de la liste.\n"
+"Retenir -- retenir ce message en attendant l'approbation par les personnes "
+"modérant la liste.\n"
+"Rejeter -- rejeter le message avec une notification envoyée à l'adresse de "
+"l'expéditeur·ice. Vous pouvez modifier le texte de la notification.\n"
+"Éliminer -- éliminer ce message sans envoi de notification à l'adresse de "
+"l'expéditeur·ice.\n"
+"Accepter -- accepte tous les messages sans vérifications supplémentaire.\n"
+"Traitement par défaut -- effectue d'autres vérifications avant d'accepter le "
+"message. \n"
 
 #: forms/list_forms.py:1114
 msgid "Select Email"
-msgstr ""
+msgstr "Sélectionner un email"
 
 #: forms/list_forms.py:1122
 msgid "Data"
-msgstr ""
+msgstr "Donnée(s)"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
 msgstr "Adresse courriel"
 
 #: forms/member_forms.py:32
-#, fuzzy
-#| msgid "Display name"
 msgid "Display Name"
-msgstr "Identité"
+msgstr "Nom à afficher"
 
 #: forms/member_forms.py:35
 #, fuzzy
@@ -1618,7 +1628,7 @@ msgstr ""
 
 #: forms/user_forms.py:107
 msgid "Receive list copies (possible duplicates)"
-msgstr ""
+msgstr "Recevoir des copies de la liste (envois en double possibles)"
 
 #: forms/user_forms.py:109
 #, fuzzy
@@ -1638,6 +1648,7 @@ msgstr ""
 "de la liste de discussion ; sélectionnez Non pour recevoir des copies."
 
 #: models.py:45
+#, fuzzy
 msgid ""
 "Note: Do not add any secret content in templates as they are publicly "
 "accessible.\n"
@@ -1655,21 +1666,39 @@ msgid ""
 "$language: The two letter language code for list's preferred language e.g. "
 "fr, en, de \n"
 msgstr ""
+"Note : N'enregistrez rien de secret dans les modèles car ils sont "
+"accessibles publiquement.\n"
+"Vous pouvez utiliser les variables suivantes dans les modèles.\n"
+"$hyperkitty_url : Lien permanent vers un message archivé par Hyperkitty\n"
+"$listname : l'adresse de la liste, par exemple ant@example.com \n"
+"$list_id : Le contenu de l'entête List-ID, par exemple ant.example.com \n"
+"$display_name : le nom de la liste, par exemple Ant \n"
+"$short_listname : la partie locale de l'adresse de la liste, par exemple ant "
+"\n"
+"$domain : le domaine de la liste, par example exemple.com \n"
+"$info : la description de la liste\n"
+"$request_email : l'adresse email -request\n"
+"$owner_email : l'adresse email -owner\n"
+"$site_email : l'adresse email de contact des propriétaires du site\n"
+"$language : le code à deux lettres pour la langue utilisée de préférence sur "
+"la liste, par exemple fr, en ou de. \n"
 
 #: models.py:258
 msgid "Choose the template you want to customize."
-msgstr ""
+msgstr "Choisissez le modèle que vous souhaitez personnaliser."
 
 #: models.py:265
 msgid ""
 "Language for the template, this should be the list's preferred language."
-msgstr ""
+msgstr "Langage du modèle, doit être dans la langue préférée sur la liste."
 
 #: template_list.py:26
 msgid ""
 "Sent to the list administrators when moderator approval for a posting is "
 "required."
 msgstr ""
+"Envoyer aux administrateur·ices de la liste quand un message doit être "
+"approuvé par un·e modérateur·ice."
 
 #: template_list.py:28
 msgid ""
