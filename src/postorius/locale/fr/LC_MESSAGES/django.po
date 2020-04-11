@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 17:14-0700\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
 "PO-Revision-Date: 2020-04-09 07:42+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -53,7 +53,7 @@ msgstr ""
 "Le nom de domaine pour vos listes de discussion. Par exemple, si vous voulez "
 "des listes comme test@example.com, entrez example.com ici."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:879
+#: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:883
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
 msgstr "Description"
@@ -210,12 +210,12 @@ msgstr "Veuillez entrer un nom de liste valide"
 msgid "Your email address"
 msgstr "Votre adresse courriel"
 
-#: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:1034
+#: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:1038
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
 msgstr "Veuillez entrer une adresse courriel."
 
-#: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:1035
+#: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:1039
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
 msgstr "Veuillez entrer une adresse courriel valide."
@@ -278,8 +278,8 @@ msgstr ""
 "Ouverte : Les désbonnements se font automatiquement\n"
 "Confirmer : Les abonnés doivent confirmer leur désabonnement en utilisant un "
 "courriel qui leur est envoyé\n"
-"Modérée : Les modérateurs devront valider chaque désabonnement manuellement."
-"\n"
+"Modérée : Les modérateurs devront valider chaque désabonnement "
+"manuellement.\n"
 "Confirmation puis modérée : Les abonnés doivent d'abord confirmer, puis un "
 "modérateur doit valider."
 
@@ -288,9 +288,9 @@ msgstr ""
 #: forms/list_forms.py:506 forms/list_forms.py:548 forms/list_forms.py:616
 #: forms/list_forms.py:651 forms/list_forms.py:664 forms/list_forms.py:672
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
-#: forms/list_forms.py:821 forms/list_forms.py:830 forms/list_forms.py:842
-#: forms/list_forms.py:854 forms/list_forms.py:873 forms/list_forms.py:916
-#: forms/list_forms.py:923 forms/list_forms.py:944 forms/user_forms.py:47
+#: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
+#: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
 msgid "Yes"
 msgstr "Oui"
 
@@ -299,9 +299,9 @@ msgstr "Oui"
 #: forms/list_forms.py:506 forms/list_forms.py:548 forms/list_forms.py:616
 #: forms/list_forms.py:651 forms/list_forms.py:664 forms/list_forms.py:672
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
-#: forms/list_forms.py:821 forms/list_forms.py:830 forms/list_forms.py:842
-#: forms/list_forms.py:854 forms/list_forms.py:873 forms/list_forms.py:916
-#: forms/list_forms.py:923 forms/list_forms.py:944 forms/user_forms.py:47
+#: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
+#: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
 msgid "No"
 msgstr "Non"
 
@@ -373,7 +373,8 @@ msgstr ""
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
-msgstr "Intervalle entre les avertissement de désactivations à cause des rejets"
+msgstr ""
+"Intervalle entre les avertissement de désactivations à cause des rejets"
 
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
@@ -506,7 +507,8 @@ msgstr ""
 
 #: forms/list_forms.py:384
 msgid "Default action to take when a non-member posts to the list"
-msgstr "Action à effectuer par défaut lorsqu'un non-abonné envoie vers la liste"
+msgstr ""
+"Action à effectuer par défaut lorsqu'un non-abonné envoie vers la liste"
 
 #: forms/list_forms.py:386
 msgid "Please choose a default non-member action."
@@ -938,15 +940,15 @@ msgid ""
 "headers, but this is not recommended (and in fact, your ability to disable "
 "these headers may eventually go away)."
 msgstr ""
-"Oui est hautement recommandé. La RFC 2369 définit un ensemble d'entêtes "
-"List-* qui sont normalement ajoutés à chaque message envoyé aux abonnés de "
-"la liste. Elles aident grandement les utilisateurs qui se servent de "
-"logiciels de messagerie conformes aux standards. Ils devraient normalement "
-"toujours êtres activés. Cependant, tous les logiciels de messagerie ne sont "
-"pas encore conformes aux standards et si vous avez un grand nombre d'abonnés "
-"qui utilisent de tels logiciels de messagerie non-conformes, ils pourraient "
-"être embarrassés par ces entêtes. Vous devriez d'abord essayer d'instruire "
-"vos abonnés de la raison de l'existence de ces entêtes et comment les cacher "
+"Oui est hautement recommandé. La RFC 2369 définit un ensemble d'entêtes List-"
+"* qui sont normalement ajoutés à chaque message envoyé aux abonnés de la "
+"liste. Elles aident grandement les utilisateurs qui se servent de logiciels "
+"de messagerie conformes aux standards. Ils devraient normalement toujours "
+"êtres activés. Cependant, tous les logiciels de messagerie ne sont pas "
+"encore conformes aux standards et si vous avez un grand nombre d'abonnés qui "
+"utilisent de tels logiciels de messagerie non-conformes, ils pourraient être "
+"embarrassés par ces entêtes. Vous devriez d'abord essayer d'instruire vos "
+"abonnés de la raison de l'existence de ces entêtes et comment les cacher "
 "dans leurs logiciels de messagerie. En dernier recours, vous pouvez "
 "désactiver ces entêtes mais ceci n'est pas recommandé (et, de fait, votre "
 "capacité de désactiver ces entêtes pourrait finir par disparaître)."
@@ -1007,6 +1009,31 @@ msgid "Explicit Reply-to set; no Cc added"
 msgstr "Reply-to explicite défini ; aucun « Cc » d'ajouté"
 
 #: forms/list_forms.py:733
+#, fuzzy
+#| msgid ""
+#| "Where are replies to list messages directed? No Munging is strongly "
+#| "recommended for most mailing lists. \n"
+#| "This option controls what Mailman does to the Reply-To: header in "
+#| "messages flowing through this mailing list. When set to No Munging, no "
+#| "Reply-To: header is added by Mailman, although if one is present in the "
+#| "original message, it is not stripped. Setting this value to either Reply "
+#| "to List, Explicit Reply, or Reply Only causes Mailman to insert a "
+#| "specific Reply-To: header in all messages, overriding the header in the "
+#| "original message if necessary (Explicit Reply inserts the value of "
+#| "reply_to_address). Explicit Reply-to set; no Cc added is useful "
+#| "forannounce-only lists where you want to avoid someone replying to the "
+#| "list address. There are many reasons not to introduce or override the "
+#| "Reply-To: header. One is that some posters depend on their own Reply-To: "
+#| "settings to convey their valid return address. Another is that modifying "
+#| "Reply-To: makes it much more difficult to send private replies. See "
+#| "`Reply-To' Munging Considered Harmful for a general discussion of this "
+#| "issue. See Reply-To Munging Considered Useful for a dissenting opinion. "
+#| "Some mailing lists have restricted posting privileges, with a parallel "
+#| "list devoted to discussions. Examples are `patches' or `checkin' lists, "
+#| "where software changes are posted by a revision control system, but "
+#| "discussion about the changes occurs on a developers mailing list. To "
+#| "support these types of mailing lists, select Explicit Reply and set the "
+#| "Reply-To: address option to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1022,8 +1049,10 @@ msgid ""
 "introduce or override the Reply-To: header. One is that some posters depend "
 "on their own Reply-To: settings to convey their valid return address. "
 "Another is that modifying Reply-To: makes it much more difficult to send "
-"private replies. See `Reply-To' Munging Considered Harmful for a general "
-"discussion of this issue. See Reply-To Munging Considered Useful for a "
+"private replies. See <a href=\"http://marc.merlins.org/netrants/reply-to-"
+"harmful.html\">`Reply-To' Munging Considered Harmful</a> for a general "
+"discussion of this issue. See <a href=\"http://marc.merlins.org/netrants/"
+"reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> for a "
 "dissenting opinion. Some mailing lists have restricted posting privileges, "
 "with a parallel list devoted to discussions. Examples are `patches' or "
 "`checkin' lists, where software changes are posted by a revision control "
@@ -1057,71 +1086,72 @@ msgstr ""
 "correctifs » ou « dépôt de code » où les changements logiciels sont expédiés "
 "par un système de gestion de versions mais pour lesquelles les discussions "
 "sur les changements se déroulent sur la liste de diffusion des développeurs. "
-"Pour gérer ces types de listes de diffusion, choisissez « Réponse explicite »"
-" et positionnez l'adresse Reply-To: pour diriger vers la liste parallèle."
+"Pour gérer ces types de listes de diffusion, choisissez « Réponse explicite "
+"» et positionnez l'adresse Reply-To: pour diriger vers la liste parallèle."
 
-#: forms/list_forms.py:761
+#: forms/list_forms.py:765
 msgid "Pipeline"
 msgstr "Traitement"
 
-#: forms/list_forms.py:766
+#: forms/list_forms.py:770
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr ""
 "Type de traitement que vous désirez utiliser pour cette liste de diffusion"
 
-#: forms/list_forms.py:774
+#: forms/list_forms.py:778
 msgid "Respond and continue processing"
 msgstr "Répondre et continuer le traitement"
 
-#: forms/list_forms.py:775
+#: forms/list_forms.py:779
 msgid "Respond and discard message"
 msgstr "Répondre et éliminer le message"
 
-#: forms/list_forms.py:776
+#: forms/list_forms.py:780
 msgid "No automatic response"
 msgstr "Aucune réponse automatique"
 
-#: forms/list_forms.py:780
+#: forms/list_forms.py:784
 msgid "Autorespond to list owner"
 msgstr "Réponse automatique au propriétaire de la liste"
 
-#: forms/list_forms.py:781
+#: forms/list_forms.py:785
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "Mailman doit-il envoyer une réponse automatique aux messages envoyés à "
 "l'adresse -owner du/des propriétaire(s) de la liste ?"
 
-#: forms/list_forms.py:784
+#: forms/list_forms.py:788
 msgid "Autoresponse owner text"
 msgstr "Texte de réponse automatique au propriétaire(s)"
 
-#: forms/list_forms.py:787
-msgid "Auto-response text to send to -owner emails."
-msgstr "Texte de réponse automatique à envoyer aux courriels destinés à -owner."
-
 #: forms/list_forms.py:791
+msgid "Auto-response text to send to -owner emails."
+msgstr ""
+"Texte de réponse automatique à envoyer aux courriels destinés à -owner."
+
+#: forms/list_forms.py:795
 msgid "Autorespond postings"
 msgstr "Réponses automatiques"
 
-#: forms/list_forms.py:792
+#: forms/list_forms.py:796
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
 "Mailman doit-il envoyer une réponse automatique aux expéditeurs à la liste ?"
 
-#: forms/list_forms.py:795
+#: forms/list_forms.py:799
 msgid "Autoresponse postings text"
 msgstr "Texte des réponses automatiques"
 
-#: forms/list_forms.py:798
+#: forms/list_forms.py:802
 msgid "Auto-response text to send to mailing list posters."
 msgstr "Texte de réponse automatique à envoyer aux expéditeurs à la liste."
 
-#: forms/list_forms.py:802
+#: forms/list_forms.py:806
 msgid "Autorespond requests"
 msgstr "Réponse automatique aux requêtes"
 
-#: forms/list_forms.py:804
+#: forms/list_forms.py:808
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
@@ -1132,19 +1162,19 @@ msgstr ""
 "que Mailman élimine le message originel ou le fasse suivre au système comme "
 "un courriel de commande normal."
 
-#: forms/list_forms.py:809
+#: forms/list_forms.py:813
 msgid "Autoresponse request text"
 msgstr "Texte de réponse automatique aux requêtes"
 
-#: forms/list_forms.py:812
+#: forms/list_forms.py:816
 msgid "Auto-response text to send to -request emails."
 msgstr "Texte de réponse automatique à envoyer aux courriels à -request."
 
-#: forms/list_forms.py:814
+#: forms/list_forms.py:818
 msgid "Autoresponse grace period"
 msgstr "Période de grâce pour réponse automatique"
 
-#: forms/list_forms.py:816
+#: forms/list_forms.py:820
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1155,11 +1185,11 @@ msgstr ""
 "négatif) pour aucun délai de grâce (c'est à dire réponse automatique à "
 "chaque message)."
 
-#: forms/list_forms.py:824
+#: forms/list_forms.py:828
 msgid "Notify users of held messages"
 msgstr "Notifier les utilisateurs des messages retenus"
 
-#: forms/list_forms.py:826
+#: forms/list_forms.py:830
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1169,11 +1199,11 @@ msgstr ""
 "approbation. Si vous dites « Non », aucune notification ne sera envoyée aux "
 "utilisateurs au sujet de leurs messages en attente d'approbation."
 
-#: forms/list_forms.py:833
+#: forms/list_forms.py:837
 msgid "Send welcome message"
 msgstr "Envoyer un message d'accueil"
 
-#: forms/list_forms.py:835
+#: forms/list_forms.py:839
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1188,11 +1218,11 @@ msgstr ""
 "listes de diffusion vers Mailman.\n"
 "Le texte du message d'accueil peut être déterminé par l'onglet « Modèles »."
 
-#: forms/list_forms.py:844
+#: forms/list_forms.py:848
 msgid "Admin immed notify"
 msgstr "Notification immédiate à l'administrateur"
 
-#: forms/list_forms.py:846
+#: forms/list_forms.py:850
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1210,37 +1240,38 @@ msgstr ""
 "l'envoi immédiat des avertissements lors de la réception des nouvelles "
 "requêtes. "
 
-#: forms/list_forms.py:856
+#: forms/list_forms.py:860
 msgid "Notify admin of membership changes"
 msgstr "Notifier l'administrateur des changements d'abonnements"
 
-#: forms/list_forms.py:857
+#: forms/list_forms.py:861
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr ""
 "L'administrateur doit-il recevoir les notifications d'abonnement et de "
 "désabonnement ?"
 
-#: forms/list_forms.py:862
+#: forms/list_forms.py:866
 msgid "Not Moderated"
 msgstr "Non-modérée"
 
-#: forms/list_forms.py:863
+#: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
 msgstr "Modérée mais ouverte à toutes les publications"
 
-#: forms/list_forms.py:864
+#: forms/list_forms.py:868
 msgid "Moderated"
 msgstr "Modérée"
 
-#: forms/list_forms.py:875
+#: forms/list_forms.py:879
 msgid "Show list on index page"
 msgstr "Afficher la liste sur la page d'index"
 
-#: forms/list_forms.py:876
+#: forms/list_forms.py:880
 msgid "Choose whether to include this list on the list of all lists"
-msgstr "Choisir d'inclure ou non cette liste dans la liste de toutes les listes"
+msgstr ""
+"Choisir d'inclure ou non cette liste dans la liste de toutes les listes"
 
-#: forms/list_forms.py:882
+#: forms/list_forms.py:886
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1251,44 +1282,44 @@ msgstr ""
 "Elle devrait donc être aussi succinte que possible tout en décrivant ce "
 "qu'est la liste."
 
-#: forms/list_forms.py:888
+#: forms/list_forms.py:892
 msgid "Information"
 msgstr "Information"
 
-#: forms/list_forms.py:889
+#: forms/list_forms.py:893
 msgid "A longer description of this mailing list."
 msgstr "Une description plus longue de cette liste de diffusion."
 
-#: forms/list_forms.py:893
+#: forms/list_forms.py:897
 msgid "Display name"
 msgstr "Nom public"
 
-#: forms/list_forms.py:895
+#: forms/list_forms.py:899
 msgid "Display name is the name shown in the web interface."
 msgstr "Le nom public est le nom affiché dans l'interface."
 
-#: forms/list_forms.py:898
+#: forms/list_forms.py:902
 msgid "Subject prefix"
 msgstr "Préfixe de l'objet"
 
-#: forms/list_forms.py:903
+#: forms/list_forms.py:907
 msgid "Preferred Language"
 msgstr "Langue préférée"
 
-#: forms/list_forms.py:909
+#: forms/list_forms.py:913
 msgid "Members List Visibility"
 msgstr "Visibilité des abonnés"
 
-#: forms/list_forms.py:913
+#: forms/list_forms.py:917
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr ""
 "Qui a le droit de voir la liste des abonnés pour cette liste de diffusion ?"
 
-#: forms/list_forms.py:918
+#: forms/list_forms.py:922
 msgid "Gateway to mail"
 msgstr "Passerelle pour les courriels"
 
-#: forms/list_forms.py:919
+#: forms/list_forms.py:923
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
@@ -1296,11 +1327,11 @@ msgstr ""
 "Indicateur signifiant que les publications sur le groupe de nouvelles lié "
 "doivent être barrées vers la liste"
 
-#: forms/list_forms.py:925
+#: forms/list_forms.py:929
 msgid "Gateway to news"
 msgstr "Passerelle vers les nouvelles"
 
-#: forms/list_forms.py:926
+#: forms/list_forms.py:930
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
@@ -1308,29 +1339,29 @@ msgstr ""
 "Indicateur signifiant que les expéditions vers la liste doivent être barrées "
 "vers le groupe de nouvelles lié."
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:934
 msgid "Linked Newsgroup"
 msgstr "Groupe de nouvelles lié"
 
-#: forms/list_forms.py:933
+#: forms/list_forms.py:937
 msgid "The name of the linked newsgroup."
 msgstr "Le nom du groupe de nouvelles lié."
 
-#: forms/list_forms.py:936
+#: forms/list_forms.py:940
 msgid "Newsgroup moderation"
 msgstr "Modération des groupes de nouvelles"
 
-#: forms/list_forms.py:940
+#: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 "La politique de modération pour le groupe de nouvelles lié, s'il en existe "
 "une."
 
-#: forms/list_forms.py:946
+#: forms/list_forms.py:950
 msgid "NNTP Include subject prefix "
 msgstr "Préfixe de l'objet à inclure en NNTP "
 
-#: forms/list_forms.py:947
+#: forms/list_forms.py:951
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
@@ -1338,11 +1369,11 @@ msgstr ""
 "Indicateur signifiant si l'« objet préfix » de la liste devra être inclus "
 "dans les expéditions déclenchées vers usenet."
 
-#: forms/list_forms.py:962
+#: forms/list_forms.py:966
 msgid "Emails to mass subscribe"
 msgstr "Adresses de courriel à inscrire en nombre"
 
-#: forms/list_forms.py:964
+#: forms/list_forms.py:968
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1360,51 +1391,51 @@ msgstr ""
 "ctartempion@example.com (Camille Tartempion)\n"
 "Utilisez les trois dernières pour associer un nom public à l'adresse\n"
 
-#: forms/list_forms.py:975
+#: forms/list_forms.py:979
 msgid "Pre confirm"
 msgstr "Pré-confirmé"
 
-#: forms/list_forms.py:979
+#: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 "Si cette case est cochée les utilisateurs n'auront pas besoin de confirmer "
 "leur abonnement."
 
-#: forms/list_forms.py:984
+#: forms/list_forms.py:988
 msgid "Pre approved"
 msgstr "Pré-approuvées"
 
-#: forms/list_forms.py:988
+#: forms/list_forms.py:992
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 "Si cette case est cochée, les modérateurs n'auront pas besoin de valider les "
 "demandes d'abonnement."
 
-#: forms/list_forms.py:994
+#: forms/list_forms.py:998
 msgid "Pre Verified"
 msgstr "Pré-vérifiées"
 
-#: forms/list_forms.py:998
+#: forms/list_forms.py:1002
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 "Si cette case est cochée, les utilisateurs n'auront pas à prouver que leur "
 "adresse de courriel est correcte."
 
-#: forms/list_forms.py:1009
+#: forms/list_forms.py:1013
 msgid "Emails to Unsubscribe"
 msgstr "Adresses de courriels à désabonner"
 
-#: forms/list_forms.py:1010
+#: forms/list_forms.py:1014
 msgid "Add one email address on each line"
 msgstr "Ajouter une adresse de courriel par ligne"
 
-#: forms/list_forms.py:1029
+#: forms/list_forms.py:1033
 msgid "Add ban"
 msgstr "Bannir"
 
-#: forms/list_forms.py:1031
+#: forms/list_forms.py:1035
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
@@ -1412,63 +1443,63 @@ msgstr ""
 "Vous pouvez bannir une seule adresse de courriel ou utiliser une expression "
 "rationnelle correspondant à des adresses de courriel similaires."
 
-#: forms/list_forms.py:1041
+#: forms/list_forms.py:1045
 msgid "Default antispam action"
 msgstr "Action anti-pourriel par défaut"
 
-#: forms/list_forms.py:1045
+#: forms/list_forms.py:1049
 msgid "Header"
 msgstr "Entête"
 
-#: forms/list_forms.py:1046
+#: forms/list_forms.py:1050
 msgid "Email header to filter on (case-insensitive)."
 msgstr "Filtrer sur l'entête de message (sans tenir compte de la casse)."
 
-#: forms/list_forms.py:1048
+#: forms/list_forms.py:1052
 msgid "Please enter a header."
 msgstr "Veuillez entrer une entête."
 
-#: forms/list_forms.py:1049
+#: forms/list_forms.py:1053
 msgid "Please enter a valid header."
 msgstr "Veuillez entrer une entête valide."
 
-#: forms/list_forms.py:1051
+#: forms/list_forms.py:1055
 msgid "Pattern"
 msgstr "Motif"
 
-#: forms/list_forms.py:1052
+#: forms/list_forms.py:1056
 msgid "Regular expression matching the header's value."
 msgstr "Expression rationnelle correspondant au contenu de l'entête."
 
-#: forms/list_forms.py:1054
+#: forms/list_forms.py:1058
 msgid "Please enter a pattern."
 msgstr "Veuillez entrer un motif."
 
-#: forms/list_forms.py:1055
+#: forms/list_forms.py:1059
 msgid "Please enter a valid pattern."
 msgstr "Veuillez entrer un motif correct."
 
-#: forms/list_forms.py:1057 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1061 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Action"
 
-#: forms/list_forms.py:1058
+#: forms/list_forms.py:1062
 msgid "Please enter a valid action."
 msgstr "Veuillez entrer une action correcte."
 
-#: forms/list_forms.py:1061
+#: forms/list_forms.py:1065
 msgid "Action to take when a header matches"
 msgstr "Action à effectuer quand une entête correspond"
 
-#: forms/list_forms.py:1090
+#: forms/list_forms.py:1094
 msgid "Moderation"
 msgstr "Modération"
 
-#: forms/list_forms.py:1092
+#: forms/list_forms.py:1096
 msgid "List default"
 msgstr "Liste par défaut"
 
-#: forms/list_forms.py:1094
+#: forms/list_forms.py:1098
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1494,11 +1525,11 @@ msgstr ""
 "Traitement par défaut -- effectue des vérifications supplémentaires avant "
 "d'accepter le message. \n"
 
-#: forms/list_forms.py:1114
+#: forms/list_forms.py:1118
 msgid "Select Email"
 msgstr "Choisir un courriel"
 
-#: forms/list_forms.py:1122
+#: forms/list_forms.py:1126
 msgid "Data"
 msgstr "Données"
 
@@ -1552,10 +1583,10 @@ msgid ""
 msgstr ""
 "Positionner cette option à « Activé » pour recevoir les messages expédiés "
 "sur cette liste de discussion. Postionnez-la à « Désactivé » si vous voulez "
-"rester abonné mais ne voulez pas recevoir les courriels pendant un moment ("
-"par exemple, si vous partez en vacances). Si vous désactivez la distribution "
-"de courriels, n'oubliez pas de la réactiver lorsque vous revenez ; elle ne "
-"sera pas automatiquement réactivée."
+"rester abonné mais ne voulez pas recevoir les courriels pendant un moment "
+"(par exemple, si vous partez en vacances). Si vous désactivez la "
+"distribution de courriels, n'oubliez pas de la réactiver lorsque vous "
+"revenez ; elle ne sera pas automatiquement réactivée."
 
 #: forms/user_forms.py:71
 msgid "Delivery mode"
@@ -1653,8 +1684,8 @@ msgstr ""
 "accessibles publiquement.\n"
 "Vous pouvez utiliser ces variables dans les modèles. \n"
 "$hyperkitty_url : lien durable vers un message archivé par Hyperkitty\n"
-"$listname : adresse de la liste de diffusion, par exemple fourmi@example.com "
-"\n"
+"$listname : adresse de la liste de diffusion, par exemple fourmi@example."
+"com \n"
 "$list_id : le contenu de l'entête List-ID, par exemple fourmi.example.com \n"
 "$display_name : nom public de la liste, par exemple Fourmi \n"
 "$short_listname : la partie locale de l'adresse de la liste, par exemple "
@@ -1879,15 +1910,15 @@ msgstr "Connexion"
 msgid "Sign Up"
 msgstr "S'inscrire"
 
-#: templates/postorius/base.html:117
+#: templates/postorius/base.html:122
 msgid "Postorius Documentation"
 msgstr "Documentation de Postorius"
 
-#: templates/postorius/base.html:121
+#: templates/postorius/base.html:126
 msgid "Postorius Version"
 msgstr "Version de Postorius"
 
-#: templates/postorius/base.html:124
+#: templates/postorius/base.html:129
 msgid "Happy Mailman Day!"
 msgstr "Joyeuse journée de Mailman !"
 
@@ -1921,7 +1952,7 @@ msgstr ""
 #: templates/postorius/lists/members.html:107
 #: templates/postorius/lists/members.html:116
 #: templates/postorius/lists/template_list.html:32
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:59
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -2155,7 +2186,7 @@ msgid "Unsubscribe All"
 msgstr "Désabonner tous"
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:59
+#: templates/postorius/menu/list_nav.html:58
 msgid "Header filters"
 msgstr "Filtres sur les entêtes"
 
@@ -2308,7 +2339,7 @@ msgid "Subscription requests"
 msgstr "Demandes d'abonnement"
 
 #: templates/postorius/lists/summary.html:8
-#: templates/postorius/menu/list_nav.html:9
+#: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "Info"
 
@@ -2353,8 +2384,8 @@ msgid ""
 "              "
 msgstr ""
 "\n"
-"                Vous pouvez gérer vos abonnements sur <a href=\""
-"%(user_list_options_url)s\">votre page des options de listes</a>\n"
+"                Vous pouvez gérer vos abonnements sur <a href="
+"\"%(user_list_options_url)s\">votre page des options de listes</a>\n"
 "              "
 
 #: templates/postorius/lists/summary.html:59
@@ -2386,8 +2417,8 @@ msgid ""
 msgstr ""
 "\n"
 "                  Pour vous abonner vous pouvez envoyer un courriel à\n"
-"                  <a href=\"mailto:%(address)s?subject=Subscribe\""
-">%(address)s</a>\n"
+"                  <a href=\"mailto:%(address)s?subject=Subscribe\">"
+"%(address)s</a>\n"
 "                  avec le mot  « subscribe » dans l'objet ou utiliser le "
 "formulaire suivant :\n"
 "              "
@@ -2432,15 +2463,15 @@ msgstr "Mesures de la liste"
 msgid "Created at"
 msgstr "Créer à"
 
-#: templates/postorius/lists/summary.html:109
+#: templates/postorius/lists/summary.html:110
 msgid "Last post at"
 msgstr "Dernier message à"
 
-#: templates/postorius/lists/summary.html:110
+#: templates/postorius/lists/summary.html:112
 msgid "Digest last sent at"
 msgstr "Condensé envoyé pour la dernière fois à"
 
-#: templates/postorius/lists/summary.html:111
+#: templates/postorius/lists/summary.html:114
 msgid "Volume"
 msgstr "Volume"
 
@@ -2489,7 +2520,7 @@ msgstr "Opérations groupées"
 msgid "Mass removal"
 msgstr "Suppression en masse"
 
-#: templates/postorius/menu/list_nav.html:58
+#: templates/postorius/menu/list_nav.html:57
 msgid "Ban List"
 msgstr "Liste des bannis"
 
@@ -2540,7 +2571,8 @@ msgstr ""
 
 #: templates/postorius/user/address_preferences.html:20
 msgid "Each email address can have specific Mailman preferences."
-msgstr "Chaque adresse email peut avoir des préférence spécifique dans Mailman."
+msgstr ""
+"Chaque adresse email peut avoir des préférence spécifique dans Mailman."
 
 #: templates/postorius/user/address_preferences.html:21
 msgid ""
