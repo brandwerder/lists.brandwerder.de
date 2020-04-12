@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 19:07-0700\n"
-"PO-Revision-Date: 2020-04-12 19:08+0000\n"
+"PO-Revision-Date: 2020-04-13 16:21+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -103,7 +103,7 @@ msgstr "Hemen kabul et (diğer kuralları atla)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr "Varsayılan işleme"
+msgstr "Öntanımlı işleme"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -468,12 +468,11 @@ msgstr ""
 
 #: forms/list_forms.py:365
 msgid "Default action to take when a member posts to the list"
-msgstr ""
-"Bir üye listeye gönderi gönderdiğinde gerçekleştirilecek varsayılan eylem"
+msgstr "Bir üye listeye mesaj gönderdiğinde gerçekleştirilecek öntanımlı eylem"
 
 #: forms/list_forms.py:367
 msgid "Please choose a default member action."
-msgstr "Lütfen varsayılan bir üye eylemi seçin."
+msgstr "Lütfen öntanımlı bir üye eylemi seçin."
 
 #: forms/list_forms.py:371
 msgid ""
@@ -486,24 +485,23 @@ msgid ""
 "Accept: accepts any postings without any further checks.\n"
 "Default Processing: run additional checks and accept the message."
 msgstr ""
-"Bir üye listeye mesaj gönderdiğinde gerçekleştirilecek varsayılan eylem.\n"
-"Beklet: bu, liste moderatörleri tarafından onaylanması için mesajı "
-"bekletir.\n"
+"Bir üye listeye mesaj gönderdiğinde gerçekleştirilecek öntanımlı eylem.\n"
+"Beklet: bu, liste moderatörleri tarafından onaylanması için mesajı bekletir."
+"\n"
 "Reddet: bu, mesajın yazarına bir geri dönme bildirimi göndererek mesajı "
 "otomatik olarak reddeder. Geri dönme bildiriminin metni sizin tarafınızdan "
 "yapılandırılabilir.\n"
 "At: bu, mesajın yazarına bildirim göndermeden sadece mesajı atar.\n"
 "Kabul et: başka kontroller yapmadan mesajı kabul eder.\n"
-"Varsayılan işlem: ek kontroller yap ve mesajı kabul et."
+"Öntanımlı işlem: ek kontroller yap ve mesajı kabul et."
 
 #: forms/list_forms.py:384
 msgid "Default action to take when a non-member posts to the list"
-msgstr ""
-"Üye olmayan biri listeye mesaj gönderdiğinde yapılacak varsayılan eylem"
+msgstr "Üye olmayan biri listeye mesaj gönderdiğinde yapılacak öntanımlı eylem"
 
 #: forms/list_forms.py:386
 msgid "Please choose a default non-member action."
-msgstr "Lütfen varsayılan bir üye olmayan eylemi seçin."
+msgstr "Lütfen öntanımlı bir üye olmayan eylemi seçin."
 
 #: forms/list_forms.py:390
 msgid ""
@@ -557,7 +555,7 @@ msgstr ""
 "ifadelerin bir listesidir. Girdiler `^` ile başlayan düzenli ifadelerdir ve "
 "mesajdaki gönderen adresleriyle eşleştirilir. Düzenli ifade olmayan adresler "
 "buraya girilebilse de, adresi üye olmayan olarak eklemek ve moderasyonunu "
-"'Varsayılan işlem' olarak ayarlamak tercih edilmektedir."
+"'Öntanımlı işlem' olarak ayarlamak tercih edilmektedir."
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
@@ -720,7 +718,7 @@ msgid ""
 "DMARC mitigation action of reject applies."
 msgstr ""
 "DMARC azaltma reddetme eylemi uygulandığında gönderilecek herhangi bir ret "
-"bildiriminde varsayılan nedeni değiştirecek metin."
+"bildiriminde öntanımlı nedenin yerini alacak metin."
 
 #: forms/list_forms.py:564
 msgid "DMARC wrapped message text"
@@ -1322,7 +1320,7 @@ msgid ""
 "jdoe@example.com (John Doe)\n"
 "Use the last three to associate a display name with the address\n"
 msgstr ""
-"Aşağıdaki formatlar kabul edilmektedir:\n"
+"Aşağıdaki biçimler kabul edilmektedir:\n"
 "jdoe@example.com\n"
 "&lt;jdoe@example.com&gt;\n"
 "John Doe &lt;jdoe@example.com&gt;\n"
@@ -1382,7 +1380,7 @@ msgstr ""
 
 #: forms/list_forms.py:1045
 msgid "Default antispam action"
-msgstr "Varsayılan antispam eylemi"
+msgstr "Öntanımlı antispam eylemi"
 
 #: forms/list_forms.py:1049
 msgid "Header"
@@ -1434,7 +1432,7 @@ msgstr "Moderasyon"
 
 #: forms/list_forms.py:1096
 msgid "List default"
-msgstr "Liste varsayılanı"
+msgstr "Liste öntanımlı değeri"
 
 #: forms/list_forms.py:1098
 msgid ""
@@ -1449,8 +1447,8 @@ msgid ""
 "Accept -- accepts any postings without any further checks. \n"
 "Default Processing -- run additional checks and accept the message. \n"
 msgstr ""
-"Bu üye listeye mesaj gönderdiğinde gerçekleştirilecek varsayılan eylem.\n"
-"Liste varsayılanı -- listenin varsayılan üye eylemini izle.\n"
+"Bu üye listeye mesaj gönderdiğinde gerçekleştirilecek öntanımlı eylem.\n"
+"Liste öntanımlı değeri -- listenin öntanımlı üye eylemini izle.\n"
 "Beklet -- bu, liste moderatörleri tarafından onaylanması için mesajı "
 "bekletir.\n"
 "Reddet -- bu, mesajın yazarına bir geri dönme bildirimi göndererek mesajı "
@@ -1458,7 +1456,7 @@ msgstr ""
 "yapılandırılabilir.\n"
 "At -- bu, mesajın yazarına bildirim göndermeden sadece mesajı atar.\n"
 "Kabul et -- başka kontroller yapmadan mesajı kabul eder.\n"
-"Varsayılan işlem -- ek kontroller yap ve mesajı kabul et. \n"
+"Öntanımlı işlem -- ek kontroller yap ve mesajı kabul et. \n"
 
 #: forms/list_forms.py:1118
 msgid "Select Email"
@@ -1673,7 +1671,7 @@ msgid ""
 "Sent to the list administrators when a bounce message in an unrecognized "
 "format has been received."
 msgstr ""
-"Tanınmayan bir formatta bir geri dönme mesajı alındığında liste "
+"Tanınmayan bir biçimde bir geri dönme mesajı alındığında liste "
 "yöneticilerine gönderilir."
 
 #: template_list.py:36
@@ -1842,7 +1840,7 @@ msgstr "Postorius Dokümantasyonu"
 
 #: templates/postorius/base.html:126
 msgid "Postorius Version"
-msgstr "Postorius Versiyonu"
+msgstr "Postorius Sürümü"
 
 #: templates/postorius/base.html:129
 msgid "Happy Mailman Day!"
@@ -2120,7 +2118,7 @@ msgstr "Değişiklikleri kaydet"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
-msgstr "Bekleyen değişiklikler var, kaydetmek için butona tıklayın."
+msgstr "Bekleyen değişiklikler var, kaydetmek için düğmeye tıklayın."
 
 #: templates/postorius/lists/held_messages.html:9
 #: templates/postorius/menu/list_nav.html:28
