@@ -26,6 +26,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
 * Added links to Reply-To munging articles.  (Closes #401)
+* Fix "Show Headers" button to show the held message headers in the
+  held message popup. (Closes #407)
 
 1.3.2
 =====
