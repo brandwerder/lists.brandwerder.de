@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 17:15-0700\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
 "PO-Revision-Date: 2019-12-03 18:06+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -51,7 +51,7 @@ msgstr ""
 "Përkatësia për listat tuaja të postimeve. Për shembull, kur doni lista të "
 "tilla si testing@example.com, jepni këtu example.com."
 
-#: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:879
+#: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:883
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
 msgstr "Përshkrim"
@@ -205,12 +205,12 @@ msgstr "Ju lutemi, jepni një emër të vlefshëm liste"
 msgid "Your email address"
 msgstr "Adresa juaj email"
 
-#: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:1034
+#: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:1038
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
 msgstr "Ju lutemi, jepni një adresë email."
 
-#: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:1035
+#: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:1039
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
 msgstr "Ju lutemi, jepni një adresë email të vlefshme."
@@ -291,9 +291,9 @@ msgstr ""
 #: forms/list_forms.py:506 forms/list_forms.py:548 forms/list_forms.py:616
 #: forms/list_forms.py:651 forms/list_forms.py:664 forms/list_forms.py:672
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
-#: forms/list_forms.py:821 forms/list_forms.py:830 forms/list_forms.py:842
-#: forms/list_forms.py:854 forms/list_forms.py:873 forms/list_forms.py:916
-#: forms/list_forms.py:923 forms/list_forms.py:944 forms/user_forms.py:47
+#: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
+#: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
 msgid "Yes"
 msgstr "Po"
 
@@ -302,9 +302,9 @@ msgstr "Po"
 #: forms/list_forms.py:506 forms/list_forms.py:548 forms/list_forms.py:616
 #: forms/list_forms.py:651 forms/list_forms.py:664 forms/list_forms.py:672
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
-#: forms/list_forms.py:821 forms/list_forms.py:830 forms/list_forms.py:842
-#: forms/list_forms.py:854 forms/list_forms.py:873 forms/list_forms.py:916
-#: forms/list_forms.py:923 forms/list_forms.py:944 forms/user_forms.py:47
+#: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
+#: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
 msgid "No"
 msgstr "Jo"
 
@@ -959,6 +959,31 @@ msgid "Explicit Reply-to set; no Cc added"
 msgstr "U caktua krye eksplicite <em>Reply-to</em>; s’u shtua Cc"
 
 #: forms/list_forms.py:733
+#, fuzzy
+#| msgid ""
+#| "Where are replies to list messages directed? No Munging is strongly "
+#| "recommended for most mailing lists. \n"
+#| "This option controls what Mailman does to the Reply-To: header in "
+#| "messages flowing through this mailing list. When set to No Munging, no "
+#| "Reply-To: header is added by Mailman, although if one is present in the "
+#| "original message, it is not stripped. Setting this value to either Reply "
+#| "to List, Explicit Reply, or Reply Only causes Mailman to insert a "
+#| "specific Reply-To: header in all messages, overriding the header in the "
+#| "original message if necessary (Explicit Reply inserts the value of "
+#| "reply_to_address). Explicit Reply-to set; no Cc added is useful "
+#| "forannounce-only lists where you want to avoid someone replying to the "
+#| "list address. There are many reasons not to introduce or override the "
+#| "Reply-To: header. One is that some posters depend on their own Reply-To: "
+#| "settings to convey their valid return address. Another is that modifying "
+#| "Reply-To: makes it much more difficult to send private replies. See "
+#| "`Reply-To' Munging Considered Harmful for a general discussion of this "
+#| "issue. See Reply-To Munging Considered Useful for a dissenting opinion. "
+#| "Some mailing lists have restricted posting privileges, with a parallel "
+#| "list devoted to discussions. Examples are `patches' or `checkin' lists, "
+#| "where software changes are posted by a revision control system, but "
+#| "discussion about the changes occurs on a developers mailing list. To "
+#| "support these types of mailing lists, select Explicit Reply and set the "
+#| "Reply-To: address option to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -974,8 +999,10 @@ msgid ""
 "introduce or override the Reply-To: header. One is that some posters depend "
 "on their own Reply-To: settings to convey their valid return address. "
 "Another is that modifying Reply-To: makes it much more difficult to send "
-"private replies. See `Reply-To' Munging Considered Harmful for a general "
-"discussion of this issue. See Reply-To Munging Considered Useful for a "
+"private replies. See <a href=\"http://marc.merlins.org/netrants/reply-to-"
+"harmful.html\">`Reply-To' Munging Considered Harmful</a> for a general "
+"discussion of this issue. See <a href=\"http://marc.merlins.org/netrants/"
+"reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> for a "
 "dissenting opinion. Some mailing lists have restricted posting privileges, "
 "with a parallel list devoted to discussions. Examples are `patches' or "
 "`checkin' lists, where software changes are posted by a revision control "
@@ -1010,70 +1037,70 @@ msgstr ""
 "listave, përzgjidhni “Përgjigje Eksplicite” dhe caktojeni mundësinë për "
 "adresën <em>Reply-To:</em> të shpjerë te lista paralele."
 
-#: forms/list_forms.py:761
+#: forms/list_forms.py:765
 msgid "Pipeline"
 msgstr "Kanal"
 
-#: forms/list_forms.py:766
+#: forms/list_forms.py:770
 msgid "Type of pipeline you want to use for this mailing list"
 msgstr "Lloj kanali që dëshironi të përdoret për këtë listë postimesh"
 
-#: forms/list_forms.py:774
+#: forms/list_forms.py:778
 msgid "Respond and continue processing"
 msgstr "Përgjigjuni dhe vazhdoni përpunimin"
 
-#: forms/list_forms.py:775
+#: forms/list_forms.py:779
 msgid "Respond and discard message"
 msgstr "Përgjigjuni dhe hidheni tej mesazhin"
 
-#: forms/list_forms.py:776
+#: forms/list_forms.py:780
 msgid "No automatic response"
 msgstr "Pa përgjigje të automatizuar"
 
-#: forms/list_forms.py:780
+#: forms/list_forms.py:784
 msgid "Autorespond to list owner"
 msgstr "Vetëpërgjigju të zotit të listës"
 
-#: forms/list_forms.py:781
+#: forms/list_forms.py:785
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -owner address?"
 msgstr ""
 "A duhet të dërgojë Mailman-i një vetëpërgjigje për email-e dërguar te adresa "
 "-owner?"
 
-#: forms/list_forms.py:784
+#: forms/list_forms.py:788
 msgid "Autoresponse owner text"
 msgstr "Tekst vetëpërgjigjeje të zotit"
 
-#: forms/list_forms.py:787
+#: forms/list_forms.py:791
 msgid "Auto-response text to send to -owner emails."
 msgstr "Tekst vetëpërgjigjeje për t’u dërguar te email-e -owner."
 
-#: forms/list_forms.py:791
+#: forms/list_forms.py:795
 msgid "Autorespond postings"
 msgstr "Postime vetëpërgjigje"
 
-#: forms/list_forms.py:792
+#: forms/list_forms.py:796
 msgid "Should Mailman send an auto-response to mailing list posters?"
 msgstr ""
 "A duhet të dërgojë Mailman-i një vetëpërgjigje te postues në listën e "
 "postimeve?"
 
-#: forms/list_forms.py:795
+#: forms/list_forms.py:799
 msgid "Autoresponse postings text"
 msgstr "Tekst postimesh vetëpërgjigje"
 
-#: forms/list_forms.py:798
+#: forms/list_forms.py:802
 msgid "Auto-response text to send to mailing list posters."
 msgstr ""
 "Tekst postimesh vetëpërgjigje për t’u dërguar te postues në listën e "
 "postimeve."
 
-#: forms/list_forms.py:802
+#: forms/list_forms.py:806
 msgid "Autorespond requests"
 msgstr "Kërkesa vetëpërgjigje"
 
-#: forms/list_forms.py:804
+#: forms/list_forms.py:808
 msgid ""
 "Should Mailman send an auto-response to emails sent to the -request address? "
 "If you choose yes, decide whether you want Mailman to discard the original "
@@ -1083,19 +1110,19 @@ msgstr ""
 "request? Nëse zgjidhni po, vendosni nëse doni që Mailman-i të hedhë tej "
 "email-in origjinal, apo ta përcjellë te sistemi si urdhër normal poste."
 
-#: forms/list_forms.py:809
+#: forms/list_forms.py:813
 msgid "Autoresponse request text"
 msgstr "Tekst kërkese vetëpërgjigje"
 
-#: forms/list_forms.py:812
+#: forms/list_forms.py:816
 msgid "Auto-response text to send to -request emails."
 msgstr "Tekst kërkese vetëpërgjigje për t’u dërguar te email-e -request."
 
-#: forms/list_forms.py:814
+#: forms/list_forms.py:818
 msgid "Autoresponse grace period"
 msgstr "Periudhë afati vetëpërgjigjesh"
 
-#: forms/list_forms.py:816
+#: forms/list_forms.py:820
 msgid ""
 "Number of days between auto-responses to either the mailing list or -"
 "request/-owner address from the same poster. Set to zero (or negative) for "
@@ -1105,11 +1132,11 @@ msgstr ""
 "<em>-request/-owner</em> prej të njëjtit postues. Vëreni zero (ose vlerë "
 "negative) për pa periudhë afati (domethënë, vetëpërgjigje për çdo mesazh)."
 
-#: forms/list_forms.py:824
+#: forms/list_forms.py:828
 msgid "Notify users of held messages"
 msgstr "Njoftoji përdoruesit e mesazheve të mbajtur"
 
-#: forms/list_forms.py:826
+#: forms/list_forms.py:830
 msgid ""
 "Should Mailman notify users about their messages held for approval. If you "
 "say 'No', no notifications will be sent to users about the pending approval "
@@ -1119,11 +1146,11 @@ msgstr ""
 "mbajtur për miratim. Nëse thoni “Jo”, përdoruesve s’do t’u dërgohen njoftime "
 "rreth pritjes për miratim për mesazhe të tyre."
 
-#: forms/list_forms.py:833
+#: forms/list_forms.py:837
 msgid "Send welcome message"
 msgstr "Dërgo mesazh mirëseardhjeje"
 
-#: forms/list_forms.py:835
+#: forms/list_forms.py:839
 msgid ""
 "Send welcome message to newly subscribed members? Turn this off only if you "
 "plan on subscribing people manually and don't want them to know that you did "
@@ -1138,11 +1165,11 @@ msgstr ""
 "Mailman-i.\n"
 "Teksti i mesazhit të Mirëseardhjes mund të caktohet që nga skeda Gjedhe."
 
-#: forms/list_forms.py:844
+#: forms/list_forms.py:848
 msgid "Admin immed notify"
 msgstr "Njoftim i menjëhershëm i përgjegjësit"
 
-#: forms/list_forms.py:846
+#: forms/list_forms.py:850
 msgid ""
 "Should the list moderators get immediate notice of new requests, as well as "
 "daily notices about collected ones? List moderators (and list "
@@ -1159,39 +1186,39 @@ msgstr ""
 "tjetër janë mbajtur. Caktimi i kësaj mundësie bën që njoftimet të dërgohen "
 "menjëherë sapo mbërrijnë kërkesa të tilla të reja. "
 
-#: forms/list_forms.py:856
+#: forms/list_forms.py:860
 msgid "Notify admin of membership changes"
 msgstr "Njofto përgjegjësin për ndryshime anëtarësie"
 
-#: forms/list_forms.py:857
+#: forms/list_forms.py:861
 msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr "A duhet të marrë përgjegjësi njoftime pajtimesh dhe shpajtimesh?"
 
-#: forms/list_forms.py:862
+#: forms/list_forms.py:866
 #, fuzzy
 #| msgid "Moderate"
 msgid "Not Moderated"
 msgstr "E moderuar"
 
-#: forms/list_forms.py:863
+#: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
 msgstr ""
 
-#: forms/list_forms.py:864
+#: forms/list_forms.py:868
 #, fuzzy
 #| msgid "Moderate"
 msgid "Moderated"
 msgstr "E moderuar"
 
-#: forms/list_forms.py:875
+#: forms/list_forms.py:879
 msgid "Show list on index page"
 msgstr "Shfaqe listën te faqja e treguesit"
 
-#: forms/list_forms.py:876
+#: forms/list_forms.py:880
 msgid "Choose whether to include this list on the list of all lists"
 msgstr "Zgjidhni nëse të përfshihet kjo listë te lista e krejt listave"
 
-#: forms/list_forms.py:882
+#: forms/list_forms.py:886
 msgid ""
 "This description is used when the mailing list is listed with other mailing "
 "lists, or in headers, and so forth. It should be as succinct as you can get "
@@ -1201,93 +1228,93 @@ msgstr ""
 "postimesh, ose në krye, e me radhë. Duhet të jetë aq e përmbledhur sa "
 "mundeni, teksa prapë tregon qartë se për çfarë është lista."
 
-#: forms/list_forms.py:888
+#: forms/list_forms.py:892
 msgid "Information"
 msgstr "Informacion"
 
-#: forms/list_forms.py:889
+#: forms/list_forms.py:893
 msgid "A longer description of this mailing list."
 msgstr "Një përshkrim më i gjatë i kësaj liste postimesh."
 
-#: forms/list_forms.py:893
+#: forms/list_forms.py:897
 msgid "Display name"
 msgstr "Emër në ekran"
 
-#: forms/list_forms.py:895
+#: forms/list_forms.py:899
 msgid "Display name is the name shown in the web interface."
 msgstr "Emri në ekran është emri i shfaqur te ndërfaqja web."
 
-#: forms/list_forms.py:898
+#: forms/list_forms.py:902
 msgid "Subject prefix"
 msgstr "Parashtesë subjekti"
 
-#: forms/list_forms.py:903
+#: forms/list_forms.py:907
 msgid "Preferred Language"
 msgstr "Gjuhë e Parapëlqyer"
 
-#: forms/list_forms.py:909
+#: forms/list_forms.py:913
 msgid "Members List Visibility"
 msgstr "Dukshmëri Anëtarësh Liste"
 
-#: forms/list_forms.py:913
+#: forms/list_forms.py:917
 msgid "Who is allowed to see members list for this MailingList?"
 msgstr "Cilit i lejohet të shohë listë anëtarësh për këtë Listë Postimesh?"
 
-#: forms/list_forms.py:918
+#: forms/list_forms.py:922
 msgid "Gateway to mail"
 msgstr ""
 
-#: forms/list_forms.py:919
+#: forms/list_forms.py:923
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
 
-#: forms/list_forms.py:925
+#: forms/list_forms.py:929
 msgid "Gateway to news"
 msgstr ""
 
-#: forms/list_forms.py:926
+#: forms/list_forms.py:930
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:930
+#: forms/list_forms.py:934
 msgid "Linked Newsgroup"
 msgstr ""
 
-#: forms/list_forms.py:933
+#: forms/list_forms.py:937
 msgid "The name of the linked newsgroup."
 msgstr ""
 
-#: forms/list_forms.py:936
+#: forms/list_forms.py:940
 #, fuzzy
 #| msgid "Set member moderation"
 msgid "Newsgroup moderation"
 msgstr "Caktoni moderim anëtarësh"
 
-#: forms/list_forms.py:940
+#: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
-#: forms/list_forms.py:946
+#: forms/list_forms.py:950
 #, fuzzy
 #| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
 msgstr "Parashtesë subjekti"
 
-#: forms/list_forms.py:947
+#: forms/list_forms.py:951
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
 
-#: forms/list_forms.py:962
+#: forms/list_forms.py:966
 msgid "Emails to mass subscribe"
 msgstr "Email-e për pajtim në masë"
 
-#: forms/list_forms.py:964
+#: forms/list_forms.py:968
 msgid ""
 "The following formats are accepted:\n"
 "jdoe@example.com\n"
@@ -1305,47 +1332,47 @@ msgstr ""
 "gjonnika@shembull.com (Gjon Nika)\n"
 "Për përshoqërim emri në ekran me adresën përdorni tre të fundit\n"
 
-#: forms/list_forms.py:975
+#: forms/list_forms.py:979
 #, fuzzy
 #| msgid "Confirm"
 msgid "Pre confirm"
 msgstr "Me ripohim"
 
-#: forms/list_forms.py:979
+#: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
 
-#: forms/list_forms.py:984
+#: forms/list_forms.py:988
 msgid "Pre approved"
 msgstr ""
 
-#: forms/list_forms.py:988
+#: forms/list_forms.py:992
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
 
-#: forms/list_forms.py:994
+#: forms/list_forms.py:998
 msgid "Pre Verified"
 msgstr ""
 
-#: forms/list_forms.py:998
+#: forms/list_forms.py:1002
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
 
-#: forms/list_forms.py:1009
+#: forms/list_forms.py:1013
 msgid "Emails to Unsubscribe"
 msgstr "Email-e për Shpajtim"
 
-#: forms/list_forms.py:1010
+#: forms/list_forms.py:1014
 msgid "Add one email address on each line"
 msgstr "Shtoni një adresë email në secilin rresht"
 
-#: forms/list_forms.py:1029
+#: forms/list_forms.py:1033
 msgid "Add ban"
 msgstr "Shtoni dëbim"
 
-#: forms/list_forms.py:1031
+#: forms/list_forms.py:1035
 msgid ""
 "You can ban a single email address or use a regular expression to match "
 "similar email addresses."
@@ -1353,65 +1380,65 @@ msgstr ""
 "Mund të dëboni një adresë email të vetme ose të përdorni një shprehje të "
 "rregullt për përputhje kundrejt adresash të ngjashme."
 
-#: forms/list_forms.py:1041
+#: forms/list_forms.py:1045
 msgid "Default antispam action"
 msgstr "Veprim antispam parazgjedhje"
 
-#: forms/list_forms.py:1045
+#: forms/list_forms.py:1049
 msgid "Header"
 msgstr "Krye"
 
-#: forms/list_forms.py:1046
+#: forms/list_forms.py:1050
 msgid "Email header to filter on (case-insensitive)."
 msgstr ""
 "Krye email-i për t’u flitruar (shkrimi me të mëdha a të vogla s’ndryshon "
 "gjë)."
 
-#: forms/list_forms.py:1048
+#: forms/list_forms.py:1052
 msgid "Please enter a header."
 msgstr "Ju lutemi, jepni një krye."
 
-#: forms/list_forms.py:1049
+#: forms/list_forms.py:1053
 msgid "Please enter a valid header."
 msgstr "Ju lutemi, jepni një krye të vlefshme."
 
-#: forms/list_forms.py:1051
+#: forms/list_forms.py:1055
 msgid "Pattern"
 msgstr "Rregullsi"
 
-#: forms/list_forms.py:1052
+#: forms/list_forms.py:1056
 msgid "Regular expression matching the header's value."
 msgstr "Shprehje e rregullt për përputhje me vlerën e kreut."
 
-#: forms/list_forms.py:1054
+#: forms/list_forms.py:1058
 msgid "Please enter a pattern."
 msgstr "Ju lutemi, jepni një rregullsi."
 
-#: forms/list_forms.py:1055
+#: forms/list_forms.py:1059
 msgid "Please enter a valid pattern."
 msgstr "Ju lutemi, jepni një rregullsi të vlefshme."
 
-#: forms/list_forms.py:1057 templates/postorius/domain/index.html:26
+#: forms/list_forms.py:1061 templates/postorius/domain/index.html:26
 msgid "Action"
 msgstr "Veprim"
 
-#: forms/list_forms.py:1058
+#: forms/list_forms.py:1062
 msgid "Please enter a valid action."
 msgstr "Ju lutemi, jepni një veprim të vlefshëm."
 
-#: forms/list_forms.py:1061
+#: forms/list_forms.py:1065
 msgid "Action to take when a header matches"
 msgstr "Veprim për t’u bërë kur ka përputhje me një krye"
 
-#: forms/list_forms.py:1090
+#: forms/list_forms.py:1094
 msgid "Moderation"
 msgstr "Moderim"
 
-#: forms/list_forms.py:1092
+#: forms/list_forms.py:1096
 msgid "List default"
 msgstr "Parazgjedhje liste"
 
-#: forms/list_forms.py:1094
+#: forms/list_forms.py:1098
 msgid ""
 "Default action to take when this member posts to the list. \n"
 "List default -- follow the list's default member action. \n"
@@ -1436,11 +1463,11 @@ msgstr ""
 "Përpunim Parazgjedhje -- xhiron mbi të kontrolle shtesë dhe e pranon "
 "mesazhin.\n"
 
-#: forms/list_forms.py:1114
+#: forms/list_forms.py:1118
 msgid "Select Email"
 msgstr "Përzgjidhni Email"
 
-#: forms/list_forms.py:1122
+#: forms/list_forms.py:1126
 msgid "Data"
 msgstr "Të dhëna"
 
@@ -1810,15 +1837,15 @@ msgstr "Hyrje"
 msgid "Sign Up"
 msgstr "Regjistrohuni"
 
-#: templates/postorius/base.html:117
+#: templates/postorius/base.html:122
 msgid "Postorius Documentation"
 msgstr "Dokumentim Postorius-i"
 
-#: templates/postorius/base.html:121
+#: templates/postorius/base.html:126
 msgid "Postorius Version"
 msgstr "Version Postorius-i"
 
-#: templates/postorius/base.html:124
+#: templates/postorius/base.html:129
 msgid "Happy Mailman Day!"
 msgstr "Gëzuar Ditën e Postierit!"
 
@@ -1852,7 +1879,7 @@ msgstr ""
 #: templates/postorius/lists/members.html:107
 #: templates/postorius/lists/members.html:116
 #: templates/postorius/lists/template_list.html:32
-#: templates/postorius/menu/list_nav.html:60
+#: templates/postorius/menu/list_nav.html:59
 msgid "Delete"
 msgstr "Fshije"
 
@@ -2083,7 +2110,7 @@ msgid "Unsubscribe All"
 msgstr "Shpajtoji Krejt"
 
 #: templates/postorius/lists/header_matches.html:7
-#: templates/postorius/menu/list_nav.html:59
+#: templates/postorius/menu/list_nav.html:58
 msgid "Header filters"
 msgstr "Filtra kryesh"
 
@@ -2236,7 +2263,7 @@ msgid "Subscription requests"
 msgstr "Kërkesë pajtimi"
 
 #: templates/postorius/lists/summary.html:8
-#: templates/postorius/menu/list_nav.html:9
+#: templates/postorius/menu/list_nav.html:10
 msgid "Info"
 msgstr "Info"
 
@@ -2358,15 +2385,15 @@ msgstr "Numra rreth listës"
 msgid "Created at"
 msgstr "Krijuar më"
 
-#: templates/postorius/lists/summary.html:109
+#: templates/postorius/lists/summary.html:110
 msgid "Last post at"
 msgstr "Postimi i fundit më"
 
-#: templates/postorius/lists/summary.html:110
+#: templates/postorius/lists/summary.html:112
 msgid "Digest last sent at"
 msgstr "Përmbledhje dërguar për herë të fundit më"
 
-#: templates/postorius/lists/summary.html:111
+#: templates/postorius/lists/summary.html:114
 msgid "Volume"
 msgstr "Vëllim"
 
@@ -2415,7 +2442,7 @@ msgstr "Veprime në masë"
 msgid "Mass removal"
 msgstr "Heqje në masë"
 
-#: templates/postorius/menu/list_nav.html:58
+#: templates/postorius/menu/list_nav.html:57
 msgid "Ban List"
 msgstr "Listë Dëbimesh"
 
