@@ -28,6 +28,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Added links to Reply-To munging articles.  (Closes #401)
 * Fix "Show Headers" button to show the held message headers in the
   held message popup. (Closes #407)
+* Fix the held message popup structure and increase the max width of the popup
+  to be 800px(modal-lg) for larger screens. (Closes $405)
 
 1.3.2
 =====
