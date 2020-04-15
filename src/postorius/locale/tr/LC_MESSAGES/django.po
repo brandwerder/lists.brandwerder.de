@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:22-0700\n"
-"PO-Revision-Date: 2020-04-13 16:21+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-16 11:09+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -27,8 +27,8 @@ msgid ""
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
 "Web kullanıcı arayüzünün sunulmasını istediğiniz etki alanı. Bu E-posta "
-"Sunucusuyla aynı veya farklı olabilir. Mevcut web sunucularının listesini <a "
-"href=\"%s\">buradan</a> düzenleyebilirsiniz."
+"Sunucusuyla aynı veya farklı olabilir. Kullanılabilir web sunucularının "
+"listesini <a href=\"%s\">buradan</a> düzenleyebilirsiniz."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
@@ -1871,7 +1871,7 @@ msgstr "Kaydol"
 
 #: templates/postorius/base.html:120
 msgid "Postorius Documentation"
-msgstr "Postorius Dokümantasyonu"
+msgstr "Postorius Belgelendirmesi"
 
 #: templates/postorius/base.html:124
 msgid "Postorius Version"
@@ -2645,7 +2645,7 @@ msgstr "Global Ayarlar"
 
 #: utils.py:37
 msgid "Mailman REST API not available. Please start Mailman core."
-msgstr "Mailman REST API'si mevcut değil. Lütfen Mailman core'u başlatın."
+msgstr "Mailman REST API'si kullanılamıyor. Lütfen Mailman core'u başlatın."
 
 #: views/domain.py:76
 msgid "New Domain registered"
