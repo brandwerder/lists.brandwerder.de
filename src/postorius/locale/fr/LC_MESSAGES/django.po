@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:21-0700\n"
-"PO-Revision-Date: 2020-04-09 07:42+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-17 04:36+0000\n"
 "Last-Translator: Frédéric Lehobey <weblate@proxience.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -26,32 +26,32 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
-"Le nom de domaine qui servira l'interface Web. Il peut être le même ou bien "
-"différent du domaine de messagerie. Vous pouvez éditer la liste des hôtes "
-"Web disponibles <a href=\"%s\">ici</a>."
+"Le nom de domaine du serveur qui fournira l'interface utilisateur. Il peut "
+"être le même ou bien différent du serveur de courriel. Vous pouvez modifier "
+"la liste des serveurs disponibles <a href=\"%s\">ici</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr "Domaine de messagerie"
+msgstr "Serveur de courriel"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr "Veuillez entrer un nom de domaine"
+msgstr "Veuillez saisir un nom de domaine"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Veuillez entrer un nom de domaine valide."
+msgstr "Veuillez saisir un nom de domaine correct."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
-"Le nom de domaine pour vos listes de discussion. Par exemple, si vous voulez "
-"des listes comme test@example.com, entrez example.com ici."
+"Le nom de domaine pour vos listes de diffusion. Par exemple, si vous voulez "
+"des listes comme test@example.com, indiquez example.com ici."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:883
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -65,7 +65,7 @@ msgstr "Nom de domaine alias"
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr "Veuillez entrer un nom de domaine valide ou rien."
+msgstr "Veuillez indiquer un nom de domaine correct sinon rien."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
@@ -75,16 +75,16 @@ msgstr ""
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr "Hôte Web"
+msgstr "Serveur"
 
 # Veuillez entrer un nom de domaine valide
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr "Veuillez entrer un nom de domaine valide"
+msgstr "Veuillez indiquer un nom de domaine correct"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr "Propriétaire du courriel"
+msgstr "Courriel du propriétaire"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
@@ -92,7 +92,7 @@ msgstr "Effectuez au moins un choix"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
-msgstr "Garder en modération"
+msgstr "Retenir en modération"
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
@@ -100,11 +100,11 @@ msgstr "Rejeter (en notifiant)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
-msgstr "Jeter (pas de notification)"
+msgstr "Éliminer (sans notification)"
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr "Accepter immédiatement (court-circuiter les autres règles)"
+msgstr "Accepter immédiatement (ignorer les autres règles)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
@@ -112,7 +112,7 @@ msgstr "Traitement par défaut"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr "Journalier"
+msgstr "Quotidien"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
@@ -132,15 +132,15 @@ msgstr "Annuel"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr "Seulement les modérateurices de la liste de diffusion"
+msgstr "Seulement les modérateurs de la liste de diffusion"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr "Seulement les membres de la liste de diffusion"
+msgstr "Seulement les abonnés de la liste de diffusion"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr "Tout le monde"
+msgstr "Quiconque"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -148,23 +148,23 @@ msgstr "Nom de la liste"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr "Veuillez entrer un nom pour votre liste."
+msgstr "Veuillez indiquer un nom pour votre liste."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr "Veuillez entrer un nom de liste valide."
+msgstr "Veuillez indiquer un nom de liste correct."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
-msgstr "Adresse courriel du propriétaire initial de la liste"
+msgstr "Adresse courriel du propriétaire originel de la liste"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr "Veuillez entrer le courriel du propriétaire de la liste."
+msgstr "Veuillez indiquer l'adresse de courriel du propriétaire de la liste."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr "Annoncer cette liste ?"
+msgstr "Publier l'existence de cette liste ?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
@@ -172,11 +172,11 @@ msgstr "Veuillez choisir un type de liste."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr "Annoncer cette liste dans l'index des listes"
+msgstr "Publier cette liste dans l'index des listes"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr "Cacher cette liste dans l'index des listes"
+msgstr "Écarter cette liste de l'index des listes"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
@@ -184,19 +184,19 @@ msgstr "Choisissez un domaine existant."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr "Choisissez un serveur de courriel valide"
+msgstr "Choisissez un serveur de courriel correct"
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr "Apparence de la liste"
+msgstr "Type de liste"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
-msgstr "Choisissez une apparence de liste."
+msgstr "Choisissez un type de liste."
 
 #: forms/list_forms.py:106
 msgid "Choose a valid List Style."
-msgstr "Choisissez une apparence de liste valide."
+msgstr "Choisissez un type de liste correct."
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
@@ -204,21 +204,21 @@ msgstr "L'administrateur du site n'a pas encore créé de domaine"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
-msgstr "Veuillez entrer un nom de liste valide"
+msgstr "Veuillez indiquer un nom de liste correct"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr "Votre adresse courriel"
+msgstr "Votre adresse de courriel"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/list_forms.py:1038
 #: forms/member_forms.py:29
 msgid "Please enter an email address."
-msgstr "Veuillez entrer une adresse courriel."
+msgstr "Veuillez entrer une adresse de courriel."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/list_forms.py:1039
 #: forms/member_forms.py:30
 msgid "Please enter a valid email address."
-msgstr "Veuillez entrer une adresse courriel valide."
+msgstr "Veuillez entrer une adresse de courriel correcte."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
@@ -1009,31 +1009,6 @@ msgid "Explicit Reply-to set; no Cc added"
 msgstr "Reply-to explicite défini ; aucun « Cc » d'ajouté"
 
 #: forms/list_forms.py:733
-#, fuzzy
-#| msgid ""
-#| "Where are replies to list messages directed? No Munging is strongly "
-#| "recommended for most mailing lists. \n"
-#| "This option controls what Mailman does to the Reply-To: header in "
-#| "messages flowing through this mailing list. When set to No Munging, no "
-#| "Reply-To: header is added by Mailman, although if one is present in the "
-#| "original message, it is not stripped. Setting this value to either Reply "
-#| "to List, Explicit Reply, or Reply Only causes Mailman to insert a "
-#| "specific Reply-To: header in all messages, overriding the header in the "
-#| "original message if necessary (Explicit Reply inserts the value of "
-#| "reply_to_address). Explicit Reply-to set; no Cc added is useful "
-#| "forannounce-only lists where you want to avoid someone replying to the "
-#| "list address. There are many reasons not to introduce or override the "
-#| "Reply-To: header. One is that some posters depend on their own Reply-To: "
-#| "settings to convey their valid return address. Another is that modifying "
-#| "Reply-To: makes it much more difficult to send private replies. See "
-#| "`Reply-To' Munging Considered Harmful for a general discussion of this "
-#| "issue. See Reply-To Munging Considered Useful for a dissenting opinion. "
-#| "Some mailing lists have restricted posting privileges, with a parallel "
-#| "list devoted to discussions. Examples are `patches' or `checkin' lists, "
-#| "where software changes are posted by a revision control system, but "
-#| "discussion about the changes occurs on a developers mailing list. To "
-#| "support these types of mailing lists, select Explicit Reply and set the "
-#| "Reply-To: address option to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1078,16 +1053,19 @@ msgstr ""
 "est que certains expéditeurs dépendent de leur propre configuration de Reply-"
 "To: pour communiquer leur adresse valide de retour. Une autre est que "
 "modifier Reply-To: rend beaucoup plus difficile d'envoyer des réponses "
-"privées. Voir « l'altération du Reply-To considérée comme dommageable » pour "
-"une discussion générale de cette question. Voir « l'altération de Reply-To "
-"considérée comme recommendable » pour une opinion différente. Certaines "
-"listes de diffuion ont des droits d'expédition restreints, avec une liste "
-"parallèle dédiée aux discussions. Des exemples sont les listes de « "
-"correctifs » ou « dépôt de code » où les changements logiciels sont expédiés "
-"par un système de gestion de versions mais pour lesquelles les discussions "
-"sur les changements se déroulent sur la liste de diffusion des développeurs. "
-"Pour gérer ces types de listes de diffusion, choisissez « Réponse explicite "
-"» et positionnez l'adresse Reply-To: pour diriger vers la liste parallèle."
+"privées. Voir <a href=\"http://marc.merlins.org/netrants/reply-to-harmful."
+"html\">« l'altération du Reply-To considérée comme dommageable »</a> pour "
+"une discussion générale de cette question. Voir <a href=\""
+"http://marc.merlins.org/netrants/reply-to-useful.html\">« l'altération de "
+"Reply-To considérée comme recommandable »</a> pour une opinion opposée. "
+"Certaines listes de diffusion ont des droits d'expédition restreints, avec "
+"une liste parallèle dédiée aux discussions. Des exemples sont les listes de «"
+" correctifs » ou « dépôt de code » où les changements logiciels sont "
+"expédiés par un système de gestion de versions mais pour lesquelles les "
+"discussions sur les changements se déroulent sur la liste de diffusion des "
+"développeurs. Pour gérer ces types de listes de diffusion, choisissez « "
+"Réponse explicite » et positionnez l'adresse Reply-To: pour diriger vers la "
+"liste parallèle."
 
 #: forms/list_forms.py:765
 msgid "Pipeline"
