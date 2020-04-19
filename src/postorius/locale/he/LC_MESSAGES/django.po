@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:21-0700\n"
-"PO-Revision-Date: 2020-04-12 19:08+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-20 15:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -515,7 +515,7 @@ msgstr ""
 
 #: forms/list_forms.py:421
 msgid "Accept these non-members"
-msgstr ""
+msgstr "לקבל את אלו שאינם חברים"
 
 #: forms/list_forms.py:424
 msgid ""
@@ -526,10 +526,15 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות שמותר להן "
+"לפרסם לרשימת דיוור זו מבלי להירשם לרשימה. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על הכתובת לעיבוד בררת המחדל."
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr ""
+msgstr "להחזיק את אלו שאינם חברים"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -686,15 +691,15 @@ msgstr ""
 
 #: forms/list_forms.py:574
 msgid "None"
-msgstr ""
+msgstr "בלי"
 
 #: forms/list_forms.py:575
 msgid "Individual"
-msgstr ""
+msgstr "פרטני"
 
 #: forms/list_forms.py:576
 msgid "Full"
-msgstr ""
+msgstr "מלא"
 
 #: forms/list_forms.py:580
 msgid ""
@@ -707,6 +712,13 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    בלי: בלי התאמה.\n"
+"\n"
+"    פרטני: כל אחד מקבל עותק ייחודי של ההודעה וישנם עוד כמה משתנים מתחלפים "
+"נוספים אבל הכותרות לא מתחלפות.\n"
+"\n"
+"    מלא: כל מה שמתבצע בהתאמה ברמת ‚פרטני’ בתוספת שינוי כותרת הנמען. "
 
 #: forms/list_forms.py:590 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:100
@@ -723,11 +735,11 @@ msgstr "דחייה"
 
 #: forms/list_forms.py:592
 msgid "Forward"
-msgstr ""
+msgstr "העברה"
 
 #: forms/list_forms.py:593
 msgid "Preserve"
-msgstr ""
+msgstr "שימור"
 
 #: forms/list_forms.py:596
 msgid ""
