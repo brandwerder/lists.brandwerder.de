@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"POT-Creation-Date: 2020-04-20 14:21-0700\n"
 "PO-Revision-Date: 2020-04-03 12:34+0000\n"
 "Last-Translator: Daniel <daniel@teichm-sh.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -1672,6 +1672,18 @@ msgstr ""
 "mit unbekanntem Format erhalten wurde."
 
 #: template_list.py:36
+#, fuzzy
+#| msgid ""
+#| "Sent to the list administrators to notify them when a member has been "
+#| "unsubscribed."
+msgid ""
+"Sent to the list administrators to notify them when a member's delivery is "
+"disabled due to excessive bounces."
+msgstr ""
+"Wird an die Listen-Administratoren verschickt, um über die Austragung eines "
+"Mitgliedes zu benachrichtigen."
+
+#: template_list.py:38
 msgid ""
 "Sent to the list administrators to notify them when a member has been "
 "unsubscribed."
@@ -1679,37 +1691,37 @@ msgstr ""
 "Wird an die Listen-Administratoren verschickt, um über die Austragung eines "
 "Mitgliedes zu benachrichtigen."
 
-#: template_list.py:38
+#: template_list.py:40
 msgid "The footer for a digest message."
 msgstr "Die Fußzeilen einer Digest-Nachricht."
 
-#: template_list.py:40
+#: template_list.py:42
 msgid "The header for a digest message."
 msgstr "Die Kopfzeilen einer Digest-Nachricht."
 
-#: template_list.py:42
+#: template_list.py:44
 msgid ""
 "The digest “masthead”; i.e. a common introduction for all digest messages."
 msgstr ""
 "Der Titelblock einer Digest-Nachricht, z.B. eine allgemeine Einleitung für "
 "alle Digest-Nachrichten."
 
-#: template_list.py:44
+#: template_list.py:46
 msgid "The footer for a regular (non-digest) message."
 msgstr "Die Fußzeilen einer regulären (nicht-digest) Nachricht."
 
-#: template_list.py:46
+#: template_list.py:48
 msgid "The header for a regular (non-digest) message."
 msgstr "Die Kopfzeilen einer regulären (nicht-digest) Nachricht."
 
-#: template_list.py:48
+#: template_list.py:50
 msgid ""
 "The message sent to subscribers when a subscription confirmation is required."
 msgstr ""
 "Die Nachricht, die an Abonnenten gesendet wird, wenn eine "
 "Abonnementbestätigung erforderlich ist."
 
-#: template_list.py:50
+#: template_list.py:52
 msgid ""
 "The message sent to subscribers when an unsubscription confirmation is "
 "required."
@@ -1717,13 +1729,13 @@ msgstr ""
 "Die Nachricht, die an Abonnenten gesendet wird, wenn eine Abmeldebestätigung "
 "erforderlich ist."
 
-#: template_list.py:52
+#: template_list.py:54
 msgid "The notice sent to a member when they unsubscribe from a mailing list."
 msgstr ""
 "Die Mitteilung, die an ein Mitglied gesendet wird, wenn es sich von einer "
 "Mailingliste abmeldet."
 
-#: template_list.py:54
+#: template_list.py:56
 msgid ""
 "The notice sent to a poster when their message is being held for moderator "
 "approval."
@@ -1731,7 +1743,7 @@ msgstr ""
 "Die Mitteilung, die an einen Versender gesendet wird, wenn die Nachricht zur "
 "Genehmigung durch den Moderator zurückgehalten wird."
 
-#: template_list.py:56
+#: template_list.py:58
 msgid ""
 "Sent to a user when the maximum number of autoresponses has been reached for "
 "that day."
@@ -1739,7 +1751,7 @@ msgstr ""
 "Wird an einen Benutzer gesendet, wenn die maximale Anzahl von automatischen "
 "Antworten für diesen Tag erreicht wurde."
 
-#: template_list.py:58
+#: template_list.py:60
 msgid ""
 "Notice sent to a poster when their message has been received by the mailing "
 "list."
@@ -1747,7 +1759,7 @@ msgstr ""
 "Mitteilung an einen Versender, wenn die Nachricht von der Mailingliste "
 "empfangen wurde."
 
-#: template_list.py:60
+#: template_list.py:62
 msgid ""
 "A bounce probe sent to a member when their subscription has been disabled "
 "due to bounces."
@@ -1755,7 +1767,7 @@ msgstr ""
 "Ein Bounce-Test, der an ein Mitglied gesendet wird, wenn dessen Abonnement "
 "aufgrund von Unzustellbarkeit deaktiviert wurde."
 
-#: template_list.py:62
+#: template_list.py:64
 msgid ""
 "Notice sent to a poster when their message has been rejected by the list’s "
 "moderator."
@@ -1763,12 +1775,35 @@ msgstr ""
 "Mitteilung an einen Versender, wenn dessen Nachricht vom Moderator der Liste "
 "abgelehnt wurde."
 
-#: template_list.py:64
+#: template_list.py:66
+#, fuzzy
+#| msgid ""
+#| "Notice sent to a poster when their message has been received by the "
+#| "mailing list."
+msgid ""
+"Notice sent to a poster when their message has been rejected automatically."
+msgstr ""
+"Mitteilung an einen Versender, wenn die Nachricht von der Mailingliste "
+"empfangen wurde."
+
+#: template_list.py:68
 msgid ""
 "The notice sent to a member when they are subscribed to the mailing list."
 msgstr ""
 "Die Mitteilung, die an ein Mitglied gesendet wird, wenn es die Mailingliste "
 "abonniert hat."
+
+#: template_list.py:70
+#, fuzzy
+#| msgid ""
+#| "A bounce probe sent to a member when their subscription has been disabled "
+#| "due to bounces."
+msgid ""
+"The notice sent to a member when their membership has been disabled due to "
+"excessive bounces."
+msgstr ""
+"Ein Bounce-Test, der an ein Mitglied gesendet wird, wenn dessen Abonnement "
+"aufgrund von Unzustellbarkeit deaktiviert wurde."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1796,60 +1831,60 @@ msgstr "Serverfehler"
 msgid "An error occurred while processing your request."
 msgstr "Bei der Verarbeitung Ihrer Anfrage ist ein Fehler aufgetreten."
 
-#: templates/postorius/base.html:34
+#: templates/postorius/base.html:32
 msgid "Mailman logo"
 msgstr "Mailman-Logo"
 
-#: templates/postorius/base.html:40
+#: templates/postorius/base.html:38
 msgid "Lists"
 msgstr "Listen"
 
-#: templates/postorius/base.html:45 templates/postorius/domain/index.html:5
+#: templates/postorius/base.html:43 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
 msgstr "Domains"
 
-#: templates/postorius/base.html:50
+#: templates/postorius/base.html:48
 msgid "System Information"
 msgstr "Systeminformationen"
 
-#: templates/postorius/base.html:57
+#: templates/postorius/base.html:55
 msgid "Archives"
 msgstr "Archive"
 
-#: templates/postorius/base.html:73
+#: templates/postorius/base.html:71
 msgid "Account"
 msgstr "Konto"
 
-#: templates/postorius/base.html:77
+#: templates/postorius/base.html:75
 msgid "Mailman settings"
 msgstr "Mailman-Einstellungen"
 
-#: templates/postorius/base.html:82
+#: templates/postorius/base.html:80
 msgid "Posting activity"
 msgstr "Posting-Aktivitäten"
 
-#: templates/postorius/base.html:88
+#: templates/postorius/base.html:86
 msgid "Logout"
 msgstr "Ausloggen"
 
-#: templates/postorius/base.html:95
+#: templates/postorius/base.html:93
 msgid "Login"
 msgstr "Anmelden"
 
-#: templates/postorius/base.html:99
+#: templates/postorius/base.html:97
 msgid "Sign Up"
 msgstr "Registrieren"
 
-#: templates/postorius/base.html:122
+#: templates/postorius/base.html:120
 msgid "Postorius Documentation"
 msgstr "Postorius Dokumentation"
 
-#: templates/postorius/base.html:126
+#: templates/postorius/base.html:124
 msgid "Postorius Version"
 msgstr "Postorius Version"
 
-#: templates/postorius/base.html:129
+#: templates/postorius/base.html:127
 msgid "Happy Mailman Day!"
 msgstr "Happy Mailman Day!"
 
