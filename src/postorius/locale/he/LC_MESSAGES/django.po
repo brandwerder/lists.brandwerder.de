@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 19:07-0700\n"
-"PO-Revision-Date: 2020-04-20 15:11+0000\n"
+"PO-Revision-Date: 2020-04-24 20:29+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -295,12 +295,12 @@ msgstr "לא"
 
 #: forms/list_forms.py:227
 msgid "Process Bounces"
-msgstr ""
+msgstr "עיבוד החזרות"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
-msgstr ""
+msgstr "מציין האם הרשימה הזאת אמורה או לא אמורה לעבד החזרות אוטומטית."
 
 #: forms/list_forms.py:234
 msgid "Bounce score threshold"
@@ -351,18 +351,20 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"אפשרות זו שולטת האם בעלי הרשימה יקבלו או לא יקבלו התראה עם הסרת חבר מהרשימה "
+"לאחר שההתראות המושבתות שלו נוצלו עד תום. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "משך אזהרות השבתת החזרות"
 
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "מספר הימים בין כל התראה שהושבתה."
 
 #: forms/list_forms.py:278
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "אזהרות השבתת החזרות"
 
 #: forms/list_forms.py:281
 msgid ""
@@ -371,6 +373,9 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"מספר ההתרעות שחבר מושבת יקבל לפני שהכתובת שלו נמחקת מתפוצת רשימת הדיוור. יש "
+"להגדיר ל־0 כדי להסיר כתובת אוטומטית מהרשימה לאחר שניקוד ההחזרה חורג מהסף. "
+"ערך זה חייב להיות מספר שלם וחיובי. "
 
 #: forms/list_forms.py:295
 msgid "Public archives"
@@ -954,21 +959,21 @@ msgstr ""
 "לא תווסף על ידי Mailman, למרות שאם כבר קיימת אחת בהודעה המקורית היא לא "
 "נמחקת. הגדרת ערך זה לכדי תגובה לרשימה, תגובה מפורשת או תגובה בלבד גורמת ל־"
 "Mailman להכניס כותרת Reply-To:‎ מסוימת לכל ההודעות, תוך דריסת הכותרת שבהודעה "
-"המקורית אם יש בכך צורך (תגובה מפורשת מכניסה את הערך של reply_to_address "
-"(כתובת לתגובה). מוגדר Reply-to (להגיב אל) מפורש, אין הוספת עותק (Cc) שימושי "
+"המקורית אם יש בכך צורך (תגובה מפורשת מכניסה את הערך של reply_to_address ("
+"כתובת לתגובה). מוגדר Reply-to (להגיב אל) מפורש, אין הוספת עותק (Cc) שימושי "
 "לרשימות להכרזה בלבד בהם עדיף להימנע משליחת תגובות לרשימת הדיוור. יש מגוון "
 "סיבות לא להציג או לדרוס את הכותרת Reply-To:‎. אחת מהן היא שחלק מהמפרסמים "
 "מסתמכים על הגדרות ה־Reply-To:‎ כדי למסור את כתובת התגובה התקנית שלהם. סיבה "
 "נוספת היא ששינוי ה־Reply-To:‎ מקשה על שליחת תגובות פרטיות. כדאי לקרוא את "
-"הכתבה <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html"
-"\">Reply-To' Munging Considered Harmful</a> (הסוואת כתובת המענה נחשבת "
-"לפוגענית) לקבלת מושג על הנושא. ניתן גם לקרוא את  <a href=\"http://marc."
-"merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging Considered "
-"Useful</a> (הסוואת כתובת המענה נחשבת שימושית) לקבלת מושג על הדעה הנגדית. "
-"הדוגמאות הן רשימות ‚patches’ או ‚checkin’ אליהן מפרסמת מערכת ניהול הגרסאות "
-"את השינויים בתכנה, אך דיונים על השינויים מתרחשים ברשימת הדיוור למתכנתים. כדי "
-"לתמוך בסוגים כאלה של רשימות דיוור, יש לבחור בתגובה מפורשת ולהגדיר את אפשרות "
-"כתובת ה־Reply-To:‎ כך שתצביע אל הרשימה המקבילה."
+"הכתבה <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\""
+">Reply-To' Munging Considered Harmful</a> (הסוואת כתובת המענה נחשבת לפוגענית)"
+" לקבלת מושג על הנושא. ניתן גם לקרוא את <a href=\"http://marc.merlins.org/"
+"netrants/reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> ("
+"הסוואת כתובת המענה נחשבת שימושית) לקבלת מושג על הדעה הנגדית. הדוגמאות הן "
+"רשימות ‚patches’ או ‚checkin’ אליהן מפרסמת מערכת ניהול הגרסאות את השינויים "
+"בתכנה, אך דיונים על השינויים מתרחשים ברשימת הדיוור למתכנתים. כדי לתמוך "
+"בסוגים כאלה של רשימות דיוור, יש לבחור בתגובה מפורשת ולהגדיר את אפשרות כתובת ה"
+"־Reply-To:‎ כך שתצביע אל הרשימה המקבילה."
 
 #: forms/list_forms.py:765
 msgid "Pipeline"
@@ -1219,7 +1224,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "קידומת לנושא"
+msgstr "NNTP כולל קידומת נושא "
 
 #: forms/list_forms.py:951
 msgid ""
@@ -1268,12 +1273,12 @@ msgstr ""
 
 #: forms/list_forms.py:998
 msgid "Pre Verified"
-msgstr ""
+msgstr "טרום תיקוף"
 
 #: forms/list_forms.py:1002
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
-msgstr ""
+msgstr "אם סומן, על המשתמשים יהיה לתקף את כתובת הדוא״ל שלהם."
 
 #: forms/list_forms.py:1013
 msgid "Emails to Unsubscribe"
@@ -1574,14 +1579,12 @@ msgid ""
 msgstr "נשלחת למנהלי הרשימה כאשר מתקבלת הודעת החזרה בתסדיר לא מוכר."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
-msgstr "נשלחת למנהלי הרשימה כדי להודיע להם על ביטול מינוי של חבר."
+msgstr ""
+"נשלחת למנהלי הרשימה כדי להודיע להם כאשר העברה לחבר מושבתת עקב כמות החזרות "
+"מוגזמת."
 
 #: template_list.py:38
 msgid ""
@@ -1656,13 +1659,9 @@ msgid ""
 msgstr "ההודעה שנשלחת למפרסם כאשר ההודעה ששלח נדחתה על ידי מפקח הרשימה."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
-msgstr "הודעה שנשלחת למפרסם כאשר הודעתו התקבלה ברשימת הדיוור."
+msgstr "הודעה שנשלחת למפרסם כאשר הודעתו נדחתה אוטומטית."
 
 #: template_list.py:68
 msgid ""
@@ -1670,14 +1669,10 @@ msgid ""
 msgstr "ההודעה שנשלחת לחבר בעת הרשמה לרשימת הדיוור."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
-msgstr "בדיקת החזרה שנשלחת לחבר כאשר המינוי שלו הושבת עקב החזרות."
+msgstr "ההתרעה שנשלחת לחבר כאשר החברות שלו הושבתה עקב החזרות מוגזמות."
 
 #: templates/403.html:5
 msgid "Forbidden"
