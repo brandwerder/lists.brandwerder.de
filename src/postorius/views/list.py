@@ -539,13 +539,14 @@ def moderate_held_message(request, list_id):
     mailing_list = List.objects.get_or_404(fqdn_listname=list_id)
     msg = mailing_list.get_held_message(request.POST['msgid'])
     moderation_choice = request.POST.get('moderation_choice')
+    reason = request.POST.get('reason')
 
     try:
         if 'accept' in request.POST:
             mailing_list.accept_message(msg.request_id)
             messages.success(request, _('The message was accepted'))
         elif 'reject' in request.POST:
-            mailing_list.reject_message(msg.request_id)
+            mailing_list.reject_message(msg.request_id, reason=reason)
             messages.success(request, _('The message was rejected'))
         elif 'discard' in request.POST:
             mailing_list.discard_message(msg.request_id)
