@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 11:35-0700\n"
+"POT-Creation-Date: 2020-04-25 14:53-0700\n"
 "PO-Revision-Date: 2020-04-10 20:01+0000\n"
 "Last-Translator: Daniele Pizzolli <dan-i18n@toel.it>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -284,7 +284,7 @@ msgstr ""
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "Yes"
 msgstr "Sì"
 
@@ -295,7 +295,7 @@ msgstr "Sì"
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "No"
 msgstr "No"
 
@@ -1458,35 +1458,35 @@ msgstr "Nome da mostrare"
 msgid "Please enter an display name."
 msgstr "Inserisci un nome da mostrare"
 
-#: forms/user_forms.py:49
+#: forms/user_forms.py:50
 msgid "Regular"
 msgstr "Regolare"
 
-#: forms/user_forms.py:50
+#: forms/user_forms.py:51
 msgid "Plain Text Digests"
 msgstr "Raggruppamento in testo semplice (plain text)"
 
-#: forms/user_forms.py:51
+#: forms/user_forms.py:52
 msgid "Mime Digests"
 msgstr "Ragruppamento MIME"
 
-#: forms/user_forms.py:52
+#: forms/user_forms.py:53
 msgid "Summary Digests"
 msgstr "Riepilogo raggruppamenti"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Enabled"
 msgstr "Abilitato"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Disabled"
 msgstr "Disabilitato"
 
-#: forms/user_forms.py:59
+#: forms/user_forms.py:60
 msgid "Delivery status"
 msgstr "Stato della consegna"
 
-#: forms/user_forms.py:61
+#: forms/user_forms.py:62
 msgid ""
 "Set this option to Enabled to receive messages posted to this mailing list. "
 "Set it to Disabled if you want to stay subscribed, but don't want mail "
@@ -1497,11 +1497,11 @@ msgstr ""
 "Abilita la ricezione di messaggi inviati a questa lista.\n"
 "Disabilita questa opzione per non ricevere i messaggi e rimanere iscritto."
 
-#: forms/user_forms.py:71
+#: forms/user_forms.py:72
 msgid "Delivery mode"
 msgstr "Modo di consegna"
 
-#: forms/user_forms.py:73
+#: forms/user_forms.py:74
 msgid ""
 "If you select summary digests , you'll get posts bundled together (usually "
 "one per day but possibly more on busy lists), instead of singly when they're "
@@ -1514,11 +1514,11 @@ msgstr ""
 "ricezione immediata del singolo messaggio.  Se il tuo programma di posta "
 "elettronica lo supporta, selezione il formato MIME."
 
-#: forms/user_forms.py:82
+#: forms/user_forms.py:83
 msgid "Receive own postings"
 msgstr "Ricezione propri messaggi"
 
-#: forms/user_forms.py:84
+#: forms/user_forms.py:85
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
@@ -1526,21 +1526,21 @@ msgstr ""
 "Di norma, si riceve la copia di un messaggio per ogni messaggio spedito alla "
 "lista. Se preferisci non ricevere la tua copia, imposta questa opzione su No."
 
-#: forms/user_forms.py:91
+#: forms/user_forms.py:92
 msgid "Acknowledge posts"
 msgstr "Messaggio di conferma"
 
-#: forms/user_forms.py:93
+#: forms/user_forms.py:94
 msgid "Receive acknowledgement mail when you send mail to the list?"
 msgstr ""
 "Vuoi ricevere un messaggio di avvenuta ricezione per ogni e-mail che "
 "spedisci alla lista?"
 
-#: forms/user_forms.py:97
+#: forms/user_forms.py:98
 msgid "Hide address"
 msgstr "Nascondi indirizzo"
 
-#: forms/user_forms.py:99
+#: forms/user_forms.py:100
 msgid ""
 "When someone views the list membership, your email address is normally shown "
 "(in an obscured fashion to thwart spam harvesters). If you do not want your "
@@ -1552,11 +1552,11 @@ msgstr ""
 "indirizzi e-mail a fini di spam). Se preferisci che il tuo indirizzo non sia "
 "mostrato nell'elenco della lista, seleziona Sì."
 
-#: forms/user_forms.py:107
+#: forms/user_forms.py:108
 msgid "Receive list copies (possible duplicates)"
 msgstr "Ricevi copie dalla lista (possibili duplicati)"
 
-#: forms/user_forms.py:109
+#: forms/user_forms.py:110
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1565,6 +1565,19 @@ msgstr ""
 "Quando il tuo indirizzo è anche incluso esplicitamente nei destinatari "
 "(intestazioni To e Cc) puoi scegliere di non ricevere una ulteriore copia "
 "del messaggio dalla lista.  Seleziona Sì per ricevere la copia dalla lista."
+
+#: forms/user_forms.py:119
+#, fuzzy
+#| msgid "Preferred Language"
+msgid "Preferred language"
+msgstr "Lingua preferita"
+
+#: forms/user_forms.py:121
+msgid ""
+"Preferred language for your interactions with Mailman. When this is set, it "
+"will override the MailingList's preferred language. This affects which "
+"language is used for your email notifications and such."
+msgstr ""
 
 #: models.py:45
 msgid ""

@@ -33,6 +33,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Fix FILTER_VHOST = True option to try to find the email host corresponding
   to the requesting web host.  (Closes #394)
 * Allow specifying a reason when rejecting a held message. (Closes #412)
+* Allow users to set their preferred language in their preferences. (Closes #413)
+
 
 1.3.2
 =====

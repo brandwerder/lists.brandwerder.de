@@ -48,6 +48,11 @@ def get_mailman_client():
     return client
 
 
+def with_empty_choice(choices):
+    """Add an empty Choice for unset values in dropdown."""
+    return [(None, '-----')] + list(choices)
+
+
 LANGUAGES = (
     ('ar', 'Arabic'),
     ('ast', 'Asturian'),

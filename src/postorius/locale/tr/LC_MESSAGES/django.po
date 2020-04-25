@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 11:36-0700\n"
+"POT-Creation-Date: 2020-04-25 14:53-0700\n"
 "PO-Revision-Date: 2020-04-16 11:09+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -284,7 +284,7 @@ msgstr ""
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "Yes"
 msgstr "Evet"
 
@@ -295,7 +295,7 @@ msgstr "Evet"
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "No"
 msgstr "Hayır"
 
@@ -1478,35 +1478,35 @@ msgstr "Görünen Ad"
 msgid "Please enter an display name."
 msgstr "Lütfen bir görünen ad girin."
 
-#: forms/user_forms.py:49
+#: forms/user_forms.py:50
 msgid "Regular"
 msgstr "Düzenli"
 
-#: forms/user_forms.py:50
+#: forms/user_forms.py:51
 msgid "Plain Text Digests"
 msgstr "Düz Metin Özetleri"
 
-#: forms/user_forms.py:51
+#: forms/user_forms.py:52
 msgid "Mime Digests"
 msgstr "Mime Özetleri"
 
-#: forms/user_forms.py:52
+#: forms/user_forms.py:53
 msgid "Summary Digests"
 msgstr "Genel Özetler"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Enabled"
 msgstr "Etkin"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: forms/user_forms.py:59
+#: forms/user_forms.py:60
 msgid "Delivery status"
 msgstr "Teslimat durumu"
 
-#: forms/user_forms.py:61
+#: forms/user_forms.py:62
 msgid ""
 "Set this option to Enabled to receive messages posted to this mailing list. "
 "Set it to Disabled if you want to stay subscribed, but don't want mail "
@@ -1521,11 +1521,11 @@ msgstr ""
 "döndüğünüzde tekrar etkinleştirmeyi unutmayın; otomatik olarak yeniden "
 "etkinleştirilmeyecektir."
 
-#: forms/user_forms.py:71
+#: forms/user_forms.py:72
 msgid "Delivery mode"
 msgstr "Teslimat modu"
 
-#: forms/user_forms.py:73
+#: forms/user_forms.py:74
 msgid ""
 "If you select summary digests , you'll get posts bundled together (usually "
 "one per day but possibly more on busy lists), instead of singly when they're "
@@ -1539,11 +1539,11 @@ msgstr ""
 "veya desteklemeyebilir. Genelde MIME özetler tercih edilir, ancak bunları "
 "okumakta sorun yaşıyorsanız düz metin özetleri seçin."
 
-#: forms/user_forms.py:82
+#: forms/user_forms.py:83
 msgid "Receive own postings"
 msgstr "Kendi gönderilerinizi alın"
 
-#: forms/user_forms.py:84
+#: forms/user_forms.py:85
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
@@ -1551,20 +1551,20 @@ msgstr ""
 "Normalde, listeye gönderdiğiniz her mesajın bir kopyasını alırsınız. Bu "
 "kopyayı almak istemiyorsanız, bu seçeneği Hayır olarak ayarlayın."
 
-#: forms/user_forms.py:91
+#: forms/user_forms.py:92
 msgid "Acknowledge posts"
 msgstr "Gönderilerin alındığını bildir"
 
-#: forms/user_forms.py:93
+#: forms/user_forms.py:94
 msgid "Receive acknowledgement mail when you send mail to the list?"
 msgstr ""
 "Listeye posta gönderdiğinizde alındı bildirim postası almak istiyor musunuz?"
 
-#: forms/user_forms.py:97
+#: forms/user_forms.py:98
 msgid "Hide address"
 msgstr "Adresi gizle"
 
-#: forms/user_forms.py:99
+#: forms/user_forms.py:100
 msgid ""
 "When someone views the list membership, your email address is normally shown "
 "(in an obscured fashion to thwart spam harvesters). If you do not want your "
@@ -1576,11 +1576,11 @@ msgstr ""
 "şekilde). E-posta adresinizin bu üyelik listesinde görünmesini "
 "istemiyorsanız, bu seçenek için Evet'i seçin."
 
-#: forms/user_forms.py:107
+#: forms/user_forms.py:108
 msgid "Receive list copies (possible duplicates)"
 msgstr "Liste kopyalarını (olası ikinci nüshalar) al"
 
-#: forms/user_forms.py:109
+#: forms/user_forms.py:110
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1590,6 +1590,19 @@ msgstr ""
 "listelendiğinizde, posta listesinden başka bir kopya almamayı tercih "
 "edebilirsiniz. Kopyaları almak için Evet'i seçin. Posta listesinden kopyalar "
 "almamak için Hayır'ı seçin"
+
+#: forms/user_forms.py:119
+#, fuzzy
+#| msgid "Preferred Language"
+msgid "Preferred language"
+msgstr "Tercih Edilen Dil"
+
+#: forms/user_forms.py:121
+msgid ""
+"Preferred language for your interactions with Mailman. When this is set, it "
+"will override the MailingList's preferred language. This affects which "
+"language is used for your email notifications and such."
+msgstr ""
 
 #: models.py:45
 msgid ""
