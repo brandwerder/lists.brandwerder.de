@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 14:53-0700\n"
-"PO-Revision-Date: 2020-04-16 11:09+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-25 21:50+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.1-dev\n"
+"X-Generator: Weblate 4.0.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1704,16 +1704,12 @@ msgstr ""
 "një format të panjohur."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
-"Dërguar përgjegjësve të listës për t’i njoftuar kur është shpajtuar një "
-"anëtar."
+"Dërguar përgjegjësve të listës për t’i njoftuar kur është çaktivizuar "
+"dërgimi për një anëtar, për shkak kthimesh të tepruara."
 
 #: template_list.py:38
 msgid ""
@@ -1802,15 +1798,10 @@ msgstr ""
 "moderatori i listës."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
-"Njoftim dërgua një postuesi kur mesazhi i tij është marrë nga lista e "
-"postimeve."
+"Njoftim dërgua një postuesi kur mesazhi i tij është hedhur tej automatikisht."
 
 #: template_list.py:68
 msgid ""
@@ -1818,16 +1809,12 @@ msgid ""
 msgstr "Njoftimi dërgua një anëtari kur është pajtuar te lista e postimeve."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
 "Njoftim dërgua një anëtari kur pajtimi i tij është çaktivizuar për shkak "
-"mesazhesh të kthyer mbrapsht."
+"numri të tepruar mesazhesh të kthyer mbrapsht."
 
 #: templates/403.html:5
 msgid "Forbidden"
