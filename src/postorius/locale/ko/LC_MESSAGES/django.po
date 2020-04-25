@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 11:35-0700\n"
+"POT-Creation-Date: 2020-04-25 14:53-0700\n"
 "PO-Revision-Date: 2019-11-19 12:04+0000\n"
 "Last-Translator: ParkSeongSoo <syvf64@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -289,7 +289,7 @@ msgstr ""
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "Yes"
 msgstr "그렇습니다."
 
@@ -300,7 +300,7 @@ msgstr "그렇습니다."
 #: forms/list_forms.py:680 forms/list_forms.py:698 forms/list_forms.py:714
 #: forms/list_forms.py:825 forms/list_forms.py:834 forms/list_forms.py:846
 #: forms/list_forms.py:858 forms/list_forms.py:877 forms/list_forms.py:920
-#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:47
+#: forms/list_forms.py:927 forms/list_forms.py:948 forms/user_forms.py:48
 msgid "No"
 msgstr "아닙니다"
 
@@ -1438,35 +1438,35 @@ msgstr "표시 이름"
 msgid "Please enter an display name."
 msgstr "표시 이름을 입력하십시오."
 
-#: forms/user_forms.py:49
+#: forms/user_forms.py:50
 msgid "Regular"
 msgstr "규칙적인"
 
-#: forms/user_forms.py:50
+#: forms/user_forms.py:51
 msgid "Plain Text Digests"
 msgstr "일반 텍스트 요약"
 
-#: forms/user_forms.py:51
+#: forms/user_forms.py:52
 msgid "Mime Digests"
 msgstr "마임 다이제스트"
 
-#: forms/user_forms.py:52
+#: forms/user_forms.py:53
 msgid "Summary Digests"
 msgstr "요약 다이제스트"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Enabled"
 msgstr "가능한"
 
-#: forms/user_forms.py:54
+#: forms/user_forms.py:55
 msgid "Disabled"
 msgstr "장애를 가진"
 
-#: forms/user_forms.py:59
+#: forms/user_forms.py:60
 msgid "Delivery status"
 msgstr "납품여부"
 
-#: forms/user_forms.py:61
+#: forms/user_forms.py:62
 msgid ""
 "Set this option to Enabled to receive messages posted to this mailing list. "
 "Set it to Disabled if you want to stay subscribed, but don't want mail "
@@ -1479,11 +1479,11 @@ msgstr ""
 "이 배달되는 것을 원하지 마십시오. 메일 배달이 비활성화된 경우, 돌아올 때 다"
 "시 활성화하는 것을 잊지 마십시오. 자동으로 다시 활성화되지는 않을 겁니다."
 
-#: forms/user_forms.py:71
+#: forms/user_forms.py:72
 msgid "Delivery mode"
 msgstr "배달 모드"
 
-#: forms/user_forms.py:73
+#: forms/user_forms.py:74
 msgid ""
 "If you select summary digests , you'll get posts bundled together (usually "
 "one per day but possibly more on busy lists), instead of singly when they're "
@@ -1497,11 +1497,11 @@ msgstr ""
 "일반적으로 MIME 다이제스트는 선호되지만, 읽기에 문제가 있는 경우 일반 텍스트 "
 "다이제스트를 선택하십시오."
 
-#: forms/user_forms.py:82
+#: forms/user_forms.py:83
 msgid "Receive own postings"
 msgstr "자체 게시물 수신"
 
-#: forms/user_forms.py:84
+#: forms/user_forms.py:85
 msgid ""
 "Ordinarily, you will get a copy of every message you post to the list. If "
 "you don't want to receive this copy, set this option to No."
@@ -1509,19 +1509,19 @@ msgstr ""
 "보통, 당신은 목록에 올린 모든 메시지의 사본을 받게 될 것이다. 이 복사본을 수"
 "신하지 않으려면 이 옵션을 아니요로 설정하십시오."
 
-#: forms/user_forms.py:91
+#: forms/user_forms.py:92
 msgid "Acknowledge posts"
 msgstr "게시물 승인"
 
-#: forms/user_forms.py:93
+#: forms/user_forms.py:94
 msgid "Receive acknowledgement mail when you send mail to the list?"
 msgstr "목록으로 메일을 보낼 때 승인 메일을 받으시겠습니까?"
 
-#: forms/user_forms.py:97
+#: forms/user_forms.py:98
 msgid "Hide address"
 msgstr "주소 숨기기"
 
-#: forms/user_forms.py:99
+#: forms/user_forms.py:100
 msgid ""
 "When someone views the list membership, your email address is normally shown "
 "(in an obscured fashion to thwart spam harvesters). If you do not want your "
@@ -1532,11 +1532,11 @@ msgstr ""
 "기 위해 가려진 방식으로) 나타난다. 전자 메일 주소를 이 구성원 목록에 표시하"
 "지 않으려면 이 옵션에 대해 예를 선택하십시오."
 
-#: forms/user_forms.py:107
+#: forms/user_forms.py:108
 msgid "Receive list copies (possible duplicates)"
 msgstr "목록 복사본 수신(복제될 수 있음)"
 
-#: forms/user_forms.py:109
+#: forms/user_forms.py:110
 msgid ""
 "When you are listed explicitly in the To: or Cc: headers of a list message, "
 "you can opt to not receive another copy from the mailing list. Select Yes to "
@@ -1545,6 +1545,19 @@ msgstr ""
 "목록 메시지의 수신인: 또는 Cc: 헤더에 명시적으로 나열된 경우, 메일링 목록에"
 "서 다른 복사본을 수신하지 않도록 선택할 수 있다. 사본을 받으려면 예를 선택하"
 "십시오. 메일 목록에서 사본을 수신하지 않으려면 아니요를 선택하십시오"
+
+#: forms/user_forms.py:119
+#, fuzzy
+#| msgid "Preferred Language"
+msgid "Preferred language"
+msgstr "선호 언어"
+
+#: forms/user_forms.py:121
+msgid ""
+"Preferred language for your interactions with Mailman. When this is set, it "
+"will override the MailingList's preferred language. This affects which "
+"language is used for your email notifications and such."
+msgstr ""
 
 #: models.py:45
 msgid ""

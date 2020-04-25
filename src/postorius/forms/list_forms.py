@@ -27,8 +27,8 @@ from django.utils.translation import gettext_lazy as _
 from django_mailman3.lib.mailman import get_mailman_client
 
 from postorius.forms.fields import ListOfStringsField
-from postorius.languages import LANGUAGES
 from postorius.models import EmailTemplate, _email_template_help_text
+from postorius.utils import LANGUAGES
 
 
 ACTION_CHOICES = (
