@@ -87,12 +87,19 @@
                                 {% csrf_token %}
                                 <p>
                                     <input type="hidden" name="msgid" />
-                                    <select class="form-control" name="moderation_choice">
+                                    <select class="form-control" name="moderation_choice" id="moderation-choice">
                                         <option value="no-action" selected="">--- {% trans "Set member moderation" %} ---</option>
                                         {% for name, action in ACTION_CHOICES %}
                                         <option value="{{name}}">{{action}}</option>
                                         {% endfor %}
                                     </select>
+                                    <div class="form-group" id="reject-reason">
+                                      <label for="reason">{% trans "Rejection reason:" %}</label>
+                                      <textarea class="form-control w-100" type="text" name="reason" aria-describedby="reasonHelpBlock" rows="3"></textarea>
+                                      <small id="reasonHelpBlock" class="form-text text-muted">
+                                        {% trans "Reason sent to the sender for message rejection. For other actions, this is ignored." %}
+                                      </small>
+                                    </div>
                                 </p>
                                 <p>
                                     <input type="submit" class="btn btn-success" name="accept" value="{% trans 'Accept' %}" />

@@ -32,6 +32,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   to be 800px(modal-lg) for larger screens. (Closes #405)
 * Fix FILTER_VHOST = True option to try to find the email host corresponding
   to the requesting web host.  (Closes #394)
+* Allow specifying a reason when rejecting a held message. (Closes #412)
 
 1.3.2
 =====

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:21-0700\n"
+"POT-Creation-Date: 2020-04-25 11:35-0700\n"
 "PO-Revision-Date: 2019-07-14 17:01+0000\n"
 "Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -658,14 +658,14 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:590 templates/postorius/lists/held_messages.html:29
-#: templates/postorius/lists/held_messages.html:100
+#: templates/postorius/lists/held_messages.html:107
 #: templates/postorius/lists/pending_confirmations.html:28
 #: templates/postorius/lists/subscription_requests.html:30
 msgid "Discard"
 msgstr ""
 
 #: forms/list_forms.py:591 templates/postorius/lists/held_messages.html:28
-#: templates/postorius/lists/held_messages.html:99
+#: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:29
 msgid "Reject"
 msgstr ""
@@ -1841,7 +1841,7 @@ msgid "Perform action on selected messages"
 msgstr ""
 
 #: templates/postorius/lists/held_messages.html:27
-#: templates/postorius/lists/held_messages.html:98
+#: templates/postorius/lists/held_messages.html:105
 #: templates/postorius/lists/subscription_requests.html:28
 msgid "Accept"
 msgstr ""
@@ -1874,15 +1874,25 @@ msgstr ""
 msgid "Set member moderation"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:107
+#: templates/postorius/lists/held_messages.html:97
+msgid "Rejection reason:"
+msgstr ""
+
+#: templates/postorius/lists/held_messages.html:100
+msgid ""
+"Reason sent to the sender for message rejection. For other actions, this is "
+"ignored."
+msgstr ""
+
+#: templates/postorius/lists/held_messages.html:114
 msgid "Show Headers"
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:115
+#: templates/postorius/lists/held_messages.html:122
 msgid "There are currently no held messages."
 msgstr ""
 
-#: templates/postorius/lists/held_messages.html:122
+#: templates/postorius/lists/held_messages.html:129
 msgid "Message could not be retrieved"
 msgstr ""
 
@@ -2301,7 +2311,7 @@ msgstr ""
 msgid "Domain %s updated"
 msgstr ""
 
-#: views/domain.py:116 views/list.py:665
+#: views/domain.py:116 views/list.py:667
 msgid "Please check the errors below"
 msgstr ""
 
@@ -2327,285 +2337,285 @@ msgstr ""
 msgid "Removed {} as an owner for {}"
 msgstr ""
 
-#: views/list.py:103
+#: views/list.py:104
 msgid "List {}s"
 msgstr ""
 
-#: views/list.py:117
+#: views/list.py:118
 msgid "Add {}"
 msgstr ""
 
-#: views/list.py:120
+#: views/list.py:121
 msgid "No {}s were found matching the search."
 msgstr ""
 
-#: views/list.py:122
+#: views/list.py:123
 msgid "List has no {}s"
 msgstr ""
 
-#: views/list.py:135
+#: views/list.py:136
 msgid "The selected members have been unsubscribed"
 msgstr ""
 
-#: views/list.py:153
+#: views/list.py:154
 #, python-brace-format
 msgid "{email} has been added with the role {role}"
 msgstr ""
 
-#: views/list.py:194
+#: views/list.py:195
 msgid "Member does not exist"
 msgstr ""
 
-#: views/list.py:210
+#: views/list.py:211
 msgid "The member's preferences have been updated."
 msgstr ""
 
-#: views/list.py:219
+#: views/list.py:220
 msgid "No change to the member's moderation."
 msgstr ""
 
-#: views/list.py:231
+#: views/list.py:232
 msgid "The member's moderation settings have been updated."
 msgstr ""
 
-#: views/list.py:315
+#: views/list.py:316
 msgid "You are already subscribed"
 msgstr ""
 
-#: views/list.py:325
+#: views/list.py:326
 msgid ""
 "Your request to change the email for this subscription was submitted and is "
 "waiting for moderator approval."
 msgstr ""
 
-#: views/list.py:330
+#: views/list.py:331
 #, python-format
 msgid "Subscription changed to %s"
 msgstr ""
 
-#: views/list.py:334 views/list.py:372 views/list.py:400
+#: views/list.py:335 views/list.py:373 views/list.py:401
 msgid "Something went wrong. Please try again."
 msgstr ""
 
-#: views/list.py:363
+#: views/list.py:364
 msgid ""
 "Your subscription request has been submitted and is waiting for moderator "
 "approval."
 msgstr ""
 
-#: views/list.py:368
+#: views/list.py:369
 #, python-format
 msgid "You are subscribed to %s."
 msgstr ""
 
-#: views/list.py:396
+#: views/list.py:397
 msgid "Please check your inbox for further instructions"
 msgstr ""
 
-#: views/list.py:415
+#: views/list.py:416
 #, python-format
 msgid "%s has been unsubscribed from this list."
 msgstr ""
 
-#: views/list.py:441
+#: views/list.py:442
 #, python-format
 msgid "The address %(address)s has been subscribed to %(list)s."
 msgstr ""
 
-#: views/list.py:448 views/list.py:485
+#: views/list.py:449 views/list.py:486
 #, python-format
 msgid "The email address %s is not valid."
 msgstr ""
 
-#: views/list.py:471
+#: views/list.py:472
 msgid "Please fill out the form correctly."
 msgstr ""
 
-#: views/list.py:478
+#: views/list.py:479
 #, python-format
 msgid "The address %(address)s has been unsubscribed from %(list)s."
 msgstr ""
 
-#: views/list.py:507
+#: views/list.py:508
 msgid "The selected messages were accepted"
 msgstr ""
 
-#: views/list.py:511
+#: views/list.py:512
 msgid "The selected messages were rejected"
 msgstr ""
 
-#: views/list.py:515
+#: views/list.py:516
 msgid "The selected messages were discarded"
 msgstr ""
 
-#: views/list.py:517
+#: views/list.py:518
 msgid "Message could not be found"
 msgstr ""
 
-#: views/list.py:545
+#: views/list.py:547
 msgid "The message was accepted"
 msgstr ""
 
-#: views/list.py:548
+#: views/list.py:550
 msgid "The message was rejected"
 msgstr ""
 
-#: views/list.py:551
+#: views/list.py:553
 msgid "The message was discarded"
 msgstr ""
 
-#: views/list.py:556
+#: views/list.py:558
 msgid "Held message was not found."
 msgstr ""
 
-#: views/list.py:569
+#: views/list.py:571
 msgid "Moderation action for {} set to {}"
 msgstr ""
 
-#: views/list.py:574
+#: views/list.py:576
 msgid "Failed to set moderation action: {}"
 msgstr ""
 
-#: views/list.py:626
+#: views/list.py:628
 msgid "Choose a Domain"
 msgstr ""
 
-#: views/list.py:647
+#: views/list.py:649
 msgid "List created"
 msgstr ""
 
-#: views/list.py:659
+#: views/list.py:661
 msgid "Mailing List already exists."
 msgstr ""
 
-#: views/list.py:795
+#: views/list.py:819
 msgid "Subscriptions pending user confirmation"
 msgstr ""
 
-#: views/list.py:808
+#: views/list.py:832
 msgid "Subscriptions pending approval"
 msgstr ""
 
-#: views/list.py:840
+#: views/list.py:864
 msgid "The request has been accepted."
 msgstr ""
 
-#: views/list.py:841
+#: views/list.py:865
 msgid "The request has been rejected."
 msgstr ""
 
-#: views/list.py:842
+#: views/list.py:866
 msgid "The request has been discarded."
 msgstr ""
 
-#: views/list.py:843
+#: views/list.py:867
 msgid "The request has been defered."
 msgstr ""
 
-#: views/list.py:854
+#: views/list.py:878
 #, python-format
 msgid "The request was already moderated: %s"
 msgstr ""
 
-#: views/list.py:857
+#: views/list.py:881
 #, python-format
 msgid "The request could not be moderated: %s"
 msgstr ""
 
-#: views/list.py:863
+#: views/list.py:887
 msgid "List Identity"
 msgstr ""
 
-#: views/list.py:864
+#: views/list.py:888
 msgid "Automatic Responses"
 msgstr ""
 
-#: views/list.py:865
+#: views/list.py:889
 msgid "Alter Messages"
 msgstr ""
 
-#: views/list.py:866
+#: views/list.py:890
 msgid "DMARC Mitigations"
 msgstr ""
 
-#: views/list.py:867
+#: views/list.py:891
 msgid "Digest"
 msgstr ""
 
-#: views/list.py:868
+#: views/list.py:892
 msgid "Message Acceptance"
 msgstr ""
 
-#: views/list.py:869
+#: views/list.py:893
 msgid "Archiving"
 msgstr ""
 
-#: views/list.py:870
+#: views/list.py:894
 msgid "Member Policy"
 msgstr ""
 
-#: views/list.py:919
+#: views/list.py:943
 msgid "The settings have been updated."
 msgstr ""
 
-#: views/list.py:924
+#: views/list.py:948
 msgid "An error occurred: "
 msgstr ""
 
-#: views/list.py:948
+#: views/list.py:972
 #, python-format
 msgid "The user %(email)s is not in the %(role)s group"
 msgstr ""
 
-#: views/list.py:954
+#: views/list.py:978
 msgid "Removing the last owner is impossible"
 msgstr ""
 
-#: views/list.py:968
+#: views/list.py:992
 #, python-format
 msgid "The user could not be removed: %(msg)s"
 msgstr ""
 
-#: views/list.py:971
+#: views/list.py:995
 #, python-format
 msgid "The user %(address)s has been removed from the %(role)s group."
 msgstr ""
 
-#: views/list.py:989
+#: views/list.py:1013
 msgid "No member is subscribed to the list currently."
 msgstr ""
 
-#: views/list.py:999
+#: views/list.py:1023
 msgid "All members have been unsubscribed from the list."
 msgstr ""
 
-#: views/list.py:1027
+#: views/list.py:1051
 msgid "The email {} has been banned."
 msgstr ""
 
-#: views/list.py:1031 views/list.py:1042 views/list.py:1103
+#: views/list.py:1055 views/list.py:1066 views/list.py:1127
 #, python-format
 msgid "An error occurred: %s"
 msgstr ""
 
-#: views/list.py:1033 views/list.py:1044
+#: views/list.py:1057 views/list.py:1068
 #, python-format
 msgid "Invalid data: %s"
 msgstr ""
 
-#: views/list.py:1039
+#: views/list.py:1063
 msgid "The email {} has been un-banned"
 msgstr ""
 
-#: views/list.py:1105
+#: views/list.py:1129
 msgid "The header matches were successfully modified."
 msgstr ""
 
-#: views/list.py:1112
+#: views/list.py:1136
 msgid "New header"
 msgstr ""
 
-#: views/list.py:1113
+#: views/list.py:1137
 msgid "New pattern"
 msgstr ""
 
