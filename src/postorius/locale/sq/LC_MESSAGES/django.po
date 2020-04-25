@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:21-0700\n"
-"PO-Revision-Date: 2019-12-03 18:06+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-16 11:09+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -257,20 +257,10 @@ msgstr ""
 "mandej një moderator lypset ta autorizojë pjesëmarrjen."
 
 #: forms/list_forms.py:214
-#, fuzzy
-#| msgid "Subscription Policy"
 msgid "Un-Subscription Policy"
-msgstr "Rregulla Pajtim"
+msgstr "Rregulla Shpajtimi"
 
 #: forms/list_forms.py:216
-#, fuzzy
-#| msgid ""
-#| "Open: Subscriptions are added automatically\n"
-#| "Confirm: Subscribers need to confirm the subscription using an email sent "
-#| "to them\n"
-#| "Moderate: Moderators will have to authorize each subscription manually.\n"
-#| "Confirm then Moderate: First subscribers have to confirm, then a "
-#| "moderator needs to authorize."
 msgid ""
 "Open: Un-Subscriptions happen automatically\n"
 "Confirm: Subscribers need to confirm the un-subscription using an email sent "
@@ -279,11 +269,11 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
-"E hapur: Pajtimet shtohen vetvetiu\n"
-"Me ripohim: Pajtimtarët lypset të ripohojnë pajtimin duke përdorur një email "
-"dërguar atyre\n"
-"E moderuar: Moderatorët do të autorizojnë dorazi secilin pajtim.\n"
-"Me ripohim, mandej E moderuar: Së pari pajtimtarëve u duhet të ripohojnë, "
+"I hapur: Shpajtimet ndodhin vetvetiu\n"
+"Me ripohim: Pajtimtarët lypset të ripohojnë shpajtimin duke përdorur një "
+"email dërguar atyre\n"
+"I moderuar: Moderatorët do të autorizojnë dorazi secilin shpajtim.\n"
+"Me ripohim, mandej I moderuar: Së pari pajtimtarëve u duhet të ripohojnë, "
 "mandej një moderator lypset ta autorizojë pjesëmarrjen."
 
 #: forms/list_forms.py:225 forms/list_forms.py:251 forms/list_forms.py:260
@@ -310,18 +300,18 @@ msgstr "Jo"
 
 #: forms/list_forms.py:227
 msgid "Process Bounces"
-msgstr ""
+msgstr "Përpunim Kthimesh Mbrapsht"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
 msgstr ""
+"Specifikon nëse kjo listë duhet të kryejë apo jo përpunim të automatizuar "
+"kthimesh mbrapsht."
 
 #: forms/list_forms.py:234
-#, fuzzy
-#| msgid "Digest size threshold"
 msgid "Bounce score threshold"
-msgstr "Prag madhësie përmbledhjesh"
+msgstr "Vlerë pragu kthimesh mbrapsht"
 
 #: forms/list_forms.py:237
 msgid ""
@@ -329,10 +319,13 @@ msgid ""
 "automatically disabled. When the subscription is  re-enabled, their bounce "
 "score will be reset to zero."
 msgstr ""
+"Kjo është vlera e kthimeve mbrapsht mbi të cilën pajtimi i një anëtari do të "
+"çaktivizohet automatikisht. Kur pajtimi të jetë riaktivizuar, vlera e "
+"kthimeve mbrapsht për të do të vendoset zero."
 
 #: forms/list_forms.py:242
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Vjetrim të dhënash kthimesh mbrapsht pas"
 
 #: forms/list_forms.py:245
 msgid ""
@@ -340,12 +333,13 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Numri i ditëve pas të cilave të dhënat për kthime mbrapsht konsiderohen si "
+"të vjetra. Nëse ndërkohë nuk merren kthime të reja mbapsht, vlera për kthime "
+"mbrapsht vendoset zero. Kjo vlerë duhet të jetë numër i plotë. "
 
 #: forms/list_forms.py:253
-#, fuzzy
-#| msgid "Notify users of held messages"
 msgid "Notify owner on disable"
-msgstr "Njoftoji përdoruesit e mesazheve të mbajtur"
+msgstr "Njoftoje të zotin gjatë çaktivizimesh"
 
 #: forms/list_forms.py:255
 msgid ""
@@ -353,12 +347,13 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
+"Kjo mundësi kontrollon nëse njoftohet ose jo i zoti i listës, kur pajtimi i "
+"një anëtari çaktivizohet automatikisht, për shkak se ka mbërritur në tavanin "
+"për kthime mbrapsht. "
 
 #: forms/list_forms.py:262
-#, fuzzy
-#| msgid "Confirm domain removal"
 msgid "Notify owner on removal"
-msgstr "Ripohoni heqje përkatësie"
+msgstr "Njoftoje të zotin gjatë heqjesh"
 
 #: forms/list_forms.py:264
 msgid ""
@@ -366,18 +361,21 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Kjo mundësi kontrollon nëse njoftohet ose jo i zoti i listës, kur një anëtar "
+"hiqet prej listës, pasi për të të jenë mbaruar njoftimet e çaktivizimit për "
+"të. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Interval çaktivizimi sinjalizimesh mbi kthime mbrapsht"
 
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "Numër ditësh mes çdo njoftimi çaktivizimesh."
 
 #: forms/list_forms.py:278
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Sinjalizime çaktivizimi mbi kthime mbrapsht"
 
 #: forms/list_forms.py:281
 msgid ""
@@ -386,6 +384,10 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Numri i njoftimeve që një anëtar i çaktivizuar do të marrë përpara se adresa "
+"e tij të hiqet nga anëtarësi e listës së postimeve. Vëreni 0 që një adresë "
+"të hiqet menjëherë prej listës, sapo vlera e kthimeve mbrapsht për të të "
+"ketë tejkaluar tavanin. Kjo vlerë duhet të jetë një numër i plotë. "
 
 #: forms/list_forms.py:295
 msgid "Public archives"
@@ -537,7 +539,7 @@ msgstr ""
 
 #: forms/list_forms.py:421
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Pranoji këta jo-anëtarë"
 
 #: forms/list_forms.py:424
 msgid ""
@@ -548,10 +550,16 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"Kjo është një listë, një për rresht, shprehjesh të rregullta për përputhje "
+"në adresa që janë të lejuara të postojnë në këtë listë pa u pajtuar te "
+"lista. Zërat janë shprehje të rregullta që fillojnë me `^' dhe për të cilat "
+"kërkohet për përputhje te adresat e dërguesve te mesazhi. Teksa këtu mund të "
+"jepen adresa që s’janë shprehje e rregullt, parapëlqehet të jepet adresa si "
+"për jo-anëtar dhe Moderimi për jo-anëtarë të vihet si Përpunim Parazgjedhje."
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Mbaji pezull këta jo-anëtarë"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -561,12 +569,16 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"Kjo është një listë, një për rresht, shprehjesh të rregullta për përputhje "
+"në adresa jo-anëtarësh, postimet e të cilëve mbahen pezull automatikisht. "
+"Zërat janë shprehje të rregullta që fillojnë me `^' dhe për të cilat "
+"kërkohet për përputhje te adresat e dërguesve te mesazhi. Teksa këtu mund të "
+"jepen adresa që s’janë shprehje e rregullt, parapëlqehet të jepet adresa si "
+"për jo-anëtar dhe Moderimi për jo-anëtarë të vihet si Pezull."
 
 #: forms/list_forms.py:446
-#, fuzzy
-#| msgid "Reject the message"
 msgid "Reject these non-members"
-msgstr "Hidhe poshtë mesazhin"
+msgstr "Refuzo këta jo-anëtarë"
 
 #: forms/list_forms.py:449
 msgid ""
@@ -576,12 +588,17 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"Kjo është një listë, një për rresht, shprehjesh të rregullta për përputhje "
+"në adresa jo-anëtarësh, postimet e të cilëve janë hedhur poshtë me një "
+"njoftim dërguesit. Zërat janë shprehje të rregullta që fillojnë me `^' dhe "
+"për të cilat kërkohet për përputhje te adresat e dërguesve te mesazhi. Teksa "
+"këtu mund të jepen adresa që s’janë shprehje e rregullt, parapëlqehet të "
+"jepet adresa si për jo-anëtar dhe Moderimi për jo-anëtarë të vihet si Hidhe "
+"Poshtë."
 
 #: forms/list_forms.py:459
-#, fuzzy
-#| msgid "Discard the message"
 msgid "Discard these non-members"
-msgstr "Hidhe tej mesazhin"
+msgstr "Hidhi tej këta jo-anëtarë"
 
 #: forms/list_forms.py:462
 msgid ""
@@ -591,6 +608,12 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"Kjo është një listë, një për rresht, shprehjesh të rregullta për përputhje "
+"në adresa jo-anëtarësh, postimet e të cilëve hidhen tej automatikisht. Zërat "
+"janë shprehje të rregullta që fillojnë me `^' dhe për të cilat kërkohet për "
+"përputhje te adresat e dërguesve te mesazhi. Teksa këtu mund të jepen adresa "
+"që s’janë shprehje e rregullt, parapëlqehet të jepet adresa si për jo-anëtar "
+"dhe Moderimi për jo-anëtarë të vihet si Hidhe Tej."
 
 #: forms/list_forms.py:484
 msgid "Invalid alias regexp: {}: {}"
@@ -617,18 +640,16 @@ msgid "Should Mailman send out digests periodically?"
 msgstr "A duhet të dërgojë Mailman-i përmbedhje në mënyrë periodike?"
 
 #: forms/list_forms.py:516
-#, fuzzy
-#| msgid "Digest Frequency"
 msgid "Digest Volume Frequency"
-msgstr "Shpeshti Përmbledhjesh"
+msgstr "Shpeshti Vëllimi Përmbledhjesh"
 
 #: forms/list_forms.py:517
-#, fuzzy
-#| msgid "At what frequency should Mailman send out digests?"
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
-msgstr "Me çfarë shpeshtie duhet t’i dërgojë përmbledhjet Mailman-i?"
+msgstr ""
+"Me ç’shpeshti duhet të rrisë Mailman-i numrin e vëllimit të përmbledhjes dhe "
+"të zerojë numrin e numrit të radhës?"
 
 #: forms/list_forms.py:521
 msgid "Digest size threshold"
@@ -720,15 +741,15 @@ msgstr ""
 
 #: forms/list_forms.py:574
 msgid "None"
-msgstr ""
+msgstr "Asnjë"
 
 #: forms/list_forms.py:575
 msgid "Individual"
-msgstr ""
+msgstr "Individual"
 
 #: forms/list_forms.py:576
 msgid "Full"
-msgstr ""
+msgstr "I plotë"
 
 #: forms/list_forms.py:580
 msgid ""
@@ -741,6 +762,14 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    Asnjë: Pa personalizim.\n"
+"\n"
+"    Individual: Gjithkush merr një kopje unike të mesazhit, dhe ka edhe pak "
+"ndryshore zëvendësimi, por kryet nuk ndryshohen.\n"
+"\n"
+"    I plotë: Krejt personalizimi i 'individual' plus ndryshim kryesh "
+"marrësi. "
 
 #: forms/list_forms.py:590 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:100
@@ -757,11 +786,11 @@ msgstr "Hidheni poshtë"
 
 #: forms/list_forms.py:592
 msgid "Forward"
-msgstr ""
+msgstr "Përcille"
 
 #: forms/list_forms.py:593
 msgid "Preserve"
-msgstr ""
+msgstr "Ruaje"
 
 #: forms/list_forms.py:596
 msgid ""
@@ -772,10 +801,16 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"Veprim për t’u bërë mbi mesazh që nuk ka lëndë\n"
+"pas filtrimi.\n"
+" Hidhe tej = hidhe tej mesazhin në heshtje.\n"
+" Hidhe poshtë = hidhe tej mesazhin dhe njofto dërguesin.\n"
+" Përcille = përcillja mesazhin të zotit(ve) të listës.\n"
+" Ruaje = ruaje mesazhin te qfiles/bad.\n"
 
 #: forms/list_forms.py:613
 msgid "Personalize"
-msgstr ""
+msgstr "Personalizojeni"
 
 #: forms/list_forms.py:619
 msgid "Filter content"
@@ -790,10 +825,8 @@ msgstr ""
 "më poshtë?"
 
 #: forms/list_forms.py:623
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter types"
-msgstr "Filtro lëndë"
+msgstr "Lloje filtrash"
 
 #: forms/list_forms.py:626
 msgid ""
@@ -801,20 +834,21 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"LLoje Mime për t’u filtruar nga postime ardhëse. Një listë e llojeve të "
+"zakonshëm mund të gjendet <a href=\"https://developer.mozilla.org/en-US/docs/"
+"Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">këtu </a>"
 
 #: forms/list_forms.py:631
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter extensions"
-msgstr "Filtro lëndë"
+msgstr "Zgjerime filtrimi"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "Zgjerime për t’u filtruar nga postimet ardhëse."
 
 #: forms/list_forms.py:637
 msgid "Pass types"
-msgstr ""
+msgstr "Lloje kalimi"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -822,16 +856,17 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"LLoje Mime për t’u lejuar te postimet ardhëse. Një listë e llojeve të "
+"zakonshëm mund të gjendet <a href=\"https://developer.mozilla.org/en-US/docs/"
+"Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">këtu </a>"
 
 #: forms/list_forms.py:645
-#, fuzzy
-#| msgid "Mass operations"
 msgid "Pass extensions"
-msgstr "Veprime në masë"
+msgstr "Zgjerime kalimi"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "Zgjerime për t’u lejuar në postime ardhëse."
 
 #: forms/list_forms.py:654
 msgid "Collapse alternatives"
@@ -845,10 +880,8 @@ msgstr ""
 "pjesës së parë?"
 
 #: forms/list_forms.py:661
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter Action"
-msgstr "Filtro lëndë"
+msgstr "Veprim Filtrimi"
 
 #: forms/list_forms.py:667
 msgid "Convert html to plaintext"
@@ -959,31 +992,6 @@ msgid "Explicit Reply-to set; no Cc added"
 msgstr "U caktua krye eksplicite <em>Reply-to</em>; s’u shtua Cc"
 
 #: forms/list_forms.py:733
-#, fuzzy
-#| msgid ""
-#| "Where are replies to list messages directed? No Munging is strongly "
-#| "recommended for most mailing lists. \n"
-#| "This option controls what Mailman does to the Reply-To: header in "
-#| "messages flowing through this mailing list. When set to No Munging, no "
-#| "Reply-To: header is added by Mailman, although if one is present in the "
-#| "original message, it is not stripped. Setting this value to either Reply "
-#| "to List, Explicit Reply, or Reply Only causes Mailman to insert a "
-#| "specific Reply-To: header in all messages, overriding the header in the "
-#| "original message if necessary (Explicit Reply inserts the value of "
-#| "reply_to_address). Explicit Reply-to set; no Cc added is useful "
-#| "forannounce-only lists where you want to avoid someone replying to the "
-#| "list address. There are many reasons not to introduce or override the "
-#| "Reply-To: header. One is that some posters depend on their own Reply-To: "
-#| "settings to convey their valid return address. Another is that modifying "
-#| "Reply-To: makes it much more difficult to send private replies. See "
-#| "`Reply-To' Munging Considered Harmful for a general discussion of this "
-#| "issue. See Reply-To Munging Considered Useful for a dissenting opinion. "
-#| "Some mailing lists have restricted posting privileges, with a parallel "
-#| "list devoted to discussions. Examples are `patches' or `checkin' lists, "
-#| "where software changes are posted by a revision control system, but "
-#| "discussion about the changes occurs on a developers mailing list. To "
-#| "support these types of mailing lists, select Explicit Reply and set the "
-#| "Reply-To: address option to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1010,32 +1018,34 @@ msgid ""
 "list. To support these types of mailing lists, select Explicit Reply and set "
 "the Reply-To: address option to point to the parallel list."
 msgstr ""
-"Për ku drejtohen përgjigjet ndaj mesazheve të listës? “Pa Rishkrim Kryesh” "
-"këshillohet me forcë për shumicën e listave të postimeve. \n"
+"Për ku drejtohen përgjigjet ndaj mesazheve të listës? Për shumicën e listave "
+"të postimeve këshillohet me forcë “Pa Rishkrim Kryesh”. \n"
 "Kjo mundësi kontrollon se ç’bën Mailman-i me kryet <em>Reply-To:</em> te "
-"mesazhe që rrjedhin nëpër listën e postimeve. Kur caktohet si “Pa Rishkrim "
+"mesazhe që rrjedhin nëpër këtë listë postimesh. Kur caktohet si “Pa Rishkrim "
 "Kryesh”, s’shtohet ndonjë krye <em>Reply-To:</em> nga Mailman-i, edhe pse, "
 "nëse te mesazhi origjinal ka të pranishme një të tillë, ajo nuk hiqet. "
 "Caktimi i kësaj vlere si “Përgjigjuni te Lista”, “Përgjigje Eksplicite”, apo "
-"“Vetëm Përgjigje” e bën Mailman-in të futë një krye specifike <em>Reply-To:</"
-"em> në krejt mesazhet, duke anashkaluar kryet në mesazhin origjinal, në "
-"qoftë e nevojshme (“Përgjigje Eksplicite” fut vlerën e <em>reply_to_address</"
-"em>). “U caktua krye eksplicite <em>Reply-to</em>; s’u shtua Cc” është e "
-"dobishme për lista vetëm për njoftime, kur doni të shmangni dikë nga "
-"përgjigja te adresa e listës. Ka plot arsye për të mos futur ose për të mos "
-"anashkaluar kryet <em>Reply-To:</em>. Njëra është se disa sisteme postimi "
-"varen nga rregullimet e tyre për <em>Reply-To:</em> për të përcjellë adresën "
-"e tyre të vlefshme të kthimit.Një tjetër është se ndryshimi i <em>Reply-To:</"
-"em> e bën shumë më të vështirë dërgimin e përgjigjeve private. Për një "
-"diskutim në përgjithësi të kësaj çështjeje, shihni “`Reply-To' Munging "
-"Considered Harmful”. Për opinione që s’pajtohen me këtë, shihni “Reply-To "
-"Munging Considered Useful”. Disa lista postimesh kanë privilegje të "
-"kufizuara postimi, me një listë paralele kushtuar diskutimeve. Shembuj janë "
-"lista `patches' ose `checkin', ku ndryshimet e software-it postohen sipas "
-"një sistemi versioni kontrollesh, ndërsa diskutimi rreth ndryshimeve ndodh "
-"te një listë postimesh për zhvilluesit. Për mbulim të këtyre llojeve të "
-"listave, përzgjidhni “Përgjigje Eksplicite” dhe caktojeni mundësinë për "
-"adresën <em>Reply-To:</em> të shpjerë te lista paralele."
+"“Vetëm Përgjigje” e bën Mailman-in të futë një krye specifike <em>Reply-"
+"To:</em> në krejt mesazhet, duke anashkaluar kryet në mesazhin origjinal, në "
+"qoftë e nevojshme (“Përgjigje Eksplicite” fut vlerën e "
+"<em>reply_to_address</em>). “U caktua krye eksplicite <em>Reply-to</em>; s’u "
+"shtua Cc” është e dobishme për lista vetëm për njoftime, kur doni të "
+"shmangni dikë nga përgjigja te adresa e listës. Ka plot arsye për të mos "
+"futur ose për të mos anashkaluar kryet <em>Reply-To:</em>. Njëra është se "
+"disa sisteme postimi varen nga rregullimet e tyre për <em>Reply-To:</em> për "
+"të përcjellë adresën e tyre të vlefshme të kthimit.Një tjetër është se "
+"ndryshimi i <em>Reply-To:</em> e bën shumë më të vështirë dërgimin e "
+"përgjigjeve private. Për një diskutim në përgjithësi të kësaj çështjeje, "
+"shihni <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\""
+">`Reply-To' Munging Considered Harmful</a>. Për opinione që s’pajtohen me "
+"këtë, shihni <a href=\"http://marc.merlins.org/netrants/reply-to-useful."
+"html\">`Reply-To' Munging Considered Useful</a>. Disa lista postimesh kanë "
+"privilegje të kufizuara postimi, me një listë paralele kushtuar diskutimeve. "
+"Shembuj janë lista `patches' ose `checkin', ku ndryshimet e software-it "
+"postohen sipas një sistemi versioni kontrollesh, ndërsa diskutimi rreth "
+"ndryshimeve ndodh te një listë postimesh për zhvilluesit. Për mbulim të "
+"këtyre lloje listash, përzgjidhni “Përgjigje Eksplicite” dhe caktojeni "
+"mundësinë për adresën <em>Reply-To:</em> të shpjerë te lista paralele."
 
 #: forms/list_forms.py:765
 msgid "Pipeline"
@@ -1195,18 +1205,14 @@ msgid "Should administrator get notices of subscribes and unsubscribes?"
 msgstr "A duhet të marrë përgjegjësi njoftime pajtimesh dhe shpajtimesh?"
 
 #: forms/list_forms.py:866
-#, fuzzy
-#| msgid "Moderate"
 msgid "Not Moderated"
-msgstr "E moderuar"
+msgstr "E pamoderuar"
 
 #: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "E moderuar, por lejon postime të hapura"
 
 #: forms/list_forms.py:868
-#, fuzzy
-#| msgid "Moderate"
 msgid "Moderated"
 msgstr "E moderuar"
 
@@ -1262,53 +1268,55 @@ msgstr "Cilit i lejohet të shohë listë anëtarësh për këtë Listë Postime
 
 #: forms/list_forms.py:922
 msgid "Gateway to mail"
-msgstr ""
+msgstr "Kanal për postë"
 
 #: forms/list_forms.py:923
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
+"Flamurkë që tregon se postimet te grupi i lidhur i lajmeve duhen kaluar te "
+"lista"
 
 #: forms/list_forms.py:929
 msgid "Gateway to news"
-msgstr ""
+msgstr "Kanal për lajme"
 
 #: forms/list_forms.py:930
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
+"Flamurkë që tregon se postimet te lista duhen kaluar te grupi i lidhur i "
+"lajmeve."
 
 #: forms/list_forms.py:934
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "Grup Lajmesh i Lidhur"
 
 #: forms/list_forms.py:937
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "Emri i grupit të lidhur të lajmeve."
 
 #: forms/list_forms.py:940
-#, fuzzy
-#| msgid "Set member moderation"
 msgid "Newsgroup moderation"
-msgstr "Caktoni moderim anëtarësh"
+msgstr "Moderim grupi lajmesh"
 
 #: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
-msgstr ""
+msgstr "Rregullat e moderimit të grupit të lidhur të lajmeve, nëse ka të tilla."
 
 #: forms/list_forms.py:950
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Parashtesë subjekti"
+msgstr "Parashtesë subjekti NNTP Include "
 
 #: forms/list_forms.py:951
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"Flamurkë që tregon nëse “Parashtesa Subjektesh” i listës duhet përfshirë apo "
+"jo te postime të kaluar te usenet."
 
 #: forms/list_forms.py:966
 msgid "Emails to mass subscribe"
@@ -1333,32 +1341,36 @@ msgstr ""
 "Për përshoqërim emri në ekran me adresën përdorni tre të fundit\n"
 
 #: forms/list_forms.py:979
-#, fuzzy
-#| msgid "Confirm"
 msgid "Pre confirm"
-msgstr "Me ripohim"
+msgstr "Pararipohoni"
 
 #: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
 msgstr ""
+"Nëse i vihet shenjë, përdoruesve s’do t’ju duhet të ripohojnë pajtimin e "
+"tyre."
 
 #: forms/list_forms.py:988
 msgid "Pre approved"
-msgstr ""
+msgstr "I paramiratuar"
 
 #: forms/list_forms.py:992
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
 msgstr ""
+"Nëse i vihet shenjë, moderatorëve s’do t’ju duhet të miratojnë kërkesën për "
+"pajtim."
 
 #: forms/list_forms.py:998
 msgid "Pre Verified"
-msgstr ""
+msgstr "E paraverifikuar"
 
 #: forms/list_forms.py:1002
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
+"Nëse i vihet shenjë, përdoruesve s’do t’ju duhet të verifikojnë se adresa e "
+"tyre email është e vlefshme."
 
 #: forms/list_forms.py:1013
 msgid "Emails to Unsubscribe"
@@ -2901,10 +2913,8 @@ msgid "Archiving"
 msgstr "Arkivim"
 
 #: views/list.py:870
-#, fuzzy
-#| msgid "Member options"
 msgid "Member Policy"
-msgstr "Mundësi anëtari"
+msgstr "Rregulla Anëtari"
 
 #: views/list.py:919
 msgid "The settings have been updated."
@@ -2961,7 +2971,7 @@ msgstr "Email-it {} i është hequr dëbimi"
 
 #: views/list.py:1105
 msgid "The header matches were successfully modified."
-msgstr ""
+msgstr "Përputhjet për kryet u ndryshuan me sukses."
 
 #: views/list.py:1112
 msgid "New header"

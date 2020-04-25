@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:21-0700\n"
-"PO-Revision-Date: 2020-04-12 19:08+0000\n"
+"POT-Creation-Date: 2020-04-10 19:07-0700\n"
+"PO-Revision-Date: 2020-04-25 15:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -295,12 +295,12 @@ msgstr "לא"
 
 #: forms/list_forms.py:227
 msgid "Process Bounces"
-msgstr ""
+msgstr "עיבוד החזרות"
 
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
-msgstr ""
+msgstr "מציין האם הרשימה הזאת אמורה או לא אמורה לעבד החזרות אוטומטית."
 
 #: forms/list_forms.py:234
 msgid "Bounce score threshold"
@@ -351,18 +351,20 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"אפשרות זו שולטת האם בעלי הרשימה יקבלו או לא יקבלו התראה עם הסרת חבר מהרשימה "
+"לאחר שההתראות המושבתות שלו נוצלו עד תום. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "משך אזהרות השבתת החזרות"
 
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "מספר הימים בין כל התראה שהושבתה."
 
 #: forms/list_forms.py:278
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "אזהרות השבתת החזרות"
 
 #: forms/list_forms.py:281
 msgid ""
@@ -371,6 +373,9 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"מספר ההתרעות שחבר מושבת יקבל לפני שהכתובת שלו נמחקת מתפוצת רשימת הדיוור. יש "
+"להגדיר ל־0 כדי להסיר כתובת אוטומטית מהרשימה לאחר שניקוד ההחזרה חורג מהסף. "
+"ערך זה חייב להיות מספר שלם וחיובי. "
 
 #: forms/list_forms.py:295
 msgid "Public archives"
@@ -515,7 +520,7 @@ msgstr ""
 
 #: forms/list_forms.py:421
 msgid "Accept these non-members"
-msgstr ""
+msgstr "לקבל את אלו שאינם חברים"
 
 #: forms/list_forms.py:424
 msgid ""
@@ -526,10 +531,15 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות שמותר להן "
+"לפרסם לרשימת דיוור זו מבלי להירשם לרשימה. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על הכתובת לעיבוד בררת המחדל."
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr ""
+msgstr "להחזיק את אלו שאינם חברים"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -539,6 +549,11 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם מוחזקים אוטומטית. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים להחזקה."
 
 #: forms/list_forms.py:446
 msgid "Reject these non-members"
@@ -552,6 +567,11 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם נדחים עם הודעה לשולח. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים לדחייה."
 
 #: forms/list_forms.py:459
 msgid "Discard these non-members"
@@ -565,6 +585,11 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם מושלכים אוטומטית. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים להתעלמות."
 
 #: forms/list_forms.py:484
 msgid "Invalid alias regexp: {}: {}"
@@ -686,15 +711,15 @@ msgstr ""
 
 #: forms/list_forms.py:574
 msgid "None"
-msgstr ""
+msgstr "בלי"
 
 #: forms/list_forms.py:575
 msgid "Individual"
-msgstr ""
+msgstr "פרטני"
 
 #: forms/list_forms.py:576
 msgid "Full"
-msgstr ""
+msgstr "מלא"
 
 #: forms/list_forms.py:580
 msgid ""
@@ -707,6 +732,13 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    בלי: בלי התאמה.\n"
+"\n"
+"    פרטני: כל אחד מקבל עותק ייחודי של ההודעה וישנם עוד כמה משתנים מתחלפים "
+"נוספים אבל הכותרות לא מתחלפות.\n"
+"\n"
+"    מלא: כל מה שמתבצע בהתאמה ברמת ‚פרטני’ בתוספת שינוי כותרת הנמען. "
 
 #: forms/list_forms.py:590 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:100
@@ -723,11 +755,11 @@ msgstr "דחייה"
 
 #: forms/list_forms.py:592
 msgid "Forward"
-msgstr ""
+msgstr "העברה"
 
 #: forms/list_forms.py:593
 msgid "Preserve"
-msgstr ""
+msgstr "שימור"
 
 #: forms/list_forms.py:596
 msgid ""
@@ -738,10 +770,15 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"פעולה לנקוט על הודעות שאין להן תוכן לאחר סינון.\n"
+" להשליך = להשליך את ההודעה באופן שקט.\n"
+" לדחות = לדחות את ההודעה ולהודיע לשולח.\n"
+" להעביר = להעביר את ההודעות לבעלי הרשימה.\n"
+" לשמר = לשמור את ההודעה ב־qfiles/bad.\n"
 
 #: forms/list_forms.py:613
 msgid "Personalize"
-msgstr ""
+msgstr "התאמה אישית"
 
 #: forms/list_forms.py:619
 msgid "Filter content"
@@ -763,6 +800,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"סוגי MIME כדי לסנן מהרשומות הנכנסות. ניתן למצוא רשימה של סוגים נפוצים <a "
+"href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/"
+"MIME_types/Common_types\">כאן</a>"
 
 #: forms/list_forms.py:631
 msgid "Filter extensions"
@@ -770,11 +810,11 @@ msgstr "סינון סיומות"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "הרחבות לסינון מהרשומות הנכנסות."
 
 #: forms/list_forms.py:637
 msgid "Pass types"
-msgstr ""
+msgstr "סוגי העברה"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -782,6 +822,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"סוגי MIME שיש לאפשר ברשומות הנכנסות. ניתן למצוא רשימה של סוגים נפוצים <a "
+"href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/"
+"MIME_types/Common_types\">כאן</a>"
 
 #: forms/list_forms.py:645
 msgid "Pass extensions"
@@ -789,7 +832,7 @@ msgstr "העברת סיומות"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "הרחבות שיש להרשות ברשומות נכנסות."
 
 #: forms/list_forms.py:654
 msgid "Collapse alternatives"
@@ -942,21 +985,21 @@ msgstr ""
 "לא תווסף על ידי Mailman, למרות שאם כבר קיימת אחת בהודעה המקורית היא לא "
 "נמחקת. הגדרת ערך זה לכדי תגובה לרשימה, תגובה מפורשת או תגובה בלבד גורמת ל־"
 "Mailman להכניס כותרת Reply-To:‎ מסוימת לכל ההודעות, תוך דריסת הכותרת שבהודעה "
-"המקורית אם יש בכך צורך (תגובה מפורשת מכניסה את הערך של reply_to_address "
-"(כתובת לתגובה). מוגדר Reply-to (להגיב אל) מפורש, אין הוספת עותק (Cc) שימושי "
+"המקורית אם יש בכך צורך (תגובה מפורשת מכניסה את הערך של reply_to_address ("
+"כתובת לתגובה). מוגדר Reply-to (להגיב אל) מפורש, אין הוספת עותק (Cc) שימושי "
 "לרשימות להכרזה בלבד בהם עדיף להימנע משליחת תגובות לרשימת הדיוור. יש מגוון "
 "סיבות לא להציג או לדרוס את הכותרת Reply-To:‎. אחת מהן היא שחלק מהמפרסמים "
 "מסתמכים על הגדרות ה־Reply-To:‎ כדי למסור את כתובת התגובה התקנית שלהם. סיבה "
 "נוספת היא ששינוי ה־Reply-To:‎ מקשה על שליחת תגובות פרטיות. כדאי לקרוא את "
-"הכתבה <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html"
-"\">Reply-To' Munging Considered Harmful</a> (הסוואת כתובת המענה נחשבת "
-"לפוגענית) לקבלת מושג על הנושא. ניתן גם לקרוא את  <a href=\"http://marc."
-"merlins.org/netrants/reply-to-useful.html\">`Reply-To' Munging Considered "
-"Useful</a> (הסוואת כתובת המענה נחשבת שימושית) לקבלת מושג על הדעה הנגדית. "
-"הדוגמאות הן רשימות ‚patches’ או ‚checkin’ אליהן מפרסמת מערכת ניהול הגרסאות "
-"את השינויים בתכנה, אך דיונים על השינויים מתרחשים ברשימת הדיוור למתכנתים. כדי "
-"לתמוך בסוגים כאלה של רשימות דיוור, יש לבחור בתגובה מפורשת ולהגדיר את אפשרות "
-"כתובת ה־Reply-To:‎ כך שתצביע אל הרשימה המקבילה."
+"הכתבה <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\""
+">Reply-To' Munging Considered Harmful</a> (הסוואת כתובת המענה נחשבת לפוגענית)"
+" לקבלת מושג על הנושא. ניתן גם לקרוא את <a href=\"http://marc.merlins.org/"
+"netrants/reply-to-useful.html\">`Reply-To' Munging Considered Useful</a> ("
+"הסוואת כתובת המענה נחשבת שימושית) לקבלת מושג על הדעה הנגדית. הדוגמאות הן "
+"רשימות ‚patches’ או ‚checkin’ אליהן מפרסמת מערכת ניהול הגרסאות את השינויים "
+"בתכנה, אך דיונים על השינויים מתרחשים ברשימת הדיוור למתכנתים. כדי לתמוך "
+"בסוגים כאלה של רשימות דיוור, יש לבחור בתגובה מפורשת ולהגדיר את אפשרות כתובת ה"
+"־Reply-To:‎ כך שתצביע אל הרשימה המקבילה."
 
 #: forms/list_forms.py:765
 msgid "Pipeline"
@@ -1112,7 +1155,7 @@ msgstr "לא בפיקוח"
 
 #: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "מפוקחת אבל מרשה פרסום פתוח"
 
 #: forms/list_forms.py:868
 msgid "Moderated"
@@ -1169,31 +1212,31 @@ msgstr "מי מורשה לראות את רשימת החברים של קבוצת 
 
 #: forms/list_forms.py:922
 msgid "Gateway to mail"
-msgstr ""
+msgstr "שער גישה לדוא״ל"
 
 #: forms/list_forms.py:923
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
-msgstr ""
+msgstr "דגלון שמציין שפרסומים לקבוצות החדשות המקושרות צריכות להתנתב לרשימה"
 
 #: forms/list_forms.py:929
 msgid "Gateway to news"
-msgstr ""
+msgstr "שער גישה לחדשות"
 
 #: forms/list_forms.py:930
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
-msgstr ""
+msgstr "דגלון שמציין שפרסומים לרשימה אמורים להתנתב לקבוצת החדשות המקושרת."
 
 #: forms/list_forms.py:934
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "קבוצות חדשות מקושרות"
 
 #: forms/list_forms.py:937
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "שם קבוצת החדשות המקושרת."
 
 #: forms/list_forms.py:940
 msgid "Newsgroup moderation"
@@ -1201,19 +1244,21 @@ msgstr "פיקוח על קבוצות דיון"
 
 #: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
-msgstr ""
+msgstr "מדיניות הפיקוח של קבוצת החדשות המקושרת, אם יש אחת כזאת."
 
 #: forms/list_forms.py:950
 #, fuzzy
 #| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "קידומת לנושא"
+msgstr "NNTP כולל קידומת נושא "
 
 #: forms/list_forms.py:951
 msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"דגלון שמציין האם „קידומת הנושא” (Subject Prefix) צריכה להיכלל בפרסומים "
+"שמנותבים לרשת השימוש (usenet)."
 
 #: forms/list_forms.py:966
 msgid "Emails to mass subscribe"
@@ -1243,25 +1288,25 @@ msgstr "קדם אימות"
 
 #: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
-msgstr ""
+msgstr "אם סומן, משתמשים לא יצטרכו לאמת את המינוי שלהם."
 
 #: forms/list_forms.py:988
 msgid "Pre approved"
-msgstr ""
+msgstr "קדם אישור"
 
 #: forms/list_forms.py:992
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
-msgstr ""
+msgstr "אם סומן, המפקחים לא יצטרכו לאשר את בקשות המינוי."
 
 #: forms/list_forms.py:998
 msgid "Pre Verified"
-msgstr ""
+msgstr "טרום תיקוף"
 
 #: forms/list_forms.py:1002
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
-msgstr ""
+msgstr "אם סומן, על המשתמשים יהיה לתקף את כתובת הדוא״ל שלהם."
 
 #: forms/list_forms.py:1013
 msgid "Emails to Unsubscribe"
@@ -1562,14 +1607,12 @@ msgid ""
 msgstr "נשלחת למנהלי הרשימה כאשר מתקבלת הודעת החזרה בתסדיר לא מוכר."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
-msgstr "נשלחת למנהלי הרשימה כדי להודיע להם על ביטול מינוי של חבר."
+msgstr ""
+"נשלחת למנהלי הרשימה כדי להודיע להם כאשר העברה לחבר מושבתת עקב כמות החזרות "
+"מוגזמת."
 
 #: template_list.py:38
 msgid ""
@@ -1644,13 +1687,9 @@ msgid ""
 msgstr "ההודעה שנשלחת למפרסם כאשר ההודעה ששלח נדחתה על ידי מפקח הרשימה."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
-msgstr "הודעה שנשלחת למפרסם כאשר הודעתו התקבלה ברשימת הדיוור."
+msgstr "הודעה שנשלחת למפרסם כאשר הודעתו נדחתה אוטומטית."
 
 #: template_list.py:68
 msgid ""
@@ -1658,14 +1697,10 @@ msgid ""
 msgstr "ההודעה שנשלחת לחבר בעת הרשמה לרשימת הדיוור."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
-msgstr "בדיקת החזרה שנשלחת לחבר כאשר המינוי שלו הושבת עקב החזרות."
+msgstr "ההתרעה שנשלחת לחבר כאשר החברות שלו הושבתה עקב החזרות מוגזמות."
 
 #: templates/403.html:5
 msgid "Forbidden"
