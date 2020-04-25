@@ -39,6 +39,7 @@ from django.views.decorators.http import require_http_methods
 from allauth.account.models import EmailAddress
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.lib.paginator import MailmanPaginator, paginate
+from django_mailman3.models import MailDomain
 from django_mailman3.signals import (
     mailinglist_created, mailinglist_deleted, mailinglist_modified)
 
@@ -677,6 +678,30 @@ def _unique_lists(lists):
     return {mlist.list_id: mlist for mlist in lists}.values()
 
 
+def _get_mail_host(web_host):
+    """Get the mail_host for a web_host if FILTER_VHOST is true and there's
+    only one mail_host for this web_host.
+    """
+    if not getattr(settings, 'FILTER_VHOST', False):
+        return None
+    mail_hosts = []
+    use_web_host = False
+    for domain in Domain.objects.all():
+        try:
+            if (MailDomain.objects.get(
+                    mail_domain=domain.mail_host).site.domain == web_host):
+                if domain.mail_host not in mail_hosts:
+                    mail_hosts.append(domain.mail_host)
+        except MailDomain.DoesNotExist:
+            use_web_host = True
+    if len(mail_hosts) == 1:
+        return mail_hosts[0]
+    elif len(mail_hosts) == 0 and use_web_host:
+        return web_host
+    else:
+        return None
+
+
 @login_required
 def list_index_authenticated(request):
     """Index page for authenticated users.
@@ -699,8 +724,7 @@ def list_index_authenticated(request):
 
     # Get all the mailing lists for the current user.
     all_lists = []
-    mail_host = request.get_host().split(':')[0] if (
-        getattr(settings, 'FILTER_VHOST', False)) else None
+    mail_host = _get_mail_host(request.get_host().split(':')[0])
     for user_email in user_emails:
         try:
             all_lists.extend(
@@ -745,8 +769,7 @@ def list_index(request, template='postorius/index.html'):
     def _get_list_page(count, page):
         client = get_mailman_client()
         advertised = not request.user.is_superuser
-        mail_host = request.get_host().split(":")[0] if (
-            getattr(settings, 'FILTER_VHOST', False)) else None
+        mail_host = _get_mail_host(request.get_host().split(":")[0])
         return client.get_list_page(
             advertised=advertised, mail_host=mail_host, count=count, page=page)
 

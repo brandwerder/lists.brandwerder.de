@@ -29,7 +29,9 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Fix "Show Headers" button to show the held message headers in the
   held message popup. (Closes #407)
 * Fix the held message popup structure and increase the max width of the popup
-  to be 800px(modal-lg) for larger screens. (Closes $405)
+  to be 800px(modal-lg) for larger screens. (Closes #405)
+* Fix FILTER_VHOST = True option to try to find the email host corresponding
+  to the requesting web host.  (Closes #394)
 
 1.3.2
 =====
