@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 19:07-0700\n"
-"PO-Revision-Date: 2020-04-24 20:29+0000\n"
+"PO-Revision-Date: 2020-04-25 15:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -549,6 +549,11 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם מוחזקים אוטומטית. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים להחזקה."
 
 #: forms/list_forms.py:446
 msgid "Reject these non-members"
@@ -562,6 +567,11 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם נדחים עם הודעה לשולח. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים לדחייה."
 
 #: forms/list_forms.py:459
 msgid "Discard these non-members"
@@ -575,6 +585,11 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"זו רשימה, פריט אחד בכל שורה, של ביטויים רגולריים שתואמים לכתובות של כאלו "
+"שאינם חברים שהפוסטים שלהם מושלכים אוטומטית. הרשומות הן ביטויים רגולריים "
+"שנפתחים ב־`^' ונבדקים מול כתובות השולחים בהודעה. למרות שניתן להוסיף כאן "
+"כתובות שאינן ביטויים רגולריים, עדיף להוסיף את הכתובת בתור „לא חבר” ולהגדיר "
+"את רמת הפיקוח על כאלו שאינם חברים להתעלמות."
 
 #: forms/list_forms.py:484
 msgid "Invalid alias regexp: {}: {}"
@@ -755,10 +770,15 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"פעולה לנקוט על הודעות שאין להן תוכן לאחר סינון.\n"
+" להשליך = להשליך את ההודעה באופן שקט.\n"
+" לדחות = לדחות את ההודעה ולהודיע לשולח.\n"
+" להעביר = להעביר את ההודעות לבעלי הרשימה.\n"
+" לשמר = לשמור את ההודעה ב־qfiles/bad.\n"
 
 #: forms/list_forms.py:613
 msgid "Personalize"
-msgstr ""
+msgstr "התאמה אישית"
 
 #: forms/list_forms.py:619
 msgid "Filter content"
@@ -780,6 +800,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"סוגי MIME כדי לסנן מהרשומות הנכנסות. ניתן למצוא רשימה של סוגים נפוצים <a "
+"href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/"
+"MIME_types/Common_types\">כאן</a>"
 
 #: forms/list_forms.py:631
 msgid "Filter extensions"
@@ -787,11 +810,11 @@ msgstr "סינון סיומות"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
-msgstr ""
+msgstr "הרחבות לסינון מהרשומות הנכנסות."
 
 #: forms/list_forms.py:637
 msgid "Pass types"
-msgstr ""
+msgstr "סוגי העברה"
 
 #: forms/list_forms.py:640
 msgid ""
@@ -799,6 +822,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"סוגי MIME שיש לאפשר ברשומות הנכנסות. ניתן למצוא רשימה של סוגים נפוצים <a "
+"href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/"
+"MIME_types/Common_types\">כאן</a>"
 
 #: forms/list_forms.py:645
 msgid "Pass extensions"
@@ -806,7 +832,7 @@ msgstr "העברת סיומות"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "הרחבות שיש להרשות ברשומות נכנסות."
 
 #: forms/list_forms.py:654
 msgid "Collapse alternatives"
@@ -1129,7 +1155,7 @@ msgstr "לא בפיקוח"
 
 #: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "מפוקחת אבל מרשה פרסום פתוח"
 
 #: forms/list_forms.py:868
 msgid "Moderated"
@@ -1186,31 +1212,31 @@ msgstr "מי מורשה לראות את רשימת החברים של קבוצת 
 
 #: forms/list_forms.py:922
 msgid "Gateway to mail"
-msgstr ""
+msgstr "שער גישה לדוא״ל"
 
 #: forms/list_forms.py:923
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
-msgstr ""
+msgstr "דגלון שמציין שפרסומים לקבוצות החדשות המקושרות צריכות להתנתב לרשימה"
 
 #: forms/list_forms.py:929
 msgid "Gateway to news"
-msgstr ""
+msgstr "שער גישה לחדשות"
 
 #: forms/list_forms.py:930
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
-msgstr ""
+msgstr "דגלון שמציין שפרסומים לרשימה אמורים להתנתב לקבוצת החדשות המקושרת."
 
 #: forms/list_forms.py:934
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "קבוצות חדשות מקושרות"
 
 #: forms/list_forms.py:937
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "שם קבוצת החדשות המקושרת."
 
 #: forms/list_forms.py:940
 msgid "Newsgroup moderation"
@@ -1218,7 +1244,7 @@ msgstr "פיקוח על קבוצות דיון"
 
 #: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
-msgstr ""
+msgstr "מדיניות הפיקוח של קבוצת החדשות המקושרת, אם יש אחת כזאת."
 
 #: forms/list_forms.py:950
 #, fuzzy
@@ -1231,6 +1257,8 @@ msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"דגלון שמציין האם „קידומת הנושא” (Subject Prefix) צריכה להיכלל בפרסומים "
+"שמנותבים לרשת השימוש (usenet)."
 
 #: forms/list_forms.py:966
 msgid "Emails to mass subscribe"
@@ -1260,16 +1288,16 @@ msgstr "קדם אימות"
 
 #: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
-msgstr ""
+msgstr "אם סומן, משתמשים לא יצטרכו לאמת את המינוי שלהם."
 
 #: forms/list_forms.py:988
 msgid "Pre approved"
-msgstr ""
+msgstr "קדם אישור"
 
 #: forms/list_forms.py:992
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
-msgstr ""
+msgstr "אם סומן, המפקחים לא יצטרכו לאשר את בקשות המינוי."
 
 #: forms/list_forms.py:998
 msgid "Pre Verified"
