@@ -134,9 +134,14 @@ urlpatterns = [
     url(r'^lists/new/$', list_views.list_new, name='list_new'),
     url(r'^lists/(?P<list_id>[^/]+)/', include(list_patterns)),
 
+    # /system/
     url(r'^system/$', system_views.system_information,
         name='system_information'),
 
+    # /bans/
+    url(r'^bans/$', system_views.bans, name='global_bans'),
+
+    # /api/
     url(r'^api/list/(?P<list_id>[^/]+)/held_message/(?P<held_id>\d+)/$',
         rest_views.get_held_message, name='rest_held_message'),
     url(r'^api/list/(?P<list_id>[^/]+)/held_message/(?P<held_id>\d+)/'

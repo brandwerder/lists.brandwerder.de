@@ -48,14 +48,14 @@ from postorius.auth.decorators import (
 from postorius.auth.mixins import ListOwnerMixin
 from postorius.forms import (
     AlterMessagesForm, ArchiveSettingsForm, DigestSettingsForm,
-    DMARCMitigationsForm, ListAddBanForm, ListAnonymousSubscribe,
-    ListAutomaticResponsesForm, ListHeaderMatchForm, ListHeaderMatchFormset,
-    ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
-    ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
-    MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
+    DMARCMitigationsForm, ListAnonymousSubscribe, ListAutomaticResponsesForm,
+    ListHeaderMatchForm, ListHeaderMatchFormset, ListIdentityForm,
+    ListMassRemoval, ListMassSubscription, ListNew, ListSubscribe, MemberForm,
+    MemberModeration, MemberPolicyForm, MessageAcceptanceForm,
+    MultipleChoiceForm, UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import Domain, List, Mailman404Error, Style
-from postorius.views.generic import MailingListView
+from postorius.views.generic import MailingListView, bans_view
 
 
 logger = logging.getLogger(__name__)
@@ -1033,49 +1033,8 @@ def remove_all_subscribers(request, list_id):
 @login_required
 @list_owner_required
 def list_bans(request, list_id):
-    """
-    Ban or unban email addresses.
-    """
-    # Get the list and cache the archivers property.
-    m_list = List.objects.get_or_404(fqdn_listname=list_id)
-    ban_list = m_list.bans
-
-    # Process form submission.
-    if request.method == 'POST':
-        if 'add' in request.POST:
-            addban_form = ListAddBanForm(request.POST)
-            if addban_form.is_valid():
-                try:
-                    ban_list.add(addban_form.cleaned_data['email'])
-                    messages.success(request, _(
-                        'The email {} has been banned.'.format(
-                            addban_form.cleaned_data['email'])))
-                except HTTPError as e:
-                    messages.error(
-                        request, _('An error occurred: %s') % e.reason)
-                except ValueError as e:
-                    messages.error(request, _('Invalid data: %s') % e)
-                return redirect('list_bans', list_id)
-        elif 'del' in request.POST:
-            try:
-                ban_list.remove(request.POST['email'])
-                messages.success(request, _(
-                    'The email {} has been un-banned'.format(
-                        request.POST['email'])))
-            except HTTPError as e:
-                messages.error(request, _('An error occurred: %s') % e.reason)
-            except ValueError as e:
-                messages.error(request, _('Invalid data: %s') % e)
-            return redirect('list_bans', list_id)
-    else:
-        addban_form = ListAddBanForm(initial=request.GET)
-    banned_addresses = paginate(
-        list(ban_list), request.GET.get('page'), request.GET.get('count'))
-    return render(request, 'postorius/lists/bans.html',
-                  {'list': m_list,
-                   'addban_form': addban_form,
-                   'banned_addresses': banned_addresses,
-                   })
+    return bans_view(
+        request, list_id=list_id, template='postorius/lists/bans.html')
 
 
 @login_required

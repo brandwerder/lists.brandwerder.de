@@ -38,10 +38,18 @@
                         {% trans 'Lists' %}
                     </a></li>
                     {% if user.is_superuser %}
-                        <li class="nav-item"><a href="{% url 'domain_index' %}" class="nav-link">
+                        <li class="nav-item">
+                          <a href="{% url 'domain_index' %}" class="nav-link">
                             <span class="fa fa-globe"></span>
                             {% trans 'Domains' %}
-                        </a></li>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'global_bans' %}" class="nav-link">
+                                <span class="fa fa-ban"></span>
+                                {% trans 'Bans' %}
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{% url 'system_information' %}" class="nav-link">
                                 <span class="fa fa-list-alt"></span>

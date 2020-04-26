@@ -1023,22 +1023,6 @@ class ListMassRemoval(forms.Form):
         layout = [["Mass Removal", "emails"]]
 
 
-class ListAddBanForm(forms.Form):
-    """Ban an email address for a list."""
-    # TODO maxking: This form should only accept valid emails or regular
-    # expressions. Anything else that doesn't look like a valid email address
-    # or regexp for email should not be a valid value for the field. However,
-    # checking for that might not be easy.
-    email = forms.CharField(
-        label=_('Add ban'),
-        help_text=_(
-            'You can ban a single email address or use a regular expression '
-            'to match similar email addresses.'),
-        error_messages={
-            'required': _('Please enter an email address.'),
-            'invalid': _('Please enter a valid email address.')})
-
-
 class ListHeaderMatchForm(forms.Form):
     """Edit a list's header match."""
 
