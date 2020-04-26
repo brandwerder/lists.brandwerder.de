@@ -35,6 +35,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Allow specifying a reason when rejecting a held message. (Closes #412)
 * Allow users to set their preferred language in their preferences. (Closes #413)
 * Add support to ban addresses for the entire Mailman installation. (Closes #357)
+* Un-handled ``HTTPError`` exception raised from MailmanClient now results in an
+  error page and proper logging instead of mysterious ``KeyError`` in logs.
+  (Closes #341)
+
 
 1.3.2
 =====
