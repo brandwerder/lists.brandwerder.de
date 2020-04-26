@@ -34,7 +34,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   to the requesting web host.  (Closes #394)
 * Allow specifying a reason when rejecting a held message. (Closes #412)
 * Allow users to set their preferred language in their preferences. (Closes #413)
-
+* Add support to ban addresses for the entire Mailman installation. (Closes #357)
 
 1.3.2
 =====
