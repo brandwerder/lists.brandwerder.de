@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:53-0700\n"
-"PO-Revision-Date: 2020-04-25 15:57+0000\n"
+"PO-Revision-Date: 2020-04-26 18:43+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -1247,8 +1247,6 @@ msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr "מדיניות הפיקוח של קבוצת החדשות המקושרת, אם יש אחת כזאת."
 
 #: forms/list_forms.py:950
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
 msgstr "NNTP כולל קידומת נושא "
 
@@ -1535,8 +1533,6 @@ msgstr ""
 "עותקים. ניתן לבחור בלא כדי להימנע מקבלת עותקים מרשימת הדיוור"
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
 msgstr "שפה מועדפת"
 
@@ -1546,6 +1542,9 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"השפה המועדפת עליך לתפעול Mailman. כאשר מוגדרת אחת כזאת, היא תדרוס השפה "
+"המועדפת של רשימת הדיוור. הגדרה זו משפיעה על השפה שתשמש לשליחת הודעות אליך "
+"בדוא״ל וכו׳."
 
 #: models.py:45
 msgid ""
@@ -2113,13 +2112,13 @@ msgstr "הגדרת פיקוח על חברים"
 
 #: templates/postorius/lists/held_messages.html:97
 msgid "Rejection reason:"
-msgstr ""
+msgstr "סיבת הדחייה:"
 
 #: templates/postorius/lists/held_messages.html:100
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
-msgstr ""
+msgstr "הסיבה נשלחת למוען על דחיית הודעה. בפעולות אחרות, אין לזה שימוש."
 
 #: templates/postorius/lists/held_messages.html:114
 msgid "Show Headers"
