@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:53-0700\n"
-"PO-Revision-Date: 2020-04-16 11:09+0000\n"
+"PO-Revision-Date: 2020-04-29 04:29+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.1-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1592,10 +1592,8 @@ msgstr ""
 "almamak için Hayır'ı seçin"
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
-msgstr "Tercih Edilen Dil"
+msgstr "Tercih edilen dil"
 
 #: forms/user_forms.py:121
 msgid ""
@@ -1603,6 +1601,9 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Mailman ile etkileşimleriniz için tercih edilen dil. Bu ayarlandığında, e-"
+"posta listesinin tercih ettiği dil geçersiz kılınacaktır. Bu, e-posta "
+"bildirimleriniz vb. için hangi dilin kullanıldığını etkiler."
 
 #: models.py:45
 msgid ""
@@ -1688,16 +1689,12 @@ msgstr ""
 "yöneticilerine gönderilir."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
-"Bir üye abonelikten çıktığında bilgilendirmek için liste yöneticilerine "
-"gönderilir."
+"Bir üyenin teslimatı aşırı geri dönmeler nedeniyle devre dışı bırakıldığında "
+"bilgilendirmek için liste yöneticilerine gönderilir."
 
 #: template_list.py:38
 msgid ""
@@ -1786,15 +1783,11 @@ msgstr ""
 "gönderilecek bildirim."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
-"Mesajları posta listesi tarafından alındığı zaman gönderi atanlara "
-"gönderilen bildirim."
+"Mesajları otomatik olarak reddedildiğinde gönderi atanlara gönderilen "
+"bildirim."
 
 #: template_list.py:68
 msgid ""
@@ -1802,16 +1795,12 @@ msgid ""
 msgstr "Posta listesine abone olduklarında üyelere gönderilecek bildirim."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
-"Geri dönüşler nedeniyle aboneliği devre dışı bırakıldığında üyeye bir geri "
-"dönme sorgusu gönderilir."
+"Aşırı geri dönüşler nedeniyle üyeliği devre dışı bırakıldığında üyeye "
+"gönderilen bildirim."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -2213,13 +2202,15 @@ msgstr "Üye denetimini ayarla"
 
 #: templates/postorius/lists/held_messages.html:97
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Reddetme nedeni:"
 
 #: templates/postorius/lists/held_messages.html:100
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Mesajının reddedilmesiyle ilgili göndericisine gönderilen neden. Diğer "
+"eylemler için bu dikkate alınmaz."
 
 #: templates/postorius/lists/held_messages.html:114
 msgid "Show Headers"
