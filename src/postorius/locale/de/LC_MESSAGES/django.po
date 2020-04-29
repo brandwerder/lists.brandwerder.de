@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:52-0700\n"
-"PO-Revision-Date: 2020-04-03 12:34+0000\n"
-"Last-Translator: Daniel <daniel@teichm-sh.de>\n"
+"PO-Revision-Date: 2020-04-29 04:29+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.0.2\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -308,7 +308,8 @@ msgstr "Behandle Zurückgewiesene"
 #: forms/list_forms.py:229
 msgid ""
 "Specifies whether or not this list should do automatic bounce processing."
-msgstr "Gibt an ob diese Liste Bounce Meassages automatisch verarbeitet"
+msgstr ""
+"Gibt an, ob diese Liste unzustellbare Nachrichten automatisch verarbeitet."
 
 #: forms/list_forms.py:234
 msgid "Bounce score threshold"
@@ -344,10 +345,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:262
-#, fuzzy
-#| msgid "Confirm domain removal"
 msgid "Notify owner on removal"
-msgstr "Bestätigen Sie das Entfernen der Domain"
+msgstr "Benachrichtige den Besitzer beim Entfernen"
 
 #: forms/list_forms.py:264
 msgid ""
@@ -528,7 +527,7 @@ msgstr ""
 
 #: forms/list_forms.py:421
 msgid "Accept these non-members"
-msgstr ""
+msgstr "Nehme die von Nicht-Mitgliedern an"
 
 #: forms/list_forms.py:424
 msgid ""
@@ -542,7 +541,7 @@ msgstr ""
 
 #: forms/list_forms.py:434
 msgid "Hold these non-members"
-msgstr ""
+msgstr "Behalte die von Nicht-Mitgliedern"
 
 #: forms/list_forms.py:437
 msgid ""
@@ -554,10 +553,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:446
-#, fuzzy
-#| msgid "Reject the message"
 msgid "Reject these non-members"
-msgstr "Nachricht zurückweisen"
+msgstr "Weise die von Nicht-Mitgliedern zurück"
 
 #: forms/list_forms.py:449
 msgid ""
@@ -569,10 +566,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:459
-#, fuzzy
-#| msgid "Discard the message"
 msgid "Discard these non-members"
-msgstr "Nachricht verwerfen"
+msgstr "Lösche die von Nicht-Mitgliedern"
 
 #: forms/list_forms.py:462
 msgid ""
@@ -778,10 +773,8 @@ msgstr ""
 "Soll Mailman den Inhalt der Liste anhand der Einstellungen unterhalb filtern?"
 
 #: forms/list_forms.py:623
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter types"
-msgstr "Inhalt filtern"
+msgstr "MimeTypes filtern"
 
 #: forms/list_forms.py:626
 msgid ""
@@ -791,10 +784,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:631
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter extensions"
-msgstr "Inhalt filtern"
+msgstr "Erweiterungen filtern"
 
 #: forms/list_forms.py:634
 msgid "Extensions to filter from the incoming posts."
@@ -812,10 +803,8 @@ msgid ""
 msgstr ""
 
 #: forms/list_forms.py:645
-#, fuzzy
-#| msgid "Mass operations"
 msgid "Pass extensions"
-msgstr "Massenoperationen"
+msgstr "Erweiterungen erlauben"
 
 #: forms/list_forms.py:648
 msgid "Extensions to allow in the incoming posts."
@@ -832,10 +821,8 @@ msgstr ""
 "Soll Mailman multipart/alternative auf den ersten Inhaltsteil reduzieren?"
 
 #: forms/list_forms.py:661
-#, fuzzy
-#| msgid "Filter content"
 msgid "Filter Action"
-msgstr "Inhalt filtern"
+msgstr "Filteraktion"
 
 #: forms/list_forms.py:667
 msgid "Convert html to plaintext"
@@ -1184,20 +1171,16 @@ msgstr ""
 "werden?"
 
 #: forms/list_forms.py:866
-#, fuzzy
-#| msgid "Moderate"
 msgid "Not Moderated"
-msgstr "Moderieren"
+msgstr "Nicht moderiert"
 
 #: forms/list_forms.py:867
 msgid "Moderated but allows for open posting"
 msgstr ""
 
 #: forms/list_forms.py:868
-#, fuzzy
-#| msgid "Moderate"
 msgid "Moderated"
-msgstr "Moderieren"
+msgstr "Moderiert"
 
 #: forms/list_forms.py:879
 msgid "Show list on index page"
@@ -1278,20 +1261,16 @@ msgid "The name of the linked newsgroup."
 msgstr ""
 
 #: forms/list_forms.py:940
-#, fuzzy
-#| msgid "Set member moderation"
 msgid "Newsgroup moderation"
-msgstr "Einstellen der Mitglieder-Moderation"
+msgstr "Mitglieder-Moderation"
 
 #: forms/list_forms.py:944
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
 
 #: forms/list_forms.py:950
-#, fuzzy
-#| msgid "Subject prefix"
 msgid "NNTP Include subject prefix "
-msgstr "Prefix für Betreff"
+msgstr "NNTP enthällt Prefix für Betreff "
 
 #: forms/list_forms.py:951
 msgid ""
@@ -1323,10 +1302,8 @@ msgstr ""
 "assoziieren.\n"
 
 #: forms/list_forms.py:979
-#, fuzzy
-#| msgid "Confirm"
 msgid "Pre confirm"
-msgstr "Bestätigen"
+msgstr "Automatisch bestätigen"
 
 #: forms/list_forms.py:983
 msgid "If checked, users will not have to confirm their subscription."
@@ -1334,7 +1311,7 @@ msgstr ""
 
 #: forms/list_forms.py:988
 msgid "Pre approved"
-msgstr ""
+msgstr "Automatisch genehmigt"
 
 #: forms/list_forms.py:992
 msgid ""
@@ -1343,7 +1320,7 @@ msgstr ""
 
 #: forms/list_forms.py:998
 msgid "Pre Verified"
-msgstr ""
+msgstr "Automatisch geprüft"
 
 #: forms/list_forms.py:1002
 msgid ""
@@ -1588,8 +1565,6 @@ msgstr ""
 "keine Kopien zu erhalten."
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
 msgstr "Bevorzugte Sprache"
 
@@ -2937,10 +2912,8 @@ msgid "Archiving"
 msgstr "Archivierung"
 
 #: views/list.py:894
-#, fuzzy
-#| msgid "Member options"
 msgid "Member Policy"
-msgstr "Benutzeroptionen"
+msgstr "Mitgliederpolitik"
 
 #: views/list.py:943
 msgid "The settings have been updated."
