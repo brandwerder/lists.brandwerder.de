@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:52-0700\n"
 "PO-Revision-Date: 2020-05-07 08:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: arnep <pottharst@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -326,8 +326,9 @@ msgstr ""
 "Score wieder auf Null zurückgesetzt."
 
 #: forms/list_forms.py:242
+#, fuzzy
 msgid "Bounce info stale after"
-msgstr ""
+msgstr "Bounce-Informationen veraltet nach"
 
 #: forms/list_forms.py:245
 msgid ""
@@ -335,6 +336,10 @@ msgid ""
 "stale. If no new bounces have been received in the interim, the bounce score "
 "is reset to zero. This value must be an integer. "
 msgstr ""
+"Die Anzahl der Tage, nach denen die Bounce-Informationen eines Mitglieds als "
+"veraltet gelten. Wenn in der Zwischenzeit keine neuen Bounces empfangen "
+"wurden, wird der Bounce-Score auf Null zurückgesetzt. Dieser Wert muss eine "
+"ganze Zahl sein. "
 
 #: forms/list_forms.py:253
 msgid "Notify owner on disable"
