@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:52-0700\n"
-"PO-Revision-Date: 2020-05-07 08:01+0000\n"
+"PO-Revision-Date: 2020-05-07 21:48+0000\n"
 "Last-Translator: arnep <pottharst@gmx.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
@@ -351,7 +351,7 @@ msgid ""
 "member's subscription is automatically disabled due to their bounce "
 "threshold being reached. "
 msgstr ""
-"Diese Option legt fest, ob der Listenbesitzer benachtichtigt wird, wenn das "
+"Diese Option steuert, ob der Listenbesitzer benachrichtigt wird, wenn das "
 "Abonnement eines Mitglieds aufgrund zu vieler Bounces automatisch "
 "deaktiviert wird. "
 
@@ -365,6 +365,9 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Diese Option steuert, ob der Listenbesitzer benachrichtigt wird oder nicht, "
+"wenn ein Mitglied von der Liste entfernt wird, nachdem seine deaktivierten "
+"Benachrichtigungen erschöpft sind. "
 
 #: forms/list_forms.py:271
 msgid "Bounce disabled warnings interval"
@@ -373,10 +376,12 @@ msgstr ""
 #: forms/list_forms.py:274
 msgid "The number of days between each disabled notification."
 msgstr ""
+"Die Anzahl der Tage zwischen den einzelnen deaktivierten Benachrichtigungen."
 
 #: forms/list_forms.py:278
+#, fuzzy
 msgid "Bounce disable warnings"
-msgstr ""
+msgstr "Bounce-Deaktivierungswarnungen"
 
 #: forms/list_forms.py:281
 msgid ""
@@ -715,15 +720,15 @@ msgstr ""
 
 #: forms/list_forms.py:574
 msgid "None"
-msgstr ""
+msgstr "Kein"
 
 #: forms/list_forms.py:575
 msgid "Individual"
-msgstr ""
+msgstr "Individuell"
 
 #: forms/list_forms.py:576
 msgid "Full"
-msgstr ""
+msgstr "Komplett"
 
 #: forms/list_forms.py:580
 msgid ""
@@ -2214,6 +2219,8 @@ msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Grund für die Ablehnung der Nachricht an den Absender. Bei anderen Aktionen "
+"wird dies ignoriert."
 
 #: templates/postorius/lists/held_messages.html:114
 msgid "Show Headers"
