@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 19:07-0700\n"
-"PO-Revision-Date: 2020-04-25 21:50+0000\n"
+"PO-Revision-Date: 2020-05-10 04:30+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.2-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1609,10 +1609,8 @@ msgstr ""
 "marrë kopje prej listës së postimeve"
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
-msgstr "Gjuhë e Parapëlqyer"
+msgstr "Gjuhë e parapëlqyer"
 
 #: forms/user_forms.py:121
 msgid ""
@@ -1620,6 +1618,9 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Gjuhë e parapëlqyer për ndërveprimet tuaja me Mailman-in. Kur kjo ujdiset, "
+"gjuha e parapëlqyer e MailingList-ës do të anashkalohet. Kjo prek cila gjuhë "
+"përdoret për njoftime tuajat me email dhe gjëra të tilla të ngjashme."
 
 #: models.py:45
 msgid ""
@@ -2215,13 +2216,15 @@ msgstr "Caktoni moderim anëtarësh"
 
 #: templates/postorius/lists/held_messages.html:97
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Arsye hedhjeje tej:"
 
 #: templates/postorius/lists/held_messages.html:100
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Arsye dërguar dërguesit për hedhjen tej të mesazhit. Për veprime të tjera, "
+"kjo shpërfillet."
 
 #: templates/postorius/lists/held_messages.html:114
 msgid "Show Headers"
