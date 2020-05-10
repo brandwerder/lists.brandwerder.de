@@ -18,10 +18,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
-1.3.3
-=====
+1.3.3rc1
+========
 
-(2020-XX-XX)
+(2020-05-09)
 
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
