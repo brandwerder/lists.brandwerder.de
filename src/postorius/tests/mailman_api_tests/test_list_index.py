@@ -52,8 +52,9 @@ class ListIndexPageTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 2)
         # The lists should be sorted by address
-        self.assertEqual([l.fqdn_listname for l in response.context['lists']],
-                         ['bar@example.com', 'foo@example.com'])
+        self.assertEqual(
+            [ml.fqdn_listname for ml in response.context['lists']],
+            ['bar@example.com', 'foo@example.com'])
 
     def test_list_index_only_contains_advertised_lists(self):
         # The list index page should contain only contain the advertised lists
@@ -241,16 +242,18 @@ class DomainFilteringListIndexPageTest(ListIndexPageTest):
         response = self.client.get2(reverse('list_index'))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 2)
-        self.assertEqual([l.fqdn_listname for l in response.context['lists']],
-                         ['quux@example.org', 'thud@example.org'])
+        self.assertEqual(
+            [ml.fqdn_listname for ml in response.context['lists']],
+            ['quux@example.org', 'thud@example.org'])
 
     def test_domain2_list_index_www_host_contains_the_lists(self):
         # The list index page should contain only the requested domain's lists
         response = self.client.get3(reverse('list_index'))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.context['lists']), 2)
-        self.assertEqual([l.fqdn_listname for l in response.context['lists']],
-                         ['quux@example.org', 'thud@example.org'])
+        self.assertEqual(
+            [ml.fqdn_listname for ml in response.context['lists']],
+            ['quux@example.org', 'thud@example.org'])
 
     def test_domain2_list_index_all_lists(self):
         # Test that list index page for a logged-in user.
