@@ -18,10 +18,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
-1.3.3rc1
-========
+1.3.3
+=====
 
-(2020-05-09)
+(2020-XX-XX)
 
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
@@ -38,6 +38,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Un-handled ``HTTPError`` exception raised from MailmanClient now results in an
   error page and proper logging instead of mysterious ``KeyError`` in logs.
   (Closes #341)
+* Change List settings navigation to be vertical instead of horizontal. (See
+  !509)
 
 
 1.3.2
