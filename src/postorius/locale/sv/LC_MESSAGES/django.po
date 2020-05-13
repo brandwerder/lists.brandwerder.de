@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-25 14:53-0700\n"
-"PO-Revision-Date: 2020-03-31 20:13+0000\n"
+"PO-Revision-Date: 2020-05-13 19:20+0000\n"
 "Last-Translator: Andreas Johansson <andjo@lysator.liu.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sv/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -45,6 +45,8 @@ msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
+"Domän för dina e-postlistor. Vill du till exempel ha listor med namn som "
+"testing@example.com, skriv example.com här."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:883
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -57,11 +59,12 @@ msgstr "Aliasdomän"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr ""
+msgstr "Ange ett giltigt domännamn eller lämna tomt."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
 msgstr ""
+"Normalt sett tomt.  Används endast för ovanliga Postfix-konfigurationer."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -73,11 +76,11 @@ msgstr ""
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
-msgstr ""
+msgstr "Ägarens e-post"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Gör minst ett val"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
