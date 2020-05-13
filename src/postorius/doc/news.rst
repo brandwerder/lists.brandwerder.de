@@ -40,6 +40,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   (Closes #341)
 * Change List settings navigation to be vertical instead of horizontal. (See
   !509)
+* Move bounce processing settings into a new vertical tab for better
+  visibility.
 
 
 1.3.2

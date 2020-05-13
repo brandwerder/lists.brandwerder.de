@@ -47,12 +47,12 @@ from postorius.auth.decorators import (
     list_moderator_required, list_owner_required, superuser_required)
 from postorius.auth.mixins import ListOwnerMixin
 from postorius.forms import (
-    AlterMessagesForm, ArchiveSettingsForm, DigestSettingsForm,
-    DMARCMitigationsForm, ListAnonymousSubscribe, ListAutomaticResponsesForm,
-    ListHeaderMatchForm, ListHeaderMatchFormset, ListIdentityForm,
-    ListMassRemoval, ListMassSubscription, ListNew, ListSubscribe, MemberForm,
-    MemberModeration, MemberPolicyForm, MessageAcceptanceForm,
-    MultipleChoiceForm, UserPreferences)
+    AlterMessagesForm, ArchiveSettingsForm, BounceProcessingForm,
+    DigestSettingsForm, DMARCMitigationsForm, ListAnonymousSubscribe,
+    ListAutomaticResponsesForm, ListHeaderMatchForm, ListHeaderMatchFormset,
+    ListIdentityForm, ListMassRemoval, ListMassSubscription, ListNew,
+    ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
+    MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import Domain, List, Mailman404Error, Style
 from postorius.views.generic import MailingListView, bans_view
@@ -892,6 +892,7 @@ SETTINGS_SECTION_NAMES = (
     ('message_acceptance', _('Message Acceptance')),
     ('archiving', _('Archiving')),
     ('subscription_policy', _('Member Policy')),
+    ('bounce_processing', _('Bounce Processing')),
 )
 
 SETTINGS_FORMS = {
@@ -903,6 +904,7 @@ SETTINGS_FORMS = {
     'message_acceptance': MessageAcceptanceForm,
     'archiving': ArchiveSettingsForm,
     'subscription_policy': MemberPolicyForm,
+    'bounce_processing': BounceProcessingForm,
 }
 
 
