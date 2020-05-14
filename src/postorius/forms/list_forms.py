@@ -221,6 +221,10 @@ class MemberPolicyForm(ListSettingsForm):
                     'Confirm then Moderate: First subscribers have to confirm,'
                     ' then a moderator needs to authorize.'))
 
+
+class BounceProcessingForm(ListSettingsForm):
+    """List's bounce processing settings."""
+
     process_bounces = forms.BooleanField(
         widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
         required=False,
