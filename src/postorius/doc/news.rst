@@ -18,10 +18,10 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
-1.3.3rc2
-========
+1.3.3
+=====
 
-(2020-05-23)
+(2020-05-XX)
 
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
@@ -42,6 +42,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   !509)
 * Move bounce processing settings into a new vertical tab for better
   visibility.
+* Add URL to edit the Web host for each domain in Domain Index page. Also, show
+  the ``SITE_ID`` for each webhost. (Closes #426)
 
 
 1.3.2
