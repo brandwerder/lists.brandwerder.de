@@ -1,14 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Szylu <chipolade@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2020-05-13 19:20+0000\n"
+"PO-Revision-Date: 2020-05-25 16:56+0000\n"
 "Last-Translator: Szylu <chipolade@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/pl/>\n"
@@ -28,9 +27,9 @@ msgid ""
 "same or different from the Mail Host. You can edit the list of available web "
 "hosts <a href=\"%s\">here</a>."
 msgstr ""
-"Domena z której interfejs webowy będzie serwowany. Może być taka sama lub "
-"różna od Mail Host. Możesz edytować listę dostępnych hostów webowych <a href="
-"\"%s\">tutaj</a>."
+"Domena, z której ma być obsługiwany internetowy interfejs użytkownika. Może "
+"to być taki sam lub inny niż Mail Host. Możesz edytować listę dostępnych "
+"hostów internetowych <a href=\"%s\">tutaj</a>."
 
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
@@ -39,19 +38,19 @@ msgstr "Dostawca Poczty"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr "Proszę podaj nazwę domeny"
+msgstr "Proszę wprowadź nazwę domeny"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr "Wpisz poprawną nazwę domeny."
+msgstr "Wprowadź poprawną nazwę domeny."
 
 #: forms/domain_forms.py:50
 msgid ""
 "The domain for your mailing lists. For example when you want lists like "
 "testing@example.com, enter example.com here."
 msgstr ""
-"Domena używana przez Twoje listy mailowe. Przykładowo jeśli chcesz mieś "
-"listę testing@example.com, umieść tutaj example.com."
+"Domena dla twoich list mailingowych. Na przykład, jeśli chcesz mieć listy "
+"takie jak testowanie@example.com, wpisz example.com tutaj."
 
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:887
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
@@ -59,16 +58,17 @@ msgid "Description"
 msgstr "Opis"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
+#, fuzzy
 msgid "Alias Domain"
 msgstr "Alias domeny"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
-msgstr "Wpisz poprawną nazwę domeny lub pozostaw puste."
+msgstr "Wprowadź prawidłową nazwę domeny lub pozostaw puste pole."
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr "Zwykle puste. Używane dla niestandardowych konfiguracji Postfixa."
+msgstr "Zwykle puste.  Używane tylko w nietypowych konfiguracjach Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
@@ -76,7 +76,7 @@ msgstr "Web Host"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr "Proszę podaj prawidłową nazwę domeny"
+msgstr "Wprowadź prawidłową nazwę domeny"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
@@ -84,7 +84,7 @@ msgstr "Adres email właściciela"
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr "Dokonaj przynajmniej jednego wyboru"
+msgstr "Dokonaj co najmniej jednego wyboru"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
@@ -104,7 +104,7 @@ msgstr "Zaakceptuj natychmiast (pomiń inne reguły)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr "Zachowanie domyślne"
+msgstr "Przetwarzanie domyślne"
 
 #: forms/list_forms.py:43
 msgid "Daily"
@@ -128,11 +128,11 @@ msgstr "Rocznie"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
-msgstr "Tylko moderatorzy listy mailowej"
+msgstr "Tylko moderatorzy listy mailingowej"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr "Tylko członkowie listy mailowej"
+msgstr "Tylko członkowie listy mailingowej"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
@@ -140,15 +140,15 @@ msgstr "Ktokolwiek"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
-msgstr "Nazwa Listy"
+msgstr "Nazwa listy"
 
 #: forms/list_forms.py:69
 msgid "Please enter a name for your list."
-msgstr "Wpisz nazwę dla twojej listy."
+msgstr "Wprowadź nazwę swojej listy."
 
 #: forms/list_forms.py:70
 msgid "Please enter a valid list name."
-msgstr "Wpisz poprawną nazwę listy."
+msgstr "Wprowadź prawidłową nazwę listy."
 
 #: forms/list_forms.py:73
 msgid "Initial list owner address"
@@ -156,11 +156,11 @@ msgstr "Adres oryginalnego właściciela listy"
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr "Wpisz adres oryginalnego właściciela listy."
+msgstr "Wprowadź adres oryginalnego właściciela listy."
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
-msgstr ""
+msgstr "Zareklamować tę listę?"
 
 #: forms/list_forms.py:81
 msgid "Please choose a list type."
@@ -168,19 +168,19 @@ msgstr "Wybierz typ listy."
 
 #: forms/list_forms.py:84
 msgid "Advertise this list in list index"
-msgstr ""
+msgstr "Zareklamuj tę listę w indeksie list"
 
 #: forms/list_forms.py:85
 msgid "Hide this list in list index"
-msgstr "Ukryj tą listę na spisie list"
+msgstr "Ukryj tę listę w indeksie list"
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr "Wybierz istniejącą domenę"
+msgstr "Wybierz istniejącą domenę."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
-msgstr ""
+msgstr "Wybierz prawidłowego hosta poczty"
 
 #: forms/list_forms.py:102
 msgid "List Style"
@@ -204,17 +204,17 @@ msgstr "Wpisz poprawną nazwę listy"
 
 #: forms/list_forms.py:148 forms/list_forms.py:169
 msgid "Your email address"
-msgstr "Twój adres e-mail"
+msgstr "Twój adres email"
 
 #: forms/list_forms.py:152 forms/list_forms.py:172 forms/member_forms.py:29
 #: forms/system.py:36
 msgid "Please enter an email address."
-msgstr "Wpisz adres e-mail."
+msgstr "Wprowadź adres email."
 
 #: forms/list_forms.py:153 forms/list_forms.py:173 forms/member_forms.py:30
 #: forms/system.py:37
 msgid "Please enter a valid email address."
-msgstr "Wpisz poprawny adres e-mail."
+msgstr "Wprowadź poprawny adres email."
 
 #: forms/list_forms.py:156 forms/list_forms.py:176
 msgid "Your name (optional)"
@@ -231,15 +231,15 @@ msgstr "Akceptuj"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "Moderuj"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
-msgstr ""
+msgstr "Zaakceptuj, a następnie moderuj"
 
 #: forms/list_forms.py:203
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Zasady subskrypcji"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -250,10 +250,16 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Otwórz: subskrypcje są dodawane automatycznie\n"
+"Potwierdź: subskrybenci muszą potwierdzić subskrypcję za pomocą wysłanego do "
+"nich emaila\n"
+"Moderuj: moderatorzy będą musieli autoryzować każdą subskrypcję ręcznie.\n"
+"Potwierdź, a następnie moderuj: Najpierw subskrybenci muszą potwierdzić, a "
+"następnie moderator musi autoryzować."
 
 #: forms/list_forms.py:214
 msgid "Un-Subscription Policy"
-msgstr ""
+msgstr "Zasady anulowania subskrypcji"
 
 #: forms/list_forms.py:216
 msgid ""
@@ -264,6 +270,13 @@ msgid ""
 "Confirm then Moderate: First subscribers have to confirm, then a moderator "
 "needs to authorize."
 msgstr ""
+"Otwórz: anulowanie subskrypcji następuje automatycznie\n"
+"Potwierdź: subskrybenci muszą potwierdzić anulowanie subskrypcji za pomocą "
+"wysłanego do nich e-maila\n"
+"Moderuj: moderatorzy będą musieli autoryzować każdą rezygnację z subskrypcji "
+"ręcznie.\n"
+"Potwierdź, a następnie moderuj: Najpierw subskrybenci muszą potwierdzić, a "
+"następnie moderator musi autoryzować."
 
 #: forms/list_forms.py:229 forms/list_forms.py:255 forms/list_forms.py:264
 #: forms/list_forms.py:350 forms/list_forms.py:358 forms/list_forms.py:503
@@ -274,7 +287,7 @@ msgstr ""
 #: forms/list_forms.py:862 forms/list_forms.py:881 forms/list_forms.py:924
 #: forms/list_forms.py:931 forms/list_forms.py:952 forms/user_forms.py:48
 msgid "Yes"
-msgstr ""
+msgstr "Tak"
 
 #: forms/list_forms.py:229 forms/list_forms.py:255 forms/list_forms.py:264
 #: forms/list_forms.py:350 forms/list_forms.py:358 forms/list_forms.py:503
@@ -285,7 +298,7 @@ msgstr ""
 #: forms/list_forms.py:862 forms/list_forms.py:881 forms/list_forms.py:924
 #: forms/list_forms.py:931 forms/list_forms.py:952 forms/user_forms.py:48
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #: forms/list_forms.py:231
 msgid "Process Bounces"
@@ -320,7 +333,7 @@ msgstr ""
 
 #: forms/list_forms.py:257
 msgid "Notify owner on disable"
-msgstr ""
+msgstr "Powiadom właściciela o wyłączeniu"
 
 #: forms/list_forms.py:259
 msgid ""
@@ -331,7 +344,7 @@ msgstr ""
 
 #: forms/list_forms.py:266
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "Powiadom właściciela o usunięciu"
 
 #: forms/list_forms.py:268
 msgid ""
@@ -339,6 +352,8 @@ msgid ""
 "is removed from the list after their disabled notifications have been "
 "exhausted. "
 msgstr ""
+"Ta opcja kontroluje, czy właściciel listy jest powiadamiany o usunięciu "
+"członka z listy po wyczerpaniu jego wyłączonych powiadomień. "
 
 #: forms/list_forms.py:275
 msgid "Bounce disabled warnings interval"
@@ -346,7 +361,7 @@ msgstr ""
 
 #: forms/list_forms.py:278
 msgid "The number of days between each disabled notification."
-msgstr ""
+msgstr "Liczba dni między każdym wyłączonym powiadomieniem."
 
 #: forms/list_forms.py:282
 msgid "Bounce disable warnings"
@@ -359,6 +374,10 @@ msgid ""
 "an address from the list once their bounce score exceeds the threshold. This "
 "value must be an integer. "
 msgstr ""
+"Liczba powiadomień, które wyłączony członek otrzyma, zanim jego adres "
+"zostanie usunięty z listy kontaktów. Ustaw tę wartość na 0, aby natychmiast "
+"usunąć adres z listy, gdy wynik odrzuceń przekroczy próg. Ta wartość musi "
+"być liczbą całkowitą. "
 
 #: forms/list_forms.py:299
 msgid "Public archives"
@@ -370,15 +389,15 @@ msgstr "Prywatne archiwa"
 
 #: forms/list_forms.py:301
 msgid "Do not archive this list"
-msgstr "Nie archiwuj tej listy"
+msgstr "Nie archiwizuj tej listy"
 
 #: forms/list_forms.py:307
 msgid "Archive policy"
-msgstr "Polityka archiwizacji"
+msgstr "Zasady archiwizacji"
 
 #: forms/list_forms.py:308
 msgid "Policy for archiving messages for this list"
-msgstr ""
+msgstr "Zasady archiwizacji wiadomości dla tej listy"
 
 #: forms/list_forms.py:313
 msgid "Active archivers"
@@ -386,7 +405,7 @@ msgstr "Aktywni archiwizatorzy"
 
 #: forms/list_forms.py:338
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Dopuszczalne aliasy"
 
 #: forms/list_forms.py:341
 msgid ""
@@ -398,6 +417,13 @@ msgid ""
 "message. The matching is performed with Python's re.match() function, "
 "meaning they are anchored to the start of the string."
 msgstr ""
+"Jest to lista, po jednym w wierszu, adresów i wyrażeń regularnych pasujących "
+"do adresów, które są dopuszczalne w Do: lub DW: zamiast adresu wysyłania "
+"listy, gdy włączona jest opcja „require_explicit_destination”.  Wpisy to "
+"adresy e-mail lub wyrażenia regularne pasujące do adresów email. Wyrażenia "
+"regularne są wpisami rozpoczynającymi się od „^” i są dopasowywane do "
+"każdego adresu odbiorcy w wiadomości. Dopasowanie odbywa się za pomocą "
+"funkcji re.match() Pythona, co oznacza, że są zakotwiczone na początku ciągu."
 
 #: forms/list_forms.py:352
 msgid "Require Explicit Destination"
@@ -408,10 +434,12 @@ msgid ""
 "This checks to ensure that the list posting address or an acceptable alias "
 "explicitly appears in a To: or Cc: header in the post."
 msgstr ""
+"Sprawdza to, czy adres lub lista dopuszczalnego aliasu jawnie pojawia się w "
+"nagłówku Do: lub DW: w poście."
 
 #: forms/list_forms.py:360
 msgid "Administrivia"
-msgstr ""
+msgstr "Administrivia"
 
 #: forms/list_forms.py:362
 msgid ""
