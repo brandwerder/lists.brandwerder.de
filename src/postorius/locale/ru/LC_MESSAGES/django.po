@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Margo Radzivilava <Margoihnid@gmail.com>, 2020.
+# Juri Grabowski <hosted-weblate@jugra.de>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2020-05-27 04:08+0000\n"
-"Last-Translator: Margo Radzivilava <Margoihnid@gmail.com>\n"
+"PO-Revision-Date: 2020-05-30 04:05+0000\n"
+"Last-Translator: Juri Grabowski <hosted-weblate@jugra.de>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
 "Language: ru\n"
@@ -31,15 +32,15 @@ msgstr ""
 #: forms/domain_forms.py:45 forms/list_forms.py:95
 #: templates/postorius/domain/index.html:21
 msgid "Mail Host"
-msgstr ""
+msgstr "Почтовый хост"
 
 #: forms/domain_forms.py:46 forms/domain_forms.py:65
 msgid "Please enter a domain name"
-msgstr ""
+msgstr "Пожалуйста, введите доменное имя"
 
 #: forms/domain_forms.py:47 forms/domain_forms.py:66
 msgid "Please enter a valid domain name."
-msgstr ""
+msgstr "Пожалуйста, введите действительное доменное имя."
 
 #: forms/domain_forms.py:50
 msgid ""
@@ -50,11 +51,11 @@ msgstr ""
 #: forms/domain_forms.py:54 forms/list_forms.py:88 forms/list_forms.py:887
 #: templates/postorius/domain/index.html:22 templates/postorius/index.html:56
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: forms/domain_forms.py:57 templates/postorius/domain/index.html:23
 msgid "Alias Domain"
-msgstr ""
+msgstr "Псевдоним Домена"
 
 #: forms/domain_forms.py:59 forms/domain_forms.py:88
 msgid "Please enter a valid domain name or nothing."
@@ -62,15 +63,15 @@ msgstr ""
 
 #: forms/domain_forms.py:61
 msgid "Normally empty.  Used only for unusual Postfix configs."
-msgstr ""
+msgstr "Обычно пусто. Используется только для необычных конфигов Postfix."
 
 #: forms/domain_forms.py:64 templates/postorius/domain/index.html:24
 msgid "Web Host"
-msgstr ""
+msgstr "Веб-Узел"
 
 #: forms/domain_forms.py:78
 msgid "Please enter a valid domain name"
-msgstr ""
+msgstr "Пожалуйста, введите действительное имя домена"
 
 #: forms/domain_forms.py:103
 msgid "Owner's Email"
@@ -78,7 +79,7 @@ msgstr ""
 
 #: forms/fields.py:81
 msgid "Make at least one selection"
-msgstr ""
+msgstr "Сделать как минимум один выбор"
 
 #: forms/list_forms.py:35
 msgid "Hold for moderation"
@@ -86,7 +87,7 @@ msgstr ""
 
 #: forms/list_forms.py:36
 msgid "Reject (with notification)"
-msgstr ""
+msgstr "Отклонить (с уведомлением)"
 
 #: forms/list_forms.py:37
 msgid "Discard (no notification)"
@@ -94,15 +95,15 @@ msgstr ""
 
 #: forms/list_forms.py:38
 msgid "Accept immediately (bypass other rules)"
-msgstr ""
+msgstr "Немедленно принять (в обход других правил)"
 
 #: forms/list_forms.py:39
 msgid "Default processing"
-msgstr ""
+msgstr "Обработки по умолчанию"
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "Ежедневно"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
@@ -110,15 +111,15 @@ msgstr ""
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "Ежеквартально"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
-msgstr ""
+msgstr "Ежемесячно"
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "Ежегодно"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
@@ -126,11 +127,11 @@ msgstr ""
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist members"
-msgstr ""
+msgstr "Только члены рассылки"
 
 #: forms/list_forms.py:53
 msgid "Anyone"
-msgstr ""
+msgstr "Любой"
 
 #: forms/list_forms.py:67 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -170,7 +171,7 @@ msgstr ""
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "Выберите существующий домен."
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
@@ -178,7 +179,7 @@ msgstr ""
 
 #: forms/list_forms.py:102
 msgid "List Style"
-msgstr ""
+msgstr "Стиль списка"
 
 #: forms/list_forms.py:105
 msgid "Choose a List Style."
@@ -190,7 +191,7 @@ msgstr ""
 
 #: forms/list_forms.py:109
 msgid "Site admin has not created any domains"
-msgstr ""
+msgstr "Админ не создал каких-либо доменов"
 
 #: forms/list_forms.py:122
 msgid "Please enter a valid listname"
@@ -216,7 +217,7 @@ msgstr ""
 
 #: forms/list_forms.py:191
 msgid "Open"
-msgstr ""
+msgstr "Открыть"
 
 #: forms/list_forms.py:192 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
@@ -225,7 +226,7 @@ msgstr "Подтвердить"
 
 #: forms/list_forms.py:193
 msgid "Moderate"
-msgstr ""
+msgstr "Модерируемый"
 
 #: forms/list_forms.py:194
 msgid "Confirm, then moderate"
@@ -233,7 +234,7 @@ msgstr ""
 
 #: forms/list_forms.py:203
 msgid "Subscription Policy"
-msgstr ""
+msgstr "Политика подписки"
 
 #: forms/list_forms.py:205
 msgid ""
@@ -268,7 +269,7 @@ msgstr ""
 #: forms/list_forms.py:862 forms/list_forms.py:881 forms/list_forms.py:924
 #: forms/list_forms.py:931 forms/list_forms.py:952 forms/user_forms.py:48
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 #: forms/list_forms.py:229 forms/list_forms.py:255 forms/list_forms.py:264
 #: forms/list_forms.py:350 forms/list_forms.py:358 forms/list_forms.py:503
@@ -279,7 +280,7 @@ msgstr ""
 #: forms/list_forms.py:862 forms/list_forms.py:881 forms/list_forms.py:924
 #: forms/list_forms.py:931 forms/list_forms.py:952 forms/user_forms.py:48
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: forms/list_forms.py:231
 msgid "Process Bounces"
@@ -360,7 +361,7 @@ msgstr ""
 
 #: forms/list_forms.py:300
 msgid "Private archives"
-msgstr ""
+msgstr "Частные архивы"
 
 #: forms/list_forms.py:301
 msgid "Do not archive this list"
@@ -368,7 +369,7 @@ msgstr ""
 
 #: forms/list_forms.py:307
 msgid "Archive policy"
-msgstr ""
+msgstr "Политика архива"
 
 #: forms/list_forms.py:308
 msgid "Policy for archiving messages for this list"
@@ -376,11 +377,11 @@ msgstr ""
 
 #: forms/list_forms.py:313
 msgid "Active archivers"
-msgstr ""
+msgstr "Активный архиваторы"
 
 #: forms/list_forms.py:338
 msgid "Acceptable aliases"
-msgstr ""
+msgstr "Допустимые псевдонимы"
 
 #: forms/list_forms.py:341
 msgid ""
@@ -633,7 +634,7 @@ msgstr ""
 
 #: forms/list_forms.py:578
 msgid "None"
-msgstr ""
+msgstr "Нет"
 
 #: forms/list_forms.py:579
 msgid "Individual"
@@ -641,7 +642,7 @@ msgstr ""
 
 #: forms/list_forms.py:580
 msgid "Full"
-msgstr ""
+msgstr "Полный"
 
 #: forms/list_forms.py:584
 msgid ""
@@ -660,13 +661,13 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:28
 #: templates/postorius/lists/subscription_requests.html:30
 msgid "Discard"
-msgstr ""
+msgstr "Отменить"
 
 #: forms/list_forms.py:595 templates/postorius/lists/held_messages.html:28
 #: templates/postorius/lists/held_messages.html:106
 #: templates/postorius/lists/subscription_requests.html:29
 msgid "Reject"
-msgstr ""
+msgstr "Отклонить"
 
 #: forms/list_forms.py:596
 msgid "Forward"
@@ -674,7 +675,7 @@ msgstr ""
 
 #: forms/list_forms.py:597
 msgid "Preserve"
-msgstr ""
+msgstr "Сохранить"
 
 #: forms/list_forms.py:600
 msgid ""
@@ -688,7 +689,7 @@ msgstr ""
 
 #: forms/list_forms.py:617
 msgid "Personalize"
-msgstr ""
+msgstr "Персонализация"
 
 #: forms/list_forms.py:623
 msgid "Filter content"
@@ -866,7 +867,7 @@ msgstr ""
 
 #: forms/list_forms.py:769
 msgid "Pipeline"
-msgstr ""
+msgstr "Производство"
 
 #: forms/list_forms.py:774
 msgid "Type of pipeline you want to use for this mailing list"
@@ -1003,7 +1004,7 @@ msgstr ""
 
 #: forms/list_forms.py:872
 msgid "Moderated"
-msgstr ""
+msgstr "Модерируемый"
 
 #: forms/list_forms.py:883
 msgid "Show list on index page"
@@ -1022,7 +1023,7 @@ msgstr ""
 
 #: forms/list_forms.py:896
 msgid "Information"
-msgstr ""
+msgstr "Информация"
 
 #: forms/list_forms.py:897
 msgid "A longer description of this mailing list."
@@ -1030,7 +1031,7 @@ msgstr ""
 
 #: forms/list_forms.py:901
 msgid "Display name"
-msgstr ""
+msgstr "Отображаемое имя"
 
 #: forms/list_forms.py:903
 msgid "Display name is the name shown in the web interface."
@@ -1155,7 +1156,7 @@ msgstr ""
 
 #: forms/list_forms.py:1037
 msgid "Header"
-msgstr ""
+msgstr "Заголовок"
 
 #: forms/list_forms.py:1038
 msgid "Email header to filter on (case-insensitive)."
@@ -1187,7 +1188,7 @@ msgstr ""
 
 #: forms/list_forms.py:1049 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "Действие"
 
 #: forms/list_forms.py:1050
 msgid "Please enter a valid action."
@@ -1199,7 +1200,7 @@ msgstr ""
 
 #: forms/list_forms.py:1082
 msgid "Moderation"
-msgstr ""
+msgstr "Модерация"
 
 #: forms/list_forms.py:1084
 msgid "List default"
@@ -1221,11 +1222,11 @@ msgstr ""
 
 #: forms/list_forms.py:1106
 msgid "Select Email"
-msgstr ""
+msgstr "Выберите адрес электронной почты"
 
 #: forms/list_forms.py:1114
 msgid "Data"
-msgstr ""
+msgstr "Данные"
 
 #: forms/member_forms.py:27
 msgid "Email Address"
@@ -1233,7 +1234,7 @@ msgstr ""
 
 #: forms/member_forms.py:32
 msgid "Display Name"
-msgstr ""
+msgstr "Отображаемое имя"
 
 #: forms/member_forms.py:35
 msgid "Please enter an display name."
@@ -1241,7 +1242,7 @@ msgstr ""
 
 #: forms/system.py:31
 msgid "Add ban"
-msgstr ""
+msgstr "Добавить запрет"
 
 #: forms/system.py:33
 msgid ""
@@ -1251,7 +1252,7 @@ msgstr ""
 
 #: forms/user_forms.py:50
 msgid "Regular"
-msgstr ""
+msgstr "Регулярные"
 
 #: forms/user_forms.py:51
 msgid "Plain Text Digests"
@@ -1263,7 +1264,7 @@ msgstr ""
 
 #: forms/user_forms.py:53
 msgid "Summary Digests"
-msgstr ""
+msgstr "Краткие обзоры"
 
 #: forms/user_forms.py:55
 msgid "Enabled"
@@ -1271,7 +1272,7 @@ msgstr ""
 
 #: forms/user_forms.py:55
 msgid "Disabled"
-msgstr ""
+msgstr "Отключен"
 
 #: forms/user_forms.py:60
 msgid "Delivery status"
@@ -1288,7 +1289,7 @@ msgstr ""
 
 #: forms/user_forms.py:72
 msgid "Delivery mode"
-msgstr ""
+msgstr "Режим доставки"
 
 #: forms/user_forms.py:74
 msgid ""
@@ -1319,7 +1320,7 @@ msgstr ""
 
 #: forms/user_forms.py:98
 msgid "Hide address"
-msgstr ""
+msgstr "Скрыть адрес"
 
 #: forms/user_forms.py:100
 msgid ""
@@ -1505,7 +1506,7 @@ msgstr ""
 
 #: templates/403.html:5
 msgid "Forbidden"
-msgstr ""
+msgstr "Запрещено"
 
 #: templates/403.html:6
 msgid "You do not have permissions to visit this page."
@@ -1542,7 +1543,7 @@ msgstr ""
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "Домены"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
@@ -1550,11 +1551,11 @@ msgstr ""
 
 #: templates/postorius/base.html:56
 msgid "System Information"
-msgstr ""
+msgstr "Системная информация"
 
 #: templates/postorius/base.html:63
 msgid "Archives"
-msgstr ""
+msgstr "Архивы"
 
 #: templates/postorius/base.html:79
 msgid "Account"
@@ -1575,7 +1576,7 @@ msgstr "Выйти"
 
 #: templates/postorius/base.html:101
 msgid "Login"
-msgstr ""
+msgstr "Логин"
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
@@ -1599,7 +1600,7 @@ msgstr ""
 
 #: templates/postorius/domain/confirm_delete.html:13
 msgid "Confirm deletion"
-msgstr ""
+msgstr "Подтвердите удаление"
 
 #: templates/postorius/domain/confirm_delete.html:17
 msgid "Are you sure you want to permanently delete"
@@ -1631,7 +1632,7 @@ msgstr ""
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "Отменить"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
@@ -1640,12 +1641,12 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "Добавить домен"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
 msgid "Owners"
-msgstr ""
+msgstr "Владельцы"
 
 #: templates/postorius/domain/index.html:43
 msgid "remove"
@@ -1653,7 +1654,7 @@ msgstr ""
 
 #: templates/postorius/domain/index.html:47
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: templates/postorius/domain/index.html:50
 #: templates/postorius/domain/template_add.html:6
@@ -1666,13 +1667,13 @@ msgstr ""
 #: templates/postorius/lists/template_update.html:7
 #: templates/postorius/menu/list_nav.html:45 templatetags/nav_helpers.py:38
 msgid "Templates"
-msgstr ""
+msgstr "Шаблоны"
 
 #: templates/postorius/domain/index.html:51
 #: templates/postorius/domain/template_index.html:33
 #: templates/postorius/lists/template_list.html:31
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
@@ -1714,7 +1715,7 @@ msgstr ""
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
 msgid "New Template"
-msgstr ""
+msgstr "Новый шаблон"
 
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
@@ -1752,7 +1753,7 @@ msgstr ""
 
 #: templates/postorius/index.html:12
 msgid "Mailing Lists"
-msgstr ""
+msgstr "Списки рассылки"
 
 #: templates/postorius/index.html:40
 msgid "Create New Domain"
@@ -1768,7 +1769,7 @@ msgstr ""
 
 #: templates/postorius/index.html:55
 msgid "Post address"
-msgstr ""
+msgstr "Почтовый адрес"
 
 #: templates/postorius/index.html:66
 msgid "unadvertised"
@@ -1836,7 +1837,7 @@ msgstr ""
 #: templates/postorius/lists/mass_removal.html:17
 #: templates/postorius/lists/members.html:63
 msgid "Unsubscribe All"
-msgstr ""
+msgstr "Отписаться от всех"
 
 #: templates/postorius/lists/header_matches.html:7
 #: templates/postorius/menu/list_nav.html:58
@@ -1845,7 +1846,7 @@ msgstr ""
 
 #: templates/postorius/lists/header_matches.html:58
 msgid "Save changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 #: templates/postorius/lists/header_matches.html:60
 msgid "Changes pending, click on the button to save them."
@@ -1864,7 +1865,7 @@ msgstr ""
 #: templates/postorius/lists/held_messages.html:105
 #: templates/postorius/lists/subscription_requests.html:28
 msgid "Accept"
-msgstr ""
+msgstr "Принять"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Subject"
@@ -1872,11 +1873,11 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Sender"
-msgstr ""
+msgstr "Отправитель"
 
 #: templates/postorius/lists/held_messages.html:39
 msgid "Reason"
-msgstr ""
+msgstr "Причина"
 
 #: templates/postorius/lists/held_messages.html:40
 msgid "Hold Date"
@@ -1884,11 +1885,11 @@ msgstr ""
 
 #: templates/postorius/lists/held_messages.html:52
 msgid "No Subject"
-msgstr ""
+msgstr "Без Темы"
 
 #: templates/postorius/lists/held_messages.html:80
 msgid "Attachments"
-msgstr ""
+msgstr "Вложения"
 
 #: templates/postorius/lists/held_messages.html:91
 msgid "Set member moderation"
@@ -1918,7 +1919,7 @@ msgstr ""
 
 #: templates/postorius/lists/mass_removal.html:14
 msgid "Unsubscribe users"
-msgstr ""
+msgstr "Отписать пользователей"
 
 #: templates/postorius/lists/mass_subscribe.html:7
 #: templates/postorius/menu/list_nav.html:53
@@ -1928,7 +1929,7 @@ msgstr ""
 #: templates/postorius/lists/memberoptions.html:7
 #: templates/postorius/user/list_options.html:7
 msgid "Member options"
-msgstr ""
+msgstr "Параметры участников"
 
 #: templates/postorius/lists/memberoptions.html:15
 msgid "No Preferences Available"
@@ -1944,7 +1945,7 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:44
 msgid "Search members..."
-msgstr ""
+msgstr "Поиск участников ..."
 
 #: templates/postorius/lists/members.html:60
 msgid "CSV Export"
@@ -1957,7 +1958,7 @@ msgstr ""
 
 #: templates/postorius/lists/members.html:93
 msgid "Member Options"
-msgstr ""
+msgstr "Параметры участника"
 
 #: templates/postorius/lists/members.html:105
 msgid "Non-member Options"
@@ -1979,12 +1980,12 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:20
 #: templates/postorius/lists/subscription_requests.html:20
 msgid "Actions"
-msgstr ""
+msgstr "Действия"
 
 #: templates/postorius/lists/pending_confirmations.html:29
 #: templates/postorius/lists/subscription_requests.html:31
 msgid "Ban"
-msgstr ""
+msgstr "Запрет"
 
 #: templates/postorius/lists/pending_confirmations.html:38
 #: templates/postorius/lists/subscription_requests.html:40
@@ -1994,12 +1995,12 @@ msgstr ""
 #: templates/postorius/lists/settings.html:7
 #: templates/postorius/menu/list_nav.html:46
 msgid "Settings"
-msgstr ""
+msgstr "Настройки"
 
 #: templates/postorius/lists/subscription_requests.html:7
 #: templates/postorius/menu/list_nav.html:14
 msgid "Subscription requests"
-msgstr ""
+msgstr "Запросы на подписку"
 
 #: templates/postorius/lists/summary.html:8
 #: templates/postorius/menu/list_nav.html:10
@@ -2043,7 +2044,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:59
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Отписаться"
 
 #: templates/postorius/lists/summary.html:63
 msgid ""
@@ -2079,7 +2080,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:85
 msgid "Log In"
-msgstr ""
+msgstr "Вход в систему"
 
 #: templates/postorius/lists/summary.html:90
 msgid ""
@@ -2095,7 +2096,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:108
 msgid "Created at"
-msgstr ""
+msgstr "Создан в"
 
 #: templates/postorius/lists/summary.html:110
 msgid "Last post at"
@@ -2107,7 +2108,7 @@ msgstr ""
 
 #: templates/postorius/lists/summary.html:114
 msgid "Volume"
-msgstr ""
+msgstr "Объём"
 
 #: templates/postorius/lists/template_delete.html:19
 #, python-format
@@ -2128,7 +2129,7 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:36
 msgid "Users"
-msgstr ""
+msgstr "Пользователи"
 
 #: templates/postorius/menu/list_nav.html:39
 msgid "Members"
@@ -2140,7 +2141,7 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:41
 msgid "Moderators"
-msgstr ""
+msgstr "Модераторы"
 
 #: templates/postorius/menu/list_nav.html:50
 msgid "Mass operations"
@@ -2148,7 +2149,7 @@ msgstr ""
 
 #: templates/postorius/menu/list_nav.html:54
 msgid "Mass removal"
-msgstr ""
+msgstr "Массового удаления"
 
 #: templates/postorius/menu/list_nav.html:57
 msgid "Ban List"
@@ -2161,7 +2162,7 @@ msgstr ""
 #: templates/postorius/menu/user_nav.html:7
 #: templates/postorius/user/subscriptions.html:8 templatetags/nav_helpers.py:42
 msgid "Subscriptions"
-msgstr ""
+msgstr "Подписки"
 
 #: templates/postorius/menu/user_nav.html:8
 msgid "Global Mailman preferences"
@@ -2214,7 +2215,7 @@ msgstr ""
 #: templates/postorius/user/address_preferences.html:62
 #: templates/postorius/user/subscription_preferences.html:68
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: templates/postorius/user/list_options.html:14
 msgid "Subscription options for"
@@ -2256,7 +2257,7 @@ msgstr ""
 
 #: templates/postorius/user/subscriptions.html:25
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 #: templates/postorius/user/subscriptions.html:41
 msgid "You are not yet subscribed to any lists."
@@ -2296,7 +2297,7 @@ msgstr ""
 
 #: templatetags/nav_helpers.py:35
 msgid "Summary"
-msgstr ""
+msgstr "Сводка"
 
 #: templatetags/nav_helpers.py:37
 msgid "Confirm Removal of All Members"
@@ -2574,7 +2575,7 @@ msgstr ""
 
 #: views/list.py:891
 msgid "Digest"
-msgstr ""
+msgstr "Дайджест"
 
 #: views/list.py:892
 msgid "Message Acceptance"
@@ -2582,7 +2583,7 @@ msgstr ""
 
 #: views/list.py:893
 msgid "Archiving"
-msgstr ""
+msgstr "Архивация"
 
 #: views/list.py:894
 msgid "Member Policy"
