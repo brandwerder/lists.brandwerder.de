@@ -21,7 +21,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 1.3.3
 =====
 
-(2020-05-XX)
+(2020-06-01)
 
 * Expose additional list settings.  (See !483)
 * Correct description of Digest Frequency.  (Closes #395)
