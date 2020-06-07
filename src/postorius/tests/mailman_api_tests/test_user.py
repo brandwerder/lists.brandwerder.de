@@ -21,6 +21,7 @@ from django.test.utils import override_settings
 from django.urls import reverse
 
 from allauth.account.models import EmailAddress
+from django_mailman3.lib.mailman import get_mailman_user
 
 from postorius.forms import ChangeSubscriptionForm, UserPreferences
 from postorius.models import Mailman404Error, MailmanUser
@@ -40,7 +41,7 @@ class MailmanUserTest(ViewTestCase):
         self.user = User.objects.create_user(
             'user', 'user@example.com', 'testpass')
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True, primary=True)
         self.mm_user = MailmanUser.objects.create_from_django(self.user)
 
     def test_address_preferences_not_logged_in(self):
@@ -281,3 +282,15 @@ class MailmanUserTest(ViewTestCase):
         self.assertEqual(response.status_code, 302)
         error = self.assertHasErrorMessage(response)
         self.assertIn('You are already subscribed', error)
+
+    def test_list_options_sets_preferred_address(self):
+        # Test that preferred address is set.
+        mm_user = get_mailman_user(self.user)
+        self.assertIsNone(mm_user.preferred_address)
+        self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        self.client.login(username='user', password='testpass')
+        self.client.get(reverse('user_list_options',
+                                args=[self.foo_list.list_id]))
+        self.assertEqual(mm_user.preferred_address.email, self.user.email)

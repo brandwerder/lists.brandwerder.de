@@ -30,6 +30,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Fix a bug where the user's display name would be ignore when
   subscribing. (Closes #429)
 * Display a user's name in the pending subscription request list. (Closes #430)
+* Set a user's preferrred_address in Core if it isn't already set and the user
+  has a Primary Address that is verified.
   
 
 1.3.3

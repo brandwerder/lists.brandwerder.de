@@ -40,7 +40,7 @@ class ListSummaryPageTest(ViewTestCase):
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testpass')
         EmailAddress.objects.create(
-            user=self.user, email=self.user.email, verified=True)
+            user=self.user, email=self.user.email, verified=True, primary=True)
 
     def test_list_summary_logged_out(self):
         # Response must contain list obj and anonymous subscribe form.
@@ -227,3 +227,24 @@ def function:
                             'following address:')
         self.assertContains(response,
                             ' <em>Primary Address (test@example.com)</em>')
+
+    def test_list_summary_sets_preferred_address(self):
+        # Test that preferred address is set.
+        mm_user = get_mailman_user(self.user)
+        self.assertIsNone(mm_user.preferred_address)
+        self.client.login(username='testuser', password='testpass')
+        self.client.get(reverse('list_summary',
+                                args=('foo@example.com', )))
+        self.assertEqual(mm_user.preferred_address.email, self.user.email)
+
+    def test_list_summary_not_verified_does_not_set_preferred(self):
+        # Test that the preferred address is *not* set if the primary_email is
+        # not verified.
+        primary_email = EmailAddress.objects.create(
+            user=self.user, email='another@example.com', verified=False)
+        primary_email.set_as_primary()
+        mm_user = get_mailman_user(self.user)
+        self.assertIsNone(mm_user.preferred_address)
+        self.client.get(reverse('list_summary',
+                                args=('foo@example.com', )))
+        self.assertIsNone(mm_user.preferred_address)
