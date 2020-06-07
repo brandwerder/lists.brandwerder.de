@@ -27,6 +27,7 @@ from django.utils.translation import gettext_lazy as _
 from django_mailman3.lib.mailman import get_mailman_client
 
 from postorius.forms.fields import ListOfStringsField
+from postorius.forms.validators import validate_uuid_or_email
 from postorius.models import EmailTemplate, _email_template_help_text
 from postorius.utils import LANGUAGES
 
@@ -144,10 +145,13 @@ class ListSubscribe(forms.Form):
     """Form fields to join an existing list.
     """
 
-    email = forms.ChoiceField(
+    subscriber = forms.ChoiceField(
         label=_('Your email address'),
-        validators=[validate_email],
         widget=forms.Select(),
+        validators=[validate_uuid_or_email, ],
+        help_text=_(
+            'Subscribing via "Primary Address" will change subscription'
+            ' address when you change your primary address.'),
         error_messages={
             'required': _('Please enter an email address.'),
             'invalid': _('Please enter a valid email address.')})
@@ -155,10 +159,15 @@ class ListSubscribe(forms.Form):
     display_name = forms.CharField(
         label=_('Your name (optional)'), required=False)
 
-    def __init__(self, user_emails, *args, **kwargs):
+    def __init__(self, user_emails, user_id, primary_email, *args, **kwargs):
         super(ListSubscribe, self).__init__(*args, **kwargs)
-        self.fields['email'].choices = ((address, address)
-                                        for address in user_emails)
+        choices = list((address, address)
+                       for address in user_emails)
+        if primary_email and user_id:
+            choices.insert(
+                0,
+                (user_id, _('Primary Address ({})').format(primary_email)))
+        self.fields['subscriber'].choices = choices
 
 
 class ListAnonymousSubscribe(forms.Form):
@@ -1098,15 +1107,22 @@ class MemberModeration(forms.Form):
 
 
 class ChangeSubscriptionForm(forms.Form):
-    email = forms.ChoiceField()
 
-    def __init__(self, user_emails, *args, **kwargs):
+    subscriber = forms.ChoiceField(
+        label=_('Select Email'),
+        required=False,
+        widget=forms.Select(),
+        validators=[validate_uuid_or_email, ],)
+
+    def __init__(self, user_emails, user_id, primary_email, *args, **kwargs):
         super(ChangeSubscriptionForm, self).__init__(*args, **kwargs)
-        self.fields['email'] = forms.ChoiceField(
-            label=_('Select Email'),
-            required=False,
-            widget=forms.Select(),
-            choices=((address, address) for address in user_emails))
+        choices = list((address, address)
+                       for address in user_emails)
+        if primary_email and user_id:
+            choices.insert(
+                0,
+                (user_id, _('Primary Address ({})').format(primary_email)))
+        self.fields['subscriber'].choices = choices
 
 
 class TemplateUpdateForm(forms.ModelForm):

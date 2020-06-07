@@ -169,3 +169,115 @@ class MailmanUserTest(ViewTestCase):
                                            args=[self.foo_list.list_id]))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'anotheremail@example.com')
+
+    def _set_primary(self, user, mm_user):
+        for addr in mm_user.addresses:
+            addr.verify()
+        mm_user.preferred_address = user.email
+
+    def test_change_subscription_to_new_email(self):
+        # Test that we can change subscription to a new email.
+        self.client.login(username='user', password='testpass')
+        user = self.mm_client.get_user('user@example.com')
+        EmailAddress.objects.create(
+            user=self.user, email='anotheremail@example.com', verified=True)
+        address = user.add_address('anotheremail@example.com')
+        address.verify()
+        self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        # Now, first verify that the list_options page has all the emails.
+        # Check response
+        response = self.client.get(reverse('user_list_options',
+                                           args=[self.foo_list.list_id]))
+        self.assertContains(response, 'anotheremail@example.com')
+        self.assertContains(
+            response,
+            '<option value="user@example.com"'
+            ' selected>user@example.com</option>')
+        # now, let's switch the subscription to a new user.
+        response = self.client.post(
+            reverse('change_subscription', args=(self.foo_list.list_id, )),
+            {'subscriber': 'anotheremail@example.com'}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response)
+        member = self.mm_client.get_member(
+            self.foo_list.list_id, 'anotheremail@example.com')
+        self.assertIsNotNone(member)
+        self.assertEqual(member.subscription_mode, 'as_address')
+
+    def test_change_subscription_to_from_primary_address(self):
+        # Test that we can change subscription to a new email.
+        self.client.login(username='user', password='testpass')
+        user = self.mm_client.get_user('user@example.com')
+        self._set_primary(self.user, user)
+        self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        # Now, first verify that the list_options page has the primary address.
+        response = self.client.get(reverse('user_list_options',
+                                           args=[self.foo_list.list_id]))
+        self.assertContains(response, 'Primary Address (user@example.com)')
+        self.assertContains(
+            response,
+            '<option value="user@example.com" '
+            'selected>user@example.com</option>')
+        # now, let's switch the subscription to a new user.
+        response = self.client.post(
+            reverse('change_subscription', args=(self.foo_list.list_id, )),
+            {'subscriber': str(user.user_id)}
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response)
+        member = self.mm_client.get_member(
+            self.foo_list.list_id, 'user@example.com')
+        self.assertIsNotNone(member)
+        self.assertEqual(member.subscription_mode, 'as_user')
+
+    def test_already_subscribed(self):
+        self.client.login(username='user', password='testpass')
+
+        self.foo_list.subscribe(
+            self.user.email,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        # Now, first verify that the list_options page has all the emails.
+        # Check response
+        response = self.client.get(reverse('user_list_options',
+                                           args=[self.foo_list.list_id]))
+        self.assertContains(
+            response,
+            '<option value="user@example.com" '
+            'selected>user@example.com</option>')
+        # now, let's switch the subscription to a new user.
+        response = self.client.post(
+            reverse('change_subscription', args=(self.foo_list.list_id, )),
+            {'subscriber': 'user@example.com'}
+        )
+        self.assertEqual(response.status_code, 302)
+        error = self.assertHasErrorMessage(response)
+        self.assertIn('You are already subscribed', error)
+
+    def test_already_subscribed_with_primary_address(self):
+        # Test that we can change subscription to a new email.
+        self.client.login(username='user', password='testpass')
+        user = self.mm_client.get_user('user@example.com')
+        self._set_primary(self.user, user)
+        self.foo_list.subscribe(
+            user.user_id,
+            pre_verified=True, pre_confirmed=True, pre_approved=True)
+        # Now, first verify that the list_options page has the primary address.
+        response = self.client.get(reverse('user_list_options',
+                                           args=[self.foo_list.list_id]))
+        self.assertContains(
+            response,
+            ('<option value="{}" selected>Primary Address (user@example.com)'
+             '</option>').format(user.user_id))
+        # now, let's switch the subscription to a new user.
+        response = self.client.post(
+            reverse('change_subscription', args=(self.foo_list.list_id, )),
+            {'subscriber': str(user.user_id)}
+        )
+        self.assertEqual(response.status_code, 302)
+        error = self.assertHasErrorMessage(response)
+        self.assertIn('You are already subscribed', error)
