@@ -27,6 +27,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   ``example.com``. (Closes #427)
 * Add the ability to subscribe via Primary Address instead of specific
   address. (See !516)
+* Fix a bug where the user's display name would be ignore when
+  subscribing. (Closes #429)
 
 
 1.3.3
