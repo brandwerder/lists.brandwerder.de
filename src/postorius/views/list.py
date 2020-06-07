@@ -391,8 +391,10 @@ class ListSubscribeView(MailingListView):
                 user_emails, mm_user.user_id, primary_email, request.POST)
             if form.is_valid():
                 subscriber = request.POST.get('subscriber')
+                display_name = request.POST.get('display_name')
                 response = self.mailing_list.subscribe(
-                    subscriber, pre_verified=True, pre_confirmed=True)
+                    subscriber, display_name,
+                    pre_verified=True, pre_confirmed=True)
                 if (type(response) == dict and                   # noqa: W504
                         response.get('token_owner') == TokenOwner.moderator):
                     messages.success(
@@ -427,8 +429,10 @@ class ListAnonymousSubscribeView(MailingListView):
             form = ListAnonymousSubscribe(request.POST)
             if form.is_valid():
                 email = form.cleaned_data.get('email')
-                self.mailing_list.subscribe(email, pre_verified=False,
-                                            pre_confirmed=False)
+                display_name = form.cleaned_data.get('display_name')
+                self.mailing_list.subscribe(
+                    email, display_name,
+                    pre_verified=False, pre_confirmed=False)
                 messages.success(request, _('Please check your inbox for '
                                             'further instructions'))
             else:

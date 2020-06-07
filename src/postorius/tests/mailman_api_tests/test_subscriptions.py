@@ -16,11 +16,12 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from unittest.mock import patch
+
 from django.contrib.auth.models import User
 from django.urls import reverse
 
 from allauth.account.models import EmailAddress
-from mock import patch
 
 from postorius.tests.utils import ViewTestCase
 
@@ -59,10 +60,11 @@ class TestSubscription(ViewTestCase):
         response = self.client.post(
             reverse('list_anonymous_subscribe',
                     args=('open_list.example.com', )),
-            {'email': 'test@example.com'})
+            {'email': 'test@example.com', 'display_name': 'Test User'})
         mock_subscribe.assert_called_once()
         mock_subscribe.assert_called_with(
-            'test@example.com', pre_verified=False, pre_confirmed=False)
+            'test@example.com', 'Test User', pre_verified=False,
+            pre_confirmed=False)
         self.assertRedirects(
             response, reverse('list_summary',
                               args=('open_list.example.com', )))
