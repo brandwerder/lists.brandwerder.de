@@ -16,9 +16,6 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 #
-
-from __future__ import absolute_import, unicode_literals
-
 from django.test import RequestFactory, TestCase
 
 from postorius.utils import render_api_error

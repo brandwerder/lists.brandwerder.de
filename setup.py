@@ -59,8 +59,6 @@ setup(
         'readme_renderer[md]',
     ],
     tests_require=[
-        "mock",
-        "vcrpy",
         "beautifulsoup4",
         "isort",
     ],
