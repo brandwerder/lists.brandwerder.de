@@ -29,7 +29,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   address. (See !516)
 * Fix a bug where the user's display name would be ignore when
   subscribing. (Closes #429)
-
+* Display a user's name in the pending subscription request list. (Closes #430)
+  
 
 1.3.3
 =====
