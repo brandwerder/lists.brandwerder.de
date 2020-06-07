@@ -25,6 +25,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 * Update the default Site when creating a domain to match the domain if it is
   ``example.com``. (Closes #427)
+* Add the ability to subscribe via Primary Address instead of specific
+  address. (See !516)
 
 
 1.3.3

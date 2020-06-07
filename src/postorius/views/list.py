@@ -37,7 +37,7 @@ from django.utils.translation import gettext as _
 from django.views.decorators.http import require_http_methods
 
 from allauth.account.models import EmailAddress
-from django_mailman3.lib.mailman import get_mailman_client
+from django_mailman3.lib.mailman import get_mailman_client, get_mailman_user
 from django_mailman3.lib.paginator import MailmanPaginator, paginate
 from django_mailman3.models import MailDomain
 from django_mailman3.signals import (
@@ -54,7 +54,8 @@ from postorius.forms import (
     ListSubscribe, MemberForm, MemberModeration, MemberPolicyForm,
     MessageAcceptanceForm, MultipleChoiceForm, UserPreferences)
 from postorius.forms.list_forms import ACTION_CHOICES
-from postorius.models import Domain, List, Mailman404Error, Style
+from postorius.models import (
+    Domain, List, Mailman404Error, Style, SubscriptionMode)
 from postorius.views.generic import MailingListView, bans_view
 
 
@@ -251,6 +252,7 @@ class ListSummaryView(MailingListView):
         data = {'list': self.mailing_list,
                 'user_subscribed': False,
                 'subscribed_address': None,
+                'subscribed_preferred': False,
                 'public_archive': False,
                 'hyperkitty_enabled': False}
         if self.mailing_list.settings['archive_policy'] == 'public':
@@ -274,14 +276,23 @@ class ListSummaryView(MailingListView):
                     data['user_request_pending'] = True
                     break
                 try:
-                    self.mailing_list.get_member(address)
+                    member = self.mailing_list.get_member(address)
                 except ValueError:
                     pass
                 else:
                     data['user_subscribed'] = True
                     data['subscribed_address'] = address
+                    data['subscribed_preferred'] = bool(
+                        member.subscription_mode ==
+                        SubscriptionMode.as_user.name)
                     break  # no need to test more addresses
-            data['subscribe_form'] = ListSubscribe(user_emails)
+            mm_user = get_mailman_user(request.user)
+            primary_email = None
+            if mm_user.preferred_address is not None:
+                primary_email = mm_user.preferred_address.email
+            data['subscribe_form'] = ListSubscribe(
+                user_emails, user_id=mm_user.user_id,
+                primary_email=primary_email)
         else:
             user_emails = None
             data['anonymous_subscription_form'] = ListAnonymousSubscribe()
@@ -292,18 +303,31 @@ class ChangeSubscriptionView(MailingListView):
     """Change mailing list subscription
     """
 
+    def _is_subscribed(self, member, subscriber):
+        """Check if the member is same as the subscriber."""
+        return (
+            (member.subscription_mode == SubscriptionMode.as_address.name and
+             member.email == subscriber) or
+            (member.subscription_mode == SubscriptionMode.as_user.name and
+             member.user.user_id == subscriber))
+
     @method_decorator(login_required)
     def post(self, request, list_id):
         try:
             user_emails = EmailAddress.objects.filter(
                 user=request.user, verified=True).order_by(
                 "email").values_list("email", flat=True)
-            form = ListSubscribe(user_emails, request.POST)
+            mm_user = get_mailman_user(request.user)
+            primary_email = None
+            if mm_user.preferred_address is not None:
+                primary_email = mm_user.preferred_address.email
+            form = ListSubscribe(
+                user_emails, mm_user.user_id, primary_email, request.POST)
             # Find the currently subscribed email
             old_email = None
             for address in user_emails:
                 try:
-                    self.mailing_list.get_member(address)
+                    member = self.mailing_list.get_member(address)
                 except ValueError:
                     pass
                 else:
@@ -311,15 +335,15 @@ class ChangeSubscriptionView(MailingListView):
                     break  # no need to test more addresses
             assert old_email is not None
             if form.is_valid():
-                email = form.cleaned_data['email']
-                if old_email == email:
+                subscriber = form.cleaned_data['subscriber']
+                if self._is_subscribed(member, subscriber):
                     messages.error(request, _('You are already subscribed'))
                 else:
                     self.mailing_list.unsubscribe(old_email)
                     # Since the action is done via the web UI, no email
                     # confirmation is needed.
                     response = self.mailing_list.subscribe(
-                        email, pre_confirmed=True)
+                        subscriber, pre_confirmed=True)
                     if (type(response) == dict and                # noqa: W504
                             response.get('token_owner') == TokenOwner.moderator):  # noqa: E501
                         messages.success(
@@ -327,9 +351,15 @@ class ChangeSubscriptionView(MailingListView):
                                        ' this subscription was submitted and'
                                        ' is waiting for moderator approval.'))
                     else:
+                        # If the subscriber is user_id (i.e. not an email
+                        # address), Show 'Primary Address ()' in the success
+                        # message instead of weird user id.
+                        if not ('@' in subscriber):
+                            subscriber = _('Primary Address ({})').format(
+                                primary_email)
                         messages.success(request,
                                          _('Subscription changed to %s') %
-                                         email)
+                                         subscriber)
             else:
                 messages.error(request,
                                _('Something went wrong. Please try again.'))
@@ -353,11 +383,16 @@ class ListSubscribeView(MailingListView):
             user_emails = EmailAddress.objects.filter(
                 user=request.user, verified=True).order_by(
                 "email").values_list("email", flat=True)
-            form = ListSubscribe(user_emails, request.POST)
+            mm_user = get_mailman_user(request.user)
+            primary_email = None
+            if mm_user.preferred_address is not None:
+                primary_email = mm_user.preferred_address.email
+            form = ListSubscribe(
+                user_emails, mm_user.user_id, primary_email, request.POST)
             if form.is_valid():
-                email = request.POST.get('email')
+                subscriber = request.POST.get('subscriber')
                 response = self.mailing_list.subscribe(
-                    email, pre_verified=True, pre_confirmed=True)
+                    subscriber, pre_verified=True, pre_confirmed=True)
                 if (type(response) == dict and                   # noqa: W504
                         response.get('token_owner') == TokenOwner.moderator):
                     messages.success(

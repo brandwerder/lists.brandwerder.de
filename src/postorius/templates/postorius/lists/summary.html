@@ -44,7 +44,12 @@
         {% if user_subscribed %}
             <h2>{% trans 'Subscription / Unsubscription' %}</h2>
             <p>
-                {% trans 'You are subscribed to this list with the following address:' %} <em>{{ subscribed_address }}</em>
+              {% trans 'You are subscribed to this list with the following address:' %}
+              {% if subscribed_preferred %}
+                  <em>{% trans 'Primary Address' %} ({{ subscribed_address }})</em>
+              {% else %}
+                  <em>{{ subscribed_address }}</em>
+              {% endif %}
             </p>
             {% url 'user_list_options' list.list_id as user_list_options_url %}
             <p>
