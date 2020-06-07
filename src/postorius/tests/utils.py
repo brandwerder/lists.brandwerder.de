@@ -16,6 +16,7 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 import os
+from unittest.mock import MagicMock
 
 from django.conf import settings
 from django.contrib import messages
@@ -24,7 +25,6 @@ from django.urls import reverse
 
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.tests.utils import get_flash_messages
-from mock import MagicMock
 from six import PY3, binary_type, text_type
 from six.moves.urllib_parse import (
     parse_qsl, quote, urlencode, urlparse, urlunparse)

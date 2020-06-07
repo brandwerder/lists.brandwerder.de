@@ -16,6 +16,8 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from unittest.mock import patch
+
 from django.contrib.auth.models import AnonymousUser, User
 from django.core.exceptions import PermissionDenied
 from django.test import TestCase
@@ -23,7 +25,6 @@ from django.test.client import RequestFactory
 
 from allauth.account.models import EmailAddress
 from mailmanclient import Client
-from mock import patch
 
 from postorius.auth.decorators import (
     list_moderator_required, list_owner_required, superuser_required)
