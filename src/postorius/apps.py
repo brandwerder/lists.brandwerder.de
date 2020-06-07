@@ -23,3 +23,6 @@ from django.apps import AppConfig
 class PostoriusConfig(AppConfig):
     name = 'postorius'
     verbose_name = "Postorius"
+
+    def ready(self):
+        import postorius.signals  # noqa: F401
