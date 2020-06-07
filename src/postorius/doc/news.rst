@@ -18,6 +18,14 @@ You should have received a copy of the GNU Lesser General Public License
 along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 
 
+1.3.4
+=====
+
+(2020-XX-XX)
+
+* Update the default Site when creating a domain to match the domain if it is
+  ``example.com``. (Closes #427)
+
 
 1.3.3
 =====
