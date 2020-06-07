@@ -56,6 +56,7 @@ from postorius.forms import (
 from postorius.forms.list_forms import ACTION_CHOICES
 from postorius.models import (
     Domain, List, Mailman404Error, Style, SubscriptionMode)
+from postorius.utils import set_preferred
 from postorius.views.generic import MailingListView, bans_view
 
 
@@ -288,7 +289,9 @@ class ListSummaryView(MailingListView):
                     break  # no need to test more addresses
             mm_user = get_mailman_user(request.user)
             primary_email = None
-            if mm_user.preferred_address is not None:
+            if mm_user.preferred_address is None:
+                primary_email = set_preferred(request.user, mm_user)
+            else:
                 primary_email = mm_user.preferred_address.email
             data['subscribe_form'] = ListSubscribe(
                 user_emails, user_id=mm_user.user_id,

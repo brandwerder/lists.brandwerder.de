@@ -23,6 +23,7 @@ from django.conf import settings
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
+from allauth.account.models import EmailAddress
 from mailmanclient import Client
 
 
@@ -57,6 +58,25 @@ def get_mailman_client():
 def with_empty_choice(choices):
     """Add an empty Choice for unset values in dropdown."""
     return [(None, '-----')] + list(choices)
+
+
+def set_preferred(user, mm_user):
+    """Set preferred address in Mailman Core.
+
+    :param user: The Django user mode to set preferred address.
+    :param mm_user: The Mailman User object to set preferred address for.
+    """
+    client = get_mailman_client()
+    primary_email = EmailAddress.objects.get_primary(user)
+    if primary_email is not None and primary_email.verified:
+        # First, make sure that the email address is verified in Core,
+        # otherwise, we can't set it as a primary address.
+        addr = client.get_address(primary_email.email)
+        if not addr.verified_on:
+            addr.verify()
+        mm_user.preferred_address = primary_email.email
+        return primary_email.email
+    return None
 
 
 LANGUAGES = (
