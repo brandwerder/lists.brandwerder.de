@@ -35,6 +35,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Use the new APIs in Core to get the count of held messages and pending
   subscriptions to improve peroformance of settings page for list
   owners. (Fixes #417)
+* Show held message is local time of the User. (Closes #434)
+
 
 
 1.3.3
