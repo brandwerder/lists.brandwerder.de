@@ -32,7 +32,10 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Display a user's name in the pending subscription request list. (Closes #430)
 * Set a user's preferrred_address in Core if it isn't already set and the user
   has a Primary Address that is verified.
-  
+* Use the new APIs in Core to get the count of held messages and pending
+  subscriptions to improve peroformance of settings page for list
+  owners. (Fixes #417)
+
 
 1.3.3
 =====
