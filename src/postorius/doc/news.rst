@@ -38,6 +38,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Show held message is local time of the User. (Closes #434)
 * Fix a bug where non-member options page would show an owner's options if the
   same email was subscribed as owner and non-member in a list. (Closes #436)
+* Switching subscription from one email address to other or Primary Address now 
+  preserves preferences and does not require Moderator approval. (Closes #425)
 
 
 1.3.3
