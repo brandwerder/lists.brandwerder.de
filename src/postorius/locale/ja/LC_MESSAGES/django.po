@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Shohei Kusakata <shohei@kusakata.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2019-09-28 11:55+0000\n"
+"PO-Revision-Date: 2020-06-09 00:41+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
-"translations/ja/>\n"
+"postorius/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -106,7 +105,7 @@ msgstr ""
 
 #: forms/list_forms.py:43
 msgid "Daily"
-msgstr ""
+msgstr "毎日"
 
 #: forms/list_forms.py:44
 msgid "Weekly"
@@ -114,7 +113,7 @@ msgstr ""
 
 #: forms/list_forms.py:45
 msgid "Quarterly"
-msgstr ""
+msgstr "3ヶ月毎"
 
 #: forms/list_forms.py:46
 msgid "Monthly"
@@ -122,7 +121,7 @@ msgstr ""
 
 #: forms/list_forms.py:47
 msgid "Yearly"
-msgstr ""
+msgstr "毎年"
 
 #: forms/list_forms.py:51
 msgid "Only mailinglist moderators"
@@ -154,7 +153,7 @@ msgstr ""
 
 #: forms/list_forms.py:75
 msgid "Please enter the list owner's email address."
-msgstr ""
+msgstr "リストのオーナーのメールアドレスを入力してください。"
 
 #: forms/list_forms.py:79
 msgid "Advertise this list?"
@@ -174,7 +173,7 @@ msgstr ""
 
 #: forms/list_forms.py:98
 msgid "Choose an existing Domain."
-msgstr ""
+msgstr "既存のドメインを選択してください。"
 
 #: forms/list_forms.py:99
 msgid "Choose a valid Mail Host"
@@ -1537,28 +1536,28 @@ msgstr ""
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
-msgstr ""
+msgstr "Mailman ロゴ"
 
 #: templates/postorius/base.html:38
 msgid "Lists"
-msgstr ""
+msgstr "リスト"
 
 #: templates/postorius/base.html:44 templates/postorius/domain/index.html:5
 #: templates/postorius/domain/index.html:11
 msgid "Domains"
-msgstr ""
+msgstr "ドメイン"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "アクセス禁止"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
-msgstr ""
+msgstr "システム情報"
 
 #: templates/postorius/base.html:63
 msgid "Archives"
-msgstr ""
+msgstr "アーカイブ"
 
 #: templates/postorius/base.html:79
 msgid "Account"
@@ -1578,7 +1577,7 @@ msgstr "ログアウト"
 
 #: templates/postorius/base.html:101
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #: templates/postorius/base.html:105
 msgid "Sign Up"
@@ -1586,11 +1585,11 @@ msgstr "登録"
 
 #: templates/postorius/base.html:128
 msgid "Postorius Documentation"
-msgstr ""
+msgstr "Postorius ドキュメント"
 
 #: templates/postorius/base.html:132
 msgid "Postorius Version"
-msgstr ""
+msgstr "Postorius バージョン"
 
 #: templates/postorius/base.html:135
 msgid "Happy Mailman Day!"
@@ -1634,29 +1633,29 @@ msgstr "削除"
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
 msgid "Edit domain"
-msgstr ""
+msgstr "ドメインを編集"
 
 #: templates/postorius/domain/index.html:14
 msgid "Add Domain"
-msgstr ""
+msgstr "ドメインを追加"
 
 #: templates/postorius/domain/index.html:25
 #: templates/postorius/menu/list_nav.html:42
 msgid "Owners"
-msgstr ""
+msgstr "オーナー"
 
 #: templates/postorius/domain/index.html:43
 msgid "remove"
-msgstr ""
+msgstr "削除"
 
 #: templates/postorius/domain/index.html:47
 msgid "Add"
-msgstr ""
+msgstr "追加"
 
 #: templates/postorius/domain/index.html:50
 #: templates/postorius/domain/template_add.html:6
@@ -1669,21 +1668,21 @@ msgstr ""
 #: templates/postorius/lists/template_update.html:7
 #: templates/postorius/menu/list_nav.html:45 templatetags/nav_helpers.py:38
 msgid "Templates"
-msgstr ""
+msgstr "テンプレート"
 
 #: templates/postorius/domain/index.html:51
 #: templates/postorius/domain/template_index.html:33
 #: templates/postorius/lists/template_list.html:31
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: templates/postorius/domain/new.html:6
 msgid "Add domain"
-msgstr ""
+msgstr "ドメインを追加"
 
 #: templates/postorius/domain/new.html:12
 msgid "Add a new domain"
-msgstr ""
+msgstr "新しいドメインを追加"
 
 #: templates/postorius/domain/owners.html:6
 msgid "Add domain owner "
@@ -1717,12 +1716,12 @@ msgstr ""
 #: templates/postorius/domain/template_index.html:16
 #: templates/postorius/lists/template_list.html:14
 msgid "New Template"
-msgstr ""
+msgstr "新しいテンプレート"
 
 #: templates/postorius/domain/template_index.html:25
 #: templates/postorius/lists/template_list.html:24
 msgid "Template Name"
-msgstr ""
+msgstr "テンプレートの名前"
 
 #: templates/postorius/domain/template_index.html:44
 #: templates/postorius/lists/template_list.html:40
@@ -2642,7 +2641,7 @@ msgstr ""
 
 #: views/list.py:1098
 msgid "New pattern"
-msgstr ""
+msgstr "新しいパターン"
 
 #: views/rest.py:60
 msgid "Message does not exist"
