@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2020-05-31 04:16+0000\n"
+"PO-Revision-Date: 2020-06-03 04:13+0000\n"
 "Last-Translator: Margo Radzivilava <Margoihnid@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
@@ -1869,7 +1869,7 @@ msgstr "Принять"
 
 #: templates/postorius/lists/held_messages.html:37
 msgid "Subject"
-msgstr ""
+msgstr "Тема"
 
 #: templates/postorius/lists/held_messages.html:38
 msgid "Sender"
