@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Margo Radzivilava <Margoihnid@gmail.com>, 2020.
 # Juri Grabowski <hosted-weblate@jugra.de>, 2020.
+# Artem <KovalevArtem.ru@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2020-06-03 04:13+0000\n"
-"Last-Translator: Margo Radzivilava <Margoihnid@gmail.com>\n"
+"PO-Revision-Date: 2020-07-04 04:25+0000\n"
+"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/ru/>\n"
 "Language: ru\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1632,7 +1633,7 @@ msgstr "Удалить"
 #: templates/postorius/lists/confirm_removeall_subscribers.html:22
 #: templates/postorius/lists/template_delete.html:25
 msgid "Cancel"
-msgstr "Отменить"
+msgstr "Отмена"
 
 #: templates/postorius/domain/edit.html:6
 #: templates/postorius/domain/edit.html:12
