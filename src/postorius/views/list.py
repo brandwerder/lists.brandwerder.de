@@ -322,6 +322,58 @@ class ChangeSubscriptionView(MailingListView):
             (member.subscription_mode == SubscriptionMode.as_user.name and
              member.user.user_id == subscriber))
 
+    @staticmethod
+    def _is_email(subscriber):
+        """Is the subscriber an email address or uuid."""
+        return '@' in subscriber
+
+    def _change_subscription(self, member, subscriber):
+        """Switch subscriptions to a new email/user.
+
+        :param member: The currently subscriber Member.
+        :param subscriber: New email or user_id to switch subscription to.
+        """
+        # If the Membership is via preferred address and we are switching to an
+        # email or vice versa, we have to do the subscribe-unsubscribe dance.
+        # If the subscription is via an address, then we can simply PATCH the
+        # address in the Member resource.
+        if (member.subscription_mode == SubscriptionMode.as_address.name and
+                self._is_email(subscriber)):
+            member.address = subscriber
+            member.save()
+            return
+        # Keep a copy of the preferences so we can restore them after the
+        # Member switches addresses.
+        if member.preferences:
+            prefs = member.preferences
+        member.unsubscribe()
+        # Unless the subscriber is an an email and it is not-verified, we
+        # should get a Member resource here as response. We should never get to
+        # here with subscriber being an un-verified email.
+        new_member = self.mailing_list.subscribe(
+            subscriber,
+            # Since the email is already verified in Postorius.
+            pre_confirmed=True,
+            # Since this user was already a Member, simply switching Email
+            # addresses shouldn't require another approval.
+            pre_approved=True)
+        self._copy_preferences(new_member.preferences, prefs)
+
+    def _copy_preferences(self, member_pref, old_member_pref):
+        """Copy the preferences of the old member to new one.
+
+        :param member_pref: The new member's preference to copy preference to.
+        :param old_member_pref: The old_member's preferences to copy
+            preferences from.
+        """
+        # We can't simply switch the Preferences object, so we copy values from
+        # previous one to the new one.
+        for prop in old_member_pref._properties:
+            val = old_member_pref.get(prop)
+            if val:
+                member_pref[prop] = val
+        member_pref.save()
+
     @method_decorator(login_required)
     def post(self, request, list_id):
         try:
@@ -350,27 +402,16 @@ class ChangeSubscriptionView(MailingListView):
                 if self._is_subscribed(member, subscriber):
                     messages.error(request, _('You are already subscribed'))
                 else:
-                    self.mailing_list.unsubscribe(old_email)
-                    # Since the action is done via the web UI, no email
-                    # confirmation is needed.
-                    response = self.mailing_list.subscribe(
-                        subscriber, pre_confirmed=True)
-                    if (type(response) == dict and                # noqa: W504
-                            response.get('token_owner') == TokenOwner.moderator):  # noqa: E501
-                        messages.success(
-                            request, _('Your request to change the email for'
-                                       ' this subscription was submitted and'
-                                       ' is waiting for moderator approval.'))
-                    else:
-                        # If the subscriber is user_id (i.e. not an email
-                        # address), Show 'Primary Address ()' in the success
-                        # message instead of weird user id.
-                        if not ('@' in subscriber):
-                            subscriber = _('Primary Address ({})').format(
-                                primary_email)
-                        messages.success(request,
-                                         _('Subscription changed to %s') %
-                                         subscriber)
+                    self._change_subscription(member, subscriber)
+                    # If the subscriber is user_id (i.e. not an email
+                    # address), Show 'Primary Address ()' in the success
+                    # message instead of weird user id.
+                    if not self._is_email(subscriber):
+                        subscriber = _(
+                            'Primary Address ({})').format(primary_email)
+                    messages.success(
+                        request,
+                        _('Subscription changed to %s').format(subscriber))
             else:
                 messages.error(request,
                                _('Something went wrong. Please try again.'))

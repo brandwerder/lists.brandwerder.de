@@ -196,6 +196,14 @@ class MailmanUserTest(ViewTestCase):
             response,
             '<option value="user@example.com"'
             ' selected>user@example.com</option>')
+        member = self.mm_client.get_member(
+            self.foo_list.list_id, 'user@example.com')
+        self.assertIsNotNone(member)
+        # Initially, all preferences are none. Let's set it to something
+        # custom.
+        self.assertIsNone(member.preferences.get('acknowledge_posts'))
+        member.preferences['acknowledge_posts'] = True
+        member.preferences.save()
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
@@ -203,10 +211,16 @@ class MailmanUserTest(ViewTestCase):
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
-        member = self.mm_client.get_member(
+        member_new = self.mm_client.get_member(
             self.foo_list.list_id, 'anotheremail@example.com')
-        self.assertIsNotNone(member)
-        self.assertEqual(member.subscription_mode, 'as_address')
+        self.assertIsNotNone(member_new)
+        # There is no 'member_id' attribute, so we simply use the self_link to
+        # compare and make sure that the Member object is same.
+        self.assertEqual(member.self_link, member_new.self_link)
+        self.assertEqual(member_new.subscription_mode, 'as_address')
+        # Also, assert that the new member's preferences are same.
+        self.assertEqual(member.preferences['acknowledge_posts'],
+                         member_new.preferences['acknowledge_posts'])
 
     def test_change_subscription_to_from_primary_address(self):
         # Test that we can change subscription to a new email.
@@ -224,6 +238,14 @@ class MailmanUserTest(ViewTestCase):
             response,
             '<option value="user@example.com" '
             'selected>user@example.com</option>')
+        member = self.mm_client.get_member(
+            self.foo_list.list_id, 'user@example.com')
+        self.assertIsNotNone(member)
+        # Initially, all preferences are none. Let's set it to something
+        # custom.
+        self.assertIsNone(member.preferences.get('acknowledge_posts'))
+        member.preferences['acknowledge_posts'] = True
+        member.preferences.save()
         # now, let's switch the subscription to a new user.
         response = self.client.post(
             reverse('change_subscription', args=(self.foo_list.list_id, )),
@@ -231,10 +253,13 @@ class MailmanUserTest(ViewTestCase):
         )
         self.assertEqual(response.status_code, 302)
         self.assertHasSuccessMessage(response)
-        member = self.mm_client.get_member(
+        new_member = self.mm_client.get_member(
             self.foo_list.list_id, 'user@example.com')
-        self.assertIsNotNone(member)
-        self.assertEqual(member.subscription_mode, 'as_user')
+        self.assertIsNotNone(new_member)
+        self.assertEqual(new_member.subscription_mode, 'as_user')
+        # we can't compare against the preferences object of `member` since the
+        # resource is now Deleted due to unsubscribe-subscribe dance.
+        self.assertEqual(new_member.preferences['acknowledge_posts'], True)
 
     def test_already_subscribed(self):
         self.client.login(username='user', password='testpass')
