@@ -179,7 +179,7 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
         if role not in self.allowed_roles:
             return redirect('list_members', list_id, 'member')
 
-        if role in ('member'):
+        if role in ('member', ):
             return self._member_post(request, role)
         else:
             return self._non_member_post(request, role)
@@ -190,16 +190,24 @@ class ListMembersViews(ListOwnerMixin, MailingListView):
 def list_member_options(request, list_id, email):
     template_name = 'postorius/lists/memberoptions.html'
     mm_list = List.objects.get_or_404(fqdn_listname=list_id)
+    # If the role is specified explicitly, use that, otherwise the value is
+    # None and is equivalent to the value not being specified and the lookup
+    # happens using only email. This can cause issues when the email is
+    # subscribed as both a Non-Member and Owner/Moderator returning the wrong
+    # Member object.
+    role = request.GET.get('role')
     try:
-        mm_member = mm_list.find_members(address=email)[0]
+        mm_member = mm_list.find_members(address=email, role=role)[0]
         member_prefs = mm_member.preferences
     except (ValueError, IndexError):
         raise Http404(_('Member does not exist'))
     except Mailman404Error:
         return render(request, template_name, {'nolists': 'true'})
+
     initial_moderation = dict([
         (key, getattr(mm_member, key)) for key in MemberModeration.base_fields
         ])
+
     if request.method == 'POST':
         if request.POST.get("formname") == 'preferences':
             preferences_form = UserPreferences(

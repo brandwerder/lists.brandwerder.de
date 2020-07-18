@@ -36,7 +36,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   subscriptions to improve peroformance of settings page for list
   owners. (Fixes #417)
 * Show held message is local time of the User. (Closes #434)
-
+* Fix a bug where non-member options page would show an owner's options if the
+  same email was subscribed as owner and non-member in a list. (Closes #436)
 
 
 1.3.3
