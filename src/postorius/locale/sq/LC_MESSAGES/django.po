@@ -1,14 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Besnik Bleta <besnik@programeshqip.org>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-14 14:20-0700\n"
-"PO-Revision-Date: 2020-05-10 04:30+0000\n"
+"PO-Revision-Date: 2020-07-14 04:20+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -1842,10 +1841,8 @@ msgid "An error occurred while processing your request."
 msgstr "Ndodhi një gabim teksa përpunohej kërkesa juaj."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
-#, fuzzy
-#| msgid "Global Settings"
 msgid "Global Bans"
-msgstr "Rregullime Globale"
+msgstr "Dëbime Globale"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -1862,7 +1859,7 @@ msgstr "Përkatësi"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Dëbime"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
@@ -2543,10 +2540,8 @@ msgid "System Configuration"
 msgstr "Formësim Sistemi"
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman Settings"
 msgid "Mailman System"
-msgstr "Rregullime Mailman-i"
+msgstr "Sistemi Mailman"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
