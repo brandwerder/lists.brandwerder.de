@@ -28,10 +28,10 @@
         </p>
       {% else %}
         {% url 'hk_list_overview' list.fqdn_listname as hyperkitty_list_url %}
+        <h2>{% trans 'Archives' %}</h2>
         <p>
           {% blocktrans %}
-            To see the prior postings to this list, visit
-            <a href="{{ hyperkitty_list_url }}">the archives</a>.
+            <a class="btn btn-primary" href="{{ hyperkitty_list_url }}">Archives</a>
           {% endblocktrans %}
         </p>
       {% endif %}
@@ -53,12 +53,8 @@
             </p>
             {% url 'user_list_options' list.list_id as user_list_options_url %}
             <p>
-              {% blocktrans %}
-                You can manage your subscription on <a href="{{ user_list_options_url }}">your list options page</a>
-              {% endblocktrans %}
-            </p>
-            <p>
-                <form method="post" action="{% url 'list_unsubscribe' list.list_id %}">
+              <a class="btn btn-primary" href="{{ user_list_options_url }}">{% trans 'Manage Subscription' %}</a>
+              <form method="post" action="{% url 'list_unsubscribe' list.list_id %}" class="form-inline">
                     {% csrf_token %}
                     <input type="hidden" name="email" value="{{ subscribed_address }}" />
                     <button type="submit" class="btn btn-danger">{% trans 'Unsubscribe' %}</button>

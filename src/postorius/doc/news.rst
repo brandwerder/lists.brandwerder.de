@@ -40,7 +40,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   same email was subscribed as owner and non-member in a list. (Closes #436)
 * Switching subscription from one email address to other or Primary Address now 
   preserves preferences and does not require Moderator approval. (Closes #425)
-
+* Make 'Archives' and 'List Options' urls more prominently visible in the
+  list summary page as buttons. (Closes #439)
 
 1.3.3
 =====
