@@ -1017,6 +1017,17 @@ class ListMassSubscription(forms.Form):
         widget=forms.CheckboxInput()
         )
 
+    invitation = forms.BooleanField(
+        label=_('Invitation'),
+        initial=False,
+        required=False,
+        help_text=_(
+            'If checked, the other checkboxes are ignored and the users will '
+            'be sent an invitation to join the list and will be subscribed '
+            'upon acceptance thereof.'),
+        widget=forms.CheckboxInput()
+        )
+
 
 class ListMassRemoval(forms.Form):
 
