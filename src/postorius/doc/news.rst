@@ -42,6 +42,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   preserves preferences and does not require Moderator approval. (Closes #425)
 * Make 'Archives' and 'List Options' urls more prominently visible in the
   list summary page as buttons. (Closes #439)
+* Added the ability to issue invitations from the mass subscribe view.
 
 1.3.3
 =====

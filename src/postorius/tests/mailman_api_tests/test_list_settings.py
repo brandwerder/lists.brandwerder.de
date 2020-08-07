@@ -361,3 +361,15 @@ class ListSettingsTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(mlist.requests), 2)
         self.assertEqual(mlist.requests[1].get('token_owner'), 'subscriber')
+
+        # Test mass subscribe an invitation.  Subscription policy doesn't
+        # matter, so just leave it as it was.
+        updated_values = {
+            'emails': 'john5@example.com',
+            'invitation': True
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        # And now there are 3 requests.
+        self.assertEqual(len(mlist.requests), 3)
+        self.assertEqual(mlist.requests[2].get('token_owner'), 'subscriber')
