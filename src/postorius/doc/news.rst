@@ -43,6 +43,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Make 'Archives' and 'List Options' urls more prominently visible in the
   list summary page as buttons. (Closes #439)
 * Added the ability to issue invitations from the mass subscribe view.
+* Expose ``emergency`` moderation setting for MailingList.
 
 1.3.3
 =====

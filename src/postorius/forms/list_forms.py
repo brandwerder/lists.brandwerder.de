@@ -404,6 +404,16 @@ class MessageAcceptanceForm(ListSettingsForm):
             'is matched against the list of explicitly accepted, held, '
             'rejected (bounced), and discarded addresses. '
             'If no match is found, then this action is taken.'))
+    emergency = forms.BooleanField(
+        widget=forms.RadioSelect(choices=((True, _('Yes')), (False, _('No')))),
+        required=False,
+        label=_('Emergency Moderation'),
+        help_text=_(
+            'When this option is enabled, all list traffic is emergency'
+            ' moderated, i.e. held for moderation. Turn this option on when'
+            ' your list is experiencing a flamewar and you want a cooling off'
+            ' period. '),
+    )
     max_message_size = forms.IntegerField(
         min_value=0,
         label=_('Maximum message size'),
