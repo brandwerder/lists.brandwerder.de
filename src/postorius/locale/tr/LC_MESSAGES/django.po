@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-05-16 04:26+0000\n"
+"PO-Revision-Date: 2020-08-16 22:03+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/tr/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -209,6 +209,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"\"Birincil Adres\" yoluyla abone olmak, birincil adresinizi "
+"değiştirdiğinizde abonelik adresini değiştirecektir."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -225,10 +227,8 @@ msgid "Your name (optional)"
 msgstr "Adınız (isteğe bağlı)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "E-posta Adresi"
+msgstr "Birincil Adres ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -1370,16 +1370,16 @@ msgstr ""
 "kanıtlamaları gerekmeyecektir."
 
 #: forms/list_forms.py:1021
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "Bilgi"
+msgstr "Davet"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"İşaretlenirse, diğer onay kutuları yok sayılır ve kullanıcılara listeye "
+"katılmaları için bir davet gönderilir ve kabul ettiklerinde abone olurlar."
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
@@ -1631,7 +1631,7 @@ msgstr ""
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Geçersiz: \"{0}\" e-posta adresi veya UUID olmalıdır"
 
 #: models.py:43
 msgid ""
@@ -2361,12 +2361,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "Bu listenin arşivlerini ziyaret etmek için giriş yapmalısınız."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2374,8 +2369,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            Bu listeye önceden gönderilen mesajları görmek için,\n"
-"            <a href=\"%(hyperkitty_list_url)s\">arşivleri</a> ziyaret edin.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">Arşivler</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2388,16 +2383,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "Bu listeye aşağıdaki adresle abone oldunuz:"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "E-posta Adresi"
+msgstr "Birincil Adres"
 
 #: templates/postorius/lists/summary.html:56
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "Toplu Abonelik"
+msgstr "Aboneliği Yönet"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
