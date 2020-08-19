@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-05-16 04:26+0000\n"
+"PO-Revision-Date: 2020-08-16 22:03+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/he/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -207,6 +207,7 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"הרשמה דרך ה„כתובת העיקרית” תשנה את כתובת המינוי בעת שינוי הכתובת העיקרית שלך."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -223,10 +224,8 @@ msgid "Your name (optional)"
 msgstr "שמך (רשות)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "כתובת דוא״ל"
+msgstr "כתובת עיקרית ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -427,7 +426,7 @@ msgid ""
 "meaning they are anchored to the start of the string."
 msgstr ""
 "זו רשימה של כתובות וביטויים רגולריים, אחד לשורה, שתואמים כתובות שמקובלות "
-"בשדות או: או עותק: במקום כתובת הפרסום של הרשימה כאשר האפשרות "
+"בשדות אל: או עותק: במקום כתובת הפרסום של הרשימה כאשר האפשרות "
 "‚require_explicit_destination’ (דרישת יעד מפורש) פעילה.  הרשומות יכולות "
 "להיות כתובות דוא״ל או ביטויים רגולריים שתואמים לכתובות דוא״ל.  ביטויים "
 "רגולריים הם ביטויים שמתחילים ב־‚^’ ומתבצעת התאמה בעזרתם לכל כתובת מען "
@@ -744,7 +743,7 @@ msgid ""
 "header           modification. "
 msgstr ""
 "\n"
-"    בלי: בלי התאמה.\n"
+"    בלי: ללא התאמה.\n"
 "\n"
 "    פרטני: כל אחד מקבל עותק ייחודי של ההודעה וישנם עוד כמה משתנים מתחלפים "
 "נוספים אבל הכותרות לא מתחלפות.\n"
@@ -1318,16 +1317,16 @@ msgid ""
 msgstr "אם סומן, על המשתמשים יהיה לתקף את כתובת הדוא״ל שלהם."
 
 #: forms/list_forms.py:1021
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "מידע"
+msgstr "הזמנה"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"אם האפשרות סומנה, לשאר התיבות שסומנו לא תהיה משמעות ותישלח הזמנה למשתמשים "
+"להצטרף לרשימה כיוון שהם יצורפו עם קבלת ההזמנה."
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
@@ -1572,7 +1571,7 @@ msgstr ""
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "שגיאה: „{0}” אמור להיות דוא״ל או מזהה ייחודי"
 
 #: models.py:43
 msgid ""
@@ -2268,12 +2267,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "עליך להיכנס כדי לבקר בארכיוני הרשימה הזו."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2281,8 +2275,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            כדי לצפות בפרסומים קודמים לרשימה הזו, יש לבקר\n"
-"            ב<a href=\"%(hyperkitty_list_url)s\">ארכיונים</a>.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">ארכיונים</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2295,16 +2289,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "נרשמת לרשימה הזו עם הכתובת הבאה:"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "כתובת דוא״ל"
+msgstr "כתובת עיקרית"
 
 #: templates/postorius/lists/summary.html:56
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "רישום כמותי"
+msgstr "ניהול מינוי"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
