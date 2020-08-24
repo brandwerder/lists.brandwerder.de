@@ -93,7 +93,7 @@
                                     <span class="fa fa-sign-out"></span>
                                     {% trans 'Logout' %}
                                 </a>
-                            </ul>
+                            </div>
                         </li>
                     {% else %}
                         <li class="nav-item"><a class="nav-link" href="{% url LOGIN_URL %}?next={{ next|default:request.path|urlencode }}">
