@@ -44,6 +44,7 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   list summary page as buttons. (Closes #439)
 * Added the ability to issue invitations from the mass subscribe view.
 * Expose ``emergency`` moderation setting for MailingList.
+* Fixed some minor HTML errors. (Closes #442)
 
 1.3.3
 =====
