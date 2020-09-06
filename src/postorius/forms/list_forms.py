@@ -943,7 +943,7 @@ class ListIdentityForm(ListSettingsForm):
         help_text=_('Flag indicating that posts to the list should be gated to'
                     ' the linked newsgroup.')
     )
-    linked_newgroup = forms.CharField(
+    linked_newsgroup = forms.CharField(
         label=_('Linked Newsgroup'),
         required=False,
         help_text=_(
