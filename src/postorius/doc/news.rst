@@ -45,6 +45,9 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Added the ability to issue invitations from the mass subscribe view.
 * Expose ``emergency`` moderation setting for MailingList.
 * Fixed some minor HTML errors. (Closes #442)
+* Fix the bug where ListOfStringsField couldn't be unset in Postorius. (Closes
+  #444)
+
 
 1.3.3
 =====
