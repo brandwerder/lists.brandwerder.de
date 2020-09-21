@@ -1032,7 +1032,20 @@ def list_settings(request, list_id=None, visible_section=None,
                     if key in form_class.mlist_properties:
                         setattr(m_list, key, form.cleaned_data[key])
                     else:
-                        list_settings[key] = form.cleaned_data[key]
+                        val = form.cleaned_data[key]
+                        # Empty list isn't really a valid value and Core
+                        # interprets empty string as empty value for
+                        # ListOfStringsField. We are doing it here instead of
+                        # ListOfStringsField.to_python() because output from
+                        # list of strings is expected to be a list and the NULL
+                        # value is hence an empty list. The serialization of
+                        # the empty list is for us empty string, hence we are
+                        # doing this here. Technically, it can be done outside
+                        # of this view, but there aren't any other use cases
+                        # where we'd want an empty list of strings.
+                        if val == []:
+                            val = ''
+                        list_settings[key] = val
                 list_settings.save()
                 messages.success(request, _('The settings have been updated.'))
                 mailinglist_modified.send(sender=List, list_id=m_list.list_id)

@@ -373,3 +373,28 @@ class ListSettingsTest(ViewTestCase):
         # And now there are 3 requests.
         self.assertEqual(len(mlist.requests), 3)
         self.assertEqual(mlist.requests[2].get('token_owner'), 'subscriber')
+
+    def test_set_list_of_strings_field_empty(self):
+        self.client.login(username='testsu', password='testpass')
+        m_list = List.objects.get(fqdn_listname='foo.example.com')
+        settings = m_list.settings
+        settings['accept_these_nonmembers'] = ['^bar*@example.[com|org]']
+        settings.save()
+
+        url = reverse('list_settings',
+                      args=('foo.example.com', 'message_acceptance'))
+        updated_values = {
+            'accept_these_nonmembers': [],
+            'require_explicit_destination': True,
+            'administrivia': True,
+            'default_member_action': 'defer',
+            'default_nonmember_action': 'hold',
+            'max_message_size': 40,
+            'max_num_recipients': 10,
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response)
+        # Get a new list object to avoid caching
+        settings._reset_cache()
+        self.assertEqual(settings.get('accept_these_nonmembers'), [])
