@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-08-19 03:44+0000\n"
+"PO-Revision-Date: 2020-08-26 03:31+0000\n"
 "Last-Translator: marklin0913da248e4cdada422a <marklin0913@protonmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "gnu-mailman/postorius/zh_Hant/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.2.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -100,15 +100,15 @@ msgstr ""
 
 #: forms/list_forms.py:44
 msgid "Daily"
-msgstr ""
+msgstr "每天"
 
 #: forms/list_forms.py:45
 msgid "Weekly"
-msgstr ""
+msgstr "每周"
 
 #: forms/list_forms.py:46
 msgid "Quarterly"
-msgstr ""
+msgstr "每四個月"
 
 #: forms/list_forms.py:47
 msgid "Monthly"
@@ -116,7 +116,7 @@ msgstr ""
 
 #: forms/list_forms.py:48
 msgid "Yearly"
-msgstr ""
+msgstr "每年"
 
 #: forms/list_forms.py:52
 msgid "Only mailinglist moderators"
@@ -128,7 +128,7 @@ msgstr ""
 
 #: forms/list_forms.py:54
 msgid "Anyone"
-msgstr ""
+msgstr "任何人"
 
 #: forms/list_forms.py:68 templates/postorius/user/subscriptions.html:22
 msgid "List Name"
@@ -156,7 +156,7 @@ msgstr ""
 
 #: forms/list_forms.py:82
 msgid "Please choose a list type."
-msgstr ""
+msgstr "請選擇目錄類型。"
 
 #: forms/list_forms.py:85
 msgid "Advertise this list in list index"
@@ -176,15 +176,15 @@ msgstr ""
 
 #: forms/list_forms.py:103
 msgid "List Style"
-msgstr ""
+msgstr "目錄類型"
 
 #: forms/list_forms.py:106
 msgid "Choose a List Style."
-msgstr ""
+msgstr "選擇目錄類型。"
 
 #: forms/list_forms.py:107
 msgid "Choose a valid List Style."
-msgstr ""
+msgstr "選擇有效的目錄類型。"
 
 #: forms/list_forms.py:110
 msgid "Site admin has not created any domains"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: forms/list_forms.py:123
 msgid "Please enter a valid listname"
-msgstr ""
+msgstr "請輸入有效的目錄名"
 
 #: forms/list_forms.py:149 forms/list_forms.py:178
 msgid "Your email address"
@@ -216,7 +216,7 @@ msgstr ""
 
 #: forms/list_forms.py:160 forms/list_forms.py:185
 msgid "Your name (optional)"
-msgstr ""
+msgstr "您的大名（選填）"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
 msgid "Primary Address ({})"
@@ -224,12 +224,12 @@ msgstr ""
 
 #: forms/list_forms.py:200
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: forms/list_forms.py:201 templates/postorius/domain/template_delete.html:27
 #: templates/postorius/lists/template_delete.html:24
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 #: forms/list_forms.py:202
 msgid "Moderate"
@@ -276,7 +276,7 @@ msgstr ""
 #: forms/list_forms.py:871 forms/list_forms.py:890 forms/list_forms.py:933
 #: forms/list_forms.py:940 forms/list_forms.py:961 forms/user_forms.py:48
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: forms/list_forms.py:238 forms/list_forms.py:264 forms/list_forms.py:273
 #: forms/list_forms.py:359 forms/list_forms.py:367 forms/list_forms.py:512
@@ -287,7 +287,7 @@ msgstr ""
 #: forms/list_forms.py:871 forms/list_forms.py:890 forms/list_forms.py:933
 #: forms/list_forms.py:940 forms/list_forms.py:961 forms/user_forms.py:48
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: forms/list_forms.py:240
 msgid "Process Bounces"
@@ -333,7 +333,7 @@ msgstr ""
 
 #: forms/list_forms.py:275
 msgid "Notify owner on removal"
-msgstr ""
+msgstr "移除時通知擁有者"
 
 #: forms/list_forms.py:277
 msgid ""
@@ -460,7 +460,7 @@ msgstr ""
 
 #: forms/list_forms.py:409
 msgid "Maximum message size"
-msgstr ""
+msgstr "最大化訊息尺寸"
 
 #: forms/list_forms.py:412
 msgid ""
@@ -595,11 +595,11 @@ msgstr ""
 
 #: forms/list_forms.py:554
 msgid "Reject the message"
-msgstr ""
+msgstr "拒收訊息"
 
 #: forms/list_forms.py:555
 msgid "Discard the message"
-msgstr ""
+msgstr "拋棄訊息"
 
 #: forms/list_forms.py:557
 msgid ""
@@ -668,13 +668,13 @@ msgstr ""
 #: templates/postorius/lists/pending_confirmations.html:34
 #: templates/postorius/lists/subscription_requests.html:36
 msgid "Discard"
-msgstr ""
+msgstr "拋棄"
 
 #: forms/list_forms.py:604 templates/postorius/lists/held_messages.html:29
 #: templates/postorius/lists/held_messages.html:107
 #: templates/postorius/lists/subscription_requests.html:35
 msgid "Reject"
-msgstr ""
+msgstr "拒絕"
 
 #: forms/list_forms.py:605
 msgid "Forward"
@@ -696,11 +696,11 @@ msgstr ""
 
 #: forms/list_forms.py:626
 msgid "Personalize"
-msgstr ""
+msgstr "個人化"
 
 #: forms/list_forms.py:632
 msgid "Filter content"
-msgstr ""
+msgstr "過濾內容"
 
 #: forms/list_forms.py:633
 msgid ""
@@ -771,7 +771,7 @@ msgstr ""
 
 #: forms/list_forms.py:688
 msgid "Anonymous list"
-msgstr ""
+msgstr "匿名清單"
 
 #: forms/list_forms.py:689
 msgid ""
@@ -1030,7 +1030,7 @@ msgstr ""
 
 #: forms/list_forms.py:905
 msgid "Information"
-msgstr ""
+msgstr "資訊"
 
 #: forms/list_forms.py:906
 msgid "A longer description of this mailing list."
@@ -1038,7 +1038,7 @@ msgstr ""
 
 #: forms/list_forms.py:910
 msgid "Display name"
-msgstr ""
+msgstr "顯示名稱"
 
 #: forms/list_forms.py:912
 msgid "Display name is the name shown in the web interface."
@@ -1050,7 +1050,7 @@ msgstr ""
 
 #: forms/list_forms.py:920
 msgid "Preferred Language"
-msgstr ""
+msgstr "偏好語言"
 
 #: forms/list_forms.py:926
 msgid "Members List Visibility"
@@ -1149,7 +1149,7 @@ msgstr ""
 
 #: forms/list_forms.py:1021
 msgid "Invitation"
-msgstr ""
+msgstr "邀請"
 
 #: forms/list_forms.py:1025
 msgid ""
@@ -1159,7 +1159,7 @@ msgstr ""
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
-msgstr ""
+msgstr "取消訂閱的郵件"
 
 #: forms/list_forms.py:1038
 msgid "Add one email address on each line"
@@ -1171,7 +1171,7 @@ msgstr ""
 
 #: forms/list_forms.py:1057
 msgid "Header"
-msgstr ""
+msgstr "頁首"
 
 #: forms/list_forms.py:1058
 msgid "Email header to filter on (case-insensitive)."
@@ -1179,7 +1179,7 @@ msgstr ""
 
 #: forms/list_forms.py:1060
 msgid "Please enter a header."
-msgstr ""
+msgstr "請輸入頁首。"
 
 #: forms/list_forms.py:1061
 msgid "Please enter a valid header."
@@ -1203,11 +1203,11 @@ msgstr ""
 
 #: forms/list_forms.py:1069 templates/postorius/domain/index.html:26
 msgid "Action"
-msgstr ""
+msgstr "動作"
 
 #: forms/list_forms.py:1070
 msgid "Please enter a valid action."
-msgstr ""
+msgstr "請輸入有效動作。"
 
 #: forms/list_forms.py:1073
 msgid "Action to take when a header matches"
@@ -1237,7 +1237,7 @@ msgstr ""
 
 #: forms/list_forms.py:1123
 msgid "Select Email"
-msgstr ""
+msgstr "選擇郵件"
 
 #: forms/list_forms.py:1141
 msgid "Data"
@@ -1245,7 +1245,7 @@ msgstr ""
 
 #: forms/member_forms.py:27
 msgid "Email Address"
-msgstr ""
+msgstr "郵件地址"
 
 #: forms/member_forms.py:32
 msgid "Display Name"
@@ -1283,11 +1283,11 @@ msgstr ""
 
 #: forms/user_forms.py:55
 msgid "Enabled"
-msgstr ""
+msgstr "啟動"
 
 #: forms/user_forms.py:55
 msgid "Disabled"
-msgstr ""
+msgstr "關閉"
 
 #: forms/user_forms.py:60
 msgid "Delivery status"
@@ -1335,7 +1335,7 @@ msgstr ""
 
 #: forms/user_forms.py:98
 msgid "Hide address"
-msgstr ""
+msgstr "隱藏地址"
 
 #: forms/user_forms.py:100
 msgid ""
@@ -1358,7 +1358,7 @@ msgstr ""
 
 #: forms/user_forms.py:119
 msgid "Preferred language"
-msgstr ""
+msgstr "偏好語言"
 
 #: forms/user_forms.py:121
 msgid ""
