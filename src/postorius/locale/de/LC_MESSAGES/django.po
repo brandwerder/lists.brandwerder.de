@@ -4,13 +4,14 @@
 # Manfred Dohmen <manfred.dohmen@gmail.com>, 2017.
 # Milo Ivir <mail@milotype.de>, 2020.
 # Tobias Hägele <haegelix@yahoo.de>, 2020.
+# Claas Augner <github@caugner.de>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-07-02 23:52+0000\n"
-"Last-Translator: Tobias Hägele <haegelix@yahoo.de>\n"
+"PO-Revision-Date: 2020-09-13 22:01+0000\n"
+"Last-Translator: Claas Augner <github@caugner.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/de/>\n"
 "Language: de\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -213,6 +214,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Wenn Sie über \"Primäre Adresse\" abonnieren, ändert sich die Abo-Adresse, "
+"wenn Sie Ihre primäre Adresse ändern."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -229,10 +232,8 @@ msgid "Your name (optional)"
 msgstr "Ihr Name (optional)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "E-Mail-Adresse"
+msgstr "Primäre Adresse ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -383,7 +384,7 @@ msgstr ""
 
 #: forms/list_forms.py:284
 msgid "Bounce disabled warnings interval"
-msgstr ""
+msgstr "Warnungsintervall für Bounce-Deaktivierungen"
 
 #: forms/list_forms.py:287
 msgid "The number of days between each disabled notification."
@@ -391,9 +392,8 @@ msgstr ""
 "Die Anzahl der Tage zwischen den einzelnen deaktivierten Benachrichtigungen."
 
 #: forms/list_forms.py:291
-#, fuzzy
 msgid "Bounce disable warnings"
-msgstr "Bounce-Deaktivierungswarnungen"
+msgstr "Warnungen zu Bounce-Deaktivierungen"
 
 #: forms/list_forms.py:294
 msgid ""
@@ -570,6 +570,13 @@ msgid ""
 "to add the address as a nonmember and set the nonmember's Moderation to "
 "Default Processing."
 msgstr ""
+"Diese Liste von Regeln, eine pro Zeile, legt fest, welche Adressen an diese "
+"Mailingliste senden dürfen, ohne die Liste zu abonnieren. Einträge, die mit "
+"`^' beginnen, werden als reguläre Ausdrücke interpretiert und mit den "
+"Absenderadressen in der Nachricht abgeglichen. Es können hier auch einzelne "
+"Adressen angegeben werden, aber es ist vorzuziehen, diese als Nicht-Mitglied "
+"hinzuzufügen und die Moderation des Nicht-Mitglieds auf Standardverarbeitung "
+"zu setzen."
 
 #: forms/list_forms.py:447
 msgid "Hold these non-members"
@@ -583,6 +590,13 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Hold."
 msgstr ""
+"Dies ist eine Liste von regulären Ausdrücken, eine pro Zeile, die Adressen "
+"von Nicht-Mitgliedern abgleichen, deren Beiträge automatisch zurückgehalten "
+"werden. Einträge, die mit `^' beginnen, werden als regulärer Ausdruck "
+"interpretiert und mit den Absenderadressen in der Nachricht abgeglichen. "
+"Nicht reguläre Einträge können zwar eingegeben werden, aber es wird "
+"empfohlen, diese als Nicht-Mitglied hinzuzufügen und die Moderation des "
+"Nicht-Mitglieds auf Zurückhalten zu setzen."
 
 #: forms/list_forms.py:459
 msgid "Reject these non-members"
@@ -596,6 +610,14 @@ msgid ""
 "message. While non-regexp addresses can be entered here, it is preferred to "
 "add the address as a nonmember and set the nonmember's Moderation to Reject."
 msgstr ""
+"Dies ist eine Liste von regulären Ausdrücken, einer pro Zeile, die Adressen "
+"von Nicht-Mitgliedern festlegen, deren Beiträge mit einer Benachrichtigung "
+"an den Absender zurückgewiesen werden sollen. Einträge, die mit `^' "
+"beginnen, werden als reguläre Ausdrücke interpretiert und mit den "
+"Absenderadressen in der Nachricht abgeglichen. Nicht reguläre Einträge "
+"können zwar eingegeben werden, aber es wird empfohlen, diese als Nicht-"
+"Mitglied hinzuzufügen und die Moderation des Nicht-Mitglieds auf "
+"Zurückweisen zu setzen."
 
 #: forms/list_forms.py:472
 msgid "Discard these non-members"
@@ -609,6 +631,13 @@ msgid ""
 "regexp addresses can be entered here, it is preferred to add the address as "
 "a nonmember and set the nonmember's Moderation to Discard."
 msgstr ""
+"Dies ist eine Liste von regulären Ausdrücken, eine pro Zeile, die Adressen "
+"von Nicht-Mitgliedern festlegen, deren Beiträge automatisch verworfen werden "
+"sollen. Einträge, die mit `^' beginnen, werden als regulärer Ausdruck "
+"interpretiert und mit den Absenderadressen in der Nachricht abgeglichen. "
+"Nicht reguläre Einträge können zwar eingegeben werden, aber es wird "
+"empfohlen, diese als Nicht-Mitglied hinzuzufügen und die Moderation des "
+"Nicht-Mitglieds auf Verwerfen zu setzen."
 
 #: forms/list_forms.py:497
 msgid "Invalid alias regexp: {}: {}"
@@ -635,18 +664,16 @@ msgid "Should Mailman send out digests periodically?"
 msgstr "Soll Mailman regelmäßig Digests versenden?"
 
 #: forms/list_forms.py:529
-#, fuzzy
-#| msgid "Digest Frequency"
 msgid "Digest Volume Frequency"
 msgstr "Digest-Häufigkeit"
 
 #: forms/list_forms.py:530
-#, fuzzy
-#| msgid "At what frequency should Mailman send out digests?"
 msgid ""
 "At what frequency should Mailman increment the digest volume number and "
 "reset the issue number?"
-msgstr "Mit welcher Häufigkeit soll Mailman Digests versenden?"
+msgstr ""
+"Mit welcher Häufigkeit soll Mailman die Digest-Nummer erhöhen und die "
+"Ausgabe-Nummer zurücksetzen?"
 
 #: forms/list_forms.py:534
 msgid "Digest size threshold"
@@ -757,6 +784,15 @@ msgid ""
 "    Full: All of the 'individual' personalization plus recipient "
 "header           modification. "
 msgstr ""
+"\n"
+"    Keine: Keine Personalisierung.\n"
+"\n"
+"    Individuell: Jeder erhält eine eigene Kopie der Nachricht, und es "
+"gibt           ein paar Ersetzungsvariablen, aber Kopfzeilen werden nicht "
+"verändert.\n"
+"\n"
+"    Vollständig: Zusätzlich zur Individuell-Personalisierung werden die "
+"Kopfzeilen           verändert. "
 
 #: forms/list_forms.py:603 templates/postorius/lists/held_messages.html:30
 #: templates/postorius/lists/held_messages.html:108
@@ -773,11 +809,11 @@ msgstr "Zurückweisen"
 
 #: forms/list_forms.py:605
 msgid "Forward"
-msgstr ""
+msgstr "Weiterleiten"
 
 #: forms/list_forms.py:606
 msgid "Preserve"
-msgstr ""
+msgstr "Aufbewahren"
 
 #: forms/list_forms.py:609
 msgid ""
@@ -788,10 +824,15 @@ msgid ""
 " Forward = forward the message to the list owner(s).\n"
 " Preserve = save the message in qfiles/bad.\n"
 msgstr ""
+"Aktion für Nachrichten, die nach der Filterung keinen Inhalt mehr haben.\n"
+" Verwerfen = Nachricht stillschweigend verwerfen.\n"
+" Ablehnen = Nachricht verwerfen und den Absender benachrichtigen.\n"
+" Weiterleiten = Nachricht an die Listenbesitzer weiterleiten.\n"
+" Aufbewahren = Nachricht unter qfiles/bad speichern.\n"
 
 #: forms/list_forms.py:626
 msgid "Personalize"
-msgstr ""
+msgstr "Personalisieren"
 
 #: forms/list_forms.py:632
 msgid "Filter content"
@@ -814,6 +855,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"MIME-Medientypen, die aus eingehenden Beiträgen gefiltert werden sollen. "
+"Eine Liste gängiger Typen gibt es <a href=\"https://developer.mozilla.org/de/"
+"docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">hier</a>"
 
 #: forms/list_forms.py:644
 msgid "Filter extensions"
@@ -822,10 +866,11 @@ msgstr "Erweiterungen filtern"
 #: forms/list_forms.py:647
 msgid "Extensions to filter from the incoming posts."
 msgstr ""
+"Dateierweiterungen, die aus eingehenden Beiträgen gefiltert werden sollen."
 
 #: forms/list_forms.py:650
 msgid "Pass types"
-msgstr ""
+msgstr "MIME-Medientypen zulassen"
 
 #: forms/list_forms.py:653
 msgid ""
@@ -833,6 +878,9 @@ msgid ""
 "found <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
 "Basics_of_HTTP/MIME_types/Common_types\">here </a>"
 msgstr ""
+"MIME-Medientypen, die in eingehenden Beiträgen zugelassen werden sollen. "
+"Eine Liste gängiger Typen gibt es <a href=\"https://developer.mozilla.org/de/"
+"docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types\">hier</a>"
 
 #: forms/list_forms.py:658
 msgid "Pass extensions"
@@ -840,7 +888,7 @@ msgstr "Erweiterungen erlauben"
 
 #: forms/list_forms.py:661
 msgid "Extensions to allow in the incoming posts."
-msgstr ""
+msgstr "Dateierweiterungen, die in eingehenden Beiträgen erlaubt werden sollen."
 
 #: forms/list_forms.py:667
 msgid "Collapse alternatives"
@@ -1185,7 +1233,7 @@ msgstr "Nicht moderiert"
 
 #: forms/list_forms.py:880
 msgid "Moderated but allows for open posting"
-msgstr ""
+msgstr "Moderiert, aber erlaubt öffentliche Beiträge"
 
 #: forms/list_forms.py:881
 msgid "Moderated"
@@ -1243,39 +1291,44 @@ msgstr "Wem ist es erlaubt, die Mitgliederliste dieser Mailingliste zu sehen?"
 
 #: forms/list_forms.py:935
 msgid "Gateway to mail"
-msgstr ""
+msgstr "Mail-Schnittstelle"
 
 #: forms/list_forms.py:936
 msgid ""
 "Flag indicating that posts to the linked newsgroup should be gated to the "
 "list"
 msgstr ""
+"Gibt an, ob Beiträge an die verlinkte Newsgroup in die Liste übernommen "
+"werden sollen"
 
 #: forms/list_forms.py:942
 msgid "Gateway to news"
-msgstr ""
+msgstr "Newsgroup-Schnittstelle"
 
 #: forms/list_forms.py:943
 msgid ""
 "Flag indicating that posts to the list should be gated to the linked "
 "newsgroup."
 msgstr ""
+"Gibt an, ob Beiträge an die Liste in die verknüpfte Newsgroup übernommen "
+"werden sollen."
 
 #: forms/list_forms.py:947
 msgid "Linked Newsgroup"
-msgstr ""
+msgstr "Verknüpfte Newsgroup"
 
 #: forms/list_forms.py:950
 msgid "The name of the linked newsgroup."
-msgstr ""
+msgstr "Der Name der verknüpften Newsgroup."
 
 #: forms/list_forms.py:953
 msgid "Newsgroup moderation"
-msgstr "Mitglieder-Moderation"
+msgstr "Newsgroup-Moderation"
 
 #: forms/list_forms.py:957
 msgid "The moderation policy for the linked newsgroup, if there is one."
 msgstr ""
+"Die Moderationsrichtlinie für die verlinkte Newsgruppe, falls vorhanden."
 
 #: forms/list_forms.py:963
 msgid "NNTP Include subject prefix "
@@ -1286,6 +1339,8 @@ msgid ""
 "Flag indicating whether the list's \"Subject Prefix\" should be included in "
 "posts gated to usenet."
 msgstr ""
+"Gibt an, ob der \"Prefix für Betreff\" der Liste in Beiträge aufgenommen "
+"werden soll, die ins Usenet übernommen werden."
 
 #: forms/list_forms.py:979
 msgid "Emails to mass subscribe"
@@ -1316,7 +1371,7 @@ msgstr "Automatisch bestätigen"
 
 #: forms/list_forms.py:996
 msgid "If checked, users will not have to confirm their subscription."
-msgstr ""
+msgstr "Wenn aktiviert, müssen Benutzer ihr Abonnement nicht bestätigen."
 
 #: forms/list_forms.py:1001
 msgid "Pre approved"
@@ -1325,7 +1380,7 @@ msgstr "Automatisch genehmigt"
 #: forms/list_forms.py:1005
 msgid ""
 "If checked, moderators will not have to approve the subscription request."
-msgstr ""
+msgstr "Wenn aktiviert, müssen Moderatoren das Abonnement nicht genehmigen."
 
 #: forms/list_forms.py:1011
 msgid "Pre Verified"
@@ -1335,18 +1390,21 @@ msgstr "Automatisch geprüft"
 msgid ""
 "If checked, users will not have to verify that their email address is valid."
 msgstr ""
+"Wenn aktiviert, müssen Benutzer nicht überprüfen, dass ihre E-Mail-Adresse "
+"gültig ist."
 
 #: forms/list_forms.py:1021
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "Information"
+msgstr "Einladung"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Wenn aktiviert, werden die anderen Checkboxen ignoriert und die Benutzer "
+"erhalten eine Einladung, der Liste beizutreten, und sie werden abonniert, "
+"sobald sie die Einladung annehmen."
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
@@ -1354,7 +1412,7 @@ msgstr "E-Mail-Adresse zur Massenaustragung"
 
 #: forms/list_forms.py:1038
 msgid "Add one email address on each line"
-msgstr "Füge eine Emailadresse pro Zeile hinzu"
+msgstr "Füge eine E-Mail-Adresse pro Zeile hinzu"
 
 #: forms/list_forms.py:1053
 msgid "Default antispam action"
@@ -1595,11 +1653,15 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Bevorzugte Sprache für Ihre Interaktionen mit Mailman. Wenn diese "
+"eingestellt ist, wird die bevorzugte Sprache der Mailingliste überschrieben. "
+"Dies wirkt sich darauf aus, welche Sprache für Ihre E-Mail-"
+"Benachrichtigungen und dergleichen verwendet wird."
 
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Ungültig: \"{0}\" sollte entweder eine E-Mail oder eine UUID sein"
 
 #: models.py:43
 msgid ""
@@ -1623,17 +1685,17 @@ msgstr ""
 "öffentlich verfügbar sind.\n"
 "Sie können folgende Variablen in Vorlagen verwenden.\n"
 "$hyperkitty_url: Permalink zur archivierten Nachricht in Hyperkitty\n"
-"$listname: Name der Mailing-Liste, z.B. ant@example.com \n"
+"$listname: Name der Mailingliste, z.B. ant@example.com \n"
 "$list_id: Die List-ID Kopfzeile, z.B. ant.example.com \n"
-"$display_name: Anzeigename der Mailing-Liste, z.B. Ant \n"
+"$display_name: Anzeigename der Mailingliste, z.B. Ant \n"
 "$short_listname: Lokalteil des Listennamens, z.B. ant \n"
 "$domain: Der Domainteil des Listennamens, z.B. example.com \n"
 "$info: Der ausführliche Beschreibungstext der Liste\n"
-"$request_email: Die -request Emailadresse\n"
-"$owner_email: Die -owner Emailadresse\n"
-"$site_email: Die Emailadresse, um den Seitenbetreiber zu erreichen\n"
-"$language: Der zweibuchstabige Sprachcode für die bevorzugte Sprache der "
-"Liste, z.B. fr, en, de \n"
+"$request_email: Die -request E-Mail-Adresse\n"
+"$owner_email: Die -owner E-Mail-Adresse\n"
+"$site_email: Die E-Mail-Adresse, um den Seitenbetreiber zu erreichen\n"
+"$language: Der zweistellige Sprachcode für die bevorzugte Sprache der Liste, "
+"z.B. fr, en, de \n"
 
 #: models.py:263
 msgid "Choose the template you want to customize."
@@ -1686,16 +1748,13 @@ msgstr ""
 "mit unbekanntem Format erhalten wurde."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
-"Wird an die Listen-Administratoren verschickt, um über die Austragung eines "
-"Mitgliedes zu benachrichtigen."
+"Wird an die Listen-Administratoren verschickt, um sie darüber zu "
+"benachrichtigen, dass die Zustellung an ein Mitglied wegen zu vieler Bounces "
+"deaktiviert wurde."
 
 #: template_list.py:38
 msgid ""
@@ -1790,15 +1849,11 @@ msgstr ""
 "abgelehnt wurde."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
-"Mitteilung an einen Versender, wenn die Nachricht von der Mailingliste "
-"empfangen wurde."
+"Mitteilung an einen Versender, wenn die Nachricht automatisch zurückgewiesen "
+"wurde."
 
 #: template_list.py:68
 msgid ""
@@ -1808,16 +1863,12 @@ msgstr ""
 "abonniert hat."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
-"Ein Bounce-Test, der an ein Mitglied gesendet wird, wenn dessen Abonnement "
-"aufgrund von Unzustellbarkeit deaktiviert wurde."
+"Die Benachrichtigung an ein Mitglied, wenn die Mitgliedschaft wegen zu "
+"vieler Bounces deaktiviert wurde."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1846,10 +1897,8 @@ msgid "An error occurred while processing your request."
 msgstr "Bei der Verarbeitung Ihrer Anfrage ist ein Fehler aufgetreten."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
-#, fuzzy
-#| msgid "Global Settings"
 msgid "Global Bans"
-msgstr "Globale Einstellungen"
+msgstr "Globale Verbote"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -1866,7 +1915,7 @@ msgstr "Domains"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Verbote"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
@@ -2233,7 +2282,7 @@ msgstr "Einstellen der Mitglieder-Moderation"
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Grund der Zurückweisung:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
@@ -2354,12 +2403,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "Sie müssen sich einloggen, um das Archiv dieser Liste zu sehen."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2367,8 +2411,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            Um die vorherigen Nachrichten zu sehen, rufen Sie auf:\n"
-"            <a href=\"%(hyperkitty_list_url)s\">die Archive</a>.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">Archive</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2381,16 +2425,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "Sie sind der Liste mit folgender E-Mail-Adresse beigetreten:"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "E-Mail-Adresse"
+msgstr "Primäre Adresse"
 
 #: templates/postorius/lists/summary.html:56
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "Masseneintragung"
+msgstr "Abo verwalten"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2556,10 +2596,8 @@ msgid "System Configuration"
 msgstr "Systemkonfiguration"
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman Settings"
 msgid "Mailman System"
-msgstr "Mailman-Einstellungen"
+msgstr "Mailman-System"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -2975,10 +3013,8 @@ msgid "Member Policy"
 msgstr "Mitgliederpolitik"
 
 #: views/list.py:987
-#, fuzzy
-#| msgid "Default processing"
 msgid "Bounce Processing"
-msgstr "Standard-Verarbeitung"
+msgstr "Bounce-Verarbeitung"
 
 #: views/list.py:1037
 msgid "The settings have been updated."
