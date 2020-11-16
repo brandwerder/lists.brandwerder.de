@@ -47,7 +47,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
 * Fixed some minor HTML errors. (Closes #442)
 * Fix the bug where ListOfStringsField couldn't be unset in Postorius. (Closes
   #444)
-
+* Allow ``list:user:action:invite`` template to be set in Postorius. (Closes
+  #454)
 
 1.3.3
 =====
