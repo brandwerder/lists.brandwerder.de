@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Victoriano Giralt <victoriano@uma.es>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-03-30 18:31+0000\n"
-"Last-Translator: Matías Bellone <matiasbellone+weblate@gmail.com>\n"
+"PO-Revision-Date: 2020-10-26 04:46+0000\n"
+"Last-Translator: Victoriano Giralt <victoriano@uma.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/es/>\n"
 "Language: es\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.3.2-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -211,6 +210,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Suscribirse con \"Dirección principal\" cambiará su dirección de suscripción "
+"cuando su dirección principal."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -227,10 +228,8 @@ msgid "Your name (optional)"
 msgstr "Su nombre (opcional)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "Dirección de correo"
+msgstr "Dirección principal ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -1012,31 +1011,6 @@ msgid "Explicit Reply-to set; no Cc added"
 msgstr "Cabecera Responder a (Reply-to) definida; no añadir Cc"
 
 #: forms/list_forms.py:746
-#, fuzzy
-#| msgid ""
-#| "Where are replies to list messages directed? No Munging is strongly "
-#| "recommended for most mailing lists. \n"
-#| "This option controls what Mailman does to the Reply-To: header in "
-#| "messages flowing through this mailing list. When set to No Munging, no "
-#| "Reply-To: header is added by Mailman, although if one is present in the "
-#| "original message, it is not stripped. Setting this value to either Reply "
-#| "to List, Explicit Reply, or Reply Only causes Mailman to insert a "
-#| "specific Reply-To: header in all messages, overriding the header in the "
-#| "original message if necessary (Explicit Reply inserts the value of "
-#| "reply_to_address). Explicit Reply-to set; no Cc added is useful "
-#| "forannounce-only lists where you want to avoid someone replying to the "
-#| "list address. There are many reasons not to introduce or override the "
-#| "Reply-To: header. One is that some posters depend on their own Reply-To: "
-#| "settings to convey their valid return address. Another is that modifying "
-#| "Reply-To: makes it much more difficult to send private replies. See "
-#| "`Reply-To' Munging Considered Harmful for a general discussion of this "
-#| "issue. See Reply-To Munging Considered Useful for a dissenting opinion. "
-#| "Some mailing lists have restricted posting privileges, with a parallel "
-#| "list devoted to discussions. Examples are `patches' or `checkin' lists, "
-#| "where software changes are posted by a revision control system, but "
-#| "discussion about the changes occurs on a developers mailing list. To "
-#| "support these types of mailing lists, select Explicit Reply and set the "
-#| "Reply-To: address option to point to the parallel list."
 msgid ""
 "Where are replies to list messages directed? No Munging is strongly "
 "recommended for most mailing lists. \n"
@@ -1080,15 +1054,17 @@ msgstr ""
 "remitentes dependen de su propia configuración de Responder-A: para "
 "transmitir su dirección de retorno válida. Otra es que modificar el "
 "Responder-A: hace que sea mucho más difícil enviar respuestas privadas. "
-"Consulta `Reply-To' Munging Considered Harmful si deseas ver una discusión "
-"general sobre este tema. Consulta Reply-To Munging Considered Useful para "
-"una opinión discordante. Algunas listas de correo tienen privilegios de "
-"envío restringidos, con una lista paralela dedicada a las discusiones. "
-"Ejemplos de ello son las listas de `parches' o `checkin', donde los cambios "
-"en programas se publicados por un sistema de control de revisiones, pero la "
-"discusión sobre los cambios se da en una lista de correo de desarrolladores. "
-"Para admitir estos tipos de listas de correo, selecciona Respuesta Explícita "
-"y configura la opción Responder-A: una dirección que apunte a la lista "
+"Consulta <a href=\"http://marc.merlins.org/netrants/reply-to-harmful.html\""
+">`Reply-To' Munging Considered Harmful</a>si deseas ver una discusión "
+"general sobre este tema. Consulta <a href=\"http://marc.merlins.org/netrants/"
+"reply-to-useful.html\"> `Reply-To' Munging Considered Useful</a>para una "
+"opinión discordante. Algunas listas de correo tienen privilegios de envío "
+"restringidos, con una lista paralela dedicada a las discusiones. Ejemplos de "
+"ello son las listas de `parches' o `checkin', donde los cambios en programas "
+"se publicados por un sistema de control de revisiones, pero la discusión "
+"sobre los cambios se da en una lista de correo de desarrolladores. Para "
+"admitir estos tipos de listas de correo, selecciona Respuesta Explícita y "
+"configura la opción Responder-A: una dirección que apunte a la lista "
 "paralela."
 
 #: forms/list_forms.py:778
@@ -1411,16 +1387,16 @@ msgstr ""
 "válida si está activa."
 
 #: forms/list_forms.py:1021
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "Información"
+msgstr "Invitación"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Si se marca, se ignorará el resto de casillas y se enviará una invitación a "
+"suscribirse a la lista y quedarán suscritos una vez acepten la invitación."
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
@@ -1657,8 +1633,6 @@ msgstr ""
 "evitar recibir copias de la lista de correo"
 
 #: forms/user_forms.py:119
-#, fuzzy
-#| msgid "Preferred Language"
 msgid "Preferred language"
 msgstr "Idioma preferido"
 
@@ -1668,11 +1642,14 @@ msgid ""
 "will override the MailingList's preferred language. This affects which "
 "language is used for your email notifications and such."
 msgstr ""
+"Idioma preferido para interactuar con Mailman. Cuando se define, prevalecerá "
+"sobre el idioma preferido de la lista. Esto afecta al idioma que se usará "
+"para sus notificaciones por correo y similares."
 
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "Incorrecto: \"{0}\" debe ser una dirección de correo o un UUID"
 
 #: models.py:43
 msgid ""
@@ -1763,16 +1740,12 @@ msgstr ""
 "rebote en un formato desconocido."
 
 #: template_list.py:36
-#, fuzzy
-#| msgid ""
-#| "Sent to the list administrators to notify them when a member has been "
-#| "unsubscribed."
 msgid ""
 "Sent to the list administrators to notify them when a member's delivery is "
 "disabled due to excessive bounces."
 msgstr ""
 "Enviado a los administradores de la lista para notificarles cuando un "
-"miembro se ha dado de baja."
+"miembro se ha desactivado por exceso de rebotes."
 
 #: template_list.py:38
 msgid ""
@@ -1866,15 +1839,11 @@ msgstr ""
 "moderador de la lista."
 
 #: template_list.py:66
-#, fuzzy
-#| msgid ""
-#| "Notice sent to a poster when their message has been received by the "
-#| "mailing list."
 msgid ""
 "Notice sent to a poster when their message has been rejected automatically."
 msgstr ""
-"Aviso enviado a un remitente cuando su mensaje ha sido recibido por la lista "
-"de correo."
+"Aviso enviado a un remitente cuando su mensaje ha sido rechazado "
+"automáticamente."
 
 #: template_list.py:68
 msgid ""
@@ -1883,16 +1852,12 @@ msgstr ""
 "Notificación enviada a un miembro cuando se suscribe a la lista de correo."
 
 #: template_list.py:70
-#, fuzzy
-#| msgid ""
-#| "A bounce probe sent to a member when their subscription has been disabled "
-#| "due to bounces."
 msgid ""
 "The notice sent to a member when their membership has been disabled due to "
 "excessive bounces."
 msgstr ""
-"Enviada una prueba de rebote a un miembro cuando su suscripción se ha "
-"deshabilitado debido a rebotes."
+"Aviso enviado a un suscriptor cuando su suscripción se ha deshabilitado "
+"debido a rebotes excesivos."
 
 #: templates/403.html:5
 msgid "Forbidden"
@@ -1919,10 +1884,8 @@ msgid "An error occurred while processing your request."
 msgstr "Se ha producido un error al procesar su petición."
 
 #: templates/postorius/bans.html:5 templates/postorius/bans.html:10
-#, fuzzy
-#| msgid "Global Settings"
 msgid "Global Bans"
-msgstr "Configuración global"
+msgstr "Bloqueos globales"
 
 #: templates/postorius/base.html:32
 msgid "Mailman logo"
@@ -1939,7 +1902,7 @@ msgstr "Dominios"
 
 #: templates/postorius/base.html:50
 msgid "Bans"
-msgstr ""
+msgstr "Bloqueos"
 
 #: templates/postorius/base.html:56
 msgid "System Information"
@@ -2307,13 +2270,15 @@ msgstr "Establecer moderación de miembros"
 
 #: templates/postorius/lists/held_messages.html:98
 msgid "Rejection reason:"
-msgstr ""
+msgstr "Causa del rechazo:"
 
 #: templates/postorius/lists/held_messages.html:101
 msgid ""
 "Reason sent to the sender for message rejection. For other actions, this is "
 "ignored."
 msgstr ""
+"Motivo que se envía al remitente para explicar el rechazo. Para otras "
+"acciones, esto se ignora."
 
 #: templates/postorius/lists/held_messages.html:115
 msgid "Show Headers"
@@ -2428,12 +2393,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "Tiene que iniciar sesión para visitar los archivos de esta lista."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2441,8 +2401,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            Para consultar envíos anteriores a esta lista, visitar\n"
-"            <a href=\"%(hyperkitty_list_url)s\">los archivos</a>.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">Archivos</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2455,16 +2415,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "Está suscrito a esta lista con la siguiente dirección:"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "Dirección de correo"
+msgstr "Dirección principal"
 
 #: templates/postorius/lists/summary.html:56
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "Suscripción en bloque"
+msgstr "Gestionar suscripción"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2629,10 +2585,8 @@ msgid "System Configuration"
 msgstr "Configuración del sistema"
 
 #: templates/postorius/system_information.html:11
-#, fuzzy
-#| msgid "Mailman Settings"
 msgid "Mailman System"
-msgstr "Configuración de Mailman"
+msgstr "Sistema Mailman"
 
 #: templates/postorius/user/address_preferences.html:8
 #: templates/postorius/user/subscription_preferences.html:7
@@ -3048,10 +3002,8 @@ msgid "Member Policy"
 msgstr "Política de miembros"
 
 #: views/list.py:987
-#, fuzzy
-#| msgid "Default processing"
 msgid "Bounce Processing"
-msgstr "Procesamiento por defecto"
+msgstr "Procesamiento de rebotes"
 
 #: views/list.py:1037
 msgid "The settings have been updated."

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-08 21:55-0700\n"
-"PO-Revision-Date: 2020-07-14 04:20+0000\n"
+"PO-Revision-Date: 2020-10-18 22:20+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "postorius/sq/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.3.1-dev\n"
 
 #: forms/domain_forms.py:34
 #, python-format
@@ -209,6 +209,8 @@ msgid ""
 "Subscribing via \"Primary Address\" will change subscription address when "
 "you change your primary address."
 msgstr ""
+"Pajtimi përmes “Adresës Parësore” do të ndryshojë adresën e pajtimit, kur "
+"ndryshoni adresën tuaj parësore."
 
 #: forms/list_forms.py:156 forms/list_forms.py:181 forms/member_forms.py:29
 #: forms/system.py:36
@@ -225,10 +227,8 @@ msgid "Your name (optional)"
 msgstr "Emri juaj (në daçi)"
 
 #: forms/list_forms.py:169 forms/list_forms.py:1135 views/list.py:411
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address ({})"
-msgstr "Adresë Email"
+msgstr "Adresë Parësore ({})"
 
 #: forms/list_forms.py:200
 msgid "Open"
@@ -1385,16 +1385,17 @@ msgstr ""
 "tyre email është e vlefshme."
 
 #: forms/list_forms.py:1021
-#, fuzzy
-#| msgid "Information"
 msgid "Invitation"
-msgstr "Informacion"
+msgstr "Ftesë"
 
 #: forms/list_forms.py:1025
 msgid ""
 "If checked, the other checkboxes are ignored and the users will be sent an "
 "invitation to join the list and will be subscribed upon acceptance thereof."
 msgstr ""
+"Në iu vëntë shenjë, kutizat e tjera shpërfillen dhe përdoruesve do t’u "
+"dërgohet një ftesë për të marrë pjesë te lista dhe do të pajtohen në të, në "
+"rast pranimi."
 
 #: forms/list_forms.py:1037
 msgid "Emails to Unsubscribe"
@@ -1648,7 +1649,7 @@ msgstr ""
 #: forms/validators.py:39
 #, python-brace-format
 msgid "Invalid: \"{0}\" should be either email or UUID"
-msgstr ""
+msgstr "E pavlefshme: \"{0}\" duhet të jetë ose email, ose UUID"
 
 #: models.py:43
 msgid ""
@@ -2374,12 +2375,7 @@ msgid "You have to login to visit the archives of this list."
 msgstr "Që të vizitoni arkivat e kësaj liste, duhet të bëni hyrjen."
 
 #: templates/postorius/lists/summary.html:33
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "            To see the prior postings to this list, visit\n"
-#| "            <a href=\"%(hyperkitty_list_url)s\">the archives</a>.\n"
-#| "          "
+#, python-format
 msgid ""
 "\n"
 "            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s"
@@ -2387,8 +2383,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            Që të shihni postime të mëparshme te kjo listë, vizitoni\n"
-"            <a href=\"%(hyperkitty_list_url)s\">arkivat</a>.\n"
+"            <a class=\"btn btn-primary\" href=\"%(hyperkitty_list_url)s\""
+">Arkiva</a>\n"
 "          "
 
 #: templates/postorius/lists/summary.html:45
@@ -2401,16 +2397,12 @@ msgid "You are subscribed to this list with the following address:"
 msgstr "Jeni i pajtuar te kjo listë me adresën vijuese:"
 
 #: templates/postorius/lists/summary.html:49
-#, fuzzy
-#| msgid "Email Address"
 msgid "Primary Address"
-msgstr "Adresë Email"
+msgstr "Adresë Parësore"
 
 #: templates/postorius/lists/summary.html:56
-#, fuzzy
-#| msgid "Mass Subscription"
 msgid "Manage Subscription"
-msgstr "Pajtime Në Masë"
+msgstr "Administroni Pajtim"
 
 #: templates/postorius/lists/summary.html:60
 msgid "Unsubscribe"
@@ -2986,10 +2978,8 @@ msgid "Member Policy"
 msgstr "Rregulla Anëtari"
 
 #: views/list.py:987
-#, fuzzy
-#| msgid "Default processing"
 msgid "Bounce Processing"
-msgstr "Përpunim parazgjedhje"
+msgstr "Përpunim Kthimesh"
 
 #: views/list.py:1037
 msgid "The settings have been updated."
