@@ -49,6 +49,8 @@ along with Postorius. If not, see <http://www.gnu.org/licenses/>.
   #444)
 * Allow ``list:user:action:invite`` template to be set in Postorius. (Closes
   #454)
+* Fix a bug where the Bans form would always use default language instead of
+  current request's language. (Closes #441)
 
 1.3.3
 =====
