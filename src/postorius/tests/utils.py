@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2012-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -15,24 +15,65 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
-
 import os
-import logging
+from unittest.mock import MagicMock
 
 from django.conf import settings
 from django.contrib import messages
-from django.core.urlresolvers import reverse
-from django.test import TestCase
-from mock import MagicMock
-from six.moves.urllib_parse import quote
+from django.test import TransactionTestCase
+from django.urls import reverse
+
 from django_mailman3.lib.mailman import get_mailman_client
 from django_mailman3.tests.utils import get_flash_messages
+from six import PY3, binary_type, text_type
+from six.moves.urllib_parse import (
+    parse_qsl, quote, urlencode, urlparse, urlunparse)
 
-from mailmanclient.testing.vcr_helpers import get_vcr
 
-vcr_log = logging.getLogger('vcr')
-vcr_log.setLevel(logging.WARNING)
+def get_test_file(*fileparts):
+    return os.path.join(os.path.dirname(__file__), "test_data", *fileparts)
+get_test_file.__test__ = False  # noqa: E305
+
+
+def reorder_request_params(request):
+    def reorder_params(params):
+        parsed = None
+        if PY3:
+            if isinstance(params, binary_type):
+                params = params.decode("ascii")
+            parsed = parse_qsl(params, encoding="utf-8")
+        else:
+            parsed = parse_qsl(params)
+        if parsed:
+            return urlencode(sorted(parsed, key=lambda kv: kv[0]))
+        else:
+            # Parsing failed, it may be a simple string.
+            return params
+        # sort the URL query-string by key names.
+    uri_parts = urlparse(request.uri)
+    if uri_parts.query:
+        request.uri = urlunparse((
+            uri_parts.scheme, uri_parts.netloc, uri_parts.path,
+            uri_parts.params, reorder_params(uri_parts.query),
+            uri_parts.fragment,
+        ))
+        # convert the request body to text and sort the parameters.
+    if isinstance(request.body, binary_type):
+        try:
+            request._body = request._body.decode('utf-8')
+        except UnicodeDecodeError:
+            pass
+    if isinstance(request.body, text_type):
+        request._body = reorder_params(request._body.encode('utf-8'))
+    return request
+
+
+def filter_response_headers(response):
+    for header in ('Date', 'Server', 'date', 'server'):
+        # The headers are lowercase on Python 2 and capitalized on Python 3
+        if header in response['headers']:
+            del response['headers'][header]
+    return response
 
 
 def create_mock_domain(properties=None):
@@ -89,21 +130,10 @@ def create_mock_member(properties=None):
     return mock_object
 
 
-class ViewTestCase(TestCase):
-
-    use_vcr = True
-    _fixtures_dir = os.path.join(os.path.abspath(
-        os.path.dirname(__file__)), 'fixtures', 'vcr_cassettes')
-
-    _mm_vcr = get_vcr(cassette_library_dir=_fixtures_dir)
+class ViewTestCase(TransactionTestCase):
 
     def setUp(self):
         self.mm_client = get_mailman_client()
-        if self.use_vcr:
-            cm = self._mm_vcr.use_cassette('.'.join([
-                self.__class__.__name__, self._testMethodName, 'yaml']))
-            self.cassette = cm.__enter__()
-            self.addCleanup(cm.__exit__, None, None, None)
 
     def tearDown(self):
         for d in self.mm_client.domains:

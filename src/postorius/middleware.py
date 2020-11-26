@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2015-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2015-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -16,16 +16,36 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
+
+import logging
+from urllib.error import HTTPError
+
+from mailmanclient import MailmanConnectionError
 
 from postorius import utils
 from postorius.models import MailmanApiError
-from mailmanclient import MailmanConnectionError
+
+
+logger = logging.getLogger('postorius')
+
+
+__all__ = [
+    'PostoriusMiddleware',
+]
 
 
 class PostoriusMiddleware(object):
 
+    def __init__(self, get_response=None):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        return self.get_response(request)
+
     def process_exception(self, request, exception):
-        if isinstance(exception, MailmanApiError) or isinstance(
-                exception, MailmanConnectionError):
+        if isinstance(exception, (MailmanApiError, MailmanConnectionError)):
+            logger.exception('Mailman REST API not available')
             return utils.render_api_error(request)
+        elif isinstance(exception, HTTPError):
+            logger.exception('Un-handled exception: %s', str(exception))
+            return utils.render_client_error(request, exception)

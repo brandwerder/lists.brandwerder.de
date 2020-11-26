@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2012-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -15,17 +15,17 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, print_function, unicode_literals
 
-from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+from django.urls import reverse
+
+from allauth.account.models import EmailAddress
 from django_mailman3.lib.mailman import get_mailman_client
 from six.moves.urllib_parse import quote
 
-from postorius.tests.utils import ViewTestCase
 from postorius.forms import MemberModeration, UserPreferences
+from postorius.tests.utils import ViewTestCase
 
 
 class ListMembersOptionsTest(ViewTestCase):
@@ -96,7 +96,7 @@ class ListMembersOptionsTest(ViewTestCase):
         url = reverse('list_member_options', args=(self.foo_list.list_id,
                                                    'none@example.com',))
         response = self.client.get(url)
-        self.assertEquals(response.status_code, 404)
+        self.assertEqual(response.status_code, 404)
 
     def test_moderation_action(self):
         self.assertIsNone(
@@ -115,3 +115,59 @@ class ListMembersOptionsTest(ViewTestCase):
         self.assertHasSuccessMessage(response)
         self.assertIsNone(
             self.foo_list.get_member('test@example.com').moderation_action)
+
+    def test_get_nonmember_options(self):
+        # Test that nonmember options can also be set using
+        # `list_member_options` view.
+        self.client.login(username='testowner', password='testpass')
+        self.foo_list.add_role(
+            role='nonmember', address='nonmember@example.com')
+        self.assertEqual(len(self.foo_list.nonmembers), 1)
+        # Now, let's try to get options for these users.
+        url = reverse('list_member_options', args=(self.foo_list.list_id,
+                                                   'nonmember@example.com',))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_nonmember_moderation_action(self):
+        self.foo_list.add_role(
+            role='nonmember', address='nonmember@example.com')
+        nonmember = self.foo_list.find_members(
+            address='nonmember@example.com')[0]
+        self.assertIsNone(nonmember.moderation_action)
+        url = reverse('list_member_options', args=(self.foo_list.list_id,
+                                                   'nonmember@example.com',))
+        self.client.login(username='testsu', password='testpass')
+        response = self.client.post(url, {
+            'formname': 'moderation', 'moderation_action': 'hold'})
+        self.assertRedirects(response, url)
+        self.assertHasSuccessMessage(response)
+        nonmember = self.foo_list.find_members(
+            address='nonmember@example.com')[0]
+        self.assertEqual(nonmember.moderation_action, 'hold')
+        response = self.client.post(url, {
+            'formname': 'moderation', 'moderation_action': ''})
+        self.assertRedirects(response, url)
+        self.assertHasSuccessMessage(response)
+        nonmember = self.foo_list.find_members(
+            address='nonmember@example.com')[0]
+        self.assertIsNone(nonmember.moderation_action)
+
+    def test_nonmember_and_owner_with_same_email_action(self):
+        # Test that when an email address with both owner and non-member roles
+        # are subscribed that we are able to moderate the non-member using the
+        # list options view.
+        self.foo_list.add_role(
+            role='nonmember', address='aperson@example.com')
+        self.foo_list.add_role(
+            role='owner', address='aperson@example.com')
+        url = reverse('list_member_options',
+                      args=(self.foo_list.list_id,
+                            'aperson@example.com',)) + '?role=nonmember'
+        self.client.login(username='testsu', password='testpass')
+        response = self.client.get(url)
+        member = response.context.get('mm_member')
+        # Assert that the list options are rendered for the non-member object
+        # and not the owner object.
+        self.assertEqual(member.role, 'nonmember')
+        self.assertEqual(member.email, 'aperson@example.com')

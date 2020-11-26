@@ -2,6 +2,7 @@
 {% load i18n %}
 {% load bootstrap_tags %}
 {% load nav_helpers %}
+{% load markdown %}
 
 {% block head_title %}
 {% trans 'Info' %} | {{ list.fqdn_listname }} - {{ block.super }}
@@ -9,11 +10,13 @@
 
 {% block content %}
 
-    {% list_nav 'list_summary' 'Summary' %}
+    {% list_nav 'list_summary' 'msgid:title:list_summary' %}
 
     <p>{{ list.settings.description }}</p>
     {% if list.settings.info %}
-    <p>{{ list.settings.info }}</p>
+        {% autoescape off %}
+          {% markdown_value list.settings.info %}
+        {% endautoescape %}
     {% endif %}
     <p>{% trans 'To contact the list owners, use the following email address:' %} <em>{{ list.settings.owner_address }}</em></p>
 
@@ -25,10 +28,10 @@
         </p>
       {% else %}
         {% url 'hk_list_overview' list.fqdn_listname as hyperkitty_list_url %}
+        <h2>{% trans 'Archives' %}</h2>
         <p>
           {% blocktrans %}
-            To see the prior postings to this list, visit
-            <a href="{{ hyperkitty_list_url }}">the archives</a>.
+            <a class="btn btn-primary" href="{{ hyperkitty_list_url }}">Archives</a>
           {% endblocktrans %}
         </p>
       {% endif %}
@@ -41,21 +44,21 @@
         {% if user_subscribed %}
             <h2>{% trans 'Subscription / Unsubscription' %}</h2>
             <p>
-                {% trans 'You are subscribed to this list with the following address:' %} <em>{{ subscribed_address }}</em>
+              {% trans 'You are subscribed to this list with the following address:' %}
+              {% if subscribed_preferred %}
+                  <em>{% trans 'Primary Address' %} ({{ subscribed_address }})</em>
+              {% else %}
+                  <em>{{ subscribed_address }}</em>
+              {% endif %}
             </p>
             {% url 'user_list_options' list.list_id as user_list_options_url %}
-            <p>
-              {% blocktrans %}
-                You can manage your subscription <a href="{{ user_list_options_url }}">here</a>
-              {% endblocktrans %}
-            </p>
-            <p>
-                <form method="post" action="{% url 'list_unsubscribe' list.list_id %}">
+              <a class="btn btn-primary" href="{{ user_list_options_url }}">{% trans 'Manage Subscription' %}</a>
+            <p></p>
+              <form method="post" action="{% url 'list_unsubscribe' list.list_id %}" class="form-inline">
                     {% csrf_token %}
                     <input type="hidden" name="email" value="{{ subscribed_address }}" />
                     <button type="submit" class="btn btn-danger">{% trans 'Unsubscribe' %}</button>
                 </form>
-            </p>
         {% elif user_request_pending %}
             <h4>{% trans "You have a subscription request pending. If you don't hear back soon, please contact the list owners." %}</h4>
         {% else %}
@@ -86,7 +89,7 @@
         <p>
         {% blocktrans %}
         You can also subscribe without creating an account.
-        If you wish to to so, please use the form below.
+        If you wish to do so, please use the form below.
         {% endblocktrans%}
         </p>
         <form action="{% url 'list_anonymous_subscribe' list.list_id %}"
@@ -100,12 +103,15 @@
     {% if user.is_authenticated %}
         {% if user.is_list_owner or user.is_superuser %}
             <hr />
-            <h4>{% trans 'List metrics' %}</h4>
-            <dl class="dl-horizontal">
-              <dt>{% trans 'Created at' %}</dt><dd>{{ list.settings.created_at }}</dd>
-              <dt>{% trans 'Last post at' %}</dt><dd>{{ list.settings.last_post_at }}</dd>
-              <dt>{% trans 'Digest last sent at' %}</dt><dd>{{ list.settings.digest_last_sent_at }}</dd>
-              <dt>{% trans 'Volume' %}</dt><dd>{{ list.settings.volume }}</dd>
+            <h3>{% trans 'List metrics' %}</h3>
+            <dl class="row">
+              <dt class="col-2">{% trans 'Created at' %}</dt><dd class="col-2">{{ list.settings.created_at }}</dd>
+              <div class="w-100"></div>
+              <dt class="col-2">{% trans 'Last post at' %}</dt><dd class="col-2">{{ list.settings.last_post_at }}</dd>
+              <div class="w-100"></div>
+              <dt class="col-2">{% trans 'Digest last sent at' %}</dt><dd class="col-2">{{ list.settings.digest_last_sent_at }}</dd>
+              <div class="w-100"></div>
+              <dt class="col-2">{% trans 'Volume' %}</dt><dd class="col-2">{{ list.settings.volume }}</dd>
             </dl>
         {% endif %}
     {% endif %}

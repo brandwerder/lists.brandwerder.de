@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2012-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -15,13 +15,13 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, print_function, unicode_literals
+from urllib.error import HTTPError
+
+from django.contrib.auth.models import User
+from django.urls import reverse
 
 from allauth.account.models import EmailAddress
-from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
 from django_mailman3.models import MailDomain
-from django.utils.six.moves.urllib.error import HTTPError
 
 from postorius.tests.utils import ViewTestCase
 
@@ -32,6 +32,7 @@ class DomainIndexPageTest(ViewTestCase):
     def setUp(self):
         super(DomainIndexPageTest, self).setUp()
         self.domain = self.mm_client.create_domain('example.com')
+        self.domain.add_owner('person@domain.com')
         try:
             self.foo_list = self.domain.create_list('foo')
         except HTTPError:
@@ -51,24 +52,36 @@ class DomainIndexPageTest(ViewTestCase):
         self.foo_list.add_owner('owner@example.com')
         self.foo_list.add_moderator('moderator@example.com')
 
-    def test_domain_index_not_accessible_to_public(self):
-        response = self.client.get(reverse('domain_index'))
+    def _test_not_accesible_to_public(self, url):
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 302)
 
-    def test_domain_index_not_accessible_to_unpriveleged_user(self):
+    def _test_not_accessible_to_unpriveleged_use(self, url):
         self.client.login(username='testuser', password='testpass')
-        response = self.client.get(reverse('domain_index'))
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 403)
+
+    def _test_not_accessible_to_moderators(self, url):
+        self.client.login(username='testmoderator', password='testpass')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 403)
+
+    def _test_not_accessible_to_owner(self, url):
+        self.client.login(username='testowner', password='testpass')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 403)
+
+    def test_domain_index_not_accessible_to_public(self):
+        self._test_not_accesible_to_public(reverse('domain_index'))
+
+    def test_domain_index_not_accessible_to_unpriveleged_user(self):
+        self._test_not_accessible_to_unpriveleged_use(reverse('domain_index'))
 
     def test_domain_index_not_accessible_to_moderators(self):
-        self.client.login(username='testmoderator', password='testpass')
-        response = self.client.get(reverse('domain_index'))
-        self.assertEqual(response.status_code, 403)
+        self._test_not_accessible_to_moderators(reverse('domain_index'))
 
     def test_domain_index_not_accessible_to_owners(self):
-        self.client.login(username='testowner', password='testpass')
-        response = self.client.get(reverse('domain_index'))
-        self.assertEqual(response.status_code, 403)
+        self._test_not_accessible_to_owner(reverse('domain_index'))
 
     def test_contains_domains_and_site(self):
         # The list index page should contain the lists
@@ -79,3 +92,37 @@ class DomainIndexPageTest(ViewTestCase):
         self.assertContains(response, 'example.com')
         self.assertTrue(
             MailDomain.objects.filter(mail_domain='example.com').exists())
+        # Test there are owners are listed.
+        self.assertContains(response, 'person@domain.com')
+
+    def test_domain_add_owner_not_acceesible_to_anyone_but_superuser(self):
+        url = reverse('domain_owners', args=(self.domain.mail_host,))
+        self._test_not_accesible_to_public(url)
+        self._test_not_accessible_to_unpriveleged_use(url)
+        self._test_not_accessible_to_moderators(url)
+        self._test_not_accessible_to_owner(url)
+        self.client.login(username='testsu', password='testpass')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, b"Add a new owner to example.com")
+        response = self.client.post(
+            url,
+            dict(email='person@example.com'))
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(
+            'person@example.com',
+            [owner.addresses[0].email for owner in self.domain.owners])
+
+    def test_domain_delete_owner_not_acceesible_to_anyone_but_superuser(self):
+        self.domain.add_owner('one@example.com')
+        self.domain.add_owner('two@example.com')
+        url = reverse('remove_domain_owner',
+                      args=(self.domain.mail_host,
+                            'person@domain.com'))
+        self.client.login(username='testsu', password='testpass')
+        response = self.client.post(url)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(len(self.domain.owners), 2)
+        self.assertEqual(sorted(owner.addresses[0].email
+                                for owner in self.domain.owners),
+                         ['one@example.com', 'two@example.com'])

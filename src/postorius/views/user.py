@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -16,27 +16,28 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
 
 import logging
-from django.utils.six.moves.urllib.error import HTTPError
+from urllib.error import HTTPError
 
-from allauth.account.models import EmailAddress
-from django.forms import formset_factory
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.core.urlresolvers import reverse, reverse_lazy
+from django.forms import formset_factory
+from django.http import Http404
 from django.shortcuts import render
+from django.urls import reverse, reverse_lazy
 from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
 from django.views.generic import FormView
-from django.http import Http404
 
-from postorius.models import List, MailmanUser
+from allauth.account.models import EmailAddress
+from django_mailman3.lib.mailman import get_mailman_client, get_mailman_user
+
 from postorius.forms import (
-    UserPreferences, UserPreferencesFormset, ChangeSubscriptionForm)
+    ChangeSubscriptionForm, UserPreferences, UserPreferencesFormset)
+from postorius.models import List, MailmanUser, SubscriptionMode
+from postorius.utils import set_preferred
 from postorius.views.generic import MailmanClientMixin
-from django_mailman3.lib.mailman import get_mailman_client
 
 
 logger = logging.getLogger(__name__)
@@ -91,7 +92,7 @@ class UserMailmanSettingsView(UserPreferencesView):
         # Get the defaults and pre-populate so view shows them
         combinedpreferences = self._get_combined_preferences()
         for key in combinedpreferences:
-            if key != u"self_link":
+            if key != "self_link":
                 self.mm_user.preferences[key] = combinedpreferences[key]
 
         # This is a bit of a hack so preferences behave as users expect
@@ -108,12 +109,12 @@ class UserMailmanSettingsView(UserPreferencesView):
         defaultpreferences = get_mailman_client().preferences
         combinedpreferences = {}
         for key in defaultpreferences:
-            if key != u"self_link":
+            if key != "self_link":
                 combinedpreferences[key] = defaultpreferences[key]
 
         # Clobber defaults with any preferences already set
         for key in self.mm_user.preferences:
-            if key != u"self_link":
+            if key != "self_link":
                 combinedpreferences[key] = self.mm_user.preferences[key]
 
         return(combinedpreferences)
@@ -148,23 +149,23 @@ class UserAddressPreferencesView(UserPreferencesView):
 
             # initialize with default preferences
             for key in defaultpreferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = defaultpreferences[key]
 
             # overwrite with user's global preferences
             for key in globalpreferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = globalpreferences[key]
 
             # overwrite with address-specific preferences
             for key in address.preferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = address.preferences[key]
             combinedpreferences.append(prefs)
 
             # put the combined preferences back on the original object
             for key in prefs:
-                if key != u"self_link":
+                if key != "self_link":
                     address.preferences[key] = prefs[key]
 
         return combinedpreferences
@@ -173,8 +174,8 @@ class UserAddressPreferencesView(UserPreferencesView):
         data = super(UserAddressPreferencesView, self).get_context_data(
             **kwargs)
         data['formset'] = data.pop('form')
-        for form, address in zip(
-                data['formset'].forms, self.mm_user.addresses):
+        for form, address in list(zip(
+                data['formset'].forms, self.mm_user.addresses)):
             form.address = address
         return data
 
@@ -200,6 +201,11 @@ class UserListOptionsView(UserPreferencesView):
             request, *args, **kwargs)
         self.mlist = List.objects.get_or_404(fqdn_listname=kwargs['list_id'])
         self.subscription = self._get_subscription()
+        if (self.subscription.subscription_mode ==
+                SubscriptionMode.as_user.name):
+            self.subscriber = self.subscription.user.user_id
+        else:
+            self.subscriber = self.subscription.email
 
     def _get_preferences(self):
         return self.subscription.preferences
@@ -210,8 +216,15 @@ class UserListOptionsView(UserPreferencesView):
         user_emails = EmailAddress.objects.filter(
             user=self.request.user, verified=True).order_by(
             "email").values_list("email", flat=True)
+        mm_user = get_mailman_user(self.request.user)
+        primary_email = None
+        if mm_user.preferred_address is None:
+            primary_email = set_preferred(self.request.user, mm_user)
+        else:
+            primary_email = mm_user.preferred_address.email
         data['change_subscription_form'] = ChangeSubscriptionForm(
-            user_emails, initial={'email': self.subscription.email})
+            user_emails, mm_user.user_id, primary_email,
+            initial={'subscriber': self.subscriber})
         return data
 
     def get_success_url(self):
@@ -261,12 +274,12 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 
             # initialize with default preferences
             for key in defaultpreferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = defaultpreferences[key]
 
             # overwrite with user's global preferences
             for key in globalpreferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = globalpreferences[key]
 
             # overwrite with address-based preferences
@@ -278,12 +291,12 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
                     addresspreferences = address.preferences
 
             for key in addresspreferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = addresspreferences[key]
 
             # overwrite with subscription-specific preferences
             for key in sub.preferences:
-                if key != u"self_link":
+                if key != "self_link":
                     prefs[key] = sub.preferences[key]
 
             combinedpreferences.append(prefs)
@@ -295,8 +308,8 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
         data = super(UserSubscriptionPreferencesView, self).get_context_data(
             **kwargs)
         data['formset'] = data.pop('form')
-        for form, subscription in zip(
-                data['formset'].forms, self.subscriptions):
+        for form, subscription in list(zip(
+                data['formset'].forms, self.subscriptions)):
             form.list_id = subscription.list_id
         return data
 
@@ -305,6 +318,6 @@ class UserSubscriptionPreferencesView(UserPreferencesView):
 def user_subscriptions(request):
     """Shows the subscriptions of a user."""
     mm_user = MailmanUser.objects.get_or_create_from_django(request.user)
-    memberships = [m for m in mm_user.subscriptions if m.role == 'member']
+    memberships = [m for m in mm_user.subscriptions]
     return render(request, 'postorius/user/subscriptions.html',
                   {'memberships': memberships})

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -17,12 +17,11 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 """Postorius view decorators."""
-
-from __future__ import absolute_import, unicode_literals
+from functools import wraps
 
 from django.core.exceptions import PermissionDenied
 
-from postorius.auth.utils import set_user_access_props
+from postorius.auth.utils import set_list_access_props
 
 
 def list_owner_required(fn):
@@ -30,14 +29,15 @@ def list_owner_required(fn):
     Assumes that the request object is the first arg and that list_id
     is present in kwargs.
     """
+    @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
         list_id = kwargs['list_id']
-        if not user.is_authenticated():
+        if not user.is_authenticated:
             raise PermissionDenied
         if user.is_superuser:
             return fn(*args, **kwargs)
-        set_user_access_props(user, list_id)
+        set_list_access_props(user, list_id)
         if user.is_list_owner:
             return fn(*args, **kwargs)
         else:
@@ -50,14 +50,15 @@ def list_moderator_required(fn):
     Assumes that the request object is the first arg and that list_id
     is present in kwargs.
     """
+    @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
         list_id = kwargs['list_id']
-        if not user.is_authenticated():
+        if not user.is_authenticated:
             raise PermissionDenied
         if user.is_superuser:
             return fn(*args, **kwargs)
-        set_user_access_props(user, list_id)
+        set_list_access_props(user, list_id)
         if user.is_list_owner or user.is_list_moderator:
             return fn(*args, **kwargs)
         else:
@@ -69,6 +70,7 @@ def superuser_required(fn):
     """Make sure that the logged in user is a superuser or otherwise raise
     PermissionDenied.
     Assumes the request object to be the first arg."""
+    @wraps(fn)
     def wrapper(*args, **kwargs):
         user = args[0].user
         if not user.is_superuser:

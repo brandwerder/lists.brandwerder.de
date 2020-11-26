@@ -1,4 +1,4 @@
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2012-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -17,7 +17,9 @@
 
 import re
 import sys
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
+
 
 # Calculate the version number without importing the postorius package.
 with open('src/postorius/__init__.py') as fp:
@@ -41,20 +43,23 @@ setup(
     keywords='email mailman django',
     url=" https://gitlab.com/mailman/postorius",
     classifiers=[
-        "Programming Language :: Python",
+        "Framework :: Django",
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+        "Topic :: Communications :: Email :: Mailing List Servers",
+        "Programming Language :: Python :: 3",
     ],
     packages=find_packages('src'),
     package_dir={'': 'src'},
     include_package_data=True,
     install_requires=[
-        'Django>=1.8',
-        'Django<1.12',
-        'django-mailman3',
-        'mailmanclient',
+        'django-mailman3>=1.3.3',
+        'Django>=1.11,<3.1',
+        'mailmanclient>=3.3.1',
+        'readme_renderer[md]',
     ],
     tests_require=[
-        "mock",
-        "vcrpy",
         "beautifulsoup4",
+        "isort",
     ],
 )

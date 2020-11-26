@@ -1,5 +1,5 @@
 ===================================
-Postorius - web ui for GNU Mailman
+Postorius - Web UI for GNU Mailman
 ===================================
 .. image:: https://gitlab.com/mailman/postorius/badges/master/build.svg
     :target: https://gitlab.com/mailman/postorius/commits/master
@@ -7,13 +7,16 @@ Postorius - web ui for GNU Mailman
 .. image:: https://readthedocs.org/projects/postorius/badge
     :target: https://postorius.readthedocs.io
 
+.. image:: https://gitlab.com/mailman/postorius/badges/master/coverage.svg?job=coverage
+    :target: https://mailman.gitlab.io/postorius
+
 .. image:: http://img.shields.io/pypi/v/postorius.svg
     :target: https://pypi.python.org/pypi/postorius
 
 .. image:: http://img.shields.io/pypi/dm/postorius.svg
     :target: https://pypi.python.org/pypi/postorius
 
-Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+Copyright (C) 1998-2019 by the Free Software Foundation, Inc.
 
 The Postorius Django app provides a web user interface to
 access GNU Mailman.
@@ -34,31 +37,18 @@ along with mailman.client. If not, see <http://www.gnu.org/licenses/>.
 Requirements
 ============
 
-Postorius requires Python 2.7 or newer and mailmanclient,
-the official Python bindings for GNU Mailman.
-The minimum Django version is 1.8.
-Postorius needs a running version of GNU Mailman version 3.
+Postorius requires Python 3.5+.
 
+The minimum Django version is 1.11.
 
-NEWS/Changelog
-==============
-
-News and the changelog can be found in the package documentation:
-
-src/postorius/doc/news.rst
+Postorius needs a running version of GNU Mailman version 3.3.0
 
 
 Installation
 ============
 
-To install GNU Mailman follow the instructions in the documentation:
-http://mailman.readthedocs.org/
-
-A description how to run Postorius on Django's dev server or deploying it 
-using Apache/mod_wsgi or Nginx/uwsig, can be found in the package documentation: 
-
-src/postorius/doc/setup.rst
-src/postorius/doc/deployment.rst
+To install GNU Mailman Suite follow the instructions in the documentation:
+https://docs.mailman3.org/
 
 
 Acknowledgements

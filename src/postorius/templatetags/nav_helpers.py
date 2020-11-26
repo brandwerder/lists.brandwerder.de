@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -16,16 +16,37 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
 
 from django import template
+from django.utils.translation import gettext_lazy as _
 
 
 register = template.Library()
 
+translation_msgids = {
+    'msgid:title:list_header_matches': _('Header Filters'),
+    'msgid:title:list_bans': _('Banned Addresses'),
+    'msgid:title:list_delete': _('Delete List'),
+    'msgid:title:list_held_messages': _('Held Messages'),
+    'msgid:title:list_mass_removal': _('Mass Removal'),
+    'msgid:title:list_mass_subscription': _('Mass Subscription'),
+    'msgid:title:list_members': _('Subscription Options'),
+    'msgid:title:list_settings': _('List Settings'),
+    'msgid:title:list_summary': _('Summary'),
+    'msgid:title:list_mass_removal_confirm':
+        _('Confirm Removal of All Members'),
+    'msgid:title:list_templates': _('Templates'),
+    'msgid:title:user_settings_address': _('Address-based Settings'),
+    'msgid:title:user_settings_list': _('Subscription Settings'),
+    'msgid:title:user_settings_global': _('Global Settings'),
+    'msgid:title:user_subscriptions': _('Subscriptions'),
+}
+
 
 @register.inclusion_tag('postorius/menu/list_nav.html', takes_context=True)
 def list_nav(context, current, title='', subtitle=''):
+    title = translation_msgids.get(title, title)
+    subtitle = translation_msgids.get(subtitle, subtitle)
     return dict(list=context['list'],
                 current=current,
                 user=context['request'].user,
@@ -34,6 +55,8 @@ def list_nav(context, current, title='', subtitle=''):
 
 @register.inclusion_tag('postorius/menu/user_nav.html', takes_context=True)
 def user_nav(context, current, title='', subtitle=''):
+    title = translation_msgids.get(title, title)
+    subtitle = translation_msgids.get(subtitle, subtitle)
     return dict(current=current,
                 user=context['request'].user,
                 title=title, subtitle=subtitle)
@@ -44,3 +67,13 @@ def nav_active_class(context, current, view_name):
     if current == view_name:
         return 'active'
     return ''
+
+
+@register.filter
+def held_count(mlist):
+    return mlist.get_held_count()
+
+
+@register.filter
+def pending_subscriptions(mlist):
+    return mlist.get_requests_count(token_owner='moderator')

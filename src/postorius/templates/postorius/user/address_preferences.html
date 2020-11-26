@@ -11,7 +11,7 @@
 {% block content %}
 
 <div class="user-profile">
-    {% user_nav 'settings_address' 'Address-based settings' %}
+    {% user_nav 'settings_address' 'msgid:title:user_settings_address' %}
 
     {% if formset|length == 0 %}
         <h2>{% trans 'No preferences available' %}</h2>
@@ -44,7 +44,7 @@
                                 {% if field|fieldtype_is:'RadioSelect' %}
                                     <td class="text-center">
                                         {% for choice in field %}
-                                            <label class="radio-inline">
+                                            <label class="radio-inline" for="{{ choice.id_for_label }}">
                                                 {{ choice.tag }}
                                                 {{ choice.choice_label }}
                                             </label>

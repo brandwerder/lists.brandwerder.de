@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2016-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2016-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -17,15 +17,14 @@
 
 """Tests for list settings"""
 
-from __future__ import absolute_import, print_function, unicode_literals
+from django.contrib.auth.models import User
+from django.urls import reverse
 
 from allauth.account.models import EmailAddress
-from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
 
-from postorius.views.list import SETTINGS_FORMS
 from postorius.models import List
 from postorius.tests.utils import ViewTestCase
+from postorius.views.list import SETTINGS_FORMS
 
 
 class ListSettingsTest(ViewTestCase):
@@ -50,6 +49,9 @@ class ListSettingsTest(ViewTestCase):
                 user=user, email=user.email, verified=True)
         self.foo_list.add_owner('owner@example.com')
         self.foo_list.add_moderator('moderator@example.com')
+
+    def tearDown(self):
+        self.domain.delete()
 
     def test_page_not_accessible_if_not_logged_in(self):
         for section_name in SETTINGS_FORMS:
@@ -133,11 +135,11 @@ class ListSettingsTest(ViewTestCase):
         self.assertEqual(response.status_code, 200)
         form = response.context["form"]
         self.assertEqual(
-            form.initial['first_strip_reply_to'], 'False')
+            form.initial['first_strip_reply_to'], False)
         post_data = dict(
-            (key, unicode(self.foo_list.settings[key]))
+            (key, self.foo_list.settings[key])
             for key in form.fields)
-        post_data['first_strip_reply_to'] = 'True'
+        post_data['first_strip_reply_to'] = True
         response = self.client.post(url, post_data)
         self.assertRedirects(response, url)
         self.assertHasSuccessMessage(response)
@@ -155,6 +157,9 @@ class ListSettingsTest(ViewTestCase):
             'subject_prefix': '',
             'description': '',
             'advertised': 'True',
+            'preferred_language': 'en',
+            'member_roster_visibility': 'public',
+            'newsgroup_moderation': 'none',
             })
         self.assertRedirects(response, url)
         self.assertHasSuccessMessage(response)
@@ -162,3 +167,234 @@ class ListSettingsTest(ViewTestCase):
         m_list = List.objects.get(fqdn_listname='foo.example.com')
         self.assertEqual(m_list.settings['subject_prefix'], '')
         self.assertEqual(m_list.settings['description'], '')
+
+    def test_respond_to_post_requests(self):
+        self.assertTrue(self.foo_list.settings['respond_to_post_requests'])
+        self.client.login(username='testsu', password='testpass')
+        url = reverse('list_settings',
+                      args=('foo.example.com', 'automatic_responses'))
+        response = self.client.post(
+            url,
+            {'respond_to_post_requests': False,
+             'autorespond_owner': 'none',
+             'autorespond_postings': 'none',
+             'autorespond_requests': 'none',
+             'send_welcome_message': True,
+             'autoresponse_grace_period': '20d'})
+        self.assertRedirects(response, url)
+        self.assertHasSuccessMessage(response)
+        mlist = List.objects.get(fqdn_listname='foo.example.com')
+        self.assertFalse(mlist.settings['respond_to_post_requests'])
+
+    def test_list_subscription_requests(self):
+        self.client.login(username='testowner', password='testpass')
+        url = reverse('list_subscription_requests', args=('foo.example.com',))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # Since there are no pending subscription requests, this page should be
+        # empty.
+        self.assertContains(response, '<small>(0)</small>')
+        self.assertTrue(
+            b'There are currently no subscription requests for this list.'
+            in response.content)
+        self.assertNotContains(response, '<div class="paginator">')
+        # We set subscription policy to 'confirm', which should wait for the
+        # user approval.
+        self.foo_list.settings['subscription_policy'] = 'confirm'
+        self.foo_list.settings.save()
+        self.foo_list.subscribe('someone@example.com', pre_verified=True)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        # Check that the request is not shown in pending subscription requests.
+        self.assertTrue('someone@example.com' not in str(response.content))
+        # Now we set the subscription policy to moderate so that all
+        # subscriptions are held for moderator approval.
+        self.foo_list.settings['subscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+        self.foo_list.subscribe('test@example.com', pre_verified=True)
+        self.foo_list.subscribe('owner@example.com', pre_verified=True)
+        self.foo_list.subscribe('moderator@example.com', pre_verified=True)
+        # Now there should be three subscription requests pending.
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        for email in ('test@example.com', 'owner@example.com',
+                      'moderator@example.com'):
+            self.assertTrue(email in str(response.content))
+        self.assertContains(response, '<small>(3)</small>')
+        # Verify that the list is paginated
+        self.assertContains(response, '<div class="paginator">')
+
+    def test_handle_subscription_request(self):
+        self.client.login(username='testowner', password='testpass')
+        self.foo_list.settings['subscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+        self.foo_list.subscribe('test@example.com', pre_verified=True)
+        # There should be one pending subscription request.
+        self.assertEqual(len(self.foo_list.requests), 1)
+        token = self.foo_list.requests[0]['token']
+        url = reverse('handle_subscription_request',
+                      args=('foo.example.com', token, 'accept'))
+        response = self.client.get(url)
+        # On success, user is redirected to list_subscription_requests page.
+        self.assertTrue(response.status_code, 302)
+        self.assertTrue(response.url,
+                        '/postorius/lists/foo.example.com/subscription_requests')  # noqa
+        self.assertEqual(len(self.foo_list.requests), 0)
+
+    def test_remove_all_subscribers(self):
+        self.client.login(username='testowner', password='testpass')
+        # Let's add 10 subscribers to the list.
+        for each in range(10):
+            self.foo_list.subscribe('test-{}@example.com'.format(each),
+                                    pre_verified=True,
+                                    pre_approved=True,
+                                    pre_confirmed=True)
+        self.assertEqual(len(self.foo_list.members), 10)
+        # First lets see the correct form is rendered when we GET
+        url = reverse('unsubscribe_all', args=('foo.example.com',))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(b'Confirm Removal of All Members' in response.content)
+        # If we POST to the above url, we will unsubscribe all the users.
+        self.assertEqual(len(self.foo_list.members), 10)
+        # Now, let's remove all the subscribers
+        self.client.post(url)
+        self.assertEqual(len(self.foo_list.members), 0)
+
+    def test_message_acceptance(self):
+        initial_values = {
+            'acceptable_aliases': [],
+            'require_explicit_destination': True,
+            'administrivia': True,
+            'default_member_action': 'defer',
+            'default_nonmember_action': 'hold',
+            'max_message_size': 40,
+            'max_num_recipients': 10,
+        }
+        self.client.login(username='testsu', password='testpass')
+        url = reverse('list_settings',
+                      args=('foo.example.com', 'message_acceptance'))
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        for field, value in initial_values.items():
+            self.assertEqual(
+                self.foo_list.settings[field], value,
+                'Field: {}'.format(field))
+            self.assertEqual(
+                response.context["form"].initial[field], value,
+                'Field: {}'.format(field))
+        updated_values = {
+            'acceptable_aliases': ['bar@example.com'],
+            'require_explicit_destination': False,
+            'administrivia': False,
+            'default_member_action': 'accept',
+            'default_nonmember_action': 'accept',
+            'max_message_size': 100,
+            'max_num_recipients': 100,
+        }
+        response = self.client.post(url, updated_values)
+        self.assertRedirects(response, url)
+        self.assertHasSuccessMessage(response)
+        # Get a new list object to avoid caching
+        m_list = List.objects.get(fqdn_listname='foo.example.com')
+        for field, value in updated_values.items():
+            self.assertEqual(
+                m_list.settings[field], value,
+                'Field: {}'.format(field))
+
+    def test_mass_subscribe_options(self):
+        self.client.login(username='testsu', password='testpass')
+        mlist = List.objects.get(fqdn_listname='foo.example.com')
+        updated_values = {
+            'emails': 'john3@example.com',
+            'pre_verified': True,
+            'pre_confirmed': True,
+            'pre_approved': True,
+        }
+        url = reverse('mass_subscribe',
+                      args=('foo.example.com',))
+        response = self.client.post(url, updated_values)
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.members), 1)
+
+        # Now, let's see if we can moderate.
+        self.foo_list.settings['subscription_policy'] = 'moderate'
+        self.foo_list.settings.save()
+
+        updated_values = {
+            'emails': 'john@example.com',
+            'pre_confirmed': True,
+            'pre_approved': True,
+            'pre_verified': True
+        }
+
+        self.assertEqual(len(mlist.members), 1)
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.members), 2)
+        # With pre_confirmed = False, there should be a pending subscription
+        # event.
+        updated_values = {
+            'emails': 'john2@example.com',
+            'pre_confirmed': True,
+            'pre_verified': True
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        # Now, there should be a pending request to confirm.
+        self.assertEqual(len(mlist.members), 2)
+        self.assertEqual(len(mlist.requests), 1)
+        self.assertEqual(mlist.requests[0].get('token_owner'), 'moderator')
+
+        # Test mass subscribe without all options.
+        self.foo_list.settings['subscription_policy'] = 'confirm_then_moderate'
+        self.foo_list.settings.save()
+
+        updated_values = {
+            'emails': 'john4@example.com',
+            'pre_confirmed': False,
+            'pre_verified': True
+        }
+
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(mlist.requests), 2)
+        self.assertEqual(mlist.requests[1].get('token_owner'), 'subscriber')
+
+        # Test mass subscribe an invitation.  Subscription policy doesn't
+        # matter, so just leave it as it was.
+        updated_values = {
+            'emails': 'john5@example.com',
+            'invitation': True
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 200)
+        # And now there are 3 requests.
+        self.assertEqual(len(mlist.requests), 3)
+        self.assertEqual(mlist.requests[2].get('token_owner'), 'subscriber')
+
+    def test_set_list_of_strings_field_empty(self):
+        self.client.login(username='testsu', password='testpass')
+        m_list = List.objects.get(fqdn_listname='foo.example.com')
+        settings = m_list.settings
+        settings['accept_these_nonmembers'] = ['^bar*@example.[com|org]']
+        settings.save()
+
+        url = reverse('list_settings',
+                      args=('foo.example.com', 'message_acceptance'))
+        updated_values = {
+            'accept_these_nonmembers': [],
+            'require_explicit_destination': True,
+            'administrivia': True,
+            'default_member_action': 'defer',
+            'default_nonmember_action': 'hold',
+            'max_message_size': 40,
+            'max_num_recipients': 10,
+        }
+        response = self.client.post(url, updated_values)
+        self.assertEqual(response.status_code, 302)
+        self.assertHasSuccessMessage(response)
+        # Get a new list object to avoid caching
+        settings._reset_cache()
+        self.assertEqual(settings.get('accept_these_nonmembers'), [])

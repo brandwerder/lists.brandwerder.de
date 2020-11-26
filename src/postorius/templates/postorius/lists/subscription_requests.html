@@ -1,6 +1,7 @@
 {% extends "postorius/base.html" %}
 {% load i18n %}
 {% load nav_helpers %}
+{% load pagination %}
 
 {% block head_title %}
 {% trans 'Subscription requests' %} | {{ list.fqdn_listname }} - {{ block.super }}
@@ -8,9 +9,9 @@
 
 {% block content %}
 
-    {% list_nav 'list_subscription_requests' 'Subscription Requests' %}
+    {% list_nav 'list_subscription_requests' page_title page_subtitle %}
 
-    {% if list.requests|length > 0 %}
+    {% if paginated_requests.paginator.count > 0 %}
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
@@ -20,19 +21,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for request in list.requests %}
+                    {% for request in paginated_requests.object_list %}
                     <tr>
-                        <td>{{ request.email }}</td>
+                      <td>
+                          {% if request.display_name %}
+                              "{{ request.display_name }}" &lt;{{ request.email }}&gt;
+                          {% else %}
+                              {{ request.email }}
+                          {% endif %}
+                        </td>
                         <td>
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'accept' %}" class="btn btn-xs btn-success">{% trans 'Accept' %}</a>
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'reject' %}" class="btn btn-xs btn-danger">{% trans 'Reject' %}</a>
                             <a href="{% url 'handle_subscription_request' list.list_id request.token 'discard' %}" class="btn btn-xs btn-danger">{% trans 'Discard' %}</a>
+                            <a href="{% url 'list_bans' list.list_id %}?email={{ request.email }}" class="btn btn-xs btn-danger">{% trans 'Ban' %}</a>
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
+        {% paginator paginated_requests %}
     {% else %}
         <p>{% trans 'There are currently no subscription requests for this list.' %}</p>
     {% endif %}

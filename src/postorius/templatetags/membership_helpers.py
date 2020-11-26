@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 1998-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -16,27 +16,54 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
 
 from django import template
+
+from mailmanclient import MailingList
 
 from postorius.auth.utils import user_is_in_list_roster
 from postorius.models import List
 
-from mailmanclient._client import MailingList
 
 register = template.Library()
 
+__all__ = [
+    'get_list',
+    'user_is_list_moderator',
+    'user_is_list_owner',
+]
+
 
 def get_list(mlist):
+    """
+    Given either a mailing list identifier or MailingList object itself, return
+    the MailingList object. Identifiers could be one of the following:
+    - List's posting address: test_list@example.com
+    - List's fqdn: test_list.example.com
+    """
     return mlist if isinstance(mlist, MailingList) else List.objects.get(mlist)
 
 
-@register.assignment_tag
+@register.simple_tag
 def user_is_list_owner(user, mlist):
+    """
+    Given a User object and a MailingList object/identifier, returns True if
+    the user is an owner of the given MailingList False otherwise.
+    """
     return user_is_in_list_roster(user, get_list(mlist), 'owners')
 
 
-@register.assignment_tag
+@register.simple_tag
 def user_is_list_moderator(user, mlist):
+    """
+    Given a User object and a MailingList object/identifier, return True if
+    the user is one of the list moderators, False otherwise.
+    """
     return user_is_in_list_roster(user, get_list(mlist), 'moderators')
+
+
+@register.filter
+def owner_repr(owner):
+    name = owner.display_name or ''
+    address = owner.addresses[0].original_email
+    return '{} {}'.format(name, address)

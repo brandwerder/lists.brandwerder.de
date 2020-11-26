@@ -1,31 +1,99 @@
-image: maxking/mailman-ci-runner
+image: ghcr.io/maxking/mailman-ci-runner
 
-django-1.8:
+py37-django-20:
+  stage: test
   script:
-  - tox -e py27-django18-coverage
+    - tox -e py37-django20
 
-django-1.9:
+py36-django-20:
+  stage: test
   script:
-  - tox -e py27-django19-coverage
+    - tox -e py36-django20
 
-django-1.10:
+py36-django-21:
+  stage: test
   script:
-  - tox -e py27-django110-coverage
+    - tox -e py36-django21
 
-django-1.11:
+py37-django-21:
+  stage: test
   script:
-  - tox -e py27-django111-coverage
+    - tox -e py37-django21
 
-django-1.11-head:
+py36-django-22:
+  stage: test
   script:
-  - tox -e py27-django111-head-coverage
-  allow_failure: true
+    - tox -e py36-django22
+
+py37-django-22:
+  stage: test
+  script:
+    - tox -e py37-django22
+
+py36-django-30:
+  stage: test
+  script:
+    - tox -e py36-django30
+
+py37-django-30:
+  stage: test
+  script:
+    - tox -e py37-django30
+
+py38-django-30:
+  stage: test
+  script:
+    - tox -e py38-django30
+
+py38-django-22:
+  stage: test
+  script:
+    - tox -e py38-django22
+
+coverage:
+  stage: test
+  script:
+  - tox -e coverage
+  artifacts:
+    paths:
+    - coverage
+    expire_in: 5 days
 
 pep8:
+  stage: test
   script:
   - tox -e pep8
 
-django-latest:
-  script:
-  - tox -e py27-django-latest
+git-heads:
+  stage: test
   allow_failure: true
+  script:
+  - tox -e py36-head
+
+django-latest:
+  stage: test
+  allow_failure: true
+  script:
+    - tox -e py36-django-latest
+
+upstream-client:
+  stage: test
+  script:
+    - tox -e upstream-client
+  only:
+    variables:
+      - $MAILMANCLIENT_COMMIT_SHA
+
+upstream-django-mailman3:
+  stage: test
+  script:
+    - tox -e upstream-django-mailman3
+  only:
+    variables:
+      - $DJANGO_MAILMAN3_COMMIT_SHA
+
+include:
+  - template: SAST.gitlab-ci.yml
+
+variables:
+  SAST_DEFAULT_ANALYZERS: "bandit,secrets"

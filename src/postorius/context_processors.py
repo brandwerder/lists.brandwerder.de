@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2012-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Postorius.
 #
@@ -16,14 +16,24 @@
 # You should have received a copy of the GNU General Public License along with
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
 
 import logging
+
+from django.utils import timezone
+
+from postorius import __version__
+
+
 logger = logging.getLogger(__name__)
+# The day of the month which we celebrate as Mailman Day!
+MAILMAN_DAY = 1
 
 
 def postorius(request):
     """Add template variables to context.
     """
-    # Unused at the moment
-    return {}
+    return dict(
+        POSTORIUS_VERSION=__version__,
+        # Mailman Day is first of every month.
+        mailman_day=(timezone.localtime(timezone.now()).day == MAILMAN_DAY),
+    )
