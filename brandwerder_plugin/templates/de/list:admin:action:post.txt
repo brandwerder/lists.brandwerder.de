@@ -1,0 +1,19 @@
+Als Mailinglistenmoderator ist ihre Genehmigung zur Veröffentlichung der
+folgenden Nachricht erforderlich:
+
+    Liste:   $listname
+    Von:     $sender_email
+    Betreff: $subject
+
+Die Nachricht wurde zurückgehalten wegen folgendem Grund:
+
+$reasons
+
+(In den meisten Fällen hat der Sender von einer nicht bekannten E-Mail Adresse
+gesendet. Sie können diese E-Mail Adresse hinzufügen, falls Sie senden darf.)
+
+
+Besuchen Sie die folgende Seite um die Nachricht freizugeben oder abzulehnen:
+https://$domain/postorius/lists/$list_id/held_messages
+
+(Sie müssen einen Account haben und sich einloggen)

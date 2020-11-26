@@ -1,0 +1,16 @@
+Ihre E-Mail an '$listname' mit dem Betreff
+
+    $subject
+
+wurde zurückgehalten bis ein Mailinglistenmoderator diese Nachricht freigegeben
+hat.
+
+Ihre Nachricht wurde zurückgehalten wegen folgendem Grund:
+
+$reasons
+
+(In den meisten Fällen senden Sie gerade von einer E-Mail Adresse, die der
+Mailingliste nicht bekannt ist.)
+
+Entweder Ihre Nachricht wird freigegeben oder Sie bekommen eine Benachrichtigung
+über die Entscheidung des Moderators.

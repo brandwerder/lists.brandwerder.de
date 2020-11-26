@@ -1,0 +1,11 @@
+Ihre Autorisierung ist erforderlich für eine Anfrage auf Entfernung von der
+Mailingliste ($listname)
+
+    Für:   $member
+    Liste: $listname
+
+
+Besuchen Sie die folgende Seite um diese Anfrage zu bestätigen:
+https://$domain/postorius/lists/$list_id/subscription_requests
+
+(Sie müssen einen Account haben und sich einloggen)

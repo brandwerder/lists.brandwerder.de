@@ -1,0 +1,13 @@
+Ihre Anfrage an die Mailingliste $listname
+
+    $request
+
+wurde von einem Listenmoderator abgelehnt. Der Moderator gab den folgenden
+Grund für die Ablehnung an:
+
+"$reason"
+
+Sollten Sie Fragen oder Kommentare bezüglich dieser Entscheidung haben, dann
+fragen Sie bitte Ihren Listenadministrator:
+
+    $owner_email

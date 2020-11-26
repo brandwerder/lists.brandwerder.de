@@ -1,0 +1,56 @@
+
+# Herzlich willkommen auf der Mailingliste der $display_name!
+
+Wir freuen uns, dass Sie das Angebot angenommen haben und sich auf diese
+Klassen-Mailingliste eintragen lassen haben.
+
+### Gestaltung der Klassen-Mailingliste
+
+Wie Sie dieses Angebot gestalten hängt ganz von Ihnen ab. So können Sie in
+Zusammenarbeit mit Ihren Lehrerinnen und Lehrern Informationen über anstehende
+Veranstaltungen, aktuelle Klassenvorhaben oder andere nützliche Informationen an
+alle Eltern versenden.
+
+-----------------------
+
+### E-Mails an die Klasse versenden
+
+Wenn Sie eine Nachricht an alle Eltern dieser Klasse senden möchten, schreiben
+Sie eine E-Mail an die folgende E-Mail-Adresse:
+
+
+      $listname
+
+
+Wenn Sie auf eine Nachricht antworten möchten, dann benutzen Sie unbedingt die
+"Alle Antworten" (Reply All) Option, ansonsten kommt diese Nachricht nur bei
+einer Person an und nicht an alle.
+
+-----------------------
+
+### Umgangston
+
+Wir würden uns freuen, wenn der Umgangston freundlich bleibt und auf unnötige
+und belanglose Nachrichten, wie es in WhatsApp Gruppen meist schnell passiert,
+zu verzichten.
+
+### Verlassen der Klassen-Mailingliste
+
+Sie werden von Ihren Elternvertretern am Ende bzw. Anfang eines Schuljahres aus
+dieser Klassen-Mailingliste ausgetragen (falls sich die Bezeichnung der Klasse
+ändert) und in die nächste Klassen-Mailingliste eingetragen.
+
+Zum Beispiel: Wenn Ihr Kind von der Klasse 4a in die Klasse 5a versetzt wird,
+dann werden Sie aus der Liste klasse-4a@lists.brandwerder.de ausgetragen und in
+die Liste klasse-5a@lists.brandwerder.de eingetragen.
+
+Sollte Ihr Kind die Schule verlassen, so werden Sie von den Elternvertretern
+ausgetragen.
+
+Sie können sich jederzeit austragen lassen, indem Sie eine E-Mail an die
+Administratoren ($owner_email) dieser Klassen-Mailingliste schicken.
+
+----------------------
+
+Vielen Dank für die Aufmerksamkeit und besuchen Sie uns auf
+http://www.brandwerder.de.

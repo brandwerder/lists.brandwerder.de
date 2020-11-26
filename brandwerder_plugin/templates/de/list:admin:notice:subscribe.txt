@@ -1,0 +1,1 @@
+$member abonnierte erfolgreich $display_name.

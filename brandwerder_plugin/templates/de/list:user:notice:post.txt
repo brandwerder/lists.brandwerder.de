@@ -1,0 +1,5 @@
+Ihre Nachricht mit dem Betreff
+
+    $subject
+
+wurde erfolgreich von der Mailingliste $display_name empfangen.

@@ -1,0 +1,3 @@
+_______________________________________________
+$display_name Mailingliste -- $listname
+Wenn Sie abgemeldet werden möchten, dann senden Sie bitte eine E-Mail an $owner_email

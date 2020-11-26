@@ -1,0 +1,5 @@
+Herzlich willkommen auf der Mailingliste "$display_name"!
+
+Um eine Nachricht an diese Liste zu schicken, senden Sie eine E-Mail an:
+
+  $listname
