@@ -390,7 +390,7 @@ def list_mass_subscribe(request, list_id):
                                            pre_confirmed=True,
                                            pre_approved=True)
                     messages.success(
-                        request, _('The address %(address)s has been'
+                        request, _('The address %(address)s (%(display_name)s) has been'
                                    ' subscribed to %(list)s.') %
                         {'address': address,
                          'list': mailing_list.fqdn_listname})
