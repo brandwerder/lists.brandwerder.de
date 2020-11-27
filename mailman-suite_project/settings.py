@@ -25,10 +25,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from pathlib import Path
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+SITE_ID = 1
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'change-this-on-your-production-server'
@@ -36,11 +41,9 @@ SECRET_KEY = 'change-this-on-your-production-server'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ADMINS = (
-     ('Mailman Suite Admin', 'root@localhost'),
-)
-
-SITE_ID = 1
+# ADMINS = (
+#      ('Mailman Suite Admin', 'root@localhost'),
+# )
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#allowed-hosts
@@ -48,19 +51,20 @@ ALLOWED_HOSTS = [
     "localhost",  # Archiving API from Mailman, keep it.
     # "lists.your-domain.org",
     # Add here all production URLs you may have.
+    'lists.brandwerder.de'
 ]
 
 # Mailman API credentials
 MAILMAN_REST_API_URL = 'http://localhost:8001'
-MAILMAN_REST_API_USER = 'restadmin'
-MAILMAN_REST_API_PASS = 'restpass'
-MAILMAN_ARCHIVER_KEY = 'SecretArchiverAPIKey'
-MAILMAN_ARCHIVER_FROM = ('127.0.0.1', '::1')
+MAILMAN_REST_API_USER = 'change-this-on-your-production-server'
+MAILMAN_REST_API_PASS = 'change-this-on-your-production-server'
+# MAILMAN_ARCHIVER_KEY = 'SecretArchiverAPIKey'
+# MAILMAN_ARCHIVER_FROM = ('127.0.0.1', '::1')
 
 # Application definition
 
 INSTALLED_APPS = (
-    'hyperkitty',
+    # 'hyperkitty',
     'postorius',
     'django_mailman3',
     # Uncomment the next line to enable the admin:
@@ -73,25 +77,24 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    # 'rest_framework',
     'django_gravatar',
-    'compressor',
-    'haystack',
-    'django_extensions',
-    'django_q',
+    # 'compressor',
+    # 'haystack',
+    # 'django_extensions',
+    # 'django_q',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django_mailman3.lib.auth.fedora',
-    'allauth.socialaccount.providers.openid',
-    'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.gitlab',
-    'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.twitter',
-    'allauth.socialaccount.providers.stackexchange',
+    # 'allauth.socialaccount.providers.openid',
+    # 'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.gitlab',
+    # 'allauth.socialaccount.providers.google',
+    # # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.twitter',
+    # 'allauth.socialaccount.providers.stackexchange',
 )
-
 
 MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -107,7 +110,6 @@ MIDDLEWARE = (
 )
 
 ROOT_URLCONF = 'urls'
-
 
 TEMPLATES = [
     {
@@ -126,7 +128,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django_mailman3.context_processors.common',
-                'hyperkitty.context_processors.common',
+                # 'hyperkitty.context_processors.common',
                 'postorius.context_processors.postorius',
             ],
         },
@@ -142,19 +144,26 @@ WSGI_APPLICATION = 'wsgi.application'
 DATABASES = {
     'default': {
         # Use 'sqlite3', 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         # DB name or path to database file if using sqlite3.
-        'NAME': os.path.join(BASE_DIR, 'mailmansuite.db'),
+        # 'NAME': os.path.join(BASE_DIR, 'mailmansuite.db'),
+        'NAME': 'change-this-on-your-production-server',
         # The following settings are not used with sqlite3:
-        'USER': 'mailmansuite',
-        'PASSWORD': 'mmpass',
+        # 'USER': 'mailmansuite',
+        # 'PASSWORD': 'mmpass',
         # HOST: empty for localhost through domain sockets or '127.0.0.1' for
         # localhost through TCP.
-        'HOST': '',
+        # 'HOST': '',
         # PORT: set to empty string for default.
-        'PORT': '',
+        # 'PORT': '',
         # OPTIONS: for mysql engine only, do not use with other engines.
         # 'OPTIONS': {'charset': 'utf8mb4'}  # Enable utf8 4-byte encodings.
+        'OPTIONS': {
+            'read_default_file': os.path.join(Path.home(), '.my.cnf'),
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4'
+        }
+
     }
     # Example for PostgreSQL (recommanded for production):
     #'default': {
@@ -165,7 +174,6 @@ DATABASES = {
     #    'HOST': 'localhost',
     #}
 }
-
 
 # If you're behind a proxy, use the X-Forwarded-Host header
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#use-x-forwarded-host
@@ -216,9 +224,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-de'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
@@ -273,17 +281,22 @@ LOGOUT_URL = 'account_logout'
 # otherwise the emails may get rejected.
 # https://docs.djangoproject.com/en/1.8/ref/settings/#default-from-email
 # DEFAULT_FROM_EMAIL = "mailing-lists@you-domain.org"
-DEFAULT_FROM_EMAIL = 'postorius@localhost.local'
+DEFAULT_FROM_EMAIL = 'no-reply@lists.brandwerder.de'
 
 # If you enable email reporting for error messages, this is where those emails
 # will appear to be coming from. Make sure you set a valid domain name,
 # otherwise the emails may get rejected.
 # https://docs.djangoproject.com/en/1.8/ref/settings/#std:setting-SERVER_EMAIL
 # SERVER_EMAIL = 'root@your-domain.org'
-SERVER_EMAIL = 'root@localhost.local'
+SERVER_EMAIL = 'root@lists.brandwerder.de'
 
 # Change this when you have a real email backend
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'lists.brandwerder.de'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'change-this-on-your-production-server'
+EMAIL_HOST_PASSWORD = 'change-this-on-your-production-server'
+EMAIL_USE_TLS = True
 
 # Compatibility with Bootstrap 3
 from django.contrib.messages import constants as messages  # flake8: noqa
@@ -305,7 +318,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 # You probably want https in production, but this is a dev setup file
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 ACCOUNT_UNIQUE_EMAIL  = True
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -442,11 +455,11 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-        'hyperkitty': {
-            'handlers': ['file'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
+        # 'hyperkitty': {
+        #     'handlers': ['file'],
+        #     'level': 'DEBUG',
+        #     'propagate': True,
+        # },
         'postorius': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
