@@ -1,12 +1,12 @@
 import os
 
-# from mailman.interfaces.plugin import IPlugin
+from mailman.interfaces.plugin import IPlugin
 from public import public
 from zope.interface import implementer
 from .templates.brandwerder_template import BrandwerderTemplate
 
 @public
-# @implementer(IPlugin)
+@implementer(IPlugin)
 class BrandwerderPlugin:
     def pre_hook(self):
         # print("pre_hook called")

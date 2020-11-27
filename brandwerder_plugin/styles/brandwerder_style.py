@@ -14,6 +14,7 @@ import re
 @implementer(IStyle)
 class BrandwerderStyle:
     name = 'brandwerder-style'
+    description = 'Setzt Standard Einstellungen, wie den Namen, der Sprache, den Listen Tag [Klasse Xxx], für `klasse-xxx`@lists.brandwerder.de Mailinglisten'
 
     @staticmethod
     def klassenlist_name(match):
