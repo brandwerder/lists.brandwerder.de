@@ -55,7 +55,7 @@ ALLOWED_HOSTS = [
 ]
 
 # Mailman API credentials
-MAILMAN_REST_API_URL = 'http://localhost:8001'
+MAILMAN_REST_API_URL = 'http://localhost:62920'
 MAILMAN_REST_API_USER = 'change-this-on-your-production-server'
 MAILMAN_REST_API_PASS = 'change-this-on-your-production-server'
 # MAILMAN_ARCHIVER_KEY = 'SecretArchiverAPIKey'
